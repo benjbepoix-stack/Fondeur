@@ -2,7 +2,7 @@
 import { $, esc } from '../core/utils.js';
 import { fmtTemp, levelOf } from '../core/score.js';
 import { durationLabel } from '../services/routes.js';
-import { directionsUrl, ring, flag } from './common.js';
+import { directionsUrl, ring, flag, favButton } from './common.js';
 
 const km = r => (r.route ? `${durationLabel(r.route.minutes)}${r.route.estimated ? ' (estimé)' : ''}` : '…');
 
@@ -18,11 +18,11 @@ function bestCard(r, origin) {
   return `<section class="hero-card card" data-station="${esc(r.station.id)}">
     <div class="hero-card__top">
       <div class="hero-card__text">
-        <p class="kicker">Meilleur choix${r.station.country === 'CH' ? ' · Suisse' : ''}</p>
+        <p class="kicker">Meilleur choix${r.station.country === 'CH' ? ' · Suisse' : ''}${r.fav ? ' · ★ favori' : ''}</p>
         <h2 class="hero-card__name">${esc(r.station.name)}</h2>
         <p class="hero-card__meta">${esc(km(r))} · ${esc(open)}</p>
       </div>
-      ${ring(r.score, 68)}
+      <div class="hero-card__side">${ring(r.score, 68)}${favButton(r.station.id, 'fav-btn--hero')}</div>
     </div>
     <span class="verdict is-${r.level}">❄ ${esc(r.verdict)}</span>
     <div class="chips">${chips.map(([v, l]) => `<div class="chip"><strong>${esc(v)}</strong><span>${esc(l)}</span></div>`).join('')}</div>
@@ -38,7 +38,7 @@ function row(r, i) {
   const meta = [r.station.country === 'CH' ? `${flag('CH')} ${r.station.region}` : r.station.region, `${r.station.alt} m`, km(r)].join(' · ');
   const b = r.bulletin;
   const status = r.closed ? 'Fermé' : b?.live && b.kmTotal ? `${Math.round(b.kmOpen || 0)} km` : `${r.depth} cm`;
-  return `<button type="button" class="rank-row" data-station="${esc(r.station.id)}">
+  return `<div class="rank-row ${r.fav ? 'is-fav' : ''}" data-station="${esc(r.station.id)}" role="button" tabindex="0" aria-label="${esc(r.station.name)}, note ${r.score ?? 'inconnue'}">
     <span class="rank-row__pos">${i + 1}</span>
     <span class="rank-row__body">
       <span class="rank-row__name">${esc(r.station.name)}</span>
@@ -46,7 +46,8 @@ function row(r, i) {
       <span class="bar"><i class="is-${lvl}" style="width:${r.score ?? 0}%"></i></span>
     </span>
     <span class="rank-row__score is-${lvl}">${r.score ?? '—'}<small>${esc(status)}</small></span>
-  </button>`;
+    ${favButton(r.station.id)}
+  </div>`;
 }
 
 export function renderList(list, state) {

@@ -1,5 +1,6 @@
 /* Éléments d'affichage partagés. */
 import { levelOf } from '../core/score.js';
+import { isFavorite } from '../core/favorites.js';
 
 const isApple = () => /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent);
 
@@ -18,3 +19,15 @@ export function ring(score, size = 64) {
 export const flag = c => (c === 'CH' ? '🇨🇭' : '🇫🇷');
 
 export const shortDate = iso => (iso ? new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' }).replace('.', '') : '—');
+
+/** Bouton étoile (favori). */
+export function favButton(id, extra = '') {
+  const on = isFavorite(id);
+  return `<button type="button" class="fav-btn ${extra} ${on ? 'is-on' : ''}" data-fav="${id}" aria-pressed="${on}" aria-label="${on ? 'Retirer des favoris' : 'Ajouter aux favoris'}">${on ? '★' : '☆'}</button>`;
+}
+export function setFavButton(btn, on) {
+  btn.classList.toggle('is-on', on);
+  btn.setAttribute('aria-pressed', String(on));
+  btn.setAttribute('aria-label', on ? 'Retirer des favoris' : 'Ajouter aux favoris');
+  btn.textContent = on ? '★' : '☆';
+}

@@ -49,12 +49,12 @@ export async function renderMap(list, state) {
     const s = r.station;
     const lvl = levelOf(r.score);
     const m = L.marker([s.lat, s.lon], {
-      icon: L.divIcon({ className: 'map-pin-wrap', html: `<span class="map-pin is-${lvl}" data-station="${esc(s.id)}">${r.score ?? '—'}</span>`, iconSize: [30, 30], iconAnchor: [15, 15] }),
+      icon: L.divIcon({ className: 'map-pin-wrap', html: `<span class="map-pin is-${lvl}${r.fav ? ' is-fav' : ''}" data-station="${esc(s.id)}">${r.score ?? '—'}</span>`, iconSize: [30, 30], iconAnchor: [15, 15] }),
       title: s.name,
       riseOnHover: true,
       zIndexOffset: (r.score ?? 0) * 10
     });
-    m.bindTooltip(`${esc(s.name)} · ${r.score ?? '—'}/100`, { direction: 'top', offset: [0, -14] });
+    m.bindTooltip(`${r.fav ? '★ ' : ''}${esc(s.name)} · ${r.score ?? '—'}/100`, { direction: 'top', offset: [0, -14] });
     m.addTo(layer);
     pts.push([s.lat, s.lon]);
   });
