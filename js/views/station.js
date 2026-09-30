@@ -4,7 +4,7 @@ import { openSheet } from '../ui/dialog.js';
 import { fmtTemp } from '../core/score.js';
 import { weatherLabel } from '../services/weather.js';
 import { durationLabel } from '../services/routes.js';
-import { directionsUrl, ring, shortDate } from './common.js';
+import { directionsUrl, ring, shortDate, favButton } from './common.js';
 import { rows, getState } from '../main.js';
 
 const dayName = (iso, i) => (i === 0 ? 'Auj.' : new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { weekday: 'short' }).replace('.', ''));
@@ -54,7 +54,7 @@ export function openStation(id) {
   const head = `<section class="hero-card card">
     <div class="hero-card__top"><div class="hero-card__text"><p class="kicker">${esc(s.region)} · ${s.alt} m</p>
       <p class="hero-card__meta">${route ? `${durationLabel(route.minutes)} · ${route.km} km depuis ${esc(st.origin?.name || 'le départ')}${route.estimated ? ' (estimé)' : ''}` : ''}</p></div>
-      ${ring(r?.score ?? null, 68)}</div>
+      <div class="hero-card__side">${ring(r?.score ?? null, 68)}${favButton(s.id, 'fav-btn--hero')}</div></div>
     ${r ? `<span class="verdict is-${r.level}">❄ ${esc(r.verdict)}</span>` : ''}
     <div class="hero-card__actions"><a class="btn btn--primary" href="${esc(directionsUrl(s, st.origin))}" target="_blank" rel="noopener">Itinéraire</a><a class="btn btn--soft" href="${esc(s.bulletin)}" target="_blank" rel="noopener">Bulletin</a></div>
   </section>`;

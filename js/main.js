@@ -4,17 +4,19 @@ import { readJSON, readText, write } from './services/storage.js';
 import { loadWeather } from './services/weather.js';
 import { loadRoutes } from './services/routes.js';
 import { bulletinFor, computeScore } from './core/score.js';
+import { isFavorite, toggleFavorite, rankScore } from './core/favorites.js';
 import { initDialogs } from './ui/dialog.js';
 import { applyTheme } from './ui/theme.js';
 import { toast, toastError } from './ui/toast.js';
 import { icon } from './ui/icons.js';
 import { renderList } from './views/list.js';
+import { setFavButton } from './views/common.js';
 import { openStation, initStation } from './views/station.js';
 import { renderMap } from './views/map.js';
 
 export const PLACES = {
   villedupont: { name: 'Ville-du-Pont', lat: 46.999, lon: 6.4989 },
-  besancon: { name: 'Besançon', lat: 47.2378, lon: 6.0241 }
+  boussieres: { name: 'Boussières', lat: 47.158, lon: 5.894 }
 };
 const PREFS = 'fondeur_prefs';
 
@@ -27,20 +29,31 @@ const state = {
   origin: null,
   prefs: { origin: 'villedupont', view: 'list', country: 'all', travel: 0, ...readJSON(PREFS, {}) }
 };
+// Ancien point de départ (Besançon) remplacé par Boussières
+if (state.prefs.origin === 'besancon') state.prefs.origin = 'boussieres';
 
 const savePrefs = () => write(PREFS, JSON.stringify(state.prefs));
 
-/** Lignes du classement (note, trajet, bulletin) triées par note puis trajet. */
+/**
+ * Lignes du classement triées par note ; à niveau égal (écart ≤ 3 points),
+ * les favoris passent devant, puis le trajet le plus court.
+ */
 export function rows() {
   return state.stations
     .map(s => {
       const b = bulletinFor(s, state.bulletins);
       const wx = state.weather[s.id] || null;
-      return { station: s, bulletin: b, wx, route: state.routes[s.id] || null, ...computeScore(wx, b) };
+      return { station: s, bulletin: b, wx, route: state.routes[s.id] || null, fav: isFavorite(s.id), ...computeScore(wx, b) };
     })
-    .filter(r => state.prefs.country === 'all' || r.station.country === state.prefs.country)
+    .filter(r => state.prefs.country === 'all' || (state.prefs.country === 'fav' ? r.fav : r.station.country === state.prefs.country))
     .filter(r => !state.prefs.travel || !r.route || r.route.minutes <= state.prefs.travel)
-    .sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || (a.route?.minutes ?? 999) - (b.route?.minutes ?? 999));
+    .sort(
+      (a, b) =>
+        rankScore(b.score, b.station.id) - rankScore(a.score, a.station.id) ||
+        Number(b.fav) - Number(a.fav) ||
+        (b.score ?? -1) - (a.score ?? -1) ||
+        (a.route?.minutes ?? 999) - (b.route?.minutes ?? 999)
+    );
 }
 
 export const getState = () => state;
@@ -159,8 +172,23 @@ async function init() {
     render();
   });
   document.addEventListener('click', e => {
+    const fav = e.target.closest('[data-fav]');
+    if (fav) {
+      const on = toggleFavorite(fav.dataset.fav);
+      document.querySelectorAll(`[data-fav="${fav.dataset.fav}"]`).forEach(b => setFavButton(b, on));
+      toast(on ? 'Ajoutée aux favoris ★' : 'Retirée des favoris', { type: 'info' });
+      render();
+      return;
+    }
     const s = e.target.closest('[data-station]');
     if (s && !e.target.closest('a')) openStation(s.dataset.station);
+  });
+  document.addEventListener('keydown', e => {
+    const s = e.target.closest?.('.rank-row[data-station]');
+    if (s && (e.key === 'Enter' || e.key === ' ')) {
+      e.preventDefault();
+      openStation(s.dataset.station);
+    }
   });
   document.addEventListener('visibilitychange', () => document.visibilityState === 'visible' && loadData());
 
