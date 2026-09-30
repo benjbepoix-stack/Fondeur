@@ -1,4 +1,6 @@
-# Fondeur
+# Trace
+
+*(dépôt « Fondeur », ancien nom de l'application)*
 
 Où skier (skating) aujourd'hui dans le Massif du Jura ? Classement des sites nordiques du Doubs, du Jura, de l'Ain et du Jura suisse selon la neige, la météo et les bulletins des pisteurs, depuis Ville-du-Pont, Besançon ou la position GPS.
 

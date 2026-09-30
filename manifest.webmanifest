@@ -1,6 +1,6 @@
 {
-  "name": "Fondeur",
-  "short_name": "Fondeur",
+  "name": "Trace",
+  "short_name": "Trace",
   "description": "Où skier (skating) aujourd'hui dans le Massif du Jura.",
   "start_url": "./",
   "display": "standalone",
