@@ -1,0 +1,23 @@
+# Relevé ponctuel des pages sources (bulletins nordiques) pour étudier leur structure.
+name: Relevé des sources
+on:
+  push:
+    branches: [claude/fondeur]
+    paths: [.github/workflows/snapshot.yml, tools/snapshot.sh]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Télécharger les pages
+        run: bash tools/snapshot.sh
+      - name: Enregistrer
+        run: |
+          git config user.name "fondeur-bot"
+          git config user.email "fondeur-bot@users.noreply.github.com"
+          git add _snapshots
+          git commit -m "Relevé des sources" || echo "rien de nouveau"
+          git push
