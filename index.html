@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Fondeur : où skier (skating) aujourd'hui dans le Massif du Jura, selon la neige, la météo et les bulletins des pisteurs.">
+  <meta name="theme-color" content="#f4f8fb">
+  <meta name="color-scheme" content="light dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Fondeur">
+  <title>Fondeur</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <script>
+    try { if (JSON.parse(localStorage.getItem('fondeur_theme')) === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+  </script>
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/fondeur.css">
+
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__titles">
+        <span class="topbar__kicker">Ski de fond · Massif du Jura</span>
+        <h1 class="topbar__title">Fondeur</h1>
+      </div>
+      <div class="topbar__actions">
+        <button type="button" class="icon-btn icon-btn--glass" id="refreshBtn" aria-label="Actualiser"><span data-icon="refresh" data-size="19"></span></button>
+        <button type="button" class="icon-btn icon-btn--glass" id="themeToggle" aria-label="Changer de thème"></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app" id="main" tabindex="-1">
+    <h2 class="page-title">Où skier aujourd’hui ?</h2>
+
+    <div class="segmented segmented--types" id="originSwitch" role="radiogroup" aria-label="Point de départ">
+      <label><input type="radio" name="origin" value="villedupont" checked><span>Ville-du-Pont</span></label>
+      <label><input type="radio" name="origin" value="besancon"><span>Besançon</span></label>
+      <label><input type="radio" name="origin" value="gps"><span>📍 Ici</span></label>
+    </div>
+
+    <div class="toolbar">
+      <div class="segmented segmented--mini" id="viewSwitch" role="tablist">
+        <button type="button" role="tab" data-view="list" aria-selected="true">Classement</button>
+        <button type="button" role="tab" data-view="map" aria-selected="false">Carte</button>
+      </div>
+      <select class="input select select--mini" id="countryFilter" aria-label="Pays">
+        <option value="all">Tous pays</option>
+        <option value="FR">France</option>
+        <option value="CH">Suisse</option>
+      </select>
+      <select class="input select select--mini" id="travelFilter" aria-label="Trajet maximum">
+        <option value="0">Tout trajet</option>
+        <option value="45">≤ 45 min</option>
+        <option value="60">≤ 1 h</option>
+        <option value="90">≤ 1 h 30</option>
+      </select>
+    </div>
+
+    <p class="status-line" id="statusLine" role="status"></p>
+
+    <section id="listView">
+      <div id="best"></div>
+      <header class="section__head"><h2 class="section__title">Classement</h2><span class="card__sub" id="rankCount"></span></header>
+      <div class="card card--list" id="ranking"></div>
+    </section>
+
+    <section id="mapView" hidden>
+      <div class="map" id="map" role="region" aria-label="Carte des stations"></div>
+      <div class="map-legend"><span style="--c:var(--good)">Très bon</span><span style="--c:var(--mid)">Correct</span><span style="--c:var(--bad)">Médiocre</span></div>
+    </section>
+
+    <footer class="sources">
+      <p>Météo <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> · Bulletins <a href="https://www.espacenordiquejurassien.com/bulletin-neige.html" target="_blank" rel="noopener">Espace Nordique Jurassien</a> / <a href="https://www.nordicfrance.fr/" target="_blank" rel="noopener">Nordic France</a> et <a href="https://snow.myswitzerland.com/" target="_blank" rel="noopener">Suisse Tourisme</a> · Carte et trajets © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></p>
+      <p>La note est une aide à la décision : vérifiez le bulletin officiel avant de partir.</p>
+    </footer>
+  </main>
+
+  <div class="sheet-backdrop" id="stationSheet" hidden>
+    <div class="sheet sheet--tall" role="dialog" aria-modal="true" aria-labelledby="stationTitle" tabindex="-1">
+      <div class="sheet__grabber" aria-hidden="true"></div>
+      <header class="sheet__head"><h2 class="sheet__title" id="stationTitle">Station</h2><button type="button" class="icon-btn" data-close aria-label="Fermer"><span data-icon="close"></span></button></header>
+      <div class="sheet__scroll" id="stationContent"></div>
+    </div>
+  </div>
+</body>
+</html>

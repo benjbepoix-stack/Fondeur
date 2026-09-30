@@ -1,0 +1,1288 @@
+{
+ "source": "Nordic France · Espace Nordique Jurassien · Suisse Tourisme",
+ "france": {
+  "1854": {
+   "name": "Arc sous Cicon",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 0.0,
+   "lastGrooming": "2026-01-12",
+   "quality": "",
+   "updated": "2026-02-22",
+   "tempMorning": 1.0,
+   "tempAfternoon": 6.0,
+   "kmOpen": 0.0,
+   "kmTotal": 88.6,
+   "xcOpen": 0,
+   "xcTotal": 8,
+   "comments": []
+  },
+  "2161": {
+   "name": "Bellefontaine",
+   "open": false,
+   "snowMin": 20.0,
+   "snowMax": 70.0,
+   "lastGrooming": "2026-04-06",
+   "quality": "Dure",
+   "updated": "2026-04-07",
+   "tempMorning": 0.0,
+   "tempAfternoon": -6.0,
+   "kmOpen": 0.0,
+   "kmTotal": 137.3,
+   "xcOpen": 0,
+   "xcTotal": 14,
+   "comments": [
+    {
+     "scope": "secteur",
+     "name": "Massif du Risoux",
+     "text": "La piste du Grand Remblai a été damée hier soir et les conditions de ski dans le Risoux sont toujours très bonnes ce lundi 6 avril 2026. Accès à 25 kms de piste de fond !",
+     "groomed": "2026-04-06"
+    },
+    {
+     "scope": "piste",
+     "name": "Piste du Grand Remblai",
+     "sector": "Massif du Risoux",
+     "text": "La piste du Grand Remblai a été damée hier soir et les conditions de ski dans le Risoux sont toujours très bonnes celundi 6 avril 2026, malgré les températures positives.",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "GTJ ski : Bellefontaine - Risoux",
+     "sector": "Massif du Risoux",
+     "text": "La piste du Grand Remblai a été damée ce dimanche 29 mars et les conditions de ski dans le Risoux sont superbes et hivernales avec 20 cm de neige fraîche et des températures négatives !",
+     "open": false
+    },
+    {
+     "scope": "secteur",
+     "name": "Porte d'entrée des Lacs",
+     "text": "pistes faciles et visuellement magnifiques.",
+     "groomed": "2026-02-27"
+    },
+    {
+     "scope": "piste",
+     "name": "Piste de la Mini Tourbière",
+     "sector": "Porte d'entrée des Lacs",
+     "text": "Bonnes conditions pour cette piste verte.",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Piste de la petite Tourbière",
+     "sector": "Porte d'entrée des Lacs",
+     "text": "piste facile avec des paysages superbes",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Piste des Pas de la Vie",
+     "sector": "Porte d'entrée des Lacs",
+     "text": "Bonnes conditions. Piste facile avec peu de dénivelés.",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Piste des Tourbières",
+     "sector": "Porte d'entrée des Lacs",
+     "text": "Piste facile avecdes visuels d'exceptions !",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Liaison Bellefontaine - Morbier",
+     "sector": "Porte d'entrée des Lacs",
+     "text": "le Sacré-cœur, la Chaux Mourant et la liaison Morbier ont été tracées ce matins samedi 21 février 26",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Piste de La Feuillat",
+     "sector": "Porte d'entrée des Lacs",
+     "text": "Bonnes conditions,",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Piste de la Chaux Mourant",
+     "sector": "Porte d'entrée des Lacs",
+     "text": "le Sacré-cœur, la Chaux Mourant et la liaison Morbier ont été tracées ce matins samedi 21 février 26",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Piste des Baganiers",
+     "sector": "Porte d'entrée des Lacs",
+     "text": "piste qui permet de monter au Risoux",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "GTJ ski : Chapelle des Bois - Bellefontaine",
+     "sector": "Porte d'entrée des Lacs",
+     "text": "La liaison avec Chapelle est ouverte mais seul, le côté sous le Risoux de la piste des lacs est tracé le 21 02 26 !",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Piste des Lacs",
+     "sector": "Porte d'entrée des Lacs",
+     "text": "Les conditions de ski sont très bonnes ce dimanche 1er février 2026.",
+     "open": false
+    },
+    {
+     "scope": "secteur",
+     "name": "Porte d'entrée Village",
+     "text": "On ne peut plus partir du village de Bellefontaine à ski  ! les Pas de la vie, la mini Tourbière et la Feuillat, ont été damées le 26 02 26 ainsi que le Risoux.",
+     "groomed": "2026-02-27"
+    },
+    {
+     "scope": "piste",
+     "name": "Victor Arbez",
+     "sector": "Porte d'entrée Village",
+     "text": "Depuis la porte des Lacs, les Pas de la vie, la mini Tourbière et la Feuillat, le Sacré-cœur, la Chaux Mourant et les liaisons Morbier et Chapelle ont été damées ce samedi 21 fév 26",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Piste du Peraillet",
+     "sector": "Porte d'entrée Village",
+     "text": "30 cm de neige fraiche et du soleil ; on a donc des paysages magnifiques",
+     "open": false
+    }
+   ]
+  },
+  "1766": {
+   "name": "Belleydoux",
+   "open": false,
+   "snowMin": 5.0,
+   "snowMax": 15.0,
+   "lastGrooming": "2025-12-03",
+   "quality": "Fraîche",
+   "updated": "2026-01-18",
+   "tempMorning": 12.0,
+   "tempAfternoon": 12.0,
+   "kmOpen": 0.0,
+   "kmTotal": 19.0,
+   "xcOpen": 0,
+   "xcTotal": 4,
+   "comments": []
+  },
+  "1753": {
+   "name": "Centre Montagnard de Lachat",
+   "open": false,
+   "snowMin": null,
+   "snowMax": null,
+   "lastGrooming": null,
+   "quality": "",
+   "updated": "2026-02-05",
+   "tempMorning": 12.0,
+   "tempAfternoon": 12.0,
+   "kmOpen": 0.0,
+   "kmTotal": 73.0,
+   "xcOpen": 0,
+   "xcTotal": 5,
+   "comments": []
+  },
+  "4774": {
+   "name": "Chapelle des Bois",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 40.0,
+   "lastGrooming": "2026-02-25",
+   "quality": "",
+   "updated": "2026-03-08",
+   "tempMorning": -1.0,
+   "tempAfternoon": 0.0,
+   "kmOpen": 0.0,
+   "kmTotal": 231.2,
+   "xcOpen": 0,
+   "xcTotal": 17,
+   "comments": [
+    {
+     "scope": "piste",
+     "name": "Chalet Pin",
+     "sector": "Chapelle des Bois",
+     "text": "Prudence, on nous annonce un  manque de neige sur le retour de la piste du Chalet Pin. Renseignez vous aux chalets des redevances au départ des pistes.",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Greffier",
+     "sector": "Chapelle des Bois",
+     "text": "Prudence, on nous annonce un  manque de neige sur la piste du Greffier. Renseignez vous aux chalets des redevances au départ des pistes.",
+     "open": false
+    }
+   ]
+  },
+  "4491": {
+   "name": "Chaux Neuve - Le Pré Poncet",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 0.0,
+   "lastGrooming": "2026-02-25",
+   "quality": "",
+   "updated": "2026-03-20",
+   "tempMorning": 1.0,
+   "tempAfternoon": 1.0,
+   "kmOpen": 0.0,
+   "kmTotal": 117.5,
+   "xcOpen": 0,
+   "xcTotal": 14,
+   "comments": []
+  },
+  "1775": {
+   "name": "Domaine Nordique de Sur-Lyand / Grand Colombier",
+   "open": false,
+   "snowMin": 10.0,
+   "snowMax": 25.0,
+   "lastGrooming": "2026-03-04",
+   "quality": "Dure",
+   "updated": "2026-03-10",
+   "tempMorning": 6.0,
+   "tempAfternoon": 9.0,
+   "kmOpen": 0.0,
+   "kmTotal": 57.4,
+   "xcOpen": 0,
+   "xcTotal": 5,
+   "comments": [
+    {
+     "scope": "piste",
+     "name": "Espace Ludique",
+     "sector": "Pistes de ski de fond",
+     "text": "Espace ludique pour débutant",
+     "open": false
+    }
+   ]
+  },
+  "2195": {
+   "name": "Foncine-le-Haut",
+   "open": false,
+   "snowMin": 5.0,
+   "snowMax": 0.0,
+   "lastGrooming": "2026-01-31",
+   "quality": "",
+   "updated": "2026-03-07",
+   "tempMorning": 8.0,
+   "tempAfternoon": 15.0,
+   "kmOpen": 0.0,
+   "kmTotal": 144.5,
+   "xcOpen": 0,
+   "xcTotal": 15,
+   "comments": []
+  },
+  "1850": {
+   "name": "Frasne",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 0.0,
+   "lastGrooming": "2026-01-12",
+   "quality": "",
+   "updated": "2026-01-19",
+   "tempMorning": 2.0,
+   "tempAfternoon": 8.0,
+   "kmOpen": 0.0,
+   "kmTotal": 21.0,
+   "xcOpen": 0,
+   "xcTotal": 3,
+   "comments": [
+    {
+     "scope": "secteur",
+     "name": "Frasne",
+     "text": "Aux portes du village de Frasne, accessible directement depuis la gare TGV, un site familial dans l'esprit du Haut Doubs.",
+     "groomed": "2026-01-15"
+    }
+   ]
+  },
+  "1900": {
+   "name": "Gilley-Les Combes",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 0.0,
+   "lastGrooming": "2026-01-10",
+   "quality": "",
+   "updated": "2026-02-04",
+   "tempMorning": 1.0,
+   "tempAfternoon": 1.0,
+   "kmOpen": 0.0,
+   "kmTotal": 28.1,
+   "xcOpen": 0,
+   "xcTotal": 3,
+   "comments": []
+  },
+  "1802": {
+   "name": "Giron 1000",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 50.0,
+   "lastGrooming": "2026-03-10",
+   "quality": "Humide / Printemps",
+   "updated": "2026-03-15",
+   "tempMorning": 3.0,
+   "tempAfternoon": 3.0,
+   "kmOpen": 0.0,
+   "kmTotal": 110.5,
+   "xcOpen": 0,
+   "xcTotal": 9,
+   "comments": []
+  },
+  "20380": {
+   "name": "Haut Saugeais Blanc",
+   "open": false,
+   "snowMin": 15.0,
+   "snowMax": 20.0,
+   "lastGrooming": "2026-02-01",
+   "quality": "Douce",
+   "updated": "2026-02-02",
+   "tempMorning": -1.0,
+   "tempAfternoon": 3.0,
+   "kmOpen": 0.0,
+   "kmTotal": 0.0,
+   "xcOpen": 0,
+   "xcTotal": 0,
+   "comments": []
+  },
+  "1990": {
+   "name": "Haute Joux",
+   "open": false,
+   "snowMin": 5.0,
+   "snowMax": 20.0,
+   "lastGrooming": null,
+   "quality": "",
+   "updated": "2026-02-25",
+   "tempMorning": 1.0,
+   "tempAfternoon": 1.0,
+   "kmOpen": 0.0,
+   "kmTotal": 232.6,
+   "xcOpen": 0,
+   "xcTotal": 25,
+   "comments": [
+    {
+     "scope": "secteur",
+     "name": "Haute-Joux - Arsure-Arsurette",
+     "text": "Site Trappeur, multiactivités, damé partiellement",
+     "groomed": null
+    }
+   ]
+  },
+  "2066": {
+   "name": "Hautes Combes du Jura",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 130.0,
+   "lastGrooming": "2026-04-05",
+   "quality": "Dure",
+   "updated": "2026-04-07",
+   "tempMorning": -2.0,
+   "tempAfternoon": 18.0,
+   "kmOpen": 0.0,
+   "kmTotal": 364.7,
+   "xcOpen": 0,
+   "xcTotal": 42,
+   "comments": [
+    {
+     "scope": "piste",
+     "name": "Les Forêts Monts",
+     "sector": "Lajoux",
+     "text": "En partant depuis Lajoux, il faut monter à pied jusqu'à la sermengindre. La route reste fermée à la circulation par arrêté .",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "GTJ ski : Carrefour du Massacre - La Baumette (Lajoux)",
+     "sector": "Lajoux",
+     "text": "Il faudra déchausser entre la Baumette et la Sermengindre",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "La Combe à la Chèvre",
+     "sector": "Lajoux",
+     "text": "En partant depuis Lajoux, il faut monter à pied jusqu'à la sermengindre. La route reste fermée à la circulation par arrêté .",
+     "open": false
+    },
+    {
+     "scope": "secteur",
+     "name": "La Pesse / Les Bouchoux",
+     "text": "Damage antérieur",
+     "groomed": "2026-03-28"
+    },
+    {
+     "scope": "piste",
+     "name": "La Combe Froide",
+     "sector": "La Pesse / Les Bouchoux",
+     "text": "Aller-retour",
+     "open": false
+    }
+   ]
+  },
+  "1846": {
+   "name": "La Chaux de Gilley - La Cernay Blanche",
+   "open": false,
+   "snowMin": 20.0,
+   "snowMax": 35.0,
+   "lastGrooming": "2026-01-31",
+   "quality": "Dure",
+   "updated": "2026-02-04",
+   "tempMorning": 1.0,
+   "tempAfternoon": 1.0,
+   "kmOpen": 0.0,
+   "kmTotal": 51.7,
+   "xcOpen": 0,
+   "xcTotal": 5,
+   "comments": []
+  },
+  "1902": {
+   "name": "Lac des Rouges Truites - Domaine du Bugnon",
+   "open": false,
+   "snowMin": 25.0,
+   "snowMax": 40.0,
+   "lastGrooming": "2025-12-30",
+   "quality": "",
+   "updated": "2026-02-03",
+   "tempMorning": 12.0,
+   "tempAfternoon": 12.0,
+   "kmOpen": 0.0,
+   "kmTotal": 63.6,
+   "xcOpen": 0,
+   "xcTotal": 9,
+   "comments": []
+  },
+  "2185": {
+   "name": "Les Crozets - Terre d'Emeraude",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 0.0,
+   "lastGrooming": null,
+   "quality": "",
+   "updated": "2026-02-03",
+   "tempMorning": 13.0,
+   "tempAfternoon": 13.0,
+   "kmOpen": 0.0,
+   "kmTotal": 22.9,
+   "xcOpen": 0,
+   "xcTotal": 4,
+   "comments": [
+    {
+     "scope": "secteur",
+     "name": "Les Crozets",
+     "text": "Humidité, peu de neige, passages de véhicules : traçage impossible",
+     "groomed": "2026-01-11"
+    }
+   ]
+  },
+  "4405": {
+   "name": "Les Fourgs - L'Herba",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 30.0,
+   "lastGrooming": "2026-02-25",
+   "quality": "Humide / Printemps",
+   "updated": "2026-03-10",
+   "tempMorning": -1.0,
+   "tempAfternoon": 0.0,
+   "kmOpen": 0.0,
+   "kmTotal": 140.9,
+   "xcOpen": 0,
+   "xcTotal": 19,
+   "comments": []
+  },
+  "1974": {
+   "name": "Longchaumois / le Rosset",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 25.0,
+   "lastGrooming": "2026-02-01",
+   "quality": "Humide",
+   "updated": "2026-04-16",
+   "tempMorning": -2.0,
+   "tempAfternoon": 0.0,
+   "kmOpen": 0.0,
+   "kmTotal": 30.0,
+   "xcOpen": 0,
+   "xcTotal": 5,
+   "comments": [
+    {
+     "scope": "piste",
+     "name": "Boucle de Rosset",
+     "sector": "Rosset",
+     "text": "Petite boucle de ski pour débuter et s'amuser. des variantes, des zones techniques et faciles.",
+     "open": false
+    }
+   ]
+  },
+  "1808": {
+   "name": "Monts Jura",
+   "open": false,
+   "snowMin": 40.0,
+   "snowMax": 85.0,
+   "lastGrooming": "2026-03-29",
+   "quality": "",
+   "updated": "2026-04-08",
+   "tempMorning": -4.0,
+   "tempAfternoon": -1.0,
+   "kmOpen": 0.0,
+   "kmTotal": 210.0,
+   "xcOpen": 0,
+   "xcTotal": 11,
+   "comments": [
+    {
+     "scope": "secteur",
+     "name": "La Vattay",
+     "text": "Bonjour à tous,  Le domaine de la Vattay est fermé définitivement pour la saison 2025-2026.  Merci à tous pour cette superbe saison. On se retrouve pour l'hiver 2026-2027.  A bientôt.",
+     "groomed": "2026-03-29"
+    },
+    {
+     "scope": "secteur",
+     "name": "Monts Jura - Menthières",
+     "text": "L'un des 4 sites de la station Monts Jura",
+     "groomed": null
+    },
+    {
+     "scope": "secteur",
+     "name": "Monts Jura - Lélex - Crozet",
+     "text": "L'un des 4 sites de la station Monts Jura",
+     "groomed": null
+    },
+    {
+     "scope": "secteur",
+     "name": "Monts Jura - Mijoux - la Faucille",
+     "text": "L'un des 4 sites de la station Monts Jura",
+     "groomed": null
+    }
+   ]
+  },
+  "1944": {
+   "name": "Morbier",
+   "open": false,
+   "snowMin": 10.0,
+   "snowMax": 25.0,
+   "lastGrooming": "2026-03-15",
+   "quality": "Fraîche",
+   "updated": "2026-03-15",
+   "tempMorning": -2.0,
+   "tempAfternoon": 2.0,
+   "kmOpen": 24.3,
+   "kmTotal": 71.6,
+   "xcOpen": 3,
+   "xcTotal": 11,
+   "comments": []
+  },
+  "4519": {
+   "name": "Mouthe - Chez Liadet",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 50.0,
+   "lastGrooming": "2026-02-23",
+   "quality": "Humide / Printemps",
+   "updated": "2026-04-08",
+   "tempMorning": -1.0,
+   "tempAfternoon": 0.0,
+   "kmOpen": 0.0,
+   "kmTotal": 147.8,
+   "xcOpen": 0,
+   "xcTotal": 11,
+   "comments": [
+    {
+     "scope": "piste",
+     "name": "Ravier",
+     "sector": "Chez Liadet",
+     "text": "Ski de rando",
+     "open": false
+    }
+   ]
+  },
+  "3857": {
+   "name": "Métabief - Mont d'Or",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 50.0,
+   "lastGrooming": "2026-02-25",
+   "quality": "Humide / Printemps",
+   "updated": "2026-03-09",
+   "tempMorning": -1.0,
+   "tempAfternoon": 0.0,
+   "kmOpen": 0.0,
+   "kmTotal": 136.7,
+   "xcOpen": 0,
+   "xcTotal": 18,
+   "comments": []
+  },
+  "1837": {
+   "name": "Plateau d'Hauteville",
+   "open": false,
+   "snowMin": 10.0,
+   "snowMax": 20.0,
+   "lastGrooming": "2026-02-22",
+   "quality": "Humide",
+   "updated": "2026-07-08",
+   "tempMorning": 13.0,
+   "tempAfternoon": 13.0,
+   "kmOpen": 0.0,
+   "kmTotal": 86.2,
+   "xcOpen": 0,
+   "xcTotal": 9,
+   "comments": []
+  },
+  "1878": {
+   "name": "Plateau de Maîche / Combe Saint-Pierre",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 0.0,
+   "lastGrooming": null,
+   "quality": "",
+   "updated": "2026-03-12",
+   "tempMorning": 6.0,
+   "tempAfternoon": 6.0,
+   "kmOpen": 0.0,
+   "kmTotal": 96.4,
+   "xcOpen": 0,
+   "xcTotal": 8,
+   "comments": [
+    {
+     "scope": "secteur",
+     "name": "Combe Saint-Pierre",
+     "text": "Patinoire ouverte les après-midi, les mercredi, samedi et dimanche.",
+     "groomed": null
+    },
+    {
+     "scope": "piste",
+     "name": "LOCATION MATÉRIEL : COMBE SAINT-PIERRE",
+     "sector": "Combe Saint-Pierre",
+     "text": "ouverte de 9h30 à 17h",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "SKI NORDIQUE : LIAISON COMBE SAINT-PIERRE - LA MONTEE",
+     "sector": "Combe Saint-Pierre",
+     "text": "Tracée au rouleau, privilégier les skis cailloux",
+     "open": false
+    }
+   ]
+  },
+  "1897": {
+   "name": "Plateau du Russey",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 0.0,
+   "lastGrooming": null,
+   "quality": "",
+   "updated": "2026-02-20",
+   "tempMorning": 0.0,
+   "tempAfternoon": 5.0,
+   "kmOpen": 0.0,
+   "kmTotal": 49.1,
+   "xcOpen": 0,
+   "xcTotal": 5,
+   "comments": [
+    {
+     "scope": "secteur",
+     "name": "La Bosse",
+     "text": "Quelques pistes ont été damées.",
+     "groomed": "2025-11-27"
+    }
+   ]
+  },
+  "1881": {
+   "name": "Pontarlier - Larmont / Malmaison / Granges-Dessus / Verrières-de-Joux",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 50.0,
+   "lastGrooming": "2026-01-12",
+   "quality": "Humide / Printemps",
+   "updated": "2026-02-24",
+   "tempMorning": 6.0,
+   "tempAfternoon": 10.0,
+   "kmOpen": 0.0,
+   "kmTotal": 171.9,
+   "xcOpen": 0,
+   "xcTotal": 26,
+   "comments": [
+    {
+     "scope": "piste",
+     "name": "GTJ : Les Verrières - Le Tillau",
+     "sector": "Les Verrières-de-Joux",
+     "text": "Côtière non damée",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "La Piste éclairée",
+     "sector": "La Malmaison",
+     "text": "La piste est éclairée les mardis et jeudis de 18h30 à 21h.",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "La Ronde des Fermes",
+     "sector": "La Malmaison",
+     "text": "Liaison La Perdrix",
+     "open": false
+    }
+   ]
+  },
+  "2779": {
+   "name": "Prénovel / Les Piards / Chaux-des-Prés NANCHEZ",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 15.0,
+   "lastGrooming": "2026-02-09",
+   "quality": "Glacée",
+   "updated": "2026-02-11",
+   "tempMorning": 2.0,
+   "tempAfternoon": 5.0,
+   "kmOpen": 0.0,
+   "kmTotal": 114.1,
+   "xcOpen": 0,
+   "xcTotal": 14,
+   "comments": [
+    {
+     "scope": "secteur",
+     "name": "Prénovel / Les Piards / Chaux-des-Prés",
+     "text": "Le domaine est ouvert partiellement.",
+     "groomed": "2026-01-27"
+    },
+    {
+     "scope": "piste",
+     "name": "La Combe Romanet",
+     "sector": "Prénovel / Les Piards / Chaux-des-Prés",
+     "text": "Départ depuis Les Piards.",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "La Landoz",
+     "sector": "Prénovel / Les Piards / Chaux-des-Prés",
+     "text": "Départ de Chaux-des-Prés",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Les Douillons",
+     "sector": "Prénovel / Les Piards / Chaux-des-Prés",
+     "text": "Départ de Chaux-des-Prés",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "La Combe Dijon",
+     "sector": "Prénovel / Les Piards / Chaux-des-Prés",
+     "text": "Départ de Chaux-des-Prés",
+     "open": false
+    }
+   ]
+  },
+  "2778": {
+   "name": "Saint-Pierre-en-Grandvaux / Trémontagne",
+   "open": false,
+   "snowMin": 30.0,
+   "snowMax": 40.0,
+   "lastGrooming": "2025-11-22",
+   "quality": "Fraîche",
+   "updated": "2026-02-03",
+   "tempMorning": 0.0,
+   "tempAfternoon": 0.0,
+   "kmOpen": 0.0,
+   "kmTotal": 44.6,
+   "xcOpen": 0,
+   "xcTotal": 5,
+   "comments": []
+  },
+  "2698": {
+   "name": "Station des Rousses",
+   "open": false,
+   "snowMin": 10.0,
+   "snowMax": 40.0,
+   "lastGrooming": "2026-04-05",
+   "quality": "Humide / Printemps",
+   "updated": "2026-04-13",
+   "tempMorning": 6.0,
+   "tempAfternoon": 17.0,
+   "kmOpen": 0.0,
+   "kmTotal": 286.5,
+   "xcOpen": 0,
+   "xcTotal": 36,
+   "comments": [
+    {
+     "scope": "piste",
+     "name": "La Pierre Levée",
+     "sector": "du Risoux",
+     "text": "Départ depuis les Combettes, boucle agréable et facile au cœur de la foret du Risoux",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Le Crêt des Sauges",
+     "sector": "du Risoux",
+     "text": "Au départ de La Combe du Vert, alliez sport et réflexion sur la piste des pensées",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Le Petit Boulu",
+     "sector": "Darbella / Frasse / Massacre",
+     "text": "Boucle très facile au départ de la Darbella Nordique",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "La Dolarde",
+     "sector": "Darbella / Frasse / Massacre",
+     "text": "Départ porte de La Darbella ou de La Frasse. Boucle facile et agréable entourée de sapins",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "GTJ ski : La Darbella / Carrefour du Massacre",
+     "sector": "Darbella / Frasse / Massacre",
+     "text": "Accès depuis les départs de La Darbella et de la Frasse (route de Lamoura) .",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Les Logettes",
+     "sector": "Darbella / Frasse / Massacre",
+     "text": "Accès depuis les départs de La Darbella et de la Frasse (route de Lamoura) . Piste assez difficile.",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Les Tuffes",
+     "sector": "Darbella / Frasse / Massacre",
+     "text": "Piste des Tuffes ouverte en partie (Portion entre carrefours des Logettes et Sire de Veray fermée par arrêté préfectoral de protection de biotope).",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Liaison : Frasse/Chalet de la Frasse",
+     "sector": "Darbella / Frasse / Massacre",
+     "text": "Départ porte de La Frasse",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Liaison : La Fournière/Carrefour du Massacre",
+     "sector": "Darbella / Frasse / Massacre",
+     "text": "Accessible depuis la Fournière d'En Haut",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Sur La Roche",
+     "sector": "Darbella / Frasse / Massacre",
+     "text": "En aller / retour - Accessible uniquement depuis la Fournière",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Espace Liberté : Le Bas des Meures - Lamoura",
+     "sector": "Lamoura / Serra",
+     "text": "Boucle accessible gratuitement au village de Lamoura : ski de fond / raquettes / piétons",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Le Tour du Lac",
+     "sector": "Lamoura / Serra",
+     "text": "Départ de la Combe du Lac pour rejoindre le lac de Lamoura : stade de départ de la mythique course de ski de fond \"la Transjurassienne\"",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Le Boulu",
+     "sector": "Lamoura / Serra",
+     "text": "Départ Lamoura Village (chemin du Bruchet), paysage varié entouré de sapin et retour au village en longeant le lac de Lamoura.",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Les Arobiers",
+     "sector": "Lamoura / Serra",
+     "text": "Départ de Lamoura village (chemin du Bruchet), piste variée; une partie technique en forêt et une partie plus facile sur le retour en fond de vallée.",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Liaison : Les Charrières/Carrefour de la Comtesse",
+     "sector": "Lamoura / Serra",
+     "text": "Parking situé sur la route de Longchaumois pour rejoindre le secteur de la Sambine",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Liaison Lajoux",
+     "sector": "Lamoura / Serra",
+     "text": "liaison permettant de rejoindre le village de Lajoux par la GTJ",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Espace Liberté : Le Stade-Bois d'Amont",
+     "sector": "Bois d'Amont / Orbe",
+     "text": "Boucle accessible gratuitement au village de Bois d'Amont : ski de fond / raquettes / piétons",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Les Marais",
+     "sector": "Bois d'Amont / Orbe",
+     "text": "Départ de L'Orbe ,village de Bois d'Amont, piste d'initiation entourée de tourbières",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "L'Orbe",
+     "sector": "Bois d'Amont / Orbe",
+     "text": "Départ de L'Orbe, village de Bois d'Amont, piste en fond de vallée dans les pâturages marécageux",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Espace Liberté : Le Tour du Fort - Les Rousses",
+     "sector": "Les Rousses / Orbe",
+     "text": "Boucle accessible gratuitement au village des Rousses : ski de fond / raquettes / piétons",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Le Lac des Rousses",
+     "sector": "Les Rousses / Orbe",
+     "text": "Départ de La Gouille à l'Ours, piste offrant une belle perspective sur la vallée de l'Orbe",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Espace Liberté : Village - Prémanon",
+     "sector": "Prémanon / Darbella",
+     "text": "Boucle accessible gratuitement au village de Prémanon : ski de fond / raquettes / piétons",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Le Cernois",
+     "sector": "Prémanon / Darbella",
+     "text": "Départ de La Darbella, boucle facile mêlant sous bois et pâturages",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Le Fer à Cheval",
+     "sector": "Prémanon / Darbella",
+     "text": "Départ de Prémanon Village ou de La Darbella, piste vallonnée et sinueuse en sous bois",
+     "open": false
+    },
+    {
+     "scope": "piste",
+     "name": "Le Bois de Ban",
+     "sector": "Prémanon / Darbella",
+     "text": "Départ de Prémanon Village ou de La Darbella, piste technique en forêt permettant de rejoindre la piste des Arobiers et des Chevreuils",
+     "open": false
+    }
+   ]
+  },
+  "1858": {
+   "name": "Val de Morteau",
+   "open": false,
+   "snowMin": 0.0,
+   "snowMax": 10.0,
+   "lastGrooming": null,
+   "quality": "",
+   "updated": "2026-03-28",
+   "tempMorning": 3.0,
+   "tempAfternoon": 15.0,
+   "kmOpen": 0.0,
+   "kmTotal": 171.3,
+   "xcOpen": 0,
+   "xcTotal": 23,
+   "comments": []
+  },
+  "1874": {
+   "name": "Val de Vennes",
+   "open": false,
+   "snowMin": null,
+   "snowMax": null,
+   "lastGrooming": null,
+   "quality": "",
+   "updated": "2026-01-24",
+   "tempMorning": 12.0,
+   "tempAfternoon": 12.0,
+   "kmOpen": 0.0,
+   "kmTotal": 29.7,
+   "xcOpen": 0,
+   "xcTotal": 4,
+   "comments": []
+  }
+ },
+ "suisse": {
+  "Thyon - 4 Vallées": {
+   "place": "Les Collons Thyon – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 79.– Enfant CHF 40.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/thyon-4-vallees-143/"
+  },
+  "Verbier": {
+   "place": "Verbier – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers (dynamiques) Adulte dès CHF 87.– Enfant dès CHF 43.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/verbier-132/"
+  },
+  "Glacier 3000": {
+   "place": "Les Diablerets – Canton de Vaud",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 75.– Enfant CHF 49.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
+  },
+  "Charmey.ch": {
+   "place": "Charmey – Région de Fribourg",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 46.– Enfant CHF 31.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/charmeych-4/"
+  },
+  "Anzère": {
+   "place": "Anzère – Valais",
+   "noSeason": false,
+   "summary": "Début de la saison : 04.12.2026 · Forfaits journaliers –",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
+  },
+  "Les Mosses - La Lécherette": {
+   "place": "Les Mosses – Canton de Vaud",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 62.– Enfant CHF 40.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-mosses-la-lecherette-329/"
+  },
+  "Val-de-Travers/La Robella": {
+   "place": "Buttes La Robella – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 29.– Enfant CHF 0.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/val-de-traversla-robella-195/"
+  },
+  "Nendaz - 4 Vallées": {
+   "place": "Nendaz – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 79.– Enfant CHF 40.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nendaz-4-vallees-139/"
+  },
+  "Crans - Montana": {
+   "place": "Crans-Montana – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 89.– Enfant CHF 50.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/crans-montana-142/"
+  },
+  "Ovronnaz": {
+   "place": "Ovronnaz – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers (dynamiques) Adulte dès CHF 61.– Enfant dès CHF 37.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/ovronnaz-138/"
+  },
+  "Leysin": {
+   "place": "Leysin – Canton de Vaud",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers (dynamiques) Adulte dès CHF 62.– Enfant dès CHF 40.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/leysin-330/"
+  },
+  "Arolla Espace Dent-Blanche": {
+   "place": "Arolla – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 48.– Enfant CHF 31.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/arolla-espace-dent-blanche-144/"
+  },
+  "Les Paccots - La Veveyse": {
+   "place": "Les Paccots – Région de Fribourg",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 45.– Enfant CHF 30.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-paccots-la-veveyse-151/"
+  },
+  "Les Pléiades": {
+   "place": "Blonay – Canton de Vaud",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 35.– Enfant CHF 18.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-pleiades-187/"
+  },
+  "Les Breuleux": {
+   "place": "Les Breuleux – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 24.– Enfant CHF 15.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-breuleux-211/"
+  },
+  "Sainte-Croix / Les Rasses": {
+   "place": "Sainte-Croix Les Rasses – Canton de Vaud",
+   "noSeason": false,
+   "summary": "Pas de données actuelles ! Début de saison : 12.12.2026 · Forfaits journaliers Adulte CHF 35.– Enfant CHF 23.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/sainte-croix-les-rasses-146/"
+  },
+  "Vallée de La Sagne": {
+   "place": "La Sagne – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-sagne-190/"
+  },
+  "Nax / Mont-Noble": {
+   "place": "Nax – Valais",
+   "noSeason": true,
+   "summary": "Pas de données actuelles ! Pas de saison ! · Forfaits journaliers Adulte CHF 57.– Enfant CHF 29.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nax-mont-noble-8/"
+  },
+  "Rougemont - Videmanette": {
+   "place": "Rougemont – Canton de Vaud",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers (dynamiques) Adulte dès CHF 49.– Enfant dès CHF 28.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/rougemont-videmanette-395/"
+  },
+  "La Fouly": {
+   "place": "La Fouly – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 46.– Enfant CHF 30.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-fouly-141/"
+  },
+  "Evolène Espace Dent-Blanche": {
+   "place": "Evolène – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 48.– Enfant CHF 31.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/evolene-espace-dent-blanche-11/"
+  },
+  "Champex-Lac": {
+   "place": "Champex-Lac – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 46.– Enfant CHF 30.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/champex-lac-168/"
+  },
+  "Bugnenets - Savagnières": {
+   "place": "Savagnières-Bugnenets – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 40.– Enfant CHF 23.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/bugnenets-savagnieres-197/"
+  },
+  "Les Genevez": {
+   "place": "Saignelégier – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 18.– Enfant CHF 10.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-genevez-208/"
+  },
+  "Vichères - Bavon": {
+   "place": "Liddes – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 46.– Enfant CHF 30.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vicheres-bavon-257/"
+  },
+  "Prés-d'Orvin-Chasseral": {
+   "place": "Les Prés d'Orvin – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Début de la saison : 19.11.2026 · Forfaits journaliers Adulte CHF 30.– Enfant CHF 19.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/pres-dorvin-chasseral-206/"
+  },
+  "Mont-Soleil - Mont-Crosin": {
+   "place": "Tramelan – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers –",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
+  },
+  "Vue des Alpes/Tête de Ran": {
+   "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vue-des-alpestete-de-ran-194/"
+  },
+  "Portes du Soleil - Champéry - Les Crosets - Champoussin - Morgins": {
+   "place": "Champéry – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 74.– Enfant CHF 56.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/portes-du-soleil-champery-les-crosets-champoussin-morgins-13/"
+  },
+  "Grimentz-Zinal /Anniviers": {
+   "place": "Grimentz – Valais",
+   "noSeason": true,
+   "summary": "Pas de données actuelles ! Pas de saison ! · Forfaits journaliers Adulte CHF 75.– Enfant CHF 45.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
+  }
+ },
+ "fetchedAt": "2026-09-30T06:02:54+00:00"
+}

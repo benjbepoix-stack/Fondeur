@@ -1,0 +1,87 @@
+/* =========================================================
+   IDENTITÉ « FONDEUR » — Givre (clair, bleu glacier) / Nuit (sombre)
+   Surcharge les tokens communs (tokens.css).
+   ========================================================= */
+:root {
+  --bg: #0b1220;
+  --bg-2: #0f1829;
+  --surface: rgba(19, 28, 46, .86);
+  --surface-solid: #131c2e;
+  --surface-2: rgba(170, 200, 240, .05);
+  --surface-3: rgba(170, 200, 240, .1);
+  --field: #0f1829;
+  --border: #223049;
+  --border-strong: #2d3d5a;
+  --text: #eef3fb;
+  --text-2: #aab6c8;
+  --text-3: #7584a0;
+
+  --accent: #8fd3ff;
+  --accent-2: #6cbcf0;
+  --accent-ink: #07121f;
+  --accent-soft: rgba(143, 211, 255, .12);
+  --gradient-accent: linear-gradient(135deg, #a9ddff 0%, #6cbcf0 100%);
+  --gradient-hero: radial-gradient(120% 90% at 85% 0%, rgba(120, 220, 200, .2), rgba(0, 0, 0, 0) 60%), linear-gradient(160deg, #17233a 0%, #0f1829 100%);
+  --shadow-accent: 0 8px 22px -12px rgba(143, 211, 255, .5);
+
+  --good: #6fd6a8;
+  --mid: #f0c46a;
+  --bad: #f08a7e;
+  --snow: #8fd3ff;
+  --blue: #8fd3ff;
+  --blue-soft: rgba(143, 211, 255, .12);
+  --amber: #f0c46a;
+  --amber-soft: rgba(240, 196, 106, .13);
+  --green: #6fd6a8;
+  --green-soft: rgba(111, 214, 168, .13);
+  --danger: #f08a7e;
+  --danger-soft: rgba(240, 138, 126, .13);
+  --violet: #b8aede;
+  --violet-soft: rgba(184, 174, 222, .12);
+
+  --ambient-1: rgba(120, 220, 200, .06);
+  --ambient-2: rgba(143, 211, 255, .05);
+  --ambient-3: rgba(0, 0, 0, 0);
+}
+
+:root[data-theme="light"] {
+  --bg: #f4f8fb;
+  --bg-2: #eaf1f7;
+  --surface: rgba(255, 255, 255, .92);
+  --surface-solid: #ffffff;
+  --surface-2: #f2f6fa;
+  --surface-3: #e8eff6;
+  --field: #ffffff;
+  --border: #dde6ee;
+  --border-strong: #c9d6e2;
+  --text: #14202e;
+  --text-2: #55657a;
+  --text-3: #8392a4;
+
+  --accent: #2f6fb2;
+  --accent-2: #3f82c6;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(47, 111, 178, .09);
+  --gradient-accent: linear-gradient(135deg, #3f82c6 0%, #2a62a0 100%);
+  --gradient-hero: linear-gradient(160deg, #ffffff 0%, #e3eef8 100%);
+  --shadow-accent: 0 8px 20px -10px rgba(47, 111, 178, .45);
+
+  --good: #2e8f6a;
+  --mid: #b07d14;
+  --bad: #c2554b;
+  --snow: #2f6fb2;
+  --blue: #2f6fb2;
+  --blue-soft: rgba(47, 111, 178, .09);
+  --amber: #a0720f;
+  --amber-soft: rgba(176, 125, 20, .1);
+  --green: #2e8f6a;
+  --green-soft: rgba(46, 143, 106, .1);
+  --danger: #c2554b;
+  --danger-soft: rgba(194, 85, 75, .09);
+  --violet: #62569a;
+  --violet-soft: rgba(98, 86, 154, .09);
+
+  --ambient-1: rgba(47, 111, 178, .07);
+  --ambient-2: rgba(120, 190, 220, .06);
+  --ambient-3: rgba(0, 0, 0, 0);
+}
