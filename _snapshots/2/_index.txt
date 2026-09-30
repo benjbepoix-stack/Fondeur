@@ -1,9 +1,0 @@
-nf-widget.js 200 2999 application/javascript
-nf-home.html 200 110865 text/html; charset=UTF-8
-gt-root.json 403 58 application/json
-gt-structure.json 200 98 application/json
-gt-practice.json 404 26 application/json
-gt-district.json 200 11118 application/json
-gt-trek.json 200 99119 application/json
-gt-touristiccontent-cat.json 200 1829 application/json
-ch-myswitzerland.html 200 305151 text/html;charset=UTF-8

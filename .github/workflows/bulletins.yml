@@ -1,0 +1,32 @@
+# Relève les bulletins nordiques (Nordic France / ENJ, Suisse Tourisme) et met à jour data/bulletins.json.
+name: Bulletins nordiques
+on:
+  schedule:
+    - cron: "7,37 4-20 * 11,12,1,2,3,4 *"   # en saison : toutes les 30 min de 5 h à 22 h (heure d'hiver)
+    - cron: "17 5 * 5-10 *"                  # hors saison : une fois par jour
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bulletins
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Relever les bulletins
+        run: python3 tools/fetch_bulletins.py
+      - name: Enregistrer si changement
+        run: |
+          if git diff --quiet -- data/bulletins.json; then echo "Aucun changement."; exit 0; fi
+          git config user.name "fondeur-bot"
+          git config user.email "fondeur-bot@users.noreply.github.com"
+          git add data/bulletins.json
+          git commit -m "Bulletins nordiques $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push

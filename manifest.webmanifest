@@ -1,0 +1,14 @@
+{
+  "name": "Fondeur",
+  "short_name": "Fondeur",
+  "description": "Où skier (skating) aujourd'hui dans le Massif du Jura.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f8fb",
+  "theme_color": "#f4f8fb",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
