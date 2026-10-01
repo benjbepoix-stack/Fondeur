@@ -1,8 +1,0 @@
-accueil.html 200 52399 https://www.espacenordiquejurassien.com/
-curl: (28) Operation timed out after 40002 milliseconds with 0 bytes received
-webcams.html 000 0 https://www.espacenordiquejurassien.com/webcams.html
-webcams.html ERREUR
-les-webcams.html 404 27257 https://www.espacenordiquejurassien.com/les-webcams.html
-webcam.html 404 27257 https://www.espacenordiquejurassien.com/webcam.html
-lien-1.html 000 0 https://www.espacenordiquejurassien.com/webcams.html
-lien-1.html ERREUR

@@ -4,7 +4,7 @@ import { readJSON, readText, write } from './services/storage.js';
 import { loadWeather } from './services/weather.js';
 import { loadRoutes } from './services/routes.js';
 import { bulletinFor, computeScore } from './core/score.js';
-import { isFavorite, toggleFavorite, rankScore } from './core/favorites.js';
+import { isFavorite, toggleFavorite, rankScore, restoreFavorites } from './core/favorites.js';
 import { initDialogs } from './ui/dialog.js';
 import { applyTheme } from './ui/theme.js';
 import { toast, toastError } from './ui/toast.js';
@@ -192,8 +192,10 @@ async function init() {
   });
   document.addEventListener('visibilitychange', () => document.visibilityState === 'visible' && loadData());
 
+  restoreFavorites().then(restored => restored && render());
   const data = await fetch('data/stations.json').then(r => r.json());
   state.stations = data.stations;
+  state.webcamsPage = data.webcamsPage;
   const originKey = PLACES[state.prefs.origin] || state.prefs.origin === 'gps' ? state.prefs.origin : 'villedupont';
   $(`#originSwitch input[value="${originKey}"]`).checked = true;
   state.origin = PLACES[originKey] || readJSON('fondeur_last_gps', PLACES.villedupont);

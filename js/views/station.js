@@ -8,6 +8,21 @@ import { directionsUrl, ring, shortDate, favButton } from './common.js';
 import { rows, getState } from '../main.js';
 
 const dayName = (iso, i) => (i === 0 ? 'Auj.' : new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { weekday: 'short' }).replace('.', ''));
+/** Webcams : images en direct quand la source en fournit une, sinon liens. */
+function webcamBlock(s, page) {
+  const cams = s.webcams || [];
+  const stamp = Math.floor(Date.now() / 600000); // rafraîchie toutes les 10 min
+  const imgs = cams.filter(c => c.image);
+  const links = cams.filter(c => !c.image);
+  const more = s.country === 'FR' && page ? page : s.country === 'CH' ? 'https://snow.myswitzerland.com/webcams/' : null;
+  if (!cams.length && !more) return '';
+  return `<section class="section"><header class="section__head"><h3 class="section__title">Webcams</h3><span class="card__sub">${cams.length ? `${cams.length} caméra${cams.length > 1 ? 's' : ''}` : ''}</span></header>
+    ${imgs.map(c => `<a class="cam-img card" href="${esc(c.url)}" target="_blank" rel="noopener"><img src="${esc(c.url)}?t=${stamp}" alt="Webcam ${esc(c.name)}" loading="lazy" onerror="this.closest('a').hidden=true"><span>${esc(c.name)} · en direct</span></a>`).join('')}
+    ${links.length ? `<div class="card card--list">${links.map(c => `<a class="cam-link" href="${esc(c.url)}" target="_blank" rel="noopener"><span class="cam-link__ico">📷</span><span class="cam-link__name">${esc(c.name)}</span><span class="cam-link__go">Voir ›</span></a>`).join('')}</div>` : ''}
+    ${!cams.length ? `<a class="btn btn--soft btn--sm" href="${esc(more)}" target="_blank" rel="noopener">${s.country === 'CH' ? 'Webcams de Suisse (Suisse Tourisme)' : 'Toutes les webcams ENJ'}</a>` : ''}
+  </section>`;
+}
+
 const tile = (label, value, note) => `<div class="tile"><span>${esc(label)}</span><strong>${esc(value)}</strong>${note ? `<small>${esc(note)}</small>` : ''}</div>`;
 
 function bulletinBlock(r) {
@@ -59,7 +74,7 @@ export function openStation(id) {
     <div class="hero-card__actions"><a class="btn btn--primary" href="${esc(directionsUrl(s, st.origin))}" target="_blank" rel="noopener">Itinéraire</a><a class="btn btn--soft" href="${esc(s.bulletin)}" target="_blank" rel="noopener">Bulletin</a></div>
   </section>`;
   if (!wx) {
-    $('#stationContent').innerHTML = `${head}<p class="card__sub section">Météo en cours de chargement…</p>${bulletinBlock(r || { station: s, bulletin: null })}`;
+    $('#stationContent').innerHTML = `${head}<p class="card__sub section">Météo en cours de chargement…</p>${bulletinBlock(r || { station: s, bulletin: null })}${webcamBlock(s, st.webcamsPage)}`;
     openSheet('stationSheet', { focus: false });
     return;
   }
@@ -83,6 +98,7 @@ export function openStation(id) {
     .join('');
   $('#stationContent').innerHTML = `${head}
     <div class="tiles section">${tiles.join('')}</div>
+    ${webcamBlock(s, st.webcamsPage)}
     ${bulletinBlock(r)}
     <section class="section"><header class="section__head"><h3 class="section__title">5 prochains jours</h3><span class="card__sub">à ${s.alt} m</span></header><div class="days">${days}</div></section>
     <section class="section"><header class="section__head"><h3 class="section__title">Pourquoi cette note</h3><span class="card__sub">skating</span></header><div class="card why">${why}</div></section>`;
