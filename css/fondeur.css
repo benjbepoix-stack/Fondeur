@@ -156,3 +156,7 @@
 .cam-link:hover { background: var(--surface-2); }
 .cam-link__name { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cam-link__go { color: var(--accent); font-weight: 800; font-size: var(--fs-sm); }
+
+/* Nom de l'app conservé pour les lecteurs d'écran, masqué à l'écran */
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.topbar__kicker { font-size: 12px; }
