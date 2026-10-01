@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <!-- header.html -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="kGXXynj3OSRwqAuzINlR1_pC-PXpnxo6iy9ETY04dTk" />
+    <title>A la une,Espace Nordique Jurassien</title>
+                                                         <meta name="description" content="Dans les Montagnes du Jura, les trois associations de ski de fond, Ain Ski de Fond, Haut Doubs Ski de Fond et Jura Ski de Fond * mettent leurs efforts en commun afin d&#039;assurer la coordination du ski de fond à l&#039;échelle des trois départements et créent l&#039;Espace Nordique Jurassien en 1985.">
+    <meta name="keywords" content="montagnes, jura, ski de fond, Ain, Doubs, Haut Doubs, Jura, coordination, espace, nordique, jurassien">
+  
+  <meta name="reply-to" content="info@xsalto.com">
+        <meta name="robots" content="index, follow">
+    <meta name="distribution" content="global">
+  <meta name="revisit-after" content="1 days">
+  <meta name="author" lang="fr" content="Espace Nordique Jurassien">
+  <meta name="copyright" content="">
+  <meta name="identifier-url" content="https://www.espacenordiquejurassien.com">
+  <meta name="msvalidate.01" content="22BC5188D45EE4521CE5B6311942F9B9" />
+  <meta name="expires" content="never">
+  <meta name="Date-Revision-yyyymmdd" content="20190926">
+  <meta name="google-site-verification" content="m8sdvL6A9L_MXTiqdO9JMncjrm8cSduPhqgjCW7S5s8" />
+<!--htdig_noindex-->
+
+  <link href="/csx/src/Application/Corail/public/js/smartmenu/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+  <link href="/csx/src/Application/Corail/public/js/ekko-lightbox/ekko-lightbox.min.css" rel="stylesheet"/>
+  <link href="/css/vendor/jquery.fb.albumbrowser.css" rel="stylesheet">
+  <link href="/css/jquery-ui.min.css" rel="stylesheet">
+
+    <!-- general style -->
+  <link rel="stylesheet" type="text/css" media="screen,print" href="/css/style-1col.css" />
+  <!-- favicon - icon -->
+<link rel="shortcut icon" href="/csx/scripts/downloader2.php?filename=CHARTEX/icon/68/99/fiz5cgpdphyq&amp;mime=image%2Fx-icon&amp;originalname=favicon.ico"><link rel="apple-touch-icon" href="/csx/scripts/downloader2.php?filename=CHARTEX/appletouchicon/68/99/fiz5cgpdphyq&amp;mime=image%2Fpng&amp;originalname=apple-touch-icon.png">
+
+<script  src="/csx/scripts/onejs.php?files=/csx/Vendor/jquery/jquery-1.11.3.js:/csx/Vendor/jquery/jquery-migrate.min.js:/csx/Vendor/jquery/jquery-ui/jquery-ui.js:/csx/Vendor/jquery/jquery-ui/locale/fr/datepicker-fr.js"></script>
+<script  src="/csx/scripts/onejs.php?files=/csx/src/Core/public/generic.js:/csx/src/Core/public/generic8.js:/csx/src/Core/public/genericX.js:/csx/src/Field/File/Viewer/public/viewer.js"></script>
+<script  src="/csx/scripts/onejs.php?files=/csx/src/Application/Corail/public/js/ekko-lightbox/ekko-lightbox.js:/csx/src/Application/Corail/public/js/bootstrap.min.js:/csx/src/Application/Corail/public/js/smartmenu/jquery.smartmenus.js:/csx/src/Application/Corail/public/js/smartmenu/jquery.smartmenus.bootstrap.js"></script>
+<script  src="/csx/scripts/onejs.php?files=js/jquery.sticky-kit.min.js:js/main.js<!-- header.html -->:js/vendor/jquery.fb.albumbrowser.js"></script>
+<script src="/csx/scripts/onejs.php?files=/csx/src/Pack/CookieBar/public/jquery.cookiebar/jquery.cookiebar.js"></script>
+<script async src="/csx/scripts/onejs.php?files=/csx/src/Pack/js/picturefill.min.js"></script>
+<script>TZR["\Seolan\Pack\PictureFill\PictureFill"]=true;TZR["\Seolan\Pack\CookieBar\CookieBar"]=true;</script>
+<link href="/csx/src/Pack/CookieBar/public/jquery.cookiebar/jquery.cookiebar.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://www.nordicfrance.fr/widgets/widget.js"></script>
+
+<script>
+jQuery(document).ready(function() {						
+    jQuery(window).scroll(function() {
+	if(jQuery(window).scrollTop() == 0){
+	    jQuery('#scrollToTop').fadeOut("fast");
+	} else {
+	    if(jQuery('#scrollToTop').length == 0){
+		jQuery('body').append('<div id="scrollToTop">'+
+        '<a href="#"></a>'+
+				 '</div>');
+	    }
+	    jQuery('#scrollToTop').fadeIn("slow");
+	}
+    });
+    jQuery(document).on('click', '#scrollToTop a' , function(event){
+	event.preventDefault();
+	jQuery('html,body').animate({scrollTop: 0}, 'slow');
+    });
+    // Effet parallaxe
+    $window = jQuery(window);
+    jQuery('section[data-type="background"]').each(function(){
+      var $scroll = jQuery(this);
+
+      jQuery(window).scroll(function() {
+        var yPos = -($window.scrollTop() / $scroll.data('speed'));
+        var coords = '50% '+ yPos + 'px';
+        $scroll.css({ backgroundPosition: coords });   
+      });
+    });
+    //remplace nyromodal par ekko-lightbox
+    // au cas  ou certain template instancie nyromodal
+    function setEkkoModalForObject(obj){
+	$this = jQuery(obj);
+	if(!$this.attr('data-gallery') && $this.attr('rel')) 
+	    $this.attr('data-gallery',$this.attr('rel'))
+	if(!$this.attr('data-title') && $this.attr('title'))
+	    $this.attr('data-title',$this.attr('title'));
+	$this.click(function(e){
+	    e.preventDefault();
+	    jQuery(this).ekkoLightbox({
+		loadingMessage: '...',
+	    });
+	});
+    }
+    if ( typeof jQuery.fn.nyroModal != "function")
+	jQuery.fn.nyroModal = function () {setEkkoModalForObject(this)};
+    jQuery('.nyroModal').each(function(i,e){
+	setEkkoModalForObject(e);
+    });
+    });
+</script>
+<script>
+           </script>
+  
+<script>jQuery.fn.mediaelementplayer = function (options) {}</script>
+  
+  
+
+<script>
+  var tarteaucitronCustomText = {
+    "adblock": "Bonjour! Ce site joue la transparence et vous donne le choix des services tiers à activer.",
+    "adblock_call": "Merci de désactiver votre adblocker pour commencer la personnalisation.",
+    "reload": "Recharger la page",
+    "alertBigScroll": "En continuant de défiler,",
+    "alertBigClick": "En poursuivant votre navigation,",
+    "alertBig": "vous acceptez l'utilisation de services tiers pouvant installer des cookies",
+    "alertBigPrivacy": "Ce site utilise des cookies et vous donne le contrôle sur ceux que vous souhaitez activer",
+    "alertSmall": "Gestion des services",
+    "acceptAll": "Tout accepter",
+    "personalize": "Personnaliser",
+    "close": "Fermer",
+    "privacyUrl": "Politique de confidentialité",
+    "all": "Préférences pour tous les services",
+    "info": "Protection de votre vie privée",
+    "disclaimer": "En autorisant ces services tiers, vous acceptez le dépôt et la lecture de cookies et l'utilisation de technologies de suivi nécessaires à leur bon fonctionnement.",
+    "allow": "Autoriser",
+    "deny": "Interdire",
+    "noCookie": "Ce service ne dépose aucun cookie.",
+    "useCookie": "Ce service peut déposer",
+    "useCookieCurrent": "Ce service a déposé",
+    "useNoCookie": "Ce service n'a déposé aucun cookie.",
+    "more": "En savoir plus",
+    "source": "Voir le site officiel",
+    "credit": "Gestion des cookies par tarteaucitron.js",
+    "noServices": "Ce site n'utilise aucun cookie nécessitant votre consentement.",
+    "toggleInfoBox": "Afficher/masquer les informations sur le stockage des cookies",
+    "title": "Panneau de gestion des cookies",
+    "cookieDetail": "Détail des cookies",
+    "ourSite": "sur notre site",
+    "newWindow": "(nouvelle fenêtre)",
+    "allowAll": "Tout accepter",
+    "denyAll": "Tout refuser",
+    "fallback": "est désactivé.",
+    "ads": {
+      "title": "Régies publicitaires",
+      "details": "Les régies publicitaires permettent de générer des revenus en commercialisant les espaces publicitaires du site."
+    },
+    "analytic": {
+      "title": "Mesure d'audience",
+      "details": "Les services de mesure d'audience permettent de générer des statistiques de fréquentation utiles à l'amélioration du site."
+    },
+    "social": {
+      "title": "Réseaux sociaux",
+      "details": "Les réseaux sociaux permettent d'améliorer la convivialité du site et aident à sa promotion via les partages."
+    },
+    "video": {
+      "title": "Vidéos",
+      "details": "Les services de partage de vidéo permettent d'enrichir le site de contenu multimédia et augmentent sa visibilité."
+    },
+    "comment": {
+      "title": "Commentaires",
+      "details": "Les gestionnaires de commentaires facilitent le dépôt de vos commentaires et luttent contre le spam."
+    },
+    "support": {
+      "title": "Support",
+      "details": "Les services de support vous permettent d'entrer en contact avec l'équipe du site et d'aider à son amélioration."
+    },
+    "api": {
+      "title": "APIs",
+      "details": "Les APIs permettent de charger des scripts : géolocalisation, moteurs de recherche, traductions, ..."
+    },
+    "other": {
+      "title": "Autre",
+      "details": "Services visant à afficher du contenu web."
+    }
+  };
+</script>
+  <script src="/csx/VendorJS/node_modules/tarteaucitronjs/tarteaucitron.js"></script>
+<script>tarteaucitron.init({
+"privacyUrl": "/mentions.html",
+"hashtag": "#tarteaucitron",
+"cookieName": "tarteaucitron",
+"orientation": "middle",
+"showAlertSmall": false,
+"showIcon": false,
+"iconPosition": "BottomRight",
+"cookieslist": true,
+"adblocker": false,
+"AcceptAllCta": true,
+"DenyAllCta": true,
+"highPrivacy": true,
+"handleBrowserDNTRequest": false,
+"removeCredit": false,
+"moreInfoLink": true,
+"useExternalCss": false,
+"readmoreLink": "",
+"mandatory": true,
+"closePopup": false,
+});
+
+        tarteaucitron.services.gajs_perso = {
+          'key': 'gajs_perso',
+          'type': 'analytic',
+          'name': 'Google Analytics (ga.js)',
+          'needConsent': true,
+          
+          'cookies': ['_ga','_gat','_gid','__utma','__utmb','__utmc','__utmt','__utmz','_gcl_au'],
+          'readmoreLink': 'https://policies.google.com/privacy',
+          
+          'js': function() {
+            'use strict';
+            tarteaucitron.user.gajsUa = "UA-27093437-37";
+window._gaq = window._gaq || [];
+        window._gaq.push(['_setAccount', tarteaucitron.user.gajsUa]);
+        if (timeExpire !== undefined) {
+            _gaq.push(['_setVisitorCookieTimeout', timeExpire]);
+        }
+
+        if (tarteaucitron.user.gajsAnonymizeIp) {
+            window._gaq.push(['_gat._anonymizeIp']);
+        }
+
+        if (tarteaucitron.user.gajsPageView) {
+            window._gaq.push(['_trackPageview, ' + tarteaucitron.user.gajsPageView]);
+        } else {
+            window._gaq.push(['_trackPageview']);
+        }
+
+        tarteaucitron.addScript('//www.google-analytics.com/ga.js', '', function () {
+            if (typeof tarteaucitron.user.gajsMore === 'function') {
+                tarteaucitron.user.gajsMore();
+            }
+        });
+          },
+          'fallback': function() {
+            'use strict';
+            
+          }
+        }
+        
+</script>
+
+<!--/htdig_noindex-->
+<!-- header.html -->
+  </head>
+
+  <body class=" home">
+  
+
+    <!--htdig_noindex-->
+  <a id="top"></a>
+  <!--/htdig_noindex--> 
+      <div class="home-slider">
+     
+<div class="cv8d-browsediv cv8d-browsediv-36 fullheight" id="cv8d-browsediv6abeb2631545f">
+  <div id="cv8d-slider6abeb2631545f" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+                <div class="item  active">
+        <img src="/csx/scripts/resizer.php?filename=SLIDES%2FImage%2F65%2F02%2F2sn5onqcl7x0&amp;mime=image%252Fpng&amp;originalname=Bandeau+site+internet+hiver.png" alt="">
+
+                  <div class="carousel-caption">
+            <p class="caption-item-title">Bienvenue sur le site de l'Espace Nordique Jurassien</p>            <p class="caption-item-caption">Toutes les activités nordique dans les Montagnes du Jura</p>                      </div>
+              </div>
+                      <div class="item ">
+        <img src="/csx/scripts/resizer.php?filename=SLIDES%2FImage%2Fbc%2F35%2Fkpb5jnlmfc8p&amp;mime=image%252Fpng&amp;originalname=Slide++%282%29.png" alt="">
+
+                  <div class="carousel-caption">
+            <p class="caption-item-title">Les missions</p>            <p class="caption-item-caption">En savoir plus sur l&#039;Espace Nordique Jurassien</p>                        <p class="caption-item-link">
+                                  <a href="/lassociation/presentation-enj.html">
+                                <span class="csico-label">En savoir plus</span>
+                </a>
+              </p>
+                      </div>
+              </div>
+                      <div class="item ">
+        <img src="/csx/scripts/resizer.php?filename=SLIDES%2FImage%2F29%2F07%2F38w5jnlmh4wf&amp;mime=image%252Fjpeg&amp;originalname=Ordinateur+portable+snowmap+slide.jpg" alt="">
+
+                  <div class="carousel-caption">
+            <p class="caption-item-title">La carte interactive Snowmap</p>            <p class="caption-item-caption">Préparez vos sorties grâce à la nouvelle carte interactive des sites nordiques des Montagnes du Jura !</p>                        <p class="caption-item-link">
+                                  <a href="/carte-interactive-snowmap.html">
+                                <span class="csico-label">En savoir plus</span>
+                </a>
+              </p>
+                      </div>
+              </div>
+                      <div class="item ">
+        <img src="/csx/scripts/resizer.php?filename=SLIDES%2FImage%2Fa8%2F5f%2Fb6ukl84si1o&amp;mime=image%252Fpng&amp;originalname=La+Halte+hiver.png" alt="">
+
+                  <div class="carousel-caption">
+            <p class="caption-item-title">La Halte</p>            <p class="caption-item-caption">Pause et repos en Montagnes du Jura</p>                        <p class="caption-item-link">
+                                  <a href="/la-halte.html">
+                                <span class="csico-label">En savoir plus</span>
+                </a>
+              </p>
+                      </div>
+              </div>
+                      <div class="item ">
+        <img src="/csx/scripts/resizer.php?filename=SLIDES%2FImage%2F9b%2Fcb%2F7va5jnlmbgo5&amp;mime=image%252Fjpeg&amp;originalname=Slide+-+Les+sites+nordiques+de+l%27arc+jurassien+franco-suisse.jpg" alt="">
+
+                  <div class="carousel-caption">
+            <p class="caption-item-title">Les sites nordiques de l'Arc Jurassien franco-suisse</p>            <p class="caption-item-caption">Retrouvez toutes les informations sur l&#039;offre du plus vaste domaine nordique d&#039;Europe  centrale.</p>                        <p class="caption-item-link">
+                                  <a href="/arc-jurassien.html">
+                                <span class="csico-label">En savoir plus</span>
+                </a>
+              </p>
+                      </div>
+              </div>
+          
+    </div>
+    <!-- /Wrapper for slides -->
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#cv8d-slider6abeb2631545f" data-slide-to="0" class="active"></li>
+            <li data-target="#cv8d-slider6abeb2631545f" data-slide-to="1"></li>
+            <li data-target="#cv8d-slider6abeb2631545f" data-slide-to="2"></li>
+            <li data-target="#cv8d-slider6abeb2631545f" data-slide-to="3"></li>
+            <li data-target="#cv8d-slider6abeb2631545f" data-slide-to="4"></li>
+    </ol>
+     <!-- Left and right controls -->
+    <a class="left carousel-control" href="#cv8d-slider6abeb2631545f" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only"></span>
+    </a>
+    <a class="right carousel-control" href="#cv8d-slider6abeb2631545f" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only"></span>
+    </a>
+  </div>
+</div>
+    </div>
+    
+    <!-- B. MAIN -->
+  
+  <div class="page-content">
+    <div class="container">
+      <!--htdig_noindex-->
+      <!-- chemin -->
+      <div class="row">
+        <div class="col-xs-12 cv3-chemin">
+         <ol class="breadcrumb hidden-xs" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  			<a itemprop="item" href="/home.html" title="Accueil">
+  				<span itemprop="name">Accueil</span>
+  			</a>
+  			<meta itemprop="position" content="1" />
+  		  </li>
+              		    		            </ol>
+        </div><!--/chemin -->
+      </div>
+      <!--/htdig_noindex-->
+
+      <!-- model de la rubrique ou template default.html -->
+      <!-- default.html -->
+<div class="row">
+  <!-- general_tpl : application:index-1col.html -->
+  <!--index-1col.html-->
+<!--/htdig_noindex-->
+<!-- B.2 CONTENU -->
+<article class="col-xs-12 cv3-main-contenu" role="main">
+	<div class="tzr-page-content cv3-col-contenu" id="tzr-page-content">
+						  
+		  		      <!-- cv3-home-blocs-pictosDEV.html -->
+  
+
+              
+                
+    <div class="home-blocks">
+    <div class="home-block-03">
+      <a href="/bulletin-neige.html" target="_self" title="Etat des pistes">
+        <span class="home-block-img">
+                     
+
+
+<picture class="image-jpeg"><!--[if IE 9]><video style="display: none;"><![endif]--><source media="(min-width: 1200px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2Fc9%2Faf%2Fg675sze6dg9p&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2825%29.jpg&amp;geometry=440x%5E&amp;gravity=Center&amp;crop=440x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2Fc9%2Faf%2Fg675sze6dg9p&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2825%29.jpg&amp;geometry=880x%5E&amp;gravity=Center&amp;crop=880x%2B0%2B0 2x"><source media="(min-width: 992px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2Fc9%2Faf%2Fg675sze6dg9p&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2825%29.jpg&amp;geometry=360x%5E&amp;gravity=Center&amp;crop=360x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2Fc9%2Faf%2Fg675sze6dg9p&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2825%29.jpg&amp;geometry=720x%5E&amp;gravity=Center&amp;crop=720x%2B0%2B0 2x"><source media="(min-width: 300px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2Fc9%2Faf%2Fg675sze6dg9p&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2825%29.jpg&amp;geometry=700x%5E&amp;gravity=Center&amp;crop=700x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2Fc9%2Faf%2Fg675sze6dg9p&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2825%29.jpg&amp;geometry=1400x%5E&amp;gravity=Center&amp;crop=1400x%2B0%2B0 2x"><!--[if IE 9]></video><![endif]--><img class="img-responsive" src="/csx/scripts/resizer.php?filename=T013%2Fimage%2Fc9%2Faf%2Fg675sze6dg9p&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2825%29.jpg&amp;geometry=700x"  alt="image" title="" ></picture>
+
+                
+          <span class="glyphicon enjico-flake" aria-hidden="true"></span>
+          <span class="home-block-title"><span class="glyphicon enjico-enj-arrow-right" aria-hidden="true"></span>Etat des pistes<span class="glyphicon enjico-enj-arrow-right" aria-hidden="true"></span></span>
+        </span>
+      </a>
+    </div><!--/new-block-01-->
+  
+    
+
+              
+                
+      <div class="home-block-04">
+      <a href="/webcams.html" target="_self" title="Webcams">
+        <span class="home-block-img">
+                     
+
+
+<picture class="image-jpeg"><!--[if IE 9]><video style="display: none;"><![endif]--><source media="(min-width: 1200px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F66%2Fa2%2Fmes5sze6k2pf&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%288%29.jpg&amp;geometry=440x%5E&amp;gravity=Center&amp;crop=440x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F66%2Fa2%2Fmes5sze6k2pf&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%288%29.jpg&amp;geometry=880x%5E&amp;gravity=Center&amp;crop=880x%2B0%2B0 2x"><source media="(min-width: 992px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F66%2Fa2%2Fmes5sze6k2pf&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%288%29.jpg&amp;geometry=360x%5E&amp;gravity=Center&amp;crop=360x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F66%2Fa2%2Fmes5sze6k2pf&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%288%29.jpg&amp;geometry=720x%5E&amp;gravity=Center&amp;crop=720x%2B0%2B0 2x"><source media="(min-width: 300px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F66%2Fa2%2Fmes5sze6k2pf&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%288%29.jpg&amp;geometry=700x%5E&amp;gravity=Center&amp;crop=700x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F66%2Fa2%2Fmes5sze6k2pf&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%288%29.jpg&amp;geometry=1400x%5E&amp;gravity=Center&amp;crop=1400x%2B0%2B0 2x"><!--[if IE 9]></video><![endif]--><img class="img-responsive" src="/csx/scripts/resizer.php?filename=T013%2Fimage%2F66%2Fa2%2Fmes5sze6k2pf&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%288%29.jpg&amp;geometry=700x"  alt="image" title="" ></picture>
+
+                
+          <span class="glyphicon enjico-webcam" aria-hidden="true"></span>
+          <span class="home-block-title"><span class="glyphicon enjico-webcamenjico-enj-arrow-right" aria-hidden="true"></span>Webcams<span class="glyphicon enjico-enj-arrow-right" aria-hidden="true"></span></span>
+        </span>
+      </a>
+    </div><!--/new-block-02-->
+    
+
+              
+                
+      <div class="home-block-02">
+      <a href="https://pass.espacenordiquejurassien.com/" target="_blank" title="Vente de pass">
+        <span class="home-block-img">
+                     
+
+
+<picture class="image-jpeg"><!--[if IE 9]><video style="display: none;"><![endif]--><source media="(min-width: 1200px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F0a%2F34%2F1ii5sze6hitb&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2814%29.JPG&amp;geometry=440x%5E&amp;gravity=Center&amp;crop=440x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F0a%2F34%2F1ii5sze6hitb&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2814%29.JPG&amp;geometry=880x%5E&amp;gravity=Center&amp;crop=880x%2B0%2B0 2x"><source media="(min-width: 992px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F0a%2F34%2F1ii5sze6hitb&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2814%29.JPG&amp;geometry=360x%5E&amp;gravity=Center&amp;crop=360x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F0a%2F34%2F1ii5sze6hitb&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2814%29.JPG&amp;geometry=720x%5E&amp;gravity=Center&amp;crop=720x%2B0%2B0 2x"><source media="(min-width: 300px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F0a%2F34%2F1ii5sze6hitb&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2814%29.JPG&amp;geometry=700x%5E&amp;gravity=Center&amp;crop=700x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F0a%2F34%2F1ii5sze6hitb&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2814%29.JPG&amp;geometry=1400x%5E&amp;gravity=Center&amp;crop=1400x%2B0%2B0 2x"><!--[if IE 9]></video><![endif]--><img class="img-responsive" src="/csx/scripts/resizer.php?filename=T013%2Fimage%2F0a%2F34%2F1ii5sze6hitb&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2814%29.JPG&amp;geometry=700x"  alt="image" title="" ></picture>
+
+                
+          <span class="glyphicon enjico-shopping-cart" aria-hidden="true"></span>
+        </span>
+        <span class="home-block-content">
+          <span class="home-block-title">Vente de pass</span>
+          <span class="home-block-txt">Pratique, facile et rapide ! L'accès aux pistes en trois clics est possible grâce a notre vente en ligne des pass de ski.</span>
+          <span class="glyphicon enjico-enj-arrow-double-left" aria-hidden="true"></span>
+        </span>
+      </a>
+    </div><!--/new-block-03-->
+  </div><!--/home-blocks - ligne 1   -->
+
+    
+
+              
+                
+    <div class="home-blocks"> 
+    <div class="home-block-01">
+      <a href="https://snowmap.espacenordiquejurassien.com/" target="_blank" title="Carte interactive">
+        <span class="home-block-content">
+          <span class="home-block-title">Carte interactive</span>
+          <span class="home-block-txt">Découvrez le nouvel outil cartographique regroupant toutes les pistes ski et raquettes du Massif du Jura</span>
+          <span class="glyphicon enjico-geotrek" aria-hidden="true"></span>
+        </span>
+        <span class="home-block-img">
+                     
+
+
+<picture class="image-jpeg"><!--[if IE 9]><video style="display: none;"><![endif]--><source media="(min-width: 1200px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2Fa6%2F96%2Fguy5sze6vwfr&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2815%29.JPG&amp;geometry=440x%5E&amp;gravity=Center&amp;crop=440x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2Fa6%2F96%2Fguy5sze6vwfr&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2815%29.JPG&amp;geometry=880x%5E&amp;gravity=Center&amp;crop=880x%2B0%2B0 2x"><source media="(min-width: 992px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2Fa6%2F96%2Fguy5sze6vwfr&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2815%29.JPG&amp;geometry=360x%5E&amp;gravity=Center&amp;crop=360x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2Fa6%2F96%2Fguy5sze6vwfr&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2815%29.JPG&amp;geometry=720x%5E&amp;gravity=Center&amp;crop=720x%2B0%2B0 2x"><source media="(min-width: 300px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2Fa6%2F96%2Fguy5sze6vwfr&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2815%29.JPG&amp;geometry=700x%5E&amp;gravity=Center&amp;crop=700x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2Fa6%2F96%2Fguy5sze6vwfr&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2815%29.JPG&amp;geometry=1400x%5E&amp;gravity=Center&amp;crop=1400x%2B0%2B0 2x"><!--[if IE 9]></video><![endif]--><img class="img-responsive" src="/csx/scripts/resizer.php?filename=T013%2Fimage%2Fa6%2F96%2Fguy5sze6vwfr&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2815%29.JPG&amp;geometry=700x"  alt="image" title="" ></picture>
+
+                
+        </span> 
+      </a>
+    </div><!--/home-block-05-->
+    
+
+              
+                
+      <div class="home-block-03">
+      <a href="/les-domaines-nordiques.html" target="_self" title="Où pratiquer ? ">
+        <span class="home-block-img">
+                     
+
+
+<picture class="image-png"><!--[if IE 9]><video style="display: none;"><![endif]--><source media="(min-width: 1200px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F3d%2F8c%2Fiqu5sze6yzvj&amp;mime=image%252Fpng&amp;originalname=TEST+CARTE.png&amp;geometry=440x%5E&amp;gravity=Center&amp;crop=440x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F3d%2F8c%2Fiqu5sze6yzvj&amp;mime=image%252Fpng&amp;originalname=TEST+CARTE.png&amp;geometry=880x%5E&amp;gravity=Center&amp;crop=880x%2B0%2B0 2x"><source media="(min-width: 992px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F3d%2F8c%2Fiqu5sze6yzvj&amp;mime=image%252Fpng&amp;originalname=TEST+CARTE.png&amp;geometry=360x%5E&amp;gravity=Center&amp;crop=360x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F3d%2F8c%2Fiqu5sze6yzvj&amp;mime=image%252Fpng&amp;originalname=TEST+CARTE.png&amp;geometry=720x%5E&amp;gravity=Center&amp;crop=720x%2B0%2B0 2x"><source media="(min-width: 300px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F3d%2F8c%2Fiqu5sze6yzvj&amp;mime=image%252Fpng&amp;originalname=TEST+CARTE.png&amp;geometry=700x%5E&amp;gravity=Center&amp;crop=700x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F3d%2F8c%2Fiqu5sze6yzvj&amp;mime=image%252Fpng&amp;originalname=TEST+CARTE.png&amp;geometry=1400x%5E&amp;gravity=Center&amp;crop=1400x%2B0%2B0 2x"><!--[if IE 9]></video><![endif]--><img class="img-responsive" src="/csx/scripts/resizer.php?filename=T013%2Fimage%2F3d%2F8c%2Fiqu5sze6yzvj&amp;mime=image%252Fpng&amp;originalname=TEST+CARTE.png&amp;geometry=700x"  alt="image" title="" ></picture>
+
+                
+          <span class="glyphicon enjico-enj-logo-puce" aria-hidden="true"></span>
+          <span class="home-block-title"><span class="glyphicon enjico-enj-arrow-right" aria-hidden="true"></span>Où pratiquer ? <span class="glyphicon enjico-enj-arrow-right" aria-hidden="true"></span></span>
+        </span>
+      </a>
+    </div><!--/new-block-01-->
+    
+
+              
+                
+      <div class="home-block-03">
+      <a href="https://pass.espacenordiquejurassien.com/home-pass-saison" target="_blank" title="Achetez votre Pass saison MDJ dès le 9 octobre 2026">
+        <span class="home-block-img">
+                     
+
+
+<picture class="image-jpeg"><!--[if IE 9]><video style="display: none;"><![endif]--><source media="(min-width: 1200px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F31%2Fa4%2Fmlfkwc7x4l8&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2822%29.jpg&amp;geometry=440x%5E&amp;gravity=Center&amp;crop=440x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F31%2Fa4%2Fmlfkwc7x4l8&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2822%29.jpg&amp;geometry=880x%5E&amp;gravity=Center&amp;crop=880x%2B0%2B0 2x"><source media="(min-width: 992px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F31%2Fa4%2Fmlfkwc7x4l8&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2822%29.jpg&amp;geometry=360x%5E&amp;gravity=Center&amp;crop=360x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F31%2Fa4%2Fmlfkwc7x4l8&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2822%29.jpg&amp;geometry=720x%5E&amp;gravity=Center&amp;crop=720x%2B0%2B0 2x"><source media="(min-width: 300px)" srcset="/csx/scripts/resizer.php?filename=T013%2Fimage%2F31%2Fa4%2Fmlfkwc7x4l8&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2822%29.jpg&amp;geometry=700x%5E&amp;gravity=Center&amp;crop=700x%2B0%2B0 1x, /csx/scripts/resizer.php?filename=T013%2Fimage%2F31%2Fa4%2Fmlfkwc7x4l8&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2822%29.jpg&amp;geometry=1400x%5E&amp;gravity=Center&amp;crop=1400x%2B0%2B0 2x"><!--[if IE 9]></video><![endif]--><img class="img-responsive" src="/csx/scripts/resizer.php?filename=T013%2Fimage%2F31%2Fa4%2Fmlfkwc7x4l8&amp;mime=image%252Fjpeg&amp;originalname=J.Carrot+-+ENJ+2026+%2822%29.jpg&amp;geometry=700x"  alt="image" title="" ></picture>
+
+                
+          <span class="glyphicon enjico-enj-bullet-01" aria-hidden="true"></span>
+          <span class="home-block-title"><span class="glyphicon enjico-enj-arrow-right" aria-hidden="true"></span>Achetez votre Pass saison MDJ dès le 9 octobre 2026<span class="glyphicon enjico-enj-arrow-right" aria-hidden="true"></span></span>
+        </span>
+      </a>
+    </div><!--/new-block-01-->
+  </div> <!-- /home-blocks - ligne 2 -->
+  <!-- /cv3-home-blocs-pictosDEV.html -->
+ 		              <div class="home-media-actu">
+
+            <div class="home-media">
+        <ul>
+                    <li>
+            <a href="/csx/scripts/resizer.php?filename=T011%2Fmedia%2Fd5%2Faa%2Fbo5yzoel2n4&amp;mime=image%252Fjpeg&amp;originalname=ski+2021+montagnes+du+jura_Jack+Carrot+%287%29.jpg&geometry=1200x%3E" class="nyroModal" data-gallery="home-media" data-title="">
+              <img class="img-responsive" src="/csx/scripts/resizer.php?filename=T011%2Fmedia%2Fd5%2Faa%2Fbo5yzoel2n4&amp;mime=image%252Fjpeg&amp;originalname=ski+2021+montagnes+du+jura_Jack+Carrot+%287%29.jpg&geometry=360x%3E" alt="">
+            </a>
+          </li>
+                    <li>
+            <a href="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F6d%2F19%2Fogx5yohjbhio&amp;mime=image%252Fjpeg&amp;originalname=DSCN3595.JPG&geometry=1200x%3E" class="nyroModal" data-gallery="home-media" data-title="">
+              <img class="img-responsive" src="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F6d%2F19%2Fogx5yohjbhio&amp;mime=image%252Fjpeg&amp;originalname=DSCN3595.JPG&geometry=360x%3E" alt="">
+            </a>
+          </li>
+                    <li>
+            <a href="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F6b%2F81%2Fj9p620go9s09&amp;mime=image%252Fjpeg&amp;originalname=%C2%A9CCLMHD+7.jpg&geometry=1200x%3E" class="nyroModal" data-gallery="home-media" data-title="">
+              <img class="img-responsive" src="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F6b%2F81%2Fj9p620go9s09&amp;mime=image%252Fjpeg&amp;originalname=%C2%A9CCLMHD+7.jpg&geometry=360x%3E" alt="">
+            </a>
+          </li>
+                    <li>
+            <a href="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F5f%2F50%2Fj9i620gr1l8s&amp;mime=image%252Fjpeg&amp;originalname=%C2%A9+ENJ+%2811%29.JPEG&geometry=1200x%3E" class="nyroModal" data-gallery="home-media" data-title="">
+              <img class="img-responsive" src="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F5f%2F50%2Fj9i620gr1l8s&amp;mime=image%252Fjpeg&amp;originalname=%C2%A9+ENJ+%2811%29.JPEG&geometry=360x%3E" alt="">
+            </a>
+          </li>
+                    <li>
+            <a href="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F4d%2F04%2Fmzw5yoiyhr23&amp;mime=image%252Fjpeg&amp;originalname=Espace+ludique+041.jpg&geometry=1200x%3E" class="nyroModal" data-gallery="home-media" data-title="">
+              <img class="img-responsive" src="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F4d%2F04%2Fmzw5yoiyhr23&amp;mime=image%252Fjpeg&amp;originalname=Espace+ludique+041.jpg&geometry=360x%3E" alt="">
+            </a>
+          </li>
+                    <li>
+            <a href="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F8f%2Fc2%2Fm9261suiyjix&amp;mime=image%252Fjpeg&amp;originalname=F%C3%AAte+Nordique+Ain+-+Plans+d%27Hotonnes+%C2%A9ENJ+%2842%29.jpg&geometry=1200x%3E" class="nyroModal" data-gallery="home-media" data-title="">
+              <img class="img-responsive" src="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F8f%2Fc2%2Fm9261suiyjix&amp;mime=image%252Fjpeg&amp;originalname=F%C3%AAte+Nordique+Ain+-+Plans+d%27Hotonnes+%C2%A9ENJ+%2842%29.jpg&geometry=360x%3E" alt="">
+            </a>
+          </li>
+                    <li>
+            <a href="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F37%2F64%2Ffjb5yojyhn2a&amp;mime=image%252Fjpeg&amp;originalname=DSCN8676.JPG&geometry=1200x%3E" class="nyroModal" data-gallery="home-media" data-title="">
+              <img class="img-responsive" src="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F37%2F64%2Ffjb5yojyhn2a&amp;mime=image%252Fjpeg&amp;originalname=DSCN8676.JPG&geometry=360x%3E" alt="">
+            </a>
+          </li>
+                    <li>
+            <a href="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F11%2F20%2F1au620gvraha&amp;mime=image%252Fjpeg&amp;originalname=%C2%A9+ENJ+%2816%29.jpg&geometry=1200x%3E" class="nyroModal" data-gallery="home-media" data-title="">
+              <img class="img-responsive" src="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F11%2F20%2F1au620gvraha&amp;mime=image%252Fjpeg&amp;originalname=%C2%A9+ENJ+%2816%29.jpg&geometry=360x%3E" alt="">
+            </a>
+          </li>
+                    <li>
+            <a href="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F71%2Fbd%2Flwd5ymwriyv9&amp;mime=image%252Fjpeg&amp;originalname=Fete+nordique+Mijoux+2023%C2%A9+G+Meunier+ENJ+%2823%29.JPG&geometry=1200x%3E" class="nyroModal" data-gallery="home-media" data-title="">
+              <img class="img-responsive" src="/csx/scripts/resizer.php?filename=T011%2Fmedia%2F71%2Fbd%2Flwd5ymwriyv9&amp;mime=image%252Fjpeg&amp;originalname=Fete+nordique+Mijoux+2023%C2%A9+G+Meunier+ENJ+%2823%29.JPG&geometry=360x%3E" alt="">
+            </a>
+          </li>
+                  </ul>
+        <div class="home-media-all"><a href="/photos-videos.html">Toutes nos images</a></div>
+      </div>
+
+      <div class="home-actus">
+        <div id="cv3-news" class="cv3-news">
+          <h4>Actualités</h4>
+          <div id="carousel-actus" class="carousel slide" data-ride="carousel">
+
+	    	    
+            <div class="carousel-inner" role="listbox">
+
+              
+            </div><!-- /carousel-inner -->
+	              </div><!-- /carousel-actus -->
+          <div class="cv3-news-all"><a href="/actualites.html">Toutes les actualités</a></div>
+        </div><!-- /cv3-news -->
+      </div><!-- /home-actus -->
+  </div><!-- /home-media-actu -->
+
+  		  
+		  
+	      <!--viewsection.html-->
+
+
+
+
+
+
+    
+ 
+
+
+    
+ 
+<header class="cv3-titrepage clearfix">
+ <h1>Découvrez les richesses de notre territoire</h1></header>
+
+			</div>
+</article>
+</div>
+
+
+  	    
+    </div>
+  </div>
+  
+  <!--htdig_noindex-->
+    <!-- C. basdepage  -->
+  	
+    <footer class="footer hidden-print">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <div class="navbar-brand-bottom">
+  <a href="/home.html" title="Espace Nordique Jurassien">
+    <span class="logo"><img class="img-responsive" src="/images/enj-logo-vert.svg" alt="Espace Nordique Jurassien"></span>
+  </a>
+  <a href="https://www.montagnes-du-jura.fr" title="Montagnes du Jura" target="_blank">
+    <span class="logo-bis"><img class="img-responsive" src="/images/by-montagne-du-jura-white.svg" alt="Espace Nordique Jurassien"></span>
+  </a>
+</div>
+
+            <!--cv3-infosite.html-->
+<div id="cv3-infosite" class="cv3-block">
+  <a class="link_toggle" data-toggle="collapse" data-parent="#cv3-infosite" href="#infosite6abeb263189d9">Contact</a>
+  <h4>Contact</h4>
+  <div id="infosite6abeb263189d9" class="collapse">
+    <div class="middle">
+      <p class="bodytext">
+  <b>Espace Nordique Jurassien</b><br />
+  28 rue Baronne Delort - 39300 Champagnole<br />
+  <a class="tzr-internallink"  href="/contact.html">Contact</a>
+</p>
+    </div>
+    <div class="link"><a href="/mentions_legales.html"></a></div>
+  </div><!-- fin infosite -->
+</div><!-- fin cv3-infosite -->            <div class="soutient">
+  <h4>Ils nous soutiennent</h4>
+  <span class="logo"><a href="https://www.ca-franchecomte.fr/" target="_blank" title="Credit agricole"><img class="img-responsive" src="/images/illustrations/credit-agricole.png" alt="Credit agricole"></a></span>
+</div>
+
+
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <!--cv3-partner.html-->
+<div id="cv3-partner" class="cv3-block">
+  <a class="link_toggle" data-toggle="collapse" data-parent="#cv3-partner" href="#partner6abeb26318e98">Nos partenaires</a>
+  <h4>Nos partenaires</h4>
+  <div id="partner6abeb26318e98" class="collapse">
+    <div class="middle">
+      <div class="partner"><h5>ANCT</h5><div class="logo"><span>
+                      <a href="https://agence-cohesion-territoires.gouv.fr/" target="_blank" title=""><img src="/csx/scripts/resizer.php?filename=T015%2FImage%2F2a%2Ff3%2F1uo5k6yep19t&amp;mime=image%252Fpng&amp;originalname=anct.png&geometry=220x%3E" alt=""></a>
+                  </span></div></div><div class="partner"><h5>Région Bourgogne Franche-Comté</h5><div class="logo"><span>
+                      <a href="https://www.bourgognefranchecomte.fr/" target="_blank" title=""><img src="/csx/scripts/resizer.php?filename=T015%2FImage%2Fc0%2Fc8%2Fhvd5k6yffpso&amp;mime=image%252Fjpeg&amp;originalname=Logo-regionCMJN.jpg&geometry=220x%3E" alt=""></a>
+                  </span></div></div><div class="partner"><h5>Région Auvergne Rhônes-Alpes</h5><div class="logo"><span>
+                      <a href="https://www.auvergnerhonealpes.fr/" target="_blank" title=""><img src="/csx/scripts/resizer.php?filename=T015%2FImage%2Fc8%2F21%2Flug5k6yfye9q&amp;mime=image%252Fpng&amp;originalname=1394_422_Logo-partenaire-generique-2017.png&geometry=220x%3E" alt=""></a>
+                  </span></div></div><div class="partner"><h5>Département de l'Ain</h5><div class="logo"><span>
+                      <a href="https://www.ain.fr/" target="_self" title=""><img src="/csx/scripts/resizer.php?filename=T015%2FImage%2Fa0%2F94%2Fkjrk0p1nm5d&amp;mime=image%252Fpng&amp;originalname=logo-ain-2018-300x155.png&geometry=220x%3E" alt=""></a>
+                  </span></div></div><div class="partner"><h5>Département du Doubs</h5><div class="logo"><span>
+                      <a href="https://www.doubs.fr/" target="_blank" title=""><img src="/csx/scripts/resizer.php?filename=T015%2FImage%2F74%2F41%2Fl9g5k6ykcsi8&amp;mime=image%252Fjpeg&amp;originalname=LOGO_dep25_2014_rvb.jpg&geometry=220x%3E" alt=""></a>
+                  </span></div></div><div class="partner"><h5>Département du Jura</h5><div class="logo"><span>
+                      <a href="http://www.jura.fr/" target="_blank" title=""><img src="/csx/scripts/resizer.php?filename=T015%2FImage%2F5a%2F0e%2F7ka5k6yl8gw2&amp;mime=image%252Fjpeg&amp;originalname=CD39_logo_2015_NB.jpg&geometry=220x%3E" alt=""></a>
+                  </span></div></div><div class="partner"><h5>FEDER</h5><div class="logo"><span>
+                      <a href="#" target="_self" title=""><img src="/csx/scripts/resizer.php?filename=T015%2FImage%2F71%2F33%2F2ik5j9qnntd9&amp;mime=image%252Fjpeg&amp;originalname=feder-europe.jpg&geometry=220x%3E" alt=""></a>
+                  </span></div></div><div class="partner"><h5>Montagnes du Jura</h5><div class="logo"><span>
+                      <a href="https://www.montagnes-du-jura.fr/" target="_self" title=""><img src="/csx/scripts/resizer.php?filename=T015%2FImage%2Feb%2F0d%2F8k669d4rbytj&amp;mime=image%252Fpng&amp;originalname=montagnes-du-jura.png&geometry=220x%3E" alt=""></a>
+                  </span></div></div><div class="partner"><h5>ICI Besançon</h5><div class="logo"><span>
+                      <a href="https://www.francebleu.fr/radio/besancon" target="_self" title=""><img src="/csx/scripts/resizer.php?filename=T015%2FImage%2F2b%2Fbd%2Fie569d43waht&amp;mime=image%252Fpng&amp;originalname=ici-radio.png&geometry=220x%3E" alt=""></a>
+                  </span></div></div><div class="partner"><h5>Banque des territoires</h5><div class="logo"><span>
+                      <a href="https://www.banquedesterritoires.fr/" target="_self" title=""><img src="/csx/scripts/resizer.php?filename=T015%2FImage%2Fbb%2F9c%2Fgms69d448y6h&amp;mime=image%252Fpng&amp;originalname=banque+des+territoires.png&geometry=220x%3E" alt=""></a>
+                  </span></div></div></div></div><!-- partner --></div><!-- fin cv3-partner -->
+          </div>
+          <div class="clearfix hidden-lg"></div>
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <!--cv3-navbas.html-->
+<nav class="cv3-navbas cv3-block">
+	<h4>Liens utiles</h4>
+	<ul>
+		<li><a href="#tarteaucitron">Gestion des cookies</a></li>
+													<li>
+				<a href="/nos-liens.html" title="Nos liens">Nos liens</a>
+							</li>
+																				<li>
+				<a href="/contact.html" title="Contact - coordonnées">Contact - coordonnées</a>
+							</li>
+																				<li>
+				<a href="/mentions.html" title="Mentions légales - Copyright">Mentions légales - Copyright</a>
+							</li>
+																				<li>
+				<a href="/plan-du-site.html" title="Plan du site">Plan du site</a>
+							</li>
+										</ul>
+								</nav> 
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <div class="cv3-footer-links">
+  <h4>Liens rapides</h4>
+  <ul>
+          		    <li><a href="/espace-pro.html">Espace pro</a></li>
+      		      		      		  </ul>
+</div>
+            <!--cv3-recherche.html-->
+<div id="cv3-recherche" class="cv3-block">
+  <a class="link_toggle" data-toggle="collapse" data-parent="#cv3-recherche" href="#recherche6abeb26319588">Recherche</a>
+  <h4>Recherche</h4>
+  <div id="recherche6abeb26319588" class="collapse">
+    <div class="middle">
+    <p id="infonewsletter2">Entrez les mots de votre recherche dans la zone ci-dessous.</p>
+        <form name="frmHtdig" method="post" action="/index.php?" role="search">
+      <input type="hidden" name="config" value="enj">
+      <input type="hidden" name="alias" value="search">
+      <input type="hidden" name="page" value="1">
+      <input type="hidden" name="insidefile" value="search.html">
+               
+      <input type="text" name="words" placeholder="Recherchez sur le site..."/> 
+      <input class="btn" type="submit" name="button" value="Ok" />
+    </form>
+    </div>
+  </div><!-- fin recherche -->
+</div><!-- fin cv3-recherche -->            <!--cv3-social.html-->
+<div class="cv3-social">
+      <ul>
+                                        <li><a href="https://www.facebook.com/espacenordicjurassien/" target="_blank" title="Voir la page de ENJ sur facebook"><span class="glyphicon csico-facebook"></span><span class="csico-label">facebook</span></a></li>
+                                                                                                                                                                                              <li><a href="https://www.youtube.com/channel/UCYO5MDP8ejgK_6YC-Xw3lFw" target="_blank" title="Voir la page de ENJ sur youtube"><span class="glyphicon csico-youtube"></span><span class="csico-label">youtube</span></a></li>
+                                              		
+		<li><a href="https://www.linkedin.com/company/espace-nordique-jurassien/posts/?feedView=all" target="_blank" title="Voir la page de ENJ sur linkedin"><span class="glyphicon csico-linkedin"></span><span class="csico-label">linkedin</span></a></li>
+
+      
+
+              </ul>
+</div><!-- fin cv3-social -->
+          </div>
+  
+        </div>
+      </div>
+    </footer>
+  	
+  
+          <header class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <!--cv3-logo.html-->
+<div class="navbar-brand" role="banner">
+  <a href="/home.html" title="Espace Nordique Jurassien">
+  <span class="logo visible-xs"><img class="img-responsive" src="/images/enj-logo-xs.svg" alt="Espace Nordique Jurassien"></span>
+  <span class="logo visible-sm"><img class="img-responsive" src="/images/enj-logo-sm.svg" alt="Espace Nordique Jurassien"></span>
+  <span class="logo visible-md"><img class="img-responsive" src="/images/enj-logo-lg.svg" alt="Espace Nordique Jurassien"></span>
+  <span class="logo visible-lg"><img class="img-responsive" src="/images/enj-logo-lg.svg" alt="Espace Nordique Jurassien"></span>
+  <span class="slogan">Espace Nordique Jurassien</span></a>
+</div>
+<div class="navbar-brand espacepro" role="banner">
+  <a href="/home.html" title="Espace Nordique Jurassien">
+  <span class="logo visible-xs"><img class="img-responsive" src="/images/enj-logo-xs.svg" alt="Espace Nordique Jurassien"></span>
+  <span class="logo visible-sm"><img class="img-responsive" src="/images/enj-pro-logo-sm.svg" alt="Espace Nordique Jurassien"></span>
+  <span class="logo visible-md"><img class="img-responsive" src="/images/enj-pro-logo-lg.svg" alt="Espace Nordique Jurassien"></span>
+  <span class="logo visible-lg"><img class="img-responsive" src="/images/enj-pro-logo-lg.svg" alt="Espace Nordique Jurassien"></span>
+  <span class="slogan">Espace Nordique Jurassien</span></a>
+</div>
+
+          <div class="navbar-brand-bis">
+  <span class="logo"><img class="img-responsive" src="/images/by-montagne-du-jura.svg" alt="Espace Nordique Jurassien"></span>
+</div>
+<div class="navbar-brand-bis espacepro">
+  <span class="logo"><img class="img-responsive" src="/images/espace-pro.svg" alt="Espace Nordique Jurassien"></span>
+</div>
+
+          <ul class="header-tools">
+                          <li>
+                <a href="/vente-en-ligne-picto.html" title="Vente en ligne">
+                  <span class="glyphicon enjico-shopping-cart"></span>
+                  <span class="enjico-label">Vente en ligne</span>
+                </a>
+            </li>
+                          <li>
+                <a href="/webcams.html" title="Webcams">
+                  <span class="glyphicon enjico-webcam"></span>
+                  <span class="enjico-label">Webcams</span>
+                </a>
+            </li>
+                          <li>
+                <a href="/bulletin-neige.html" title="Etat des pistes">
+                  <span class="glyphicon enjico-flake"></span>
+                  <span class="enjico-label">Etat des pistes</span>
+                </a>
+            </li>
+                          <li>
+                <a href="/carte-interactive-snowmap.html" title="Carte interactive">
+                  <span class="glyphicon enjico-geotrek"></span>
+                  <span class="enjico-label">Carte interactive</span>
+                </a>
+            </li>
+                      </ul>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--menu_deroule.html-->
+
+<nav class="collapse navbar-collapse bs-navbar-collapse">
+
+<!-- Menu Déroulant -->
+<ul class="nav navbar-nav">
+  <!-- 1 / 1 /index.php? / alias=infos-pratiques /  --><li class=""><a  title="Infos pratiques " href="/infos-pratiques.html">Infos pratiques </a></li>
+  <!-- 1 / 1 /index.php? / alias=activites /  --><li class=""><a  title="Activités" href="/activites.html">Activités</a></li>
+  <!-- 1 / 1 /index.php? / alias=les-domaines-nordiques /  --><li class=""><a  title="Les domaines nordiques du Massif du  Jura" href="/les-domaines-nordiques.html">Les domaines nordiques du Massif du  Jura</a></li>
+  <!-- 1 /  /index.php? / alias=la-halte /  --><li class=""><a  title="La Halte, pause et repos en Montagnes du Jura" href="/la-halte.html">La Halte, pause et repos en Montagnes du Jura</a></li></ul>
+<!--/ Menu Déroulant -->
+
+</nav>
+                  </div>
+      </header>
+      
+    <div id="scrollToTop"><a href="#"><span class="glyphicon enjico-arrow-up"></span></a></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">&nbsp;</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal pour le Viewer PDF -->
+  <div id="cs-default-dialog" class="modal ui-draggable" aria-hidden="true" role="dialog" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header ui-draggable-handle" style="cursor: move;">
+  	      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+  	      <h4 class="modal-title">&nbsp;</h4>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+  
+    <script>TZR.referer('home','FR');</script>
+
+    <!--/htdig_noindex-->
+      <script>
+(tarteaucitron.job = tarteaucitron.job || []).push("youtube");
+tarteaucitron.user.addthisPubId = " ra-5d8e0e2dc78a3a35";
+(tarteaucitron.job = tarteaucitron.job || []).push("addthis");
+(tarteaucitron.job = tarteaucitron.job || []).push("vimeo");
+tarteaucitron.user.gtagUa = "G-MKM3VR6GFJ";
+(tarteaucitron.job = tarteaucitron.job || []).push("gtag");
+(tarteaucitron.job = tarteaucitron.job || []).push("dailymotion");
+(tarteaucitron.job = tarteaucitron.job || []).push("gajs_perso");
+</script>
+    </body>
+</html>
