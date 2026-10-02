@@ -35,7 +35,14 @@ function bestCard(r, origin) {
 
 function row(r, i) {
   const lvl = levelOf(r.score);
-  const meta = [r.station.country === 'CH' ? `${flag('CH')} ${r.station.region}` : r.station.region, `${r.station.alt} m`, km(r)].join(' · ');
+  const meta = [
+    r.station.country === 'CH' ? `${flag('CH')} ${r.station.region}` : r.station.region,
+    `${r.station.alt} m`,
+    km(r),
+    r.wx ? `${fmtTemp(r.wx.tMinNight)} cette nuit` : null
+  ]
+    .filter(Boolean)
+    .join(' · ');
   const b = r.bulletin;
   const status = r.closed ? 'Fermé' : b?.live && b.kmTotal ? `${Math.round(b.kmOpen || 0)} km` : `${r.depth} cm`;
   return `<div class="rank-row ${r.fav ? 'is-fav' : ''}" data-station="${esc(r.station.id)}" role="button" tabindex="0" aria-label="${esc(r.station.name)}, note ${r.score ?? 'inconnue'}">

@@ -2,6 +2,7 @@
 import { $, esc } from '../core/utils.js';
 import { openSheet } from '../ui/dialog.js';
 import { fmtTemp } from '../core/score.js';
+import { waxFor } from '../core/wax.js';
 import { weatherLabel } from '../services/weather.js';
 import { durationLabel } from '../services/routes.js';
 import { directionsUrl, ring, shortDate, favButton } from './common.js';
@@ -24,6 +25,19 @@ function webcamBlock(s, page) {
 }
 
 const tile = (label, value, note) => `<div class="tile"><span>${esc(label)}</span><strong>${esc(value)}</strong>${note ? `<small>${esc(note)}</small>` : ''}</div>`;
+
+function waxCard(label, tempC) {
+  const w = waxFor(tempC);
+  if (!w) return `<div class="wax-card wax-card--empty"><span>${esc(label)}</span><strong>—</strong></div>`;
+  return `<div class="wax-card" style="--c:${w.color}"><span class="wax-card__swatch" aria-hidden="true"></span><div class="wax-card__text"><span>${esc(label)} · ${esc(fmtTemp(w.temp))}</span><strong>${esc(w.name)}</strong><small>${esc(w.note)}</small></div></div>`;
+}
+
+function waxBlock(wx) {
+  return `<section class="section"><header class="section__head"><h3 class="section__title">Fart conseillé</h3><span class="card__sub">repère, à confirmer sur place</span></header>
+    <div class="wax-cards">${waxCard('Départ matinal', wx.tMinNight)}${waxCard('Après-midi', wx.tMaxToday)}</div>
+    <p class="card__sub wax-caveat">Indication basée sur la seule température : le choix réel dépend aussi de l'état de la neige (fraîche, transformée, humide) — vérifiez sur place ou avec le bulletin des pisteurs.</p>
+  </section>`;
+}
 
 function bulletinBlock(r) {
   const b = r.bulletin;
@@ -98,6 +112,7 @@ export function openStation(id) {
     .join('');
   $('#stationContent').innerHTML = `${head}
     <div class="tiles section">${tiles.join('')}</div>
+    ${waxBlock(wx)}
     ${webcamBlock(s, st.webcamsPage)}
     ${bulletinBlock(r)}
     <section class="section"><header class="section__head"><h3 class="section__title">5 prochains jours</h3><span class="card__sub">à ${s.alt} m</span></header><div class="days">${days}</div></section>

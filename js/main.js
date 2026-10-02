@@ -27,7 +27,7 @@ const state = {
   weatherAt: null,
   routes: {},
   origin: null,
-  prefs: { origin: 'villedupont', view: 'list', country: 'all', travel: 0, ...readJSON(PREFS, {}) }
+  prefs: { origin: 'villedupont', view: 'list', country: 'all', travel: 0, sort: 'score', ...readJSON(PREFS, {}) }
 };
 // Ancien point de départ (Besançon) remplacé par Boussières
 if (state.prefs.origin === 'besancon') state.prefs.origin = 'boussieres';
@@ -35,9 +35,18 @@ if (state.prefs.origin === 'besancon') state.prefs.origin = 'boussieres';
 const savePrefs = () => write(PREFS, JSON.stringify(state.prefs));
 
 /**
- * Lignes du classement triées par note ; à niveau égal (écart ≤ 3 points),
- * les favoris passent devant, puis le trajet le plus court.
+ * Lignes du classement. Par défaut, triées par note ; à niveau égal (écart
+ * ≤ 3 points), les favoris passent devant, puis le trajet le plus court.
+ * Deux autres tris sont disponibles (state.prefs.sort) : par trajet le plus
+ * court, ou par nuit la plus froide (meilleur regel) — la note reste le
+ * critère de repli en cas d'égalité pour ces deux modes.
  */
+const byDefault = (a, b) =>
+  rankScore(b.score, b.station.id) - rankScore(a.score, a.station.id) ||
+  Number(b.fav) - Number(a.fav) ||
+  (b.score ?? -1) - (a.score ?? -1) ||
+  (a.route?.minutes ?? 999) - (b.route?.minutes ?? 999);
+
 export function rows() {
   return state.stations
     .map(s => {
@@ -47,13 +56,18 @@ export function rows() {
     })
     .filter(r => state.prefs.country === 'all' || (state.prefs.country === 'fav' ? r.fav : r.station.country === state.prefs.country))
     .filter(r => !state.prefs.travel || !r.route || r.route.minutes <= state.prefs.travel)
-    .sort(
-      (a, b) =>
-        rankScore(b.score, b.station.id) - rankScore(a.score, a.station.id) ||
-        Number(b.fav) - Number(a.fav) ||
-        (b.score ?? -1) - (a.score ?? -1) ||
-        (a.route?.minutes ?? 999) - (b.route?.minutes ?? 999)
-    );
+    .sort((a, b) => {
+      if (state.prefs.sort === 'distance') {
+        const da = a.route?.minutes ?? Infinity;
+        const db = b.route?.minutes ?? Infinity;
+        if (da !== db) return da - db;
+      } else if (state.prefs.sort === 'night') {
+        const ta = a.wx?.tMinNight ?? Infinity;
+        const tb = b.wx?.tMinNight ?? Infinity;
+        if (ta !== tb) return ta - tb;
+      }
+      return byDefault(a, b);
+    });
 }
 
 export const getState = () => state;
@@ -171,6 +185,12 @@ async function init() {
     savePrefs();
     render();
   });
+  $('#sortFilter').value = state.prefs.sort;
+  $('#sortFilter').addEventListener('change', e => {
+    state.prefs.sort = e.target.value;
+    savePrefs();
+    render();
+  });
   document.addEventListener('click', e => {
     const fav = e.target.closest('[data-fav]');
     if (fav) {
@@ -201,6 +221,8 @@ async function init() {
   state.origin = PLACES[originKey] || readJSON('fondeur_last_gps', PLACES.villedupont);
   render();
   await Promise.all([loadData(), setOrigin(originKey)]);
+
+  if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
 }
 
 init();
