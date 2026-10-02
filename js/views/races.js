@@ -1,33 +1,42 @@
 /*
- * Onglet Courses : sélection de courses populaires de ski de fond du Massif
- * du Jura, à ajouter d'un geste au planning de course de l'app Carnet.
+ * Onglet Courses : sélection de courses populaires de ski de fond (Jura,
+ * Vosges, Alpes du Nord, Massif Central), à ajouter d'un geste au planning
+ * de l'app Carnet. Chaque course propose deux éditions (en cours / suivante)
+ * via le sélecteur d'année ; "Ajouter" envoie l'édition affichée.
  */
 import { $, $$, esc } from '../core/utils.js';
 import { readJSON, write } from '../services/storage.js';
 import { addRaceToCarnet } from '../services/carnet-sync.js';
 import { toast, toastError } from '../ui/toast.js';
 import { icon } from '../ui/icons.js';
-import { RACES } from '../data/races.js';
+import { RACES, RACE_GROUPS } from '../data/races.js';
 
 const ADDED_KEY = 'fondeur_races_added';
 let added = new Set(readJSON(ADDED_KEY, []));
 const saveAdded = () => write(ADDED_KEY, JSON.stringify([...added]));
 
+const view = { group: 'all', yearIdx: 0 };
+
+function addedKey(raceId, year) {
+  return `${raceId}@${year}`;
+}
+
 function raceCard(r) {
-  const isAdded = added.has(r.id);
+  const edition = r.editions[view.yearIdx] || r.editions[0];
+  const isAdded = added.has(addedKey(r.id, edition.year));
   return `<article class="race-card" data-race="${esc(r.id)}">
     <header class="race-card__head">
       <label class="race-card__check"><input type="checkbox" data-race-check ${isAdded ? 'disabled' : ''}></label>
       <div class="race-card__titles">
         <h3 class="race-card__name">${esc(r.name)}</h3>
         <p class="race-card__meta">${esc(r.location)}</p>
-        <p class="race-card__period">${esc(r.period)}${r.confirmed ? '' : ' · <em>à vérifier</em>'}</p>
+        <p class="race-card__period">${esc(r.period)}${edition.confirmed ? '' : ' · <em>à vérifier</em>'}</p>
       </div>
     </header>
     <p class="race-card__dist">${esc(r.distance)}</p>
     ${r.notes ? `<p class="race-card__notes">${esc(r.notes)}</p>` : ''}
     <div class="race-card__actions">
-      <input type="date" class="input race-card__date" data-race-date value="${esc(r.date)}" aria-label="Date de l'édition pour ${esc(r.name)}">
+      <input type="date" class="input race-card__date" data-race-date value="${esc(edition.date)}" aria-label="Date de l'édition ${edition.year} pour ${esc(r.name)}">
       <button type="button" class="btn btn--soft btn--sm" data-race-action="add" ${isAdded ? 'disabled' : ''}>${icon(isAdded ? 'check' : 'plus', 15)}<span>${isAdded ? 'Ajoutée ✓' : 'Ajouter'}</span></button>
       <a class="btn btn--ghost btn--sm" href="${esc(r.link)}" target="_blank" rel="noopener">Site officiel</a>
     </div>
@@ -42,13 +51,19 @@ function updateBar() {
 }
 
 export function renderRaces() {
-  $('#racesList').innerHTML = RACES.map(raceCard).join('');
+  const groupBtns = $$('#racesGroups [data-race-group]');
+  if (groupBtns.length) groupBtns.forEach(b => b.setAttribute('aria-checked', String(b.dataset.raceGroup === view.group)));
+  const yearBtns = $$('#racesYear [data-race-year]');
+  if (yearBtns.length) yearBtns.forEach((b, i) => b.setAttribute('aria-checked', String(i === view.yearIdx)));
+  const list = view.group === 'all' ? RACES : RACES.filter(r => r.group === view.group);
+  $('#racesList').innerHTML = list.length ? list.map(raceCard).join('') : '<div class="empty">Aucune course dans cette catégorie.</div>';
   updateBar();
 }
 
 async function addOne(card, { silent = false } = {}) {
   const id = card.dataset.race;
   const r = RACES.find(x => x.id === id);
+  const edition = r.editions[view.yearIdx] || r.editions[0];
   const date = card.querySelector('[data-race-date]').value;
   if (!date) {
     toastError(`Indiquez une date pour ${r.name}.`);
@@ -58,7 +73,7 @@ async function addOne(card, { silent = false } = {}) {
     // Carnet attend un nombre de km pour « distance » (plusieurs formats possibles ici) :
     // laissé vide pour que vous le précisiez une fois le format choisi ; le détail reste en note.
     await addRaceToCarnet({ name: r.name, sport: 'Ski de fond', date, location: r.location, notes: [`Distances : ${r.distance}`, r.notes, r.link].filter(Boolean).join(' — ') });
-    added.add(id);
+    added.add(addedKey(id, edition.year));
     saveAdded();
     card.querySelector('[data-race-check]').checked = false;
     card.querySelector('[data-race-check]').disabled = true;
@@ -74,6 +89,27 @@ async function addOne(card, { silent = false } = {}) {
 }
 
 export function initRaces() {
+  const groups = $('#racesGroups');
+  if (groups) {
+    groups.innerHTML = ['<button type="button" role="radio" data-race-group="all" aria-checked="true">Toutes</button>']
+      .concat(RACE_GROUPS.map(g => `<button type="button" role="radio" data-race-group="${esc(g.id)}" aria-checked="false">${esc(g.label)}</button>`))
+      .join('');
+    groups.addEventListener('click', e => {
+      const b = e.target.closest('[data-race-group]');
+      if (!b) return;
+      view.group = b.dataset.raceGroup;
+      renderRaces();
+    });
+  }
+  const years = $('#racesYear');
+  if (years) {
+    years.addEventListener('click', e => {
+      const b = e.target.closest('[data-race-year]');
+      if (!b) return;
+      view.yearIdx = Number(b.dataset.raceYear);
+      renderRaces();
+    });
+  }
   $('#racesList').addEventListener('click', e => {
     const btn = e.target.closest('[data-race-action="add"]');
     if (btn) addOne(btn.closest('[data-race]'));

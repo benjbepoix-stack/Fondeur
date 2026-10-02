@@ -171,6 +171,10 @@
 .topbar__kicker { font-size: 12px; }
 
 /* Onglet Courses */
+.races-filter { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: var(--sp-3); }
+.races-filter button { min-height: 32px; padding: 0 12px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); color: var(--text-2); font-size: var(--fs-sm); font-weight: 700; transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
+.races-filter button[aria-checked="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
 .race-card { padding: 14px 16px; border-radius: var(--r-lg); background: var(--surface-solid); border: 1px solid var(--border); margin-bottom: 10px; }
 .race-card__head { display: flex; gap: 10px; }
 .race-card__check { flex: none; display: flex; align-items: center; padding-top: 2px; }
