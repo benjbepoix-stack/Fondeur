@@ -4,7 +4,7 @@
  * (Open-Meteo, OSRM) et les données qui doivent rester fraîches passent par
  * le réseau normalement ; seul un éventuel repli cache les dépanne hors ligne.
  */
-const CACHE = 'trace-fondeur-v1';
+const CACHE = 'trace-fondeur-v2';
 
 const PRECACHE_URLS = [
   './',
@@ -27,6 +27,8 @@ const PRECACHE_URLS = [
   'js/core/utils.js',
   'js/core/wax.js',
   'js/services/routes.js',
+  'js/services/carnet-sync.js',
+  'js/data/races.js',
   'js/services/storage.js',
   'js/services/weather.js',
   'js/ui/dialog.js',
@@ -35,6 +37,7 @@ const PRECACHE_URLS = [
   'js/ui/toast.js',
   'js/views/common.js',
   'js/views/list.js',
+  'js/views/races.js',
   'js/views/map.js',
   'js/views/station.js',
   'data/stations.json',

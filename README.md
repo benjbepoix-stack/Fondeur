@@ -28,6 +28,11 @@ Chaque ligne du classement affiche aussi ce minimum nocturne. La neige fraîche 
 ## Fart conseillé
 La fiche de chaque station propose un repère de fart de retenue (vert → bleu → violet → rouge → jaune/klister) calculé à partir du minimum de la nuit (départ matinal) et du maximum du jour (après-midi). C'est une indication basée sur la seule température : le choix réel dépend aussi de l'état de la neige (fraîche, transformée, humide), non mesuré ici — à confirmer sur place ou avec le bulletin des pisteurs. Détail dans `js/core/wax.js`.
 
+## Onglet Courses
+Sélection curatée (`js/data/races.js`, mise à jour à la main) de courses populaires de ski de fond du Massif du Jura et du Jura suisse. La plupart des dates d'édition 2027 ne sont pas encore publiées : une date estimée est pré-remplie mais reste modifiable avant d'ajouter.
+
+« Ajouter » (une course, ou plusieurs via les cases à cocher et la barre en bas) envoie directement la course dans le planning de l'app **Carnet** (Mon tableau de bord), onglet Courses — via sa base Firebase partagée (même choix assumé, sans mot de passe, que ses autres synchronisations) : pas besoin d'ouvrir Carnet, la course y apparaît dès la prochaine synchronisation. Le détail (distances, source) part en note ; la distance chiffrée est à préciser dans Carnet une fois le format choisi. Détail dans `js/services/carnet-sync.js`.
+
 ## Hors ligne (PWA)
 Un service worker (`sw.js`) met en cache l'app (HTML/CSS/JS, icônes, dernier instantané des données) pour un chargement hors ligne ou en réseau instable. Les appels météo (Open-Meteo) et trajet (OSRM) restent en réseau direct ; seule l'app elle-même fonctionne hors ligne, avec les dernières données chargées.
 

@@ -59,6 +59,7 @@
       <div class="segmented segmented--mini" id="viewSwitch" role="tablist">
         <button type="button" role="tab" data-view="list" aria-selected="true">Classement</button>
         <button type="button" role="tab" data-view="map" aria-selected="false">Carte</button>
+        <button type="button" role="tab" data-view="races" aria-selected="false">Courses</button>
       </div>
       <select class="input select select--mini" id="countryFilter" aria-label="Pays">
         <option value="all">Tous pays</option>
@@ -91,6 +92,16 @@
       <div class="map" id="map" role="region" aria-label="Carte des stations"></div>
       <div class="map-legend"><span style="--c:var(--good)">Très bon</span><span style="--c:var(--mid)">Correct</span><span style="--c:var(--bad)">Médiocre</span></div>
     </section>
+
+    <section id="racesView" hidden>
+      <p class="status-line">Sélection curatée, mise à jour à la main · dates à vérifier avant d'ajouter.</p>
+      <div id="racesList"></div>
+    </section>
+
+    <div class="races-bar" id="racesBar" hidden>
+      <span id="racesBarCount"></span>
+      <button type="button" class="btn btn--primary btn--sm" id="racesBarAdd">Ajouter au planning</button>
+    </div>
 
     <footer class="sources">
       <p>Météo <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> · Bulletins <a href="https://www.espacenordiquejurassien.com/bulletin-neige.html" target="_blank" rel="noopener">Espace Nordique Jurassien</a> / <a href="https://www.nordicfrance.fr/" target="_blank" rel="noopener">Nordic France</a> et <a href="https://snow.myswitzerland.com/" target="_blank" rel="noopener">Suisse Tourisme</a> · Carte et trajets © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></p>

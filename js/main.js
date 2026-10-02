@@ -13,6 +13,7 @@ import { renderList } from './views/list.js';
 import { setFavButton } from './views/common.js';
 import { openStation, initStation } from './views/station.js';
 import { renderMap } from './views/map.js';
+import { renderRaces, initRaces } from './views/races.js';
 
 export const PLACES = {
   villedupont: { name: 'Ville-du-Pont', lat: 46.999, lon: 6.4989 },
@@ -77,8 +78,10 @@ function render() {
   $$('#viewSwitch [data-view]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === state.prefs.view)));
   $('#listView').hidden = state.prefs.view !== 'list';
   $('#mapView').hidden = state.prefs.view !== 'map';
+  $('#racesView').hidden = state.prefs.view !== 'races';
   if (state.prefs.view === 'list') renderList(list, state);
-  else renderMap(list, state);
+  else if (state.prefs.view === 'map') renderMap(list, state);
+  else renderRaces();
   const at = state.weatherAt ? new Date(state.weatherAt).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }) : null;
   const fetched = state.bulletins?.fetchedAt ? new Date(state.bulletins.fetchedAt) : null;
   $('#statusLine').textContent = [
@@ -157,6 +160,7 @@ async function init() {
   applyTheme(readText('fondeur_theme', '"light"').includes('dark') ? 'dark' : 'light');
   initDialogs();
   initStation();
+  initRaces();
 
   $('#themeToggle').addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
