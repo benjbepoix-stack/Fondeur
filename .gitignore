@@ -16,6 +16,8 @@ database-debug.log*
 node_modules/
 npm-debug.log*
 .eslintcache
+__pycache__/
+*.pyc
 
 # Systèmes & éditeurs
 .DS_Store
