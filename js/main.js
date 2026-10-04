@@ -73,14 +73,26 @@ export function rows() {
 
 export const getState = () => state;
 
+const PAGE_TITLES = { list: 'Où skier aujourd’hui ?', map: 'Où skier aujourd’hui ?', races: 'Courses' };
+
 function render() {
   const list = rows();
-  $$('#viewSwitch [data-view]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === state.prefs.view)));
-  $('#listView').hidden = state.prefs.view !== 'list';
-  $('#mapView').hidden = state.prefs.view !== 'map';
-  $('#racesView').hidden = state.prefs.view !== 'races';
-  if (state.prefs.view === 'list') renderList(list, state);
-  else if (state.prefs.view === 'map') renderMap(list, state);
+  const view = state.prefs.view;
+  $$('#viewSwitch [data-view]').forEach(b => {
+    const active = b.dataset.view === view;
+    b.classList.toggle('is-active', active);
+    if (active) b.setAttribute('aria-current', 'page');
+    else b.removeAttribute('aria-current');
+  });
+  $('#listView').hidden = view !== 'list';
+  $('#mapView').hidden = view !== 'map';
+  $('#racesView').hidden = view !== 'races';
+  $('#pageTitle').textContent = PAGE_TITLES[view] || PAGE_TITLES.list;
+  $('#originSwitch').hidden = view === 'races';
+  $('.toolbar').hidden = view === 'races';
+  $('#statusLine').hidden = view === 'races';
+  if (view === 'list') renderList(list, state);
+  else if (view === 'map') renderMap(list, state);
   else renderRaces();
   const at = state.weatherAt ? new Date(state.weatherAt).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }) : null;
   const fetched = state.bulletins?.fetchedAt ? new Date(state.bulletins.fetchedAt) : null;

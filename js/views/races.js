@@ -28,7 +28,7 @@ function raceCard(r) {
     <header class="race-card__head">
       <label class="race-card__check"><input type="checkbox" data-race-check ${isAdded ? 'disabled' : ''}></label>
       <div class="race-card__titles">
-        <h3 class="race-card__name">${esc(r.name)}</h3>
+        <h3 class="race-card__name">${esc(r.name)}${r.circuit ? `<span class="race-card__circuit">${icon('flag', 11)}<span>${esc(r.circuit)}</span></span>` : ''}</h3>
         <p class="race-card__meta">${esc(r.location)}</p>
         <p class="race-card__period">${esc(r.period)}${edition.confirmed ? '' : ' · <em>à vérifier</em>'}</p>
       </div>
@@ -55,7 +55,7 @@ export function renderRaces() {
   if (groupBtns.length) groupBtns.forEach(b => b.setAttribute('aria-checked', String(b.dataset.raceGroup === view.group)));
   const yearBtns = $$('#racesYear [data-race-year]');
   if (yearBtns.length) yearBtns.forEach((b, i) => b.setAttribute('aria-checked', String(i === view.yearIdx)));
-  const list = view.group === 'all' ? RACES : RACES.filter(r => r.group === view.group);
+  const list = view.group === 'all' ? RACES : view.group === 'circuit' ? RACES.filter(r => r.circuit) : RACES.filter(r => r.group === view.group);
   $('#racesList').innerHTML = list.length ? list.map(raceCard).join('') : '<div class="empty">Aucune course dans cette catégorie.</div>';
   updateBar();
 }
@@ -93,6 +93,7 @@ export function initRaces() {
   if (groups) {
     groups.innerHTML = ['<button type="button" role="radio" data-race-group="all" aria-checked="true">Toutes</button>']
       .concat(RACE_GROUPS.map(g => `<button type="button" role="radio" data-race-group="${esc(g.id)}" aria-checked="false">${esc(g.label)}</button>`))
+      .concat(['<button type="button" role="radio" data-race-group="circuit" aria-checked="false">🏁 Marathon Ski Tour</button>'])
       .join('');
     groups.addEventListener('click', e => {
       const b = e.target.closest('[data-race-group]');

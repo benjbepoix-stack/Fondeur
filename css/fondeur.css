@@ -11,15 +11,19 @@
 .segmented--types input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
 .btn--block { width: 100%; white-space: normal; }
 
-.app { padding-bottom: calc(var(--safe-bottom) + 40px); }
+.app { padding-bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 40px); }
 .page-title { font-size: 28px; font-weight: 850; letter-spacing: -.04em; margin: 4px 0 12px; }
 .kicker { font-size: 10.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
 #refreshBtn.is-spinning .icon { animation: spin 1s linear infinite; }
 
+/* Barre d'onglets Trace : 3 destinations (au lieu des 5 par défaut) */
+#viewSwitch.tabbar { grid-template-columns: repeat(3, minmax(0, 1fr)); width: min(340px, calc(100% - 24px)); }
+@media (min-width: 900px) {
+  #viewSwitch.tabbar { width: min(380px, calc(100% - 64px)); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
 /* Barre d'outils */
 .toolbar { display: flex; gap: 8px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
-.segmented--mini { flex: 1 1 180px; margin: 0; }
-.segmented--mini button { min-height: 34px; font-size: var(--fs-sm); }
 .select--mini { width: auto; flex: 1 1 120px; min-height: 40px; padding-top: 6px; padding-bottom: 6px; font-size: var(--fs-sm); font-weight: 700; }
 .status-line { margin: 10px 2px 12px; font-size: 11.5px; color: var(--text-3); font-weight: 600; min-height: 16px; }
 
@@ -180,7 +184,8 @@
 .race-card__check { flex: none; display: flex; align-items: center; padding-top: 2px; }
 .race-card__check input { width: 20px; height: 20px; }
 .race-card__titles { min-width: 0; }
-.race-card__name { font-weight: 800; font-size: var(--fs-md); }
+.race-card__name { font-weight: 800; font-size: var(--fs-md); display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.race-card__circuit { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: var(--r-pill); font-size: 10px; font-weight: 800; letter-spacing: .01em; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
 .race-card__meta { font-size: var(--fs-sm); color: var(--text-2); margin-top: 2px; }
 .race-card__period { font-size: var(--fs-xs); color: var(--text-3); margin-top: 2px; }
 .race-card__period em { color: var(--accent); font-style: normal; font-weight: 700; }

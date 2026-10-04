@@ -33,6 +33,7 @@ export const RACES = [
     editions: [{ year: 2027, date: '2027-02-13', confirmed: true }, { year: 2028, date: '2028-02-12', confirmed: false }],
     distance: 'Classique le 13/02, skating le 14/02 — détail des distances 2027 non finalisé',
     notes: 'Classique le 13 février, skating le 14. Nouveau tracé permanent de 50 km à partir de 2027.',
+    circuit: 'Marathon Ski Tour',
     link: 'https://www.latransju.com/'
   },
   {
@@ -44,6 +45,7 @@ export const RACES = [
     editions: [{ year: 2027, date: '2026-12-19', confirmed: false }, { year: 2028, date: '2027-12-18', confirmed: false }],
     distance: '15, 30 km (+ Marathon Ski Tour FFS associé : 15 / 23 / 42 km)',
     notes: '',
+    circuit: 'Marathon Ski Tour',
     link: 'https://www.ski-massif-jurassien.com/'
   },
   {
@@ -109,7 +111,7 @@ export const RACES = [
     period: 'Début mars, date 2027 non annoncée (généralement ~1er mars)',
     editions: [{ year: 2027, date: '2027-03-01', confirmed: false }, { year: 2028, date: '2028-02-29', confirmed: false }],
     distance: '21 et 42 km, skating',
-    notes: '',
+    notes: 'Faisait partie du Marathon Ski Tour jusqu’à la saison 2024-2025 ; absente du circuit 2025-2026.',
     link: 'https://www.ski-massif-jurassien.com/'
   },
   {
@@ -169,6 +171,7 @@ export const RACES = [
     editions: [{ year: 2027, date: '2027-01-31', confirmed: false }, { year: 2028, date: '2028-01-30', confirmed: false }],
     distance: '42 km (marathon) + formats courts (10 et 21 km selon les années)',
     notes: 'Une des plus anciennes courses populaires françaises.',
+    circuit: 'Marathon Ski Tour',
     link: 'https://www.lafouleeblanche.com/'
   },
   {
@@ -176,10 +179,11 @@ export const RACES = [
     name: 'La Savoyarde (Marathon international de ski nordique)',
     group: 'alpes-nord',
     location: 'La Féclaz, massif des Bauges (Savoie)',
-    period: '1er dimanche de février, date 2027 non annoncée',
-    editions: [{ year: 2027, date: '2027-01-31', confirmed: false }, { year: 2028, date: '2028-01-30', confirmed: false }],
+    period: 'Dimanche 7 février 2027 (confirmé)',
+    editions: [{ year: 2027, date: '2027-02-07', confirmed: true }, { year: 2028, date: '2028-02-06', confirmed: false }],
     distance: '42 km (skating), formats plus courts certaines années',
     notes: '⚠️ Déjà annulée certaines années faute de neige.',
+    circuit: 'Marathon Ski Tour',
     link: 'https://www.grandchambery.fr/tous-les-evenements/la-savoyarde-marathon-international-ski-nordique'
   },
   {
@@ -191,6 +195,7 @@ export const RACES = [
     editions: [{ year: 2027, date: '2027-02-21', confirmed: false }, { year: 2028, date: '2028-02-20', confirmed: false }],
     distance: '42 / 21 / 10 / 5 / 3 / 1,5 km, classique et skating selon distances',
     notes: 'Déjà annulée une année faute de neige.',
+    circuit: 'Marathon Ski Tour',
     link: 'https://www.marathondugrandbec.com/'
   },
   {
@@ -202,6 +207,7 @@ export const RACES = [
     editions: [{ year: 2027, date: '2027-03-14', confirmed: false }, { year: 2028, date: '2028-03-12', confirmed: false }],
     distance: '42 km (Marathon), 21 km (Grand Plateau), 12 km (Petit Plateau), skating',
     notes: '',
+    circuit: 'Marathon Ski Tour',
     link: 'https://www.marathondesglieres.com/'
   },
   {
@@ -213,6 +219,7 @@ export const RACES = [
     editions: [{ year: 2027, date: '2027-03-28', confirmed: true }, { year: 2028, date: '2028-03-26', confirmed: false }],
     distance: '42 km (format marathon) + distances courtes',
     notes: '',
+    circuit: 'Marathon Ski Tour',
     link: 'https://www.lessaisies.com/evenements/hiver-2026-27/'
   },
   {
@@ -224,6 +231,7 @@ export const RACES = [
     editions: [{ year: 2027, date: '2027-01-09', confirmed: true }, { year: 2028, date: '2028-01-08', confirmed: false }],
     distance: 'Samedi classique (15/30 km), dimanche skating (2,5/5/10/23/42 km) + distances « fun »',
     notes: 'Deux jours, deux styles.',
+    circuit: 'Marathon Ski Tour',
     link: 'http://www.marathondebessans.com/'
   },
   {

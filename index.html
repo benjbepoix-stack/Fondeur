@@ -46,8 +46,14 @@
     </div>
   </header>
 
+  <nav class="tabbar" id="viewSwitch" aria-label="Navigation principale">
+    <button type="button" class="tabbar__item is-active" data-view="list" aria-current="page"><span data-icon="pin"></span><span>Où skier ?</span></button>
+    <button type="button" class="tabbar__item" data-view="map"><span data-icon="map"></span><span>Carte</span></button>
+    <button type="button" class="tabbar__item" data-view="races"><span data-icon="flag"></span><span>Courses</span></button>
+  </nav>
+
   <main class="app" id="main" tabindex="-1">
-    <h2 class="page-title">Où skier aujourd’hui ?</h2>
+    <h2 class="page-title" id="pageTitle">Où skier aujourd’hui ?</h2>
 
     <div class="segmented segmented--types" id="originSwitch" role="radiogroup" aria-label="Point de départ">
       <label><input type="radio" name="origin" value="villedupont" checked><span>Ville-du-Pont</span></label>
@@ -56,11 +62,6 @@
     </div>
 
     <div class="toolbar">
-      <div class="segmented segmented--mini" id="viewSwitch" role="tablist">
-        <button type="button" role="tab" data-view="list" aria-selected="true">Classement</button>
-        <button type="button" role="tab" data-view="map" aria-selected="false">Carte</button>
-        <button type="button" role="tab" data-view="races" aria-selected="false">Courses</button>
-      </div>
       <select class="input select select--mini" id="countryFilter" aria-label="Pays">
         <option value="all">Tous pays</option>
         <option value="fav">★ Favoris</option>
