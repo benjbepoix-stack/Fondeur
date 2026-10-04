@@ -100,7 +100,7 @@ function render() {
   $('#mapView').hidden = view !== 'map';
   $('#racesView').hidden = view !== 'races';
   $('#pageTitle').textContent = PAGE_TITLES[view] || PAGE_TITLES.list;
-  $('#originSwitch').hidden = view === 'races';
+  $('.origin-row').hidden = view === 'races';
   $('.toolbar').hidden = view === 'races';
   $('#statusLine').hidden = view === 'races';
   if (view === 'list') renderList(list, state);

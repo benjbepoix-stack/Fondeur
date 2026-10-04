@@ -215,7 +215,8 @@ body[data-view="map"] .map { height: calc(100dvh - var(--safe-top) - var(--topba
 .races-filter button { min-height: 32px; padding: 0 12px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); color: var(--text-2); font-size: var(--fs-sm); font-weight: 700; transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
 .races-filter button[aria-checked="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
 
-.race-card { padding: 14px 16px; border-radius: var(--r-lg); background: var(--surface-solid); border: 1px solid var(--border); margin-bottom: 10px; }
+.race-card { padding: 12px 14px; border-radius: var(--r-lg); background: var(--surface-solid); border: 1px solid var(--border); margin-bottom: 8px; transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.race-card.is-added { background: color-mix(in srgb, var(--good) 7%, var(--surface-solid)); border-color: color-mix(in srgb, var(--good) 40%, var(--border)); }
 .race-card__head { display: flex; gap: 10px; }
 .race-card__check { flex: none; display: flex; align-items: center; padding-top: 2px; }
 .race-card__check input { width: 20px; height: 20px; }
@@ -229,9 +230,9 @@ body[data-view="map"] .map { height: calc(100dvh - var(--safe-top) - var(--topba
 .race-card__meta { font-size: var(--fs-sm); color: var(--text-2); margin-top: 2px; }
 .race-card__period { font-size: var(--fs-xs); color: var(--text-3); margin-top: 2px; }
 .race-card__period em { color: var(--accent); font-style: normal; font-weight: 700; }
-.race-card__dist { font-size: var(--fs-sm); margin-top: 8px; }
+.race-card__dist { font-size: var(--fs-sm); margin-top: 6px; }
 .race-card__notes { font-size: var(--fs-xs); color: var(--text-3); margin-top: 4px; }
-.race-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 10px; }
+.race-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 8px; }
 .race-card__date { width: 150px; min-height: 36px; padding: 0 10px; font-size: var(--fs-xs); }
 .races-bar { position: sticky; bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 20px); z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; padding: 10px 14px; border-radius: var(--r-lg); background: var(--surface-solid); border: 1px solid var(--border-strong); box-shadow: var(--shadow-md, 0 10px 24px -10px rgba(0, 0, 0, .3)); font-weight: 700; font-size: var(--fs-sm); }
 @media (min-width: 900px) {

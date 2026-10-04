@@ -24,7 +24,7 @@ function addedKey(raceId, year) {
 function raceCard(r) {
   const edition = r.editions[view.yearIdx] || r.editions[0];
   const isAdded = added.has(addedKey(r.id, edition.year));
-  return `<article class="race-card" data-race="${esc(r.id)}">
+  return `<article class="race-card ${isAdded ? 'is-added' : ''}" data-race="${esc(r.id)}">
     <header class="race-card__head">
       <label class="race-card__check"><input type="checkbox" data-race-check ${isAdded ? 'disabled' : ''}></label>
       <div class="race-card__titles">
@@ -91,11 +91,8 @@ async function addOne(card, { silent = false } = {}) {
     await addRaceToCarnet({ name: r.name, sport: 'Ski de fond', date, location: r.location, notes: [`Distances : ${r.distance}`, r.notes, r.link].filter(Boolean).join(' — ') });
     added.add(addedKey(id, edition.year));
     saveAdded();
-    card.querySelector('[data-race-check]').checked = false;
-    card.querySelector('[data-race-check]').disabled = true;
-    const btn = card.querySelector('[data-race-action="add"]');
-    btn.disabled = true;
-    btn.innerHTML = `${icon('check', 15)}<span>Ajoutée ✓</span>`;
+    // Reflète tout de suite la marque « ajoutée » (badge + surbrillance du cadre), pas seulement le bouton.
+    card.outerHTML = raceCard(r);
     if (!silent) toast(`${r.name} ajoutée au planning de Carnet`);
     return true;
   } catch (error) {
