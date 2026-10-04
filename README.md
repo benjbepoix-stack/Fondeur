@@ -46,7 +46,7 @@ Sélection curatée (`js/data/races.js`, mise à jour à la main) de 20 courses 
 
 Une course déjà ajoutée au planning de Carnet (ou marquée comme telle via le badge calendrier) se distingue d'un coup d'œil : cadre en surbrillance, badge coché, case et bouton « Ajouter » désactivés.
 
-« Ajouter » (une course, ou plusieurs via les cases à cocher et la barre en bas) envoie directement la course dans le planning de l'app **Carnet** (Mon tableau de bord), onglet Courses — via sa base Firebase partagée (même choix assumé, sans mot de passe, que ses autres synchronisations) : pas besoin d'ouvrir Carnet, la course y apparaît dès la prochaine synchronisation. Le détail (distances, source) part en note ; la distance chiffrée est à préciser dans Carnet une fois le format choisi. Détail dans `js/services/carnet-sync.js`.
+« Ajouter » (une course, ou plusieurs via les cases à cocher et la barre en bas) envoie directement la course dans le planning de l'app **Carnet** (Mon tableau de bord), onglet Courses — via sa base Firebase partagée (même choix assumé, sans mot de passe, que ses autres synchronisations) : pas besoin d'ouvrir Carnet, la course y apparaît dès la prochaine synchronisation. La distance chiffrée est à préciser dans Carnet une fois le format choisi ; le champ note n'est pas pré-rempli, pour rester libre dans Carnet. Détail dans `js/services/carnet-sync.js`.
 
 **Marque « déjà ajoutée »** : le badge rond en haut de chaque carte de course permet de la marquer comme déjà présente au calendrier (ou de retirer la marque) sans repasser par l'envoi vers Carnet — utile si elle y a été ajoutée autrement. Ce marquage est indépendant du bouton « Ajouter » (stocké localement, `fondeur_races_added`).
 

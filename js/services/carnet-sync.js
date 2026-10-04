@@ -10,7 +10,7 @@ const DB_URL = 'https://dashboard---projet-default-rtdb.europe-west1.firebasedat
 const makeId = () => `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 7)}`;
 
 /**
- * @param {{name:string, sport?:string, date:string, location?:string, distance?:string, elevation?:string, notes?:string}} race
+ * @param {{name:string, sport?:string, date:string, location?:string, distance?:string, elevation?:string}} race
  * @returns {Promise<string>} identifiant de la course créée dans Carnet
  */
 export async function addRaceToCarnet(race) {
@@ -26,7 +26,7 @@ export async function addRaceToCarnet(race) {
     elevation: String(race.elevation || '').slice(0, 12),
     price: '',
     target: '',
-    notes: String(race.notes || '').slice(0, 2000),
+    notes: '',
     resultTime: '',
     resultRank: '',
     resultDistance: ''
