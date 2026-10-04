@@ -78,6 +78,7 @@ const PAGE_TITLES = { list: 'Où skier aujourd’hui ?', map: 'Où skier aujourd
 function render() {
   const list = rows();
   const view = state.prefs.view;
+  document.body.dataset.view = view;
   $$('#viewSwitch [data-view]').forEach(b => {
     const active = b.dataset.view === view;
     b.classList.toggle('is-active', active);
