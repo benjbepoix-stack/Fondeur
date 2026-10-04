@@ -139,6 +139,9 @@
       <header class="sheet__head"><h2 class="sheet__title" id="placeFormTitle">Nouveau lieu</h2><button type="button" class="icon-btn" data-close aria-label="Fermer"><span data-icon="close"></span></button></header>
       <form class="form sheet__scroll" id="placeForm" novalidate>
         <input type="hidden" name="editId">
+        <div class="field"><label class="field__label" for="plSearch">Rechercher une commune</label><input class="input" id="plSearch" type="text" placeholder="Ex. Pontarlier" autocomplete="off"></div>
+        <div class="stack" id="plSearchResults"></div>
+        <p class="field__help">La commune donne ses coordonnées directement (son centre). Pour un lieu précis (parking, départ de piste…), utilisez plutôt la position actuelle ci-dessous.</p>
         <div class="field"><label class="field__label" for="plName">Nom</label><input class="input" id="plName" name="name" maxlength="40" placeholder="Ex. Pontarlier" autocomplete="off"></div>
         <div class="form-grid">
           <div class="field"><label class="field__label" for="plLat">Latitude</label><input class="input" id="plLat" name="lat" inputmode="decimal" placeholder="Ex. 46,999"></div>

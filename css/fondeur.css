@@ -18,11 +18,27 @@
 /* Lieux de départ : liste éditable (feuille Réglages des lieux) */
 .origin-row { display: flex; align-items: center; gap: 8px; }
 .origin-row .segmented { flex: 1; margin-bottom: 0; }
+/* Bandeau de lieux : largeur égale tant que ça tient, sinon défilement horizontal plutôt que
+   d'écraser le texte (propre avec 4-5 lieux et plus). */
+#originSwitch {
+  grid-auto-columns: minmax(92px, 1fr);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+#originSwitch::-webkit-scrollbar { display: none; }
+#originSwitch label { scroll-snap-align: start; }
+#originSwitch span { padding: 0 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .row { display: flex; align-items: center; gap: 10px; padding: 11px 2px; border-bottom: 1px solid var(--border); }
 .row:last-child { border-bottom: 0; }
 .row__body { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .row__title { font-weight: 750; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .row__sub { font-size: 11.5px; color: var(--text-3); margin-top: 1px; font-variant-numeric: tabular-nums; }
+/* Résultats de recherche de commune : lignes cliquables */
+#plSearchResults .row { width: 100%; text-align: left; border-radius: 10px; padding-left: 8px; padding-right: 8px; transition: background var(--dur) var(--ease); }
+#plSearchResults .row:hover { background: var(--surface-2); }
+#plSearchResults .row__icon { flex: none; color: var(--text-3); }
 
 .app { padding-bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 40px); }
 .page-title { font-size: 28px; font-weight: 850; letter-spacing: -.04em; margin: 4px 0 12px; }
@@ -134,7 +150,9 @@
 .why__row em.is-minus { color: var(--bad); }
 
 /* Carte */
-.map { height: min(62dvh, 560px); border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--border); background: var(--surface-2); }
+/* isolation : Leaflet utilise des z-index internes élevés (jusqu'à 1000 pour ses contrôles) ; sans
+   ça, ils passeraient au-dessus des feuilles (lieux de départ…) ouvertes par-dessus la carte. */
+.map { height: min(62dvh, 560px); border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--border); background: var(--surface-2); isolation: isolate; }
 /* Onglet Carte : la carte prend toute la hauteur disponible et peut passer sous la barre d'onglets
    (qui reste au-dessus, cliquable, grâce à son z-index). On garde en revanche la marge basse normale
    de .app (hauteur de la barre d'onglets incluse) pour que les notes de bas de page ne se retrouvent

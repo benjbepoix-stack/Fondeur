@@ -3,6 +3,7 @@ import { $, $$, esc, uid, parseNumber } from './core/utils.js';
 import { readJSON, readText, write } from './services/storage.js';
 import { loadWeather } from './services/weather.js';
 import { loadRoutes } from './services/routes.js';
+import { searchPlace } from './services/geocode.js';
 import { bulletinFor, computeScore } from './core/score.js';
 import { isFavorite, toggleFavorite, rankScore, restoreFavorites } from './core/favorites.js';
 import { initDialogs, openSheet, closeSheet, confirmDialog } from './ui/dialog.js';
@@ -206,9 +207,59 @@ function openPlaceForm(id = null) {
   form.elements.name.value = p?.name || '';
   form.elements.lat.value = p ? String(p.lat).replace('.', ',') : '';
   form.elements.lon.value = p ? String(p.lon).replace('.', ',') : '';
+  $('#plSearch').value = '';
+  $('#plSearchResults').innerHTML = '';
   $('#placeFormTitle').textContent = p ? `Modifier · ${p.name}` : 'Nouveau lieu';
   $('#placeDeleteBtn').hidden = !p;
   openSheet('placeFormSheet', { focus: false });
+}
+
+/* ---------- Recherche de commune (remplit nom + coordonnées d'un coup) ---------- */
+let placeSearchResults = [];
+let placeSearchTimer = null;
+
+function renderPlaceSearchResults() {
+  $('#plSearchResults').innerHTML = placeSearchResults
+    .map(
+      (r, i) =>
+        `<button type="button" class="row" data-pick="${i}">
+          <span class="row__icon">${icon('pin', 16)}</span>
+          <div class="row__body"><span class="row__title">${esc(r.name)}</span>${r.detail ? `<span class="row__sub">${esc(r.detail)}</span>` : ''}</div>
+        </button>`
+    )
+    .join('');
+}
+
+function onPlaceSearchInput(e) {
+  const q = e.target.value;
+  clearTimeout(placeSearchTimer);
+  if (q.trim().length < 2) {
+    placeSearchResults = [];
+    $('#plSearchResults').innerHTML = '';
+    return;
+  }
+  placeSearchTimer = setTimeout(async () => {
+    try {
+      placeSearchResults = await searchPlace(q);
+      renderPlaceSearchResults();
+    } catch {
+      // Recherche indisponible (hors ligne…) : on laisse la saisie manuelle.
+    }
+  }, 350);
+}
+
+function pickPlaceSearchResult(i) {
+  const r = placeSearchResults[i];
+  if (!r) return;
+  const form = $('#placeForm');
+  form.elements.name.value = r.name;
+  form.elements.lat.value = String(r.lat).replace('.', ',');
+  form.elements.lon.value = String(r.lon).replace('.', ',');
+  $('#placeFormError').hidden = true;
+  $('#plSearch').value = '';
+  placeSearchResults = [];
+  $('#plSearchResults').innerHTML = '';
+  toast(`${r.name} sélectionnée`, { type: 'info' });
 }
 
 function onPlaceSubmit(e) {
@@ -300,6 +351,11 @@ async function init() {
   $('#placeForm').addEventListener('submit', onPlaceSubmit);
   $('#placeDeleteBtn').addEventListener('click', () => deletePlace($('#placeForm').elements.editId.value));
   $('#placeUseGps').addEventListener('click', fillPlaceGps);
+  $('#plSearch').addEventListener('input', onPlaceSearchInput);
+  $('#plSearchResults').addEventListener('click', e => {
+    const btn = e.target.closest('[data-pick]');
+    if (btn) pickPlaceSearchResult(Number(btn.dataset.pick));
+  });
   $('#viewSwitch').addEventListener('click', e => {
     const b = e.target.closest('[data-view]');
     if (!b) return;
