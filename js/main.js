@@ -1,11 +1,11 @@
 /* Fondeur — point d'entrée : chargement des données, départ, filtres, rendu. */
-import { $, $$ } from './core/utils.js';
+import { $, $$, esc, uid, parseNumber } from './core/utils.js';
 import { readJSON, readText, write } from './services/storage.js';
 import { loadWeather } from './services/weather.js';
 import { loadRoutes } from './services/routes.js';
 import { bulletinFor, computeScore } from './core/score.js';
 import { isFavorite, toggleFavorite, rankScore, restoreFavorites } from './core/favorites.js';
-import { initDialogs } from './ui/dialog.js';
+import { initDialogs, openSheet, closeSheet, confirmDialog } from './ui/dialog.js';
 import { applyTheme } from './ui/theme.js';
 import { toast, toastError } from './ui/toast.js';
 import { icon } from './ui/icons.js';
@@ -15,10 +15,19 @@ import { openStation, initStation } from './views/station.js';
 import { renderMap } from './views/map.js';
 import { renderRaces, initRaces } from './views/races.js';
 
-export const PLACES = {
-  villedupont: { name: 'Ville-du-Pont', lat: 46.999, lon: 6.4989 },
-  boussieres: { name: 'Boussières', lat: 47.158, lon: 5.894 }
-};
+/* ---------- Lieux de départ (éditables, « Ici » mis à part) ---------- */
+const PLACES_KEY = 'fondeur_places';
+const DEFAULT_PLACES = [
+  { id: 'villedupont', name: 'Ville-du-Pont', lat: 46.999, lon: 6.4989 },
+  { id: 'boussieres', name: 'Boussières', lat: 47.158, lon: 5.894 }
+];
+function loadPlaces() {
+  const saved = readJSON(PLACES_KEY, null);
+  return Array.isArray(saved) && saved.length ? saved : DEFAULT_PLACES.map(p => ({ ...p }));
+}
+const savePlaces = () => write(PLACES_KEY, JSON.stringify(state.places));
+const placeById = id => state.places.find(p => p.id === id);
+
 const PREFS = 'fondeur_prefs';
 
 const state = {
@@ -28,6 +37,7 @@ const state = {
   weatherAt: null,
   routes: {},
   origin: null,
+  places: loadPlaces(),
   prefs: { origin: 'villedupont', view: 'list', country: 'all', travel: 0, sort: 'score', ...readJSON(PREFS, {}) }
 };
 // Ancien point de départ (Besançon) remplacé par Boussières
@@ -118,8 +128,18 @@ function gpsPosition() {
   });
 }
 
+/** (Re)construit les boutons de lieux de départ à partir de state.places, « Ici » (GPS) toujours en dernier. */
+function renderOriginSwitch() {
+  const html =
+    state.places.map(p => `<label><input type="radio" name="origin" value="${esc(p.id)}"><span>${esc(p.name)}</span></label>`).join('') +
+    `<label><input type="radio" name="origin" value="gps"><span>📍 Ici</span></label>`;
+  $('#originSwitch').innerHTML = html;
+  const current = $(`#originSwitch input[value="${state.prefs.origin}"]`) || $(`#originSwitch input[value="gps"]`);
+  if (current) current.checked = true;
+}
+
 async function setOrigin(key) {
-  let origin = PLACES[key];
+  let origin = placeById(key);
   if (key === 'gps') {
     try {
       origin = await gpsPosition();
@@ -128,19 +148,104 @@ async function setOrigin(key) {
       const last = readJSON('fondeur_last_gps', null);
       if (!last) {
         toastError(error.message);
-        $(`#originSwitch input[value="${state.prefs.origin === 'gps' ? 'villedupont' : state.prefs.origin}"]`).checked = true;
+        const fallback = state.prefs.origin !== 'gps' && placeById(state.prefs.origin) ? state.prefs.origin : state.places[0]?.id || 'gps';
+        $(`#originSwitch input[value="${fallback}"]`).checked = true;
         return;
       }
       origin = last;
       toast('Dernière position connue utilisée', { type: 'info' });
     }
   }
+  if (!origin) return;
   state.origin = origin;
   state.prefs.origin = key;
   savePrefs();
   render();
   state.routes = await loadRoutes(origin, state.stations);
   render();
+}
+
+/* ---------- Gestion des lieux de départ ---------- */
+function renderPlacesList() {
+  $('#placesList').innerHTML = state.places.length
+    ? state.places
+        .map(
+          p => `<div class="row" data-place="${esc(p.id)}">
+            <div class="row__body"><span class="row__title">${esc(p.name)}</span><span class="row__sub">${p.lat.toFixed(4)}, ${p.lon.toFixed(4)}</span></div>
+            <div class="row-actions">
+              <button type="button" class="icon-btn icon-btn--sm" data-place-edit aria-label="Modifier ${esc(p.name)}"><span data-icon="edit" data-size="16"></span></button>
+              <button type="button" class="icon-btn icon-btn--sm icon-btn--danger" data-place-delete aria-label="Supprimer ${esc(p.name)}"><span data-icon="trash" data-size="16"></span></button>
+            </div>
+          </div>`
+        )
+        .join('')
+    : '<p class="field__help">Aucun lieu enregistré pour l’instant.</p>';
+}
+
+function openPlaces() {
+  renderPlacesList();
+  openSheet('placesSheet', { focus: false });
+}
+
+function fillPlaceGps() {
+  gpsPosition()
+    .then(pos => {
+      $('#placeForm').elements.lat.value = pos.lat.toFixed(5);
+      $('#placeForm').elements.lon.value = pos.lon.toFixed(5);
+      $('#placeFormError').hidden = true;
+    })
+    .catch(error => toastError(error.message));
+}
+
+function openPlaceForm(id = null) {
+  const p = id ? placeById(id) : null;
+  const form = $('#placeForm');
+  form.reset();
+  $('#placeFormError').hidden = true;
+  form.elements.editId.value = p ? p.id : '';
+  form.elements.name.value = p?.name || '';
+  form.elements.lat.value = p ? String(p.lat).replace('.', ',') : '';
+  form.elements.lon.value = p ? String(p.lon).replace('.', ',') : '';
+  $('#placeFormTitle').textContent = p ? `Modifier · ${p.name}` : 'Nouveau lieu';
+  $('#placeDeleteBtn').hidden = !p;
+  openSheet('placeFormSheet', { focus: false });
+}
+
+function onPlaceSubmit(e) {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const name = form.elements.name.value.trim();
+  const lat = parseNumber(form.elements.lat.value);
+  const lon = parseNumber(form.elements.lon.value);
+  const errBox = $('#placeFormError');
+  const err = !name ? 'Indiquez un nom.' : lat === null || lat < -90 || lat > 90 ? 'Latitude invalide.' : lon === null || lon < -180 || lon > 180 ? 'Longitude invalide.' : null;
+  if (err) {
+    errBox.textContent = err;
+    errBox.hidden = false;
+    return;
+  }
+  const editId = form.elements.editId.value;
+  const item = { id: editId || uid(), name, lat, lon };
+  state.places = editId ? state.places.map(p => (p.id === editId ? item : p)) : [...state.places, item];
+  savePlaces();
+  closeSheet('placeFormSheet');
+  renderPlacesList();
+  renderOriginSwitch();
+  toast(editId ? 'Lieu modifié' : 'Lieu ajouté');
+  // Si le lieu actif a été renommé/déplacé, reprend ses nouvelles coordonnées tout de suite.
+  if (state.prefs.origin === item.id) setOrigin(item.id);
+}
+
+async function deletePlace(id) {
+  const p = placeById(id);
+  if (!p || !(await confirmDialog({ title: `Supprimer « ${p.name} » ?`, confirmLabel: 'Supprimer', danger: true }))) return;
+  state.places = state.places.filter(x => x.id !== id);
+  savePlaces();
+  closeSheet('placeFormSheet');
+  renderPlacesList();
+  renderOriginSwitch();
+  toast('Lieu supprimé');
+  if (state.prefs.origin === id) setOrigin(state.places[0]?.id || 'gps');
 }
 
 /* ---------- Données ---------- */
@@ -182,7 +287,19 @@ async function init() {
     if (state.prefs.view === 'map') render();
   });
   $('#refreshBtn').addEventListener('click', () => loadData({ force: true }));
+  renderOriginSwitch();
   $('#originSwitch').addEventListener('change', e => setOrigin(e.target.value));
+  $('#placesEditBtn').addEventListener('click', openPlaces);
+  $('#placesList').addEventListener('click', e => {
+    const row = e.target.closest('[data-place]');
+    if (!row) return;
+    if (e.target.closest('[data-place-delete]')) return deletePlace(row.dataset.place);
+    openPlaceForm(row.dataset.place);
+  });
+  $('#placeAddBtn').addEventListener('click', () => openPlaceForm());
+  $('#placeForm').addEventListener('submit', onPlaceSubmit);
+  $('#placeDeleteBtn').addEventListener('click', () => deletePlace($('#placeForm').elements.editId.value));
+  $('#placeUseGps').addEventListener('click', fillPlaceGps);
   $('#viewSwitch').addEventListener('click', e => {
     const b = e.target.closest('[data-view]');
     if (!b) return;
@@ -233,9 +350,10 @@ async function init() {
   const data = await fetch('data/stations.json').then(r => r.json());
   state.stations = data.stations;
   state.webcamsPage = data.webcamsPage;
-  const originKey = PLACES[state.prefs.origin] || state.prefs.origin === 'gps' ? state.prefs.origin : 'villedupont';
-  $(`#originSwitch input[value="${originKey}"]`).checked = true;
-  state.origin = PLACES[originKey] || readJSON('fondeur_last_gps', PLACES.villedupont);
+  const originKey = placeById(state.prefs.origin) || state.prefs.origin === 'gps' ? state.prefs.origin : state.places[0]?.id || 'gps';
+  const originInput = $(`#originSwitch input[value="${originKey}"]`);
+  if (originInput) originInput.checked = true;
+  state.origin = placeById(originKey) || readJSON('fondeur_last_gps', state.places[0]);
   render();
   await Promise.all([loadData(), setOrigin(originKey)]);
 

@@ -32,6 +32,7 @@ function raceCard(r) {
         <p class="race-card__meta">${esc(r.location)}</p>
         <p class="race-card__period">${esc(r.period)}${edition.confirmed ? '' : ' · <em>à vérifier</em>'}</p>
       </div>
+      <button type="button" class="race-card__mark ${isAdded ? 'is-on' : ''}" data-race-mark aria-pressed="${isAdded}" title="${isAdded ? 'Ajoutée au calendrier · toucher pour retirer la marque' : 'Marquer comme déjà ajoutée au calendrier (sans repasser par Carnet)'}">${icon(isAdded ? 'check' : 'calendar', 15)}</button>
     </header>
     <p class="race-card__dist">${esc(r.distance)}</p>
     ${r.notes ? `<p class="race-card__notes">${esc(r.notes)}</p>` : ''}
@@ -41,6 +42,21 @@ function raceCard(r) {
       <a class="btn btn--ghost btn--sm" href="${esc(r.link)}" target="_blank" rel="noopener">Site officiel</a>
     </div>
   </article>`;
+}
+
+/** Marque/démarque manuellement une course comme « déjà ajoutée au calendrier », sans passer par Carnet. */
+function toggleMark(card) {
+  const id = card.dataset.race;
+  const r = RACES.find(x => x.id === id);
+  const edition = r.editions[view.yearIdx] || r.editions[0];
+  const key = addedKey(id, edition.year);
+  const now = !added.has(key);
+  if (now) added.add(key);
+  else added.delete(key);
+  saveAdded();
+  card.outerHTML = raceCard(r);
+  updateBar();
+  toast(now ? 'Marquée comme ajoutée au calendrier' : 'Marque retirée', { type: 'info' });
 }
 
 function updateBar() {
@@ -112,8 +128,10 @@ export function initRaces() {
     });
   }
   $('#racesList').addEventListener('click', e => {
-    const btn = e.target.closest('[data-race-action="add"]');
-    if (btn) addOne(btn.closest('[data-race]'));
+    const addBtn = e.target.closest('[data-race-action="add"]');
+    if (addBtn) return addOne(addBtn.closest('[data-race]'));
+    const markBtn = e.target.closest('[data-race-mark]');
+    if (markBtn) toggleMark(markBtn.closest('[data-race]'));
   });
   $('#racesList').addEventListener('change', e => {
     if (e.target.matches('[data-race-check]')) updateBar();

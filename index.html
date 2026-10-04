@@ -55,10 +55,9 @@
   <main class="app" id="main" tabindex="-1">
     <h2 class="page-title" id="pageTitle">Où skier aujourd’hui ?</h2>
 
-    <div class="segmented segmented--types" id="originSwitch" role="radiogroup" aria-label="Point de départ">
-      <label><input type="radio" name="origin" value="villedupont" checked><span>Ville-du-Pont</span></label>
-      <label><input type="radio" name="origin" value="boussieres"><span>Boussières</span></label>
-      <label><input type="radio" name="origin" value="gps"><span>📍 Ici</span></label>
+    <div class="origin-row">
+      <div class="segmented segmented--types" id="originSwitch" role="radiogroup" aria-label="Point de départ"></div>
+      <button type="button" class="icon-btn" id="placesEditBtn" aria-label="Gérer les lieux de départ"><span data-icon="edit" data-size="17"></span></button>
     </div>
 
     <div class="toolbar">
@@ -117,6 +116,39 @@
       <div class="sheet__grabber" aria-hidden="true"></div>
       <header class="sheet__head"><h2 class="sheet__title" id="stationTitle">Station</h2><button type="button" class="icon-btn" data-close aria-label="Fermer"><span data-icon="close"></span></button></header>
       <div class="sheet__scroll" id="stationContent"></div>
+    </div>
+  </div>
+
+  <!-- Lieux de départ -->
+  <div class="sheet-backdrop" id="placesSheet" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="placesTitle" tabindex="-1">
+      <div class="sheet__grabber" aria-hidden="true"></div>
+      <header class="sheet__head"><h2 class="sheet__title" id="placesTitle">Lieux de départ</h2><button type="button" class="icon-btn" data-close aria-label="Fermer"><span data-icon="close"></span></button></header>
+      <div class="sheet__scroll">
+        <p class="field__help">« 📍 Ici » (position actuelle) reste toujours disponible et ne se modifie pas ici.</p>
+        <div class="stack" id="placesList"></div>
+        <button type="button" class="btn btn--ghost btn--block" id="placeAddBtn"><span data-icon="plus" data-size="16"></span><span>Ajouter un lieu</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lieu : ajout / modification -->
+  <div class="sheet-backdrop" id="placeFormSheet" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="placeFormTitle" tabindex="-1">
+      <div class="sheet__grabber" aria-hidden="true"></div>
+      <header class="sheet__head"><h2 class="sheet__title" id="placeFormTitle">Nouveau lieu</h2><button type="button" class="icon-btn" data-close aria-label="Fermer"><span data-icon="close"></span></button></header>
+      <form class="form sheet__scroll" id="placeForm" novalidate>
+        <input type="hidden" name="editId">
+        <div class="field"><label class="field__label" for="plName">Nom</label><input class="input" id="plName" name="name" maxlength="40" placeholder="Ex. Pontarlier" autocomplete="off"></div>
+        <div class="form-grid">
+          <div class="field"><label class="field__label" for="plLat">Latitude</label><input class="input" id="plLat" name="lat" inputmode="decimal" placeholder="Ex. 46,999"></div>
+          <div class="field"><label class="field__label" for="plLon">Longitude</label><input class="input" id="plLon" name="lon" inputmode="decimal" placeholder="Ex. 6,499"></div>
+        </div>
+        <button type="button" class="btn btn--ghost btn--block" id="placeUseGps"><span data-icon="pin" data-size="16"></span><span>Utiliser ma position actuelle</span></button>
+        <div class="field-error" id="placeFormError" hidden></div>
+        <div class="form-actions"><button type="button" class="btn btn--ghost" data-close>Annuler</button><button type="submit" class="btn btn--primary">Enregistrer</button></div>
+        <button type="button" class="btn btn--ghost btn--danger-text" id="placeDeleteBtn" hidden><span data-icon="trash" data-size="16"></span><span>Supprimer ce lieu</span></button>
+      </form>
     </div>
   </div>
 </body>
