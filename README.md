@@ -13,6 +13,9 @@ HTML/CSS/JavaScript purs (modules ES), sans serveur, hébergement GitHub Pages.
 | Suisse Tourisme | état des sites de ski de fond de Suisse romande | idem |
 | Open-Meteo | température, regel nocturne, neige fraîche, pluie, vent, hauteur de neige estimée, prévisions 5 jours, à l'altitude de chaque site | appelé depuis l'app (gratuit, sans clé) |
 | OSRM / OpenStreetMap | temps de trajet en voiture, carte | appelé depuis l'app |
+| [Météo Franc-Comtoise](https://www.meteofranccomtoise.fr/) | avis d'un prévisionniste local sur la région | lien vers le site (pas d'API publique) sous les prévisions 5 jours de chaque fiche station, à recouper avec le modèle Open-Meteo |
+
+Le relevé des bulletins (`tools/fetch_bulletins.py`, via GitHub Actions) enregistre l'heure de **chaque** vérification réussie, pas seulement celle des changements constatés — sinon la date affichée dans l'app pouvait dater de plusieurs jours hors saison (quand rien ne change d'un jour à l'autre) alors que les bulletins avaient bien été revérifiés entre-temps.
 
 ## Note « skating » (/100)
 Neige (35) · pistes ouvertes (20) · regel de la nuit (15) · température du jour (10) · damage récent (10) · pluie et vent (10), malus en cas de grosse chute non damée. Le trajet n'entre pas dans la note (filtre « trajet max » disponible). Détail dans `js/core/score.js`.
@@ -37,7 +40,7 @@ Le sélecteur de point de départ (sous le titre) propose des lieux enregistrés
 À l'ajout ou la modification d'un lieu, deux façons de le positionner : **rechercher une commune** (son nom suffit, coordonnées de son centre remplies automatiquement — API de géocodage gratuite d'Open-Meteo, `js/services/geocode.js`) ou **renseigner un point précis** (saisie manuelle des coordonnées, ou bouton « Utiliser ma position actuelle » pour un endroit exact comme un parking ou un départ de piste).
 
 ## Onglet Courses
-Sélection curatée (`js/data/races.js`, mise à jour à la main) de 20 courses populaires de ski de fond : Massif du Jura (France et Suisse), Vosges, Alpes du Nord et Massif Central — la France entière hors Alpes du Sud et Pyrénées. Un filtre par région (dont un filtre dédié « 🏁 Marathon Ski Tour ») et un sélecteur d'édition (année en cours / suivante) permettent de restreindre l'affichage. La plupart des dates précises ne sont pas encore publiées aussi loin à l'avance : une date estimée est pré-remplie mais reste modifiable avant d'ajouter.
+Sélection curatée (`js/data/races.js`, mise à jour à la main) de 20 courses populaires de ski de fond : Massif du Jura (France et Suisse), Vosges, Alpes du Nord et Massif Central — la France entière hors Alpes du Sud et Pyrénées. Un filtre par région (dont un filtre dédié « 🏁 Marathon Ski Tour ») et un sélecteur d'édition (année en cours / suivante) permettent de restreindre l'affichage. Les courses sont triées par date de l'édition affichée (la plus proche en premier). La plupart des dates précises ne sont pas encore publiées aussi loin à l'avance : une date estimée est pré-remplie mais reste modifiable avant d'ajouter.
 
 **Circuit Marathon Ski Tour** : les 8 épreuves du circuit officiel 2025-2026 ([marathonskitour.fr](https://www.marathonskitour.fr/)) portent un badge « Marathon Ski Tour » (champ `circuit` dans `js/data/races.js`) — La Transjurassienne, Les Belles Combes, La Foulée Blanche, La Savoyarde, le Marathon du Grand Bec, le Marathon des Glières, l'Étoile des Saisies et le Marathon de Bessans. Le circuit ne couvre que le Jura et les Alpes (pas les Vosges, Pyrénées ni le Massif Central). La Traversée du Massacre, qui en faisait partie jusqu'à la saison 2024-2025, n'y figure plus depuis 2025-2026.
 

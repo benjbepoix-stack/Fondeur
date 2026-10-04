@@ -71,7 +71,9 @@ export function renderRaces() {
   if (groupBtns.length) groupBtns.forEach(b => b.setAttribute('aria-checked', String(b.dataset.raceGroup === view.group)));
   const yearBtns = $$('#racesYear [data-race-year]');
   if (yearBtns.length) yearBtns.forEach((b, i) => b.setAttribute('aria-checked', String(i === view.yearIdx)));
-  const list = view.group === 'all' ? RACES : view.group === 'circuit' ? RACES.filter(r => r.circuit) : RACES.filter(r => r.group === view.group);
+  const filtered = view.group === 'all' ? RACES : view.group === 'circuit' ? RACES.filter(r => r.circuit) : RACES.filter(r => r.group === view.group);
+  const editionDate = r => (r.editions[view.yearIdx] || r.editions[0]).date;
+  const list = [...filtered].sort((a, b) => editionDate(a).localeCompare(editionDate(b)));
   $('#racesList').innerHTML = list.length ? list.map(raceCard).join('') : '<div class="empty">Aucune course dans cette catégorie.</div>';
   updateBar();
 }

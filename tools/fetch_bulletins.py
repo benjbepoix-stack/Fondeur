@@ -198,21 +198,27 @@ def main():
     if not data["france"] and not data["suisse"]:
         sys.exit("Aucune donnée : fichier existant conservé.")
 
-    # N'écrit que si le contenu change (évite des commits inutiles)
+    # fetchedAt enregistre l'heure de CE relevé réussi, à chaque exécution — y compris quand le
+    # contenu est identique au précédent (hors saison, rien ne change d'un jour à l'autre). Avant,
+    # le script n'écrivait (et donc ne publiait) rien dans ce cas, et la date affichée dans l'app
+    # finissait par dater de plusieurs jours alors que les bulletins avaient bien été revérifiés
+    # entre-temps — trompeur. On écrit désormais systématiquement, pour que « bulletins relevés
+    # le... » reflète toujours la dernière vérification réussie, pas le dernier changement constaté.
     previous = None
     if os.path.exists(OUT):
         try:
             previous = json.load(open(OUT, encoding="utf-8"))
         except ValueError:
             previous = None
-    if previous and {k: v for k, v in previous.items() if k != "fetchedAt"} == data:
-        print("Bulletins inchangés.")
-        return
+    unchanged = previous is not None and {k: v for k, v in previous.items() if k != "fetchedAt"} == data
     data["fetchedAt"] = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
-    print(f"Bulletins écrits : {len(data['france'])} sites FR, {len(data['suisse'])} sites CH.")
+    if unchanged:
+        print(f"Bulletins inchangés, date de relevé mise à jour : {len(data['france'])} sites FR, {len(data['suisse'])} sites CH.")
+    else:
+        print(f"Bulletins écrits : {len(data['france'])} sites FR, {len(data['suisse'])} sites CH.")
 
 
 if __name__ == "__main__":

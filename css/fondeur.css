@@ -134,6 +134,8 @@
 .level.is-bad { background: var(--danger-soft); color: var(--danger); }
 .level.is-none { background: var(--surface-3); color: var(--text-3); }
 .days { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.forecast-crosscheck { margin-top: 10px; }
+.forecast-crosscheck a { color: var(--accent); font-weight: 700; }
 .day { display: flex; flex-direction: column; align-items: center; padding: 9px 0; border-radius: 14px; background: var(--surface-solid); border: 1px solid var(--border); }
 .day b { font-size: 11.5px; color: var(--text-2); text-transform: capitalize; }
 .day__ico { font-size: 20px; margin: 3px 0; }

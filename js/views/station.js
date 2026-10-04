@@ -115,7 +115,9 @@ export function openStation(id) {
     ${waxBlock(wx)}
     ${webcamBlock(s, st.webcamsPage)}
     ${bulletinBlock(r)}
-    <section class="section"><header class="section__head"><h3 class="section__title">5 prochains jours</h3><span class="card__sub">à ${s.alt} m</span></header><div class="days">${days}</div></section>
+    <section class="section"><header class="section__head"><h3 class="section__title">5 prochains jours</h3><span class="card__sub">à ${s.alt} m</span></header><div class="days">${days}</div>
+      <p class="card__sub forecast-crosscheck">Modèle météo automatisé — à recouper avec l'avis d'un prévisionniste local : <a href="https://www.meteofranccomtoise.fr/" target="_blank" rel="noopener">Météo Franc-Comtoise</a>.</p>
+    </section>
     <section class="section"><header class="section__head"><h3 class="section__title">Pourquoi cette note</h3><span class="card__sub">skating</span></header><div class="card why">${why}</div></section>`;
   openSheet('stationSheet', { focus: false });
 }
