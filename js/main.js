@@ -43,6 +43,11 @@ const state = {
 };
 // Ancien point de départ (Besançon) remplacé par Boussières
 if (state.prefs.origin === 'besancon') state.prefs.origin = 'boussieres';
+// L'app doit toujours rouvrir sur « Où skier ? », jamais rester sur l'onglet
+// Courses resté ouvert à la fermeture précédente (le choix de vue n'est donc
+// plus persisté d'une session à l'autre, même s'il continue de l'être le
+// temps de la session, pour les autres écrans qui s'y réfèrent).
+state.prefs.view = 'list';
 
 const savePrefs = () => write(PREFS, JSON.stringify(state.prefs));
 
