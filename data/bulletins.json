@@ -1031,15 +1031,6 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/verbier-132/"
   },
-  "Portes du Soleil - Champéry - Les Crosets - Champoussin - Morgins": {
-   "place": "Champéry – Valais",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 74.– Enfant CHF 56.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/portes-du-soleil-champery-les-crosets-champoussin-morgins-13/"
-  },
   "Glacier 3000": {
    "place": "Les Diablerets – Canton de Vaud",
    "noSeason": true,
@@ -1058,15 +1049,6 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/charmeych-4/"
   },
-  "Les Mosses - La Lécherette": {
-   "place": "Les Mosses – Canton de Vaud",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 62.– Enfant CHF 40.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-mosses-la-lecherette-329/"
-  },
   "Crans - Montana": {
    "place": "Crans-Montana – Valais",
    "noSeason": true,
@@ -1075,15 +1057,6 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/crans-montana-142/"
-  },
-  "Leysin": {
-   "place": "Leysin – Canton de Vaud",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers (dynamiques) Adulte dès CHF 62.– Enfant dès CHF 40.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/leysin-330/"
   },
   "Ovronnaz": {
    "place": "Ovronnaz – Valais",
@@ -1103,6 +1076,15 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/nendaz-4-vallees-139/"
   },
+  "Leysin": {
+   "place": "Leysin – Canton de Vaud",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers (dynamiques) Adulte dès CHF 62.– Enfant dès CHF 40.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/leysin-330/"
+  },
   "Anzère": {
    "place": "Anzère – Valais",
    "noSeason": false,
@@ -1111,6 +1093,15 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
+  },
+  "Les Mosses - La Lécherette": {
+   "place": "Les Mosses – Canton de Vaud",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 62.– Enfant CHF 40.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-mosses-la-lecherette-329/"
   },
   "Val-de-Travers/La Robella": {
    "place": "Buttes La Robella – Jura & Trois-Lacs",
@@ -1129,33 +1120,6 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/evolene-espace-dent-blanche-11/"
-  },
-  "Grimentz-Zinal /Anniviers": {
-   "place": "Grimentz – Valais",
-   "noSeason": true,
-   "summary": "Pas de données actuelles ! Pas de saison ! · Forfaits journaliers Adulte CHF 75.– Enfant CHF 45.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
-  },
-  "Vue des Alpes/Tête de Ran": {
-   "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vue-des-alpestete-de-ran-194/"
-  },
-  "Mont-Soleil - Mont-Crosin": {
-   "place": "Tramelan – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers –",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
   },
   "Champex-Lac": {
    "place": "Champex-Lac – Valais",
@@ -1202,6 +1166,78 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/pres-dorvin-chasseral-206/"
   },
+  "Mont-Soleil - Mont-Crosin": {
+   "place": "Tramelan – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers –",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
+  },
+  "Vue des Alpes/Tête de Ran": {
+   "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vue-des-alpestete-de-ran-194/"
+  },
+  "Portes du Soleil - Champéry - Les Crosets - Champoussin - Morgins": {
+   "place": "Champéry – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 74.– Enfant CHF 56.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/portes-du-soleil-champery-les-crosets-champoussin-morgins-13/"
+  },
+  "Grimentz-Zinal /Anniviers": {
+   "place": "Grimentz – Valais",
+   "noSeason": true,
+   "summary": "Pas de données actuelles ! Pas de saison ! · Forfaits journaliers Adulte CHF 75.– Enfant CHF 45.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
+  },
+  "Arolla Espace Dent-Blanche": {
+   "place": "Arolla – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 48.– Enfant CHF 31.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/arolla-espace-dent-blanche-144/"
+  },
+  "Les Paccots - La Veveyse": {
+   "place": "Les Paccots – Région de Fribourg",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 45.– Enfant CHF 30.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-paccots-la-veveyse-151/"
+  },
+  "Les Pléiades": {
+   "place": "Blonay – Canton de Vaud",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 35.– Enfant CHF 18.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-pleiades-187/"
+  },
+  "Les Breuleux": {
+   "place": "Les Breuleux – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 24.– Enfant CHF 15.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-breuleux-211/"
+  },
   "Sainte-Croix / Les Rasses": {
    "place": "Sainte-Croix Les Rasses – Canton de Vaud",
    "noSeason": false,
@@ -1246,43 +1282,7 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-fouly-141/"
-  },
-  "Arolla Espace Dent-Blanche": {
-   "place": "Arolla – Valais",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 48.– Enfant CHF 31.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/arolla-espace-dent-blanche-144/"
-  },
-  "Les Paccots - La Veveyse": {
-   "place": "Les Paccots – Région de Fribourg",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 45.– Enfant CHF 30.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-paccots-la-veveyse-151/"
-  },
-  "Les Pléiades": {
-   "place": "Blonay – Canton de Vaud",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 35.– Enfant CHF 18.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-pleiades-187/"
-  },
-  "Les Breuleux": {
-   "place": "Les Breuleux – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 24.– Enfant CHF 15.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-breuleux-211/"
   }
  },
- "fetchedAt": "2026-10-05T05:33:00+00:00"
+ "fetchedAt": "2026-10-06T05:30:06+00:00"
 }
