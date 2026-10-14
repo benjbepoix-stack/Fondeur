@@ -39,9 +39,6 @@
   --violet: #b8aede;
   --violet-soft: rgba(184, 174, 222, .12);
 
-  --ambient-1: rgba(120, 220, 200, .06);
-  --ambient-2: rgba(143, 211, 255, .05);
-  --ambient-3: rgba(0, 0, 0, 0);
 }
 
 :root[data-theme="light"] {
@@ -81,7 +78,4 @@
   --violet: #62569a;
   --violet-soft: rgba(98, 86, 154, .09);
 
-  --ambient-1: rgba(47, 111, 178, .07);
-  --ambient-2: rgba(120, 190, 220, .06);
-  --ambient-3: rgba(0, 0, 0, 0);
 }

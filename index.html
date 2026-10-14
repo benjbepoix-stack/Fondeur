@@ -17,7 +17,13 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
   <script>
-    try { if (JSON.parse(localStorage.getItem('fondeur_theme')) === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+    // Thème choisi, sinon celui de l'appareil (évite un flash clair en mode sombre).
+    (function () {
+      var t = null;
+      try { t = JSON.parse(localStorage.getItem('fondeur_theme')); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = t;
+    })();
   </script>
 
   <link rel="stylesheet" href="css/tokens.css">
@@ -31,8 +37,6 @@
 </head>
 
 <body>
-  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
-
   <header class="topbar">
     <div class="topbar__inner">
       <div class="topbar__titles">

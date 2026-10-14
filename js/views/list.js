@@ -19,7 +19,7 @@ function answer(r, state) {
     b?.live && b.kmTotal ? `${Math.round(b.kmOpen || 0)}/${Math.round(b.kmTotal)} km ouverts` : `${r.station.alt} m`
   ];
   const go = travel(r);
-  return `<section class="answer" aria-labelledby="answerName">
+  return `<section class="answer" aria-labelledby="answerName" style="view-transition-name: answer">
     <p class="lab">${esc(lead)}</p>
     <div class="answer__title">
       <h2 class="answer__name" id="answerName">${esc(r.station.name)}</h2>
@@ -39,7 +39,8 @@ function card(r, pos) {
   const lvl = levelOf(r.score);
   const top = [pos, r.route ? durationLabel(r.route.minutes) : null, r.station.country === 'CH' ? 'CH' : null].filter(Boolean).join(' · ');
   const foot = r.closed ? 'Fermé' : r.wx ? `${deg(r.wx.tMinNight)} la nuit` : '';
-  return `<div class="nx ${r.fav ? 'is-fav' : ''}" data-station="${esc(r.station.id)}" role="button" tabindex="0" aria-label="${esc(r.station.name)}, note ${r.score ?? 'inconnue'}">
+  // Nom de transition propre à la station : la carte glisse vers sa nouvelle place quand le classement change.
+  return `<div class="nx ${r.fav ? 'is-fav' : ''}" style="view-transition-name: nx-${esc(r.station.id)}" data-station="${esc(r.station.id)}" role="button" tabindex="0" aria-label="${esc(r.station.name)}, note ${r.score ?? 'inconnue'}">
     <span class="nx__top"><span>${esc(top)}</span>${favButton(r.station.id, 'fav-btn--sm')}</span>
     <strong class="nx__name">${esc(r.station.name)}</strong>
     <span class="nx__score is-${lvl}">${r.score ?? '—'}</span>
@@ -53,7 +54,12 @@ export function renderList(list, state) {
   $('#nextSection').hidden = list.length < 2 || !ready.length;
   if (!ready.length) {
     $('#best').innerHTML = list.length
-      ? '<section class="answer answer--loading"><div class="spinner"></div><p>Chargement de la météo des stations…</p></section>'
+      ? `<section class="answer answer--skeleton" role="status" aria-busy="true">
+          <span class="visually-hidden">Chargement de la météo des stations…</span>
+          <span class="skeleton sk-lab"></span><span class="skeleton sk-name"></span><span class="skeleton sk-num"></span>
+          <span class="skeleton sk-line"></span><span class="skeleton sk-facts"></span>
+          <span class="sk-actions"><span class="skeleton"></span><span class="skeleton"></span></span>
+        </section>`
       : '<div class="empty-state"><p>Aucune station ne correspond aux réglages.</p></div>';
     $('#ranking').innerHTML = '';
     return;
