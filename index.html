@@ -36,56 +36,33 @@
   <header class="topbar">
     <div class="topbar__inner">
       <div class="topbar__titles">
-        <span class="topbar__kicker">Ski de fond · Massif du Jura</span>
-        <h1 class="visually-hidden">Trace</h1>
+        <h1 class="topbar__brand">Trace</h1>
       </div>
       <div class="topbar__actions">
-        <button type="button" class="icon-btn icon-btn--glass" id="refreshBtn" aria-label="Actualiser"><span data-icon="refresh" data-size="19"></span></button>
-        <button type="button" class="icon-btn icon-btn--glass" id="themeToggle" aria-label="Changer de thème"></button>
+        <button type="button" class="icon-btn" id="mapToggle" aria-label="Voir la carte" aria-pressed="false"><span data-icon="map" data-size="20"></span></button>
+        <button type="button" class="icon-btn" id="refreshBtn" aria-label="Actualiser"><span data-icon="refresh" data-size="19"></span></button>
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Changer de thème"></button>
       </div>
     </div>
   </header>
 
   <nav class="tabbar" id="viewSwitch" aria-label="Navigation principale">
-    <button type="button" class="tabbar__item is-active" data-view="list" aria-current="page"><span data-icon="pin"></span><span>Où skier ?</span></button>
-    <button type="button" class="tabbar__item" data-view="map"><span data-icon="map"></span><span>Carte</span></button>
+    <button type="button" class="tabbar__item is-active" data-view="list" aria-current="page"><span data-icon="sun"></span><span>Aujourd’hui</span></button>
     <button type="button" class="tabbar__item" data-view="races"><span data-icon="flag"></span><span>Courses</span></button>
   </nav>
 
   <main class="app" id="main" tabindex="-1">
-    <h2 class="page-title" id="pageTitle">Où skier aujourd’hui ?</h2>
-
-    <div class="origin-row">
-      <div class="segmented segmented--types" id="originSwitch" role="radiogroup" aria-label="Point de départ"></div>
-      <button type="button" class="icon-btn" id="placesEditBtn" aria-label="Gérer les lieux de départ"><span data-icon="edit" data-size="17"></span></button>
+    <div class="today-head" id="todayHead">
+      <button type="button" class="filter-pill" id="filtersBtn" aria-haspopup="dialog"><span id="filtersLabel">Réglages</span><span data-icon="chevronDown" data-size="15"></span></button>
+      <p class="mood" id="mood" role="status"></p>
     </div>
-
-    <div class="toolbar">
-      <select class="input select select--mini" id="countryFilter" aria-label="Pays">
-        <option value="all">Tous pays</option>
-        <option value="fav">★ Favoris</option>
-        <option value="FR">France</option>
-        <option value="CH">Suisse</option>
-      </select>
-      <select class="input select select--mini" id="travelFilter" aria-label="Trajet maximum">
-        <option value="0">Tout trajet</option>
-        <option value="45">≤ 45 min</option>
-        <option value="60">≤ 1 h</option>
-        <option value="90">≤ 1 h 30</option>
-      </select>
-      <select class="input select select--mini" id="sortFilter" aria-label="Trier le classement">
-        <option value="score">Meilleure note</option>
-        <option value="distance">Trajet le plus court</option>
-        <option value="night">Nuit la plus froide</option>
-      </select>
-    </div>
-
-    <p class="status-line" id="statusLine" role="status"></p>
 
     <section id="listView">
       <div id="best"></div>
-      <header class="section__head"><h2 class="section__title">Classement</h2><span class="card__sub" id="rankCount"></span></header>
-      <div class="card card--list" id="ranking"></div>
+      <section class="next" id="nextSection">
+        <header class="next__head"><h2 class="lab">Ensuite</h2><span class="lab" id="rankCount"></span></header>
+        <div class="deck" id="ranking"></div>
+      </section>
     </section>
 
     <section id="mapView" hidden>
@@ -94,9 +71,12 @@
     </section>
 
     <section id="racesView" hidden>
-      <p class="status-line">Sélection curatée, mise à jour à la main · dates à vérifier avant d'ajouter.</p>
-      <div class="races-filter" id="racesYear" role="radiogroup" aria-label="Édition"></div>
+      <header class="races-head">
+        <h2 class="page-title">Courses</h2>
+        <div class="races-year" id="racesYear" role="radiogroup" aria-label="Saison"></div>
+      </header>
       <div class="races-filter" id="racesGroups" role="radiogroup" aria-label="Région"></div>
+      <p class="status-line">Sélection curatée, mise à jour à la main · dates à vérifier avant d’ajouter.</p>
       <div id="racesList"></div>
     </section>
 
@@ -105,11 +85,57 @@
       <button type="button" class="btn btn--primary btn--sm" id="racesBarAdd">Ajouter au planning</button>
     </div>
 
+    <p class="status-line" id="statusLine"></p>
+
     <footer class="sources">
       <p>Météo <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> · Bulletins <a href="https://www.espacenordiquejurassien.com/bulletin-neige.html" target="_blank" rel="noopener">Espace Nordique Jurassien</a> / <a href="https://www.nordicfrance.fr/" target="_blank" rel="noopener">Nordic France</a> et <a href="https://snow.myswitzerland.com/" target="_blank" rel="noopener">Suisse Tourisme</a> · Carte et trajets © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></p>
       <p>La note est une aide à la décision : vérifiez le bulletin officiel avant de partir.</p>
     </footer>
   </main>
+
+  <!-- Réglages du classement : départ, pays, trajet, tri -->
+  <div class="sheet-backdrop" id="filtersSheet" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="filtersTitle" tabindex="-1">
+      <div class="sheet__grabber" aria-hidden="true"></div>
+      <header class="sheet__head"><h2 class="sheet__title" id="filtersTitle">Réglages</h2><button type="button" class="icon-btn" data-close aria-label="Fermer"><span data-icon="close"></span></button></header>
+      <div class="sheet__scroll form">
+        <div class="field">
+          <span class="field__label">Point de départ</span>
+          <div class="origin-row">
+            <div class="segmented segmented--types" id="originSwitch" role="radiogroup" aria-label="Point de départ"></div>
+            <button type="button" class="icon-btn" id="placesEditBtn" aria-label="Gérer les lieux de départ"><span data-icon="edit" data-size="17"></span></button>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label" for="countryFilter">Stations</label>
+          <select class="input select" id="countryFilter">
+            <option value="all">Tous pays</option>
+            <option value="fav">★ Favoris</option>
+            <option value="FR">France</option>
+            <option value="CH">Suisse</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field__label" for="travelFilter">Trajet maximum</label>
+          <select class="input select" id="travelFilter">
+            <option value="0">Tout trajet</option>
+            <option value="45">≤ 45 min</option>
+            <option value="60">≤ 1 h</option>
+            <option value="90">≤ 1 h 30</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field__label" for="sortFilter">Trier par</label>
+          <select class="input select" id="sortFilter">
+            <option value="score">Meilleure note</option>
+            <option value="distance">Trajet le plus court</option>
+            <option value="night">Nuit la plus froide</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn--primary btn--block btn--lg" data-close>Voir le classement</button>
+      </div>
+    </div>
+  </div>
 
   <div class="sheet-backdrop" id="stationSheet" hidden>
     <div class="sheet sheet--tall" role="dialog" aria-modal="true" aria-labelledby="stationTitle" tabindex="-1">
