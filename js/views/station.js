@@ -1,11 +1,11 @@
 /* Fiche d'une station : note, conditions, bulletin officiel, commentaires des pisteurs, prévisions. */
-import { $, esc } from '../core/utils.js';
+import { $, $$, esc } from '../core/utils.js';
 import { openSheet } from '../ui/dialog.js';
 import { fmtTemp } from '../core/score.js';
 import { waxFor } from '../core/wax.js';
 import { weatherLabel } from '../services/weather.js';
 import { durationLabel } from '../services/routes.js';
-import { directionsUrl, ring, shortDate, favButton } from './common.js';
+import { directionsUrl, shortDate, favButton } from './common.js';
 import { rows, getState } from '../main.js';
 
 const dayName = (iso, i) => (i === 0 ? 'Auj.' : new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { weekday: 'short' }).replace('.', ''));
@@ -24,17 +24,17 @@ function webcamBlock(s, page) {
   </section>`;
 }
 
-const tile = (label, value, note) => `<div class="tile"><span>${esc(label)}</span><strong>${esc(value)}</strong>${note ? `<small>${esc(note)}</small>` : ''}</div>`;
+const kpi = (value, label) => `<div class="kpi"><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`;
 
 function waxCard(label, tempC) {
   const w = waxFor(tempC);
   if (!w) return `<div class="wax-card wax-card--empty"><span>${esc(label)}</span><strong>—</strong></div>`;
-  return `<div class="wax-card" style="--c:${w.color}"><span class="wax-card__swatch" aria-hidden="true"></span><div class="wax-card__text"><span>${esc(label)} · ${esc(fmtTemp(w.temp))}</span><strong>${esc(w.name)}</strong><small>${esc(w.note)}</small></div></div>`;
+  return `<div class="wax-card" style="--c:${w.color}"><span class="wax-card__swatch" aria-hidden="true"></span><div class="wax-card__text"><span>${esc(label)} · ${esc(fmtTemp(w.temp).replace(' °C', '°'))}</span><strong>${esc(w.name)}</strong><small>${esc(w.note)}</small></div></div>`;
 }
 
 function waxBlock(wx) {
-  return `<section class="section"><header class="section__head"><h3 class="section__title">Fart conseillé</h3><span class="card__sub">repère, à confirmer sur place</span></header>
-    <div class="wax-cards">${waxCard('Départ matinal', wx.tMinNight)}${waxCard('Après-midi', wx.tMaxToday)}</div>
+  return `<section class="section"><header class="section__head"><h3 class="lab">Fart · repère température</h3></header>
+    <div class="wax-cards">${waxCard('Matin', wx.tMinNight)}${waxCard('Après-midi', wx.tMaxToday)}</div>
     <p class="card__sub wax-caveat">Indication basée sur la seule température : le choix réel dépend aussi de l'état de la neige (fraîche, transformée, humide) — vérifiez sur place ou avec le bulletin des pisteurs.</p>
   </section>`;
 }
@@ -72,6 +72,41 @@ function bulletinBlock(r) {
   </section>`;
 }
 
+/** Barre empilée « Pourquoi cette note », détail dépliable. */
+function whyBlock(r) {
+  const parts = r.factors.filter(f => f.pts > 0);
+  const rest = Math.max(0, 100 - parts.reduce((t, f) => t + f.pts, 0));
+  const short = { snow: 'Neige', open: 'Pistes', night: 'Regel', day: 'Température', groom: 'Damage', weather: 'Pluie, vent', fresh: 'Neige fraîche' };
+  const legend = r.factors.map(f => `${short[f.key] || f.label} ${f.pts}${f.max ? `/${f.max}` : ''}`).join(' · ');
+  const rows = r.factors
+    .map(f => `<div class="why__row"><span><strong>${esc(f.label)}</strong><small>${esc(f.note)}</small></span><em class="${f.pts < 0 ? 'is-minus' : ''}">${f.pts > 0 ? '+' : ''}${f.pts}${f.max ? `<small>/${f.max}</small>` : ''}</em></div>`)
+    .join('');
+  return `<section class="section"><header class="section__head"><h3 class="lab">Pourquoi ${r.score}</h3><span class="lab">skating</span></header>
+    <div class="why-bar" role="img" aria-label="${esc(legend)}">${parts.map((f, i) => `<span style="flex:${f.pts};--k:${i}"></span>`).join('')}<span class="why-bar__rest" style="flex:${rest}"></span></div>
+    <p class="why-legend">${esc(legend)}</p>
+    <details class="why-more"><summary>Détailler</summary><div class="card why">${rows}</div></details>
+  </section>`;
+}
+
+function forecastBlock(s, wx) {
+  const days = wx.days
+    .map((d, i) => {
+      const [ico] = weatherLabel(d.code);
+      const note = d.snow >= 1 ? `+${Math.round(d.snow)} cm` : d.rain >= 1 ? 'pluie' : '';
+      return `<div class="day"><b>${esc(dayName(d.date, i))}</b><span class="day__ico">${ico}</span><span class="day__t">${Math.round(d.tmin)}/${Math.round(d.tmax)}°</span><span class="day__s ${d.rain >= 1 && !(d.snow >= 1) ? 'is-rain' : ''}">${note || '&nbsp;'}</span></div>`;
+    })
+    .join('');
+  return `<section class="section"><header class="section__head"><h3 class="lab">5 prochains jours</h3><span class="lab">à ${s.alt} m</span></header><div class="days">${days}</div>
+    <p class="card__sub forecast-crosscheck">Modèle météo automatisé — à recouper avec l'avis d'un prévisionniste local : <a href="https://www.meteofranccomtoise.fr/" target="_blank" rel="noopener">Météo Franc-Comtoise</a>.</p>
+  </section>`;
+}
+
+const PANELS = [
+  ['conditions', 'Conditions'],
+  ['bulletin', 'Bulletin'],
+  ['forecast', '5 jours']
+];
+
 export function openStation(id) {
   const r = rows().find(x => x.station.id === id) || null;
   const st = getState();
@@ -80,46 +115,46 @@ export function openStation(id) {
   $('#stationTitle').textContent = s.name;
   const wx = r?.wx;
   const route = st.routes[s.id];
-  const head = `<section class="hero-card card">
-    <div class="hero-card__top"><div class="hero-card__text"><p class="kicker">${esc(s.region)} · ${s.alt} m</p>
-      <p class="hero-card__meta">${route ? `${durationLabel(route.minutes)} · ${route.km} km depuis ${esc(st.origin?.name || 'le départ')}${route.estimated ? ' (estimé)' : ''}` : ''}</p></div>
-      <div class="hero-card__side">${ring(r?.score ?? null, 68)}${favButton(s.id, 'fav-btn--hero')}</div></div>
-    ${r ? `<span class="verdict is-${r.level}">❄ ${esc(r.verdict)}</span>` : ''}
-    <div class="hero-card__actions"><a class="btn btn--primary" href="${esc(directionsUrl(s, st.origin))}" target="_blank" rel="noopener">Itinéraire</a><a class="btn btn--soft" href="${esc(s.bulletin)}" target="_blank" rel="noopener">Bulletin</a></div>
+  const meta = [s.region, `${s.alt} m`, route ? durationLabel(route.minutes) : null, route ? `${route.km} km` : null].filter(Boolean).join(' · ');
+  const head = `<section class="fiche-head">
+    <div class="fiche-head__text">
+      <p class="lab">${esc(meta)}${route?.estimated ? ' (estimé)' : ''}</p>
+      ${r ? `<p class="answer__verdict is-${r.level}">${esc(r.verdict)}</p>` : ''}
+    </div>
+    <div class="fiche-head__side"><span class="fiche-head__score">${r?.score ?? '—'}</span>${favButton(s.id, 'fav-btn--hero')}</div>
   </section>`;
+  const tabs = `<div class="segmented fiche-tabs" role="tablist" aria-label="Volets de la fiche">${PANELS.map(
+    ([key, label], i) => `<button type="button" role="tab" id="tab-${key}" aria-controls="panel-${key}" aria-selected="${i === 0}" data-panel-tab="${key}">${label}</button>`
+  ).join('')}</div>`;
+  const panel = (key, html, open = false) => `<div class="fiche-panel" role="tabpanel" id="panel-${key}" aria-labelledby="tab-${key}" ${open ? '' : 'hidden'}>${html}</div>`;
+  const cta = `<div class="fiche-cta"><a class="btn btn--primary btn--lg btn--block" href="${esc(directionsUrl(s, st.origin))}" target="_blank" rel="noopener">Itinéraire${route ? ` · ${esc(durationLabel(route.minutes))}` : ''}</a></div>`;
+
+  let conditions;
   if (!wx) {
-    $('#stationContent').innerHTML = `${head}<p class="card__sub section">Météo en cours de chargement…</p>${bulletinBlock(r || { station: s, bulletin: null })}${webcamBlock(s, st.webcamsPage)}`;
-    openSheet('stationSheet', { focus: false });
-    return;
+    conditions = `<p class="card__sub section">Météo en cours de chargement…</p>${webcamBlock(s, st.webcamsPage)}`;
+  } else {
+    const kpis = [
+      kpi(`${r.depth} cm`, r.measured ? 'neige mesurée' : 'neige estimée'),
+      kpi(`+${wx.fresh72} cm`, `frais sur 72 h`),
+      kpi(fmtTemp(wx.tMinNight).replace(' °C', '°'), wx.tMinNight <= -1 ? 'regel cette nuit' : 'pas de regel'),
+      kpi(fmtTemp(wx.tMaxToday).replace(' °C', '°'), wx.tMaxToday > 4 ? 'max · neige molle' : 'max du jour'),
+      kpi(`${String(wx.rain48).replace('.', ',')} mm`, 'pluie 48 h'),
+      kpi(`${Math.round(wx.windMax)}`, 'km/h de vent')
+    ];
+    conditions = `<div class="kpis">${kpis.join('')}</div>${waxBlock(wx)}${whyBlock(r)}${webcamBlock(s, st.webcamsPage)}`;
   }
-  const tiles = [
-    tile('Hauteur de neige', `${r.depth} cm`, r.measured ? 'mesurée par la station' : 'estimée (modèle météo)'),
-    tile('Neige fraîche', `+${wx.fresh72} cm`, `sur 72 h · +${wx.fresh24} cm sur 24 h`),
-    tile('Minimum cette nuit', fmtTemp(wx.tMinNight), wx.tMinNight <= -4 ? 'regel : neige dure le matin' : wx.tMinNight > 0 ? 'pas de regel' : 'léger regel'),
-    tile('Maximum du jour', fmtTemp(wx.tMaxToday), wx.tMaxToday > 4 ? 'neige qui ramollit' : 'neige qui tient'),
-    tile('Pluie sur 48 h', `${String(wx.rain48).replace('.', ',')} mm`, wx.rain48 > 0.4 ? 'neige mouillée' : 'aucune pluie'),
-    tile('Vent max', `${Math.round(wx.windMax)} km/h`, weatherLabel(wx.code)[1])
-  ];
-  const days = wx.days
-    .map((d, i) => {
-      const [ico] = weatherLabel(d.code);
-      const note = d.snow >= 1 ? `+${Math.round(d.snow)} cm` : d.rain >= 1 ? 'pluie' : '';
-      return `<div class="day"><b>${esc(dayName(d.date, i))}</b><span class="day__ico">${ico}</span><span class="day__t">${Math.round(d.tmin)}/${Math.round(d.tmax)}°</span><span class="day__s ${d.rain >= 1 && !(d.snow >= 1) ? 'is-rain' : ''}">${note || '&nbsp;'}</span></div>`;
-    })
-    .join('');
-  const why = r.factors
-    .map(f => `<div class="why__row"><span><strong>${esc(f.label)}</strong><small>${esc(f.note)}</small></span><em class="${f.pts < 0 ? 'is-minus' : ''}">${f.pts > 0 ? '+' : ''}${f.pts}${f.max ? `<small>/${f.max}</small>` : ''}</em></div>`)
-    .join('');
-  $('#stationContent').innerHTML = `${head}
-    <div class="tiles section">${tiles.join('')}</div>
-    ${waxBlock(wx)}
-    ${webcamBlock(s, st.webcamsPage)}
-    ${bulletinBlock(r)}
-    <section class="section"><header class="section__head"><h3 class="section__title">5 prochains jours</h3><span class="card__sub">à ${s.alt} m</span></header><div class="days">${days}</div>
-      <p class="card__sub forecast-crosscheck">Modèle météo automatisé — à recouper avec l'avis d'un prévisionniste local : <a href="https://www.meteofranccomtoise.fr/" target="_blank" rel="noopener">Météo Franc-Comtoise</a>.</p>
-    </section>
-    <section class="section"><header class="section__head"><h3 class="section__title">Pourquoi cette note</h3><span class="card__sub">skating</span></header><div class="card why">${why}</div></section>`;
+  const bulletin = bulletinBlock(r || { station: s, bulletin: null });
+  const forecast = wx ? forecastBlock(s, wx) : '<p class="card__sub section">Prévisions en cours de chargement…</p>';
+  $('#stationContent').innerHTML = `${head}${tabs}${panel('conditions', conditions, true)}${panel('bulletin', bulletin)}${panel('forecast', forecast)}${cta}`;
+  $('#stationContent').scrollTop = 0;
   openSheet('stationSheet', { focus: false });
 }
 
-export function initStation() {}
+export function initStation() {
+  $('#stationContent').addEventListener('click', e => {
+    const tab = e.target.closest('[data-panel-tab]');
+    if (!tab) return;
+    $$('#stationContent [data-panel-tab]').forEach(b => b.setAttribute('aria-selected', String(b === tab)));
+    $$('#stationContent .fiche-panel').forEach(p => (p.hidden = p.id !== `panel-${tab.dataset.panelTab}`));
+  });
+}

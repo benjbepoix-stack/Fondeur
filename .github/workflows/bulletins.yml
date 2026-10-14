@@ -1,4 +1,5 @@
-# Relève les bulletins nordiques (Nordic France / ENJ, Suisse Tourisme) et met à jour data/bulletins.json.
+# Relève les bulletins nordiques (Nordic France / ENJ, Suisse Tourisme) et met à jour data/bulletins.json,
+# puis recalcule les données des widgets iPhone (data/widget.json).
 name: Bulletins nordiques
 on:
   schedule:
@@ -21,16 +22,27 @@ jobs:
           python-version: "3.12"
       - name: Relever les bulletins
         run: python3 tools/fetch_bulletins.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Données des widgets
+        # Même calcul que l'app (modules js/core) ; un échec météo ne bloque pas les bulletins.
+        continue-on-error: true
+        env:
+          TZ: Europe/Paris
+        run: node tools/build_widget.mjs
       - name: Enregistrer le relevé
         # Committe à chaque exécution réussie (même si le contenu est identique à la précédente) :
         # la date « bulletins relevés le... » affichée dans l'app doit refléter la dernière
         # vérification réussie, pas le dernier changement constaté — sinon elle peut dater de
         # plusieurs jours hors saison alors que les bulletins ont bien été revérifiés entre-temps.
         run: |
-          if git diff --quiet -- data/bulletins.json; then echo "Rien à committer."; exit 0; fi
+          git add -N data/widget.json 2>/dev/null || true
+          if git diff --quiet -- data/bulletins.json data/widget.json; then echo "Rien à committer."; exit 0; fi
           git config user.name "fondeur-bot"
           git config user.email "fondeur-bot@users.noreply.github.com"
           git add data/bulletins.json
+          if [ -f data/widget.json ]; then git add data/widget.json; fi
           git commit -m "Bulletins nordiques $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
           git push

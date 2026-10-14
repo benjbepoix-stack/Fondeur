@@ -1,71 +1,66 @@
-/* Classement : meilleur choix mis en avant puis toutes les stations. */
+/* « Aujourd'hui » : une seule réponse en grand, puis les stations suivantes en cartes. */
 import { $, esc } from '../core/utils.js';
 import { fmtTemp, levelOf } from '../core/score.js';
 import { durationLabel } from '../services/routes.js';
-import { directionsUrl, ring, flag, favButton } from './common.js';
+import { directionsUrl, favButton } from './common.js';
 
-const km = r => (r.route ? `${durationLabel(r.route.minutes)}${r.route.estimated ? ' (estimé)' : ''}` : '…');
+const deg = t => fmtTemp(t).replace(' °C', '°');
+const travel = r => (r.route ? `${durationLabel(r.route.minutes)}${r.route.estimated ? ' (estimé)' : ''}` : null);
 
-function bestCard(r, origin) {
+const LEADS = { score: 'Meilleur choix', distance: 'Le plus proche', night: 'Nuit la plus froide' };
+
+function answer(r, state) {
   const b = r.bulletin;
-  const open = b?.live && b.kmTotal ? `${Math.round(b.kmOpen || 0)} / ${Math.round(b.kmTotal)} km ouverts` : `${r.station.alt} m`;
-  const chips = [
-    [`${r.depth} cm`, r.measured ? 'neige (station)' : 'neige (estim.)'],
-    [r.wx.fresh72 ? `+${r.wx.fresh72}` : '0', 'cm / 72 h'],
-    [fmtTemp(r.wx.tMinNight).replace(' °C', '°'), 'cette nuit'],
-    [fmtTemp(r.wx.tMaxToday).replace(' °C', '°'), 'max jour']
+  const when = new Date().getHours() < 11 ? ' ce matin' : '';
+  const lead = `${LEADS[state.prefs.sort] || LEADS.score}${state.prefs.sort === 'score' ? when : ''}${r.station.country === 'CH' ? ' · Suisse' : ''}`;
+  const facts = [
+    `${r.depth} cm${r.measured ? '' : ' (estim.)'}`,
+    `${deg(r.wx.tMinNight)} cette nuit`,
+    b?.live && b.kmTotal ? `${Math.round(b.kmOpen || 0)}/${Math.round(b.kmTotal)} km ouverts` : `${r.station.alt} m`
   ];
-  return `<section class="hero-card card" data-station="${esc(r.station.id)}">
-    <div class="hero-card__top">
-      <div class="hero-card__text">
-        <p class="kicker">Meilleur choix${r.station.country === 'CH' ? ' · Suisse' : ''}${r.fav ? ' · ★ favori' : ''}</p>
-        <h2 class="hero-card__name">${esc(r.station.name)}</h2>
-        <p class="hero-card__meta">${esc(km(r))} · ${esc(open)}</p>
-      </div>
-      <div class="hero-card__side">${ring(r.score, 68)}${favButton(r.station.id, 'fav-btn--hero')}</div>
+  const go = travel(r);
+  return `<section class="answer" aria-labelledby="answerName">
+    <p class="lab">${esc(lead)}</p>
+    <div class="answer__title">
+      <h2 class="answer__name" id="answerName">${esc(r.station.name)}</h2>
+      ${favButton(r.station.id, 'fav-btn--hero')}
     </div>
-    <span class="verdict is-${r.level}">❄ ${esc(r.verdict)}</span>
-    <div class="chips">${chips.map(([v, l]) => `<div class="chip"><strong>${esc(v)}</strong><span>${esc(l)}</span></div>`).join('')}</div>
-    <div class="hero-card__actions">
-      <a class="btn btn--primary" href="${esc(directionsUrl(r.station, origin))}" target="_blank" rel="noopener">Itinéraire</a>
-      <button type="button" class="btn btn--soft" data-station="${esc(r.station.id)}">Détails</button>
+    <p class="answer__score" aria-label="Note ${r.score} sur 100"><span class="answer__num">${r.score}</span><span class="answer__of">/100</span></p>
+    <p class="answer__verdict is-${r.level}">${esc(r.verdict)}</p>
+    <p class="answer__facts">${facts.map(esc).join(' · ')}</p>
+    <div class="answer__actions">
+      <a class="btn btn--primary btn--lg" href="${esc(directionsUrl(r.station, state.origin))}" target="_blank" rel="noopener">Y aller${go ? ` · ${esc(go)}` : ''}</a>
+      <button type="button" class="btn btn--soft btn--lg" data-station="${esc(r.station.id)}">Fiche</button>
     </div>
   </section>`;
 }
 
-function row(r, i) {
+function card(r, pos) {
   const lvl = levelOf(r.score);
-  const meta = [
-    r.station.country === 'CH' ? `${flag('CH')} ${r.station.region}` : r.station.region,
-    `${r.station.alt} m`,
-    km(r),
-    r.wx ? `${fmtTemp(r.wx.tMinNight)} cette nuit` : null
-  ]
-    .filter(Boolean)
-    .join(' · ');
-  const b = r.bulletin;
-  const status = r.closed ? 'Fermé' : b?.live && b.kmTotal ? `${Math.round(b.kmOpen || 0)} km` : `${r.depth} cm`;
-  return `<div class="rank-row ${r.fav ? 'is-fav' : ''}" data-station="${esc(r.station.id)}" role="button" tabindex="0" aria-label="${esc(r.station.name)}, note ${r.score ?? 'inconnue'}">
-    <span class="rank-row__pos">${i + 1}</span>
-    <span class="rank-row__body">
-      <span class="rank-row__name">${esc(r.station.name)}</span>
-      <span class="rank-row__meta">${meta}</span>
-      <span class="bar"><i class="is-${lvl}" style="width:${r.score ?? 0}%"></i></span>
-    </span>
-    <span class="rank-row__score is-${lvl}">${r.score ?? '—'}<small>${esc(status)}</small></span>
-    ${favButton(r.station.id)}
+  const top = [pos, r.route ? durationLabel(r.route.minutes) : null, r.station.country === 'CH' ? 'CH' : null].filter(Boolean).join(' · ');
+  const foot = r.closed ? 'Fermé' : r.wx ? `${deg(r.wx.tMinNight)} la nuit` : '';
+  return `<div class="nx ${r.fav ? 'is-fav' : ''}" data-station="${esc(r.station.id)}" role="button" tabindex="0" aria-label="${esc(r.station.name)}, note ${r.score ?? 'inconnue'}">
+    <span class="nx__top"><span>${esc(top)}</span>${favButton(r.station.id, 'fav-btn--sm')}</span>
+    <strong class="nx__name">${esc(r.station.name)}</strong>
+    <span class="nx__score is-${lvl}">${r.score ?? '—'}</span>
+    <span class="nx__foot">${esc(foot)}</span>
   </div>`;
 }
 
 export function renderList(list, state) {
   const ready = list.filter(r => r.score !== null);
-  $('#rankCount').textContent = list.length ? `${list.length} station${list.length > 1 ? 's' : ''}` : '';
+  $('#rankCount').textContent = list.length > 1 ? `${list.length - 1} station${list.length > 2 ? 's' : ''}` : '';
+  $('#nextSection').hidden = list.length < 2 || !ready.length;
   if (!ready.length) {
-    $('#best').innerHTML = `<section class="hero-card card hero-card--loading"><div class="spinner"></div><p>Chargement de la météo des stations…</p></section>`;
-    $('#ranking').innerHTML = list.length ? '' : '<div class="empty-state"><p>Aucune station ne correspond aux filtres.</p></div>';
-    if (!list.length) $('#best').innerHTML = '';
+    $('#best').innerHTML = list.length
+      ? '<section class="answer answer--loading"><div class="spinner"></div><p>Chargement de la météo des stations…</p></section>'
+      : '<div class="empty-state"><p>Aucune station ne correspond aux réglages.</p></div>';
+    $('#ranking').innerHTML = '';
     return;
   }
-  $('#best').innerHTML = bestCard(ready[0], state.origin);
-  $('#ranking').innerHTML = list.slice(1).map((r, i) => row(r, i + 1)).join('') || '<div class="empty-state"><p>Aucune autre station avec ces filtres.</p></div>';
+  $('#best').innerHTML = answer(ready[0], state);
+  $('#ranking').innerHTML = list
+    .filter(r => r !== ready[0])
+    .map((r, i) => card(r, i + 2))
+    .join('');
 }

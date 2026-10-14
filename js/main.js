@@ -5,6 +5,7 @@ import { loadWeather } from './services/weather.js';
 import { loadRoutes } from './services/routes.js';
 import { searchPlace } from './services/geocode.js';
 import { bulletinFor, computeScore } from './core/score.js';
+import { generalState } from './core/summary.js';
 import { isFavorite, toggleFavorite, rankScore, restoreFavorites } from './core/favorites.js';
 import { initDialogs, openSheet, closeSheet, confirmDialog } from './ui/dialog.js';
 import { applyTheme } from './ui/theme.js';
@@ -64,13 +65,17 @@ const byDefault = (a, b) =>
   (b.score ?? -1) - (a.score ?? -1) ||
   (a.route?.minutes ?? 999) - (b.route?.minutes ?? 999);
 
+/** Toutes les stations notées, sans filtre ni tri. */
+function scored() {
+  return state.stations.map(s => {
+    const b = bulletinFor(s, state.bulletins);
+    const wx = state.weather[s.id] || null;
+    return { station: s, bulletin: b, wx, route: state.routes[s.id] || null, fav: isFavorite(s.id), ...computeScore(wx, b) };
+  });
+}
+
 export function rows() {
-  return state.stations
-    .map(s => {
-      const b = bulletinFor(s, state.bulletins);
-      const wx = state.weather[s.id] || null;
-      return { station: s, bulletin: b, wx, route: state.routes[s.id] || null, fav: isFavorite(s.id), ...computeScore(wx, b) };
-    })
+  return scored()
     .filter(r => state.prefs.country === 'all' || (state.prefs.country === 'fav' ? r.fav : r.station.country === state.prefs.country))
     .filter(r => !state.prefs.travel || !r.route || r.route.minutes <= state.prefs.travel)
     .sort((a, b) => {
@@ -89,25 +94,39 @@ export function rows() {
 
 export const getState = () => state;
 
-const PAGE_TITLES = { list: 'Où skier aujourd’hui ?', map: 'Où skier aujourd’hui ?', races: 'Courses' };
+const COUNTRY_LABELS = { all: 'tous pays', fav: '★ favoris', FR: 'France', CH: 'Suisse' };
+const TRAVEL_LABELS = { 0: 'tout trajet', 45: '≤ 45 min', 60: '≤ 1 h', 90: '≤ 1 h 30' };
+const SORT_LABELS = { score: 'note', distance: 'trajet', night: 'nuit froide' };
+
+/** Texte de la pastille de réglages : « Ville-du-Pont · ≤ 1 h · tous pays · note ». */
+function filtersLabel() {
+  const p = state.prefs;
+  const origin = p.origin === 'gps' ? 'Ici' : state.origin?.name || 'Départ';
+  return [origin, TRAVEL_LABELS[p.travel] || `≤ ${p.travel} min`, COUNTRY_LABELS[p.country], SORT_LABELS[p.sort]].filter(Boolean).join(' · ');
+}
 
 function render() {
   const list = rows();
   const view = state.prefs.view;
   document.body.dataset.view = view;
   $$('#viewSwitch [data-view]').forEach(b => {
-    const active = b.dataset.view === view;
+    const active = b.dataset.view === (view === 'map' ? 'list' : view);
     b.classList.toggle('is-active', active);
     if (active) b.setAttribute('aria-current', 'page');
     else b.removeAttribute('aria-current');
   });
+  const mapBtn = $('#mapToggle');
+  mapBtn.hidden = view === 'races';
+  mapBtn.setAttribute('aria-pressed', String(view === 'map'));
+  mapBtn.setAttribute('aria-label', view === 'map' ? 'Voir le classement' : 'Voir la carte');
+  mapBtn.innerHTML = icon(view === 'map' ? 'list' : 'map', 20);
   $('#listView').hidden = view !== 'list';
   $('#mapView').hidden = view !== 'map';
   $('#racesView').hidden = view !== 'races';
-  $('#pageTitle').textContent = PAGE_TITLES[view] || PAGE_TITLES.list;
-  $('.origin-row').hidden = view === 'races';
-  $('.toolbar').hidden = view === 'races';
+  $('#todayHead').hidden = view === 'races';
   $('#statusLine').hidden = view === 'races';
+  $('#filtersLabel').textContent = filtersLabel();
+  $('#mood').textContent = generalState(scored());
   if (view === 'list') renderList(list, state);
   else if (view === 'map') renderMap(list, state);
   else renderRaces();
@@ -304,6 +323,26 @@ async function deletePlace(id) {
   if (state.prefs.origin === id) setOrigin(state.places[0]?.id || 'gps');
 }
 
+/* ---------- Liens directs (widgets) : #station=<id>, #courses, #carte ---------- */
+function openFromHash() {
+  const hash = decodeURIComponent(location.hash.slice(1));
+  if (!hash) return;
+  history.replaceState(null, '', location.pathname + location.search);
+  if (hash === 'courses' || hash === 'carte') {
+    state.prefs.view = hash === 'courses' ? 'races' : 'map';
+    render();
+    return;
+  }
+  const id = hash.startsWith('station=') ? hash.slice(8) : null;
+  if (id && state.stations.some(s => s.id === id)) {
+    if (state.prefs.view === 'races') {
+      state.prefs.view = 'list';
+      render();
+    }
+    openStation(id);
+  }
+}
+
 /* ---------- Données ---------- */
 async function loadData({ force = false } = {}) {
   const btn = $('#refreshBtn');
@@ -361,6 +400,11 @@ async function init() {
     const btn = e.target.closest('[data-pick]');
     if (btn) pickPlaceSearchResult(Number(btn.dataset.pick));
   });
+  $('#filtersBtn').addEventListener('click', () => openSheet('filtersSheet', { focus: false }));
+  $('#mapToggle').addEventListener('click', () => {
+    state.prefs.view = state.prefs.view === 'map' ? 'list' : 'map';
+    render();
+  });
   $('#viewSwitch').addEventListener('click', e => {
     const b = e.target.closest('[data-view]');
     if (!b) return;
@@ -399,7 +443,8 @@ async function init() {
     if (s && !e.target.closest('a')) openStation(s.dataset.station);
   });
   document.addEventListener('keydown', e => {
-    const s = e.target.closest?.('.rank-row[data-station]');
+    const s = e.target.closest?.('[role="button"][data-station]');
+    if (s && e.target.closest('[data-fav]')) return;
     if (s && (e.key === 'Enter' || e.key === ' ')) {
       e.preventDefault();
       openStation(s.dataset.station);
@@ -417,6 +462,8 @@ async function init() {
   state.origin = placeById(originKey) || readJSON('fondeur_last_gps', state.places[0]);
   render();
   await Promise.all([loadData(), setOrigin(originKey)]);
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
 
   if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
 }
