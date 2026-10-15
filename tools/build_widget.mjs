@@ -22,7 +22,7 @@ const OSRM = 'https://router.project-osrm.org/table/v1/driving/';
 const readJson = async path => JSON.parse(await readFile(new URL(path, ROOT), 'utf8'));
 
 async function getJson(url) {
-  const res = await fetch(url, { headers: { 'User-Agent': 'Trace-widget/1.0 (+https://github.com/benjbepoix-stack/Fondeur)' }, signal: AbortSignal.timeout(30000) });
+  const res = await fetch(url, { headers: { 'User-Agent': 'Glisse-widget/1.0 (+https://github.com/benjbepoix-stack/Fondeur)' }, signal: AbortSignal.timeout(30000) });
   if (!res.ok) throw new Error(`${url.slice(0, 60)}… : HTTP ${res.status}`);
   return res.json();
 }

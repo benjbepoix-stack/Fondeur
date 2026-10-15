@@ -3,11 +3,11 @@
 // icon-color: blue; icon-glyph: snowflake;
 
 /*
- * Trace · widgets iPhone (app Scriptable, gratuite).
+ * Glisse · widgets iPhone (app Scriptable, gratuite).
  *
  * Lit data/widget.json, recalculé par GitHub Actions avec le même calcul que
  * l'app (toutes les 30 min en saison). Toucher un widget ouvre la fiche de
- * la station (ou les courses) dans Trace.
+ * la station (ou les courses) dans Glisse.
  *
  * Paramètre du widget (appui long sur le widget > Modifier le widget > Parameter) :
  *   (vide)                        petit : favoris (ou top 3) · moyen/grand : meilleur choix
@@ -78,7 +78,7 @@ function parseParam(raw) {
 // ---------- Données (avec copie locale hors connexion) ----------
 async function loadData() {
   const fm = FileManager.local();
-  const path = fm.joinPath(fm.documentsDirectory(), 'trace-widget.json');
+  const path = fm.joinPath(fm.documentsDirectory(), 'glisse-widget.json');
   try {
     const req = new Request(`${DATA_URL}?t=${Math.floor(Date.now() / 600000)}`);
     req.timeoutInterval = 15;
@@ -139,7 +139,7 @@ function newWidget(url) {
 
 function errorWidget(message) {
   const w = newWidget(APP_URL);
-  label(w, 'Trace');
+  label(w, 'Glisse');
   w.addSpacer(6);
   text(w, message, 13, { color: C.sub, lines: 4 });
   return w;
@@ -150,7 +150,7 @@ function errorWidget(message) {
 function bestWidget(data, s, family) {
   const w = newWidget(stationUrl(s));
   const head = row(w);
-  label(head, `Trace · ${s === data.stations[0] ? 'meilleur choix' : 'station'}`);
+  label(head, `Glisse · ${s === data.stations[0] ? 'meilleur choix' : 'station'}`);
   head.addSpacer();
   label(head, stamp(data));
   w.addSpacer(6);
@@ -208,7 +208,7 @@ function bestWidget(data, s, family) {
 /** Une station en petit : nom, note, regel et trajet. */
 function smallBestWidget(data, s) {
   const w = newWidget(stationUrl(s));
-  label(w, 'Trace');
+  label(w, 'Glisse');
   w.addSpacer(4);
   text(w, s.name, 15, { weight: 'heavy', lines: 2, scale: 0.6 });
   w.addSpacer();
@@ -313,7 +313,7 @@ function rectangularWidget(data, s, list) {
   const w = new ListWidget();
   w.url = stationUrl(s);
   w.refreshAfterDate = new Date(Date.now() + 30 * 60 * 1000);
-  text(w, `Trace · depuis ${data.origin}`, 11, { color: Color.white() });
+  text(w, `Glisse · depuis ${data.origin}`, 11, { color: Color.white() });
   text(w, `${shortName(s)} ${s.score} · ${travel(s.minutes)}`, 14, { weight: 'bold', color: Color.white() });
   text(w, list.filter(x => x.id !== s.id).slice(0, 2).map(x => `${shortName(x)} ${x.score}`).join(' · ') || data.summary, 11.5, { color: Color.white(), scale: 0.6 });
   return w;
@@ -343,7 +343,7 @@ async function build(family, rawParam) {
   if (mode === 'course') return raceWidget(data, arg);
   if (mode === 'fart') return waxWidget(data, target);
   if (mode === 'favori' || (family === 'small' && !mode && favs.length)) return listWidget(data, favs.sort((a, b) => b.score - a.score), '★ Favoris', family);
-  if (family === 'small' && mode !== 'station') return listWidget(data, data.stations.slice(0, 4), 'Trace · top', family);
+  if (family === 'small' && mode !== 'station') return listWidget(data, data.stations.slice(0, 4), 'Glisse · top', family);
   if (family === 'small') return smallBestWidget(data, target);
   return bestWidget(data, target, family === 'large' || family === 'extraLarge' ? 'large' : 'medium');
 }

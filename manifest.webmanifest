@@ -1,6 +1,6 @@
 {
-  "name": "Trace",
-  "short_name": "Trace",
+  "name": "Glisse",
+  "short_name": "Glisse",
   "description": "Où skier (skating) aujourd'hui dans le Massif du Jura.",
   "start_url": "./",
   "display": "standalone",

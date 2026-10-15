@@ -4,7 +4,7 @@
  * (Open-Meteo, OSRM) et les données qui doivent rester fraîches passent par
  * le réseau normalement ; seul un éventuel repli cache les dépanne hors ligne.
  */
-const CACHE = 'trace-fondeur-v9';
+const CACHE = 'glisse-fondeur-v10';
 
 const PRECACHE_URLS = [
   './',
