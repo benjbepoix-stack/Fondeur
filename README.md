@@ -1,6 +1,6 @@
-# Trace
+# Glisse
 
-*(dépôt « Fondeur », ancien nom de l'application)*
+*(dépôt « Fondeur », premier nom de l'application, puis « Trace »)*
 
 Où skier (skating) aujourd'hui dans le Massif du Jura ? Classement des sites nordiques du Doubs, du Jura, de l'Ain et du Jura suisse selon la neige, la météo et les bulletins des pisteurs, depuis un lieu de départ enregistré (Ville-du-Pont, Boussières…) ou la position GPS.
 
@@ -37,7 +37,7 @@ La fiche de chaque station propose un repère de fart de retenue (vert → bleu 
 Liens directs : `#station=<id>` ouvre la fiche d'une station, `#courses` l'onglet Courses, `#carte` la carte (utilisés par les widgets).
 
 ## Widgets iPhone (Scriptable)
-`tools/build_widget.mjs` (lancé par l'action « Bulletins nordiques ») recalcule les notes avec les mêmes modules que l'app et publie `data/widget.json` : stations triées, phrase d'état général, trajet depuis Ville-du-Pont, fart, prochaines courses. Le script `widgets/trace-scriptable.js`, à coller dans l'app gratuite Scriptable, affiche les widgets : meilleur choix (moyen, grand), favoris ou top (petit), fart du jour, prochaine course, et sur l'écran verrouillé note / regel / fart. Le paramètre de chaque widget est décrit en tête du script.
+`tools/build_widget.mjs` (lancé par l'action « Bulletins nordiques ») recalcule les notes avec les mêmes modules que l'app et publie `data/widget.json` : stations triées, phrase d'état général, trajet depuis Ville-du-Pont, fart, prochaines courses. Le script `widgets/glisse-scriptable.js`, à coller dans l'app gratuite Scriptable, affiche les widgets : meilleur choix (moyen, grand), favoris ou top (petit), fart du jour, prochaine course, et sur l'écran verrouillé note / regel / fart. Le paramètre de chaque widget est décrit en tête du script.
 
 ## Lieux de départ
 Le sélecteur de point de départ (feuille « Réglages ») propose des lieux enregistrés, modifiables via le bouton crayon à côté : ajout, renommage, changement de coordonnées et suppression, depuis la feuille « Lieux de départ ». « 📍 Ici » (position GPS) reste toujours disponible à part et ne se gère pas dans cette liste. Les lieux sont stockés localement (`fondeur_places`) ; par défaut, Ville-du-Pont et Boussières. Avec plusieurs lieux (4-5 et plus), le sélecteur défile horizontalement plutôt que d'écraser le texte des pastilles. Ce sélecteur et son bouton de gestion se trouvent dans la feuille « Réglages ».

@@ -125,7 +125,7 @@ export function openStation(id) {
   </section>`;
   const tabs = `<div class="segmented fiche-tabs" role="tablist" aria-label="Volets de la fiche">${PANELS.map(
     ([key, label], i) => `<button type="button" role="tab" id="tab-${key}" aria-controls="panel-${key}" aria-selected="${i === 0}" data-panel-tab="${key}">${label}</button>`
-  ).join('')}</div>`;
+  ).join('')}<span class="fiche-tabs__thumb" aria-hidden="true"></span></div>`;
   const panel = (key, html, open = false) => `<div class="fiche-panel" role="tabpanel" id="panel-${key}" aria-labelledby="tab-${key}" ${open ? '' : 'hidden'}>${html}</div>`;
   const cta = `<div class="fiche-cta"><a class="btn btn--primary btn--lg btn--block" href="${esc(directionsUrl(s, st.origin))}" target="_blank" rel="noopener">Itinéraire${route ? ` · ${esc(durationLabel(route.minutes))}` : ''}</a></div>`;
 
@@ -154,7 +154,9 @@ export function initStation() {
   $('#stationContent').addEventListener('click', e => {
     const tab = e.target.closest('[data-panel-tab]');
     if (!tab) return;
-    $$('#stationContent [data-panel-tab]').forEach(b => b.setAttribute('aria-selected', String(b === tab)));
+    const tabs = $$('#stationContent [data-panel-tab]');
+    tabs.forEach(b => b.setAttribute('aria-selected', String(b === tab)));
+    tab.parentElement.style.setProperty('--i', tabs.indexOf(tab));
     $$('#stationContent .fiche-panel').forEach(p => (p.hidden = p.id !== `panel-${tab.dataset.panelTab}`));
   });
 }

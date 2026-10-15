@@ -8,20 +8,39 @@
  */
 import { esc } from '../core/utils.js';
 import { icon } from './icons.js';
+import { spring, project, rubberband, tracker, reducedMotion } from './motion.js';
 
 const stack = [];
 const ANIMATION_MS = 320;
+const hideTimers = new WeakMap();
+const isSheetLayout = () => window.matchMedia('(max-width: 719px)').matches;
 
 function syncLock() {
   document.documentElement.classList.toggle('is-locked', stack.length > 0);
+}
+
+/* Sur ordinateur, la boîte grandit depuis le bouton qui l'a ouverte. */
+function anchorTo(el, trigger) {
+  const sheet = el.querySelector('.sheet');
+  if (!sheet) return;
+  sheet.style.transformOrigin = '';
+  if (isSheetLayout() || !trigger?.getBoundingClientRect || trigger === document.body) return;
+  const t = trigger.getBoundingClientRect();
+  const r = sheet.getBoundingClientRect();
+  if (!t.width) return;
+  sheet.style.transformOrigin = `${t.left + t.width / 2 - r.left}px ${t.top + t.height / 2 - r.top}px`;
 }
 
 export function openSheet(target, { onClose, focus = true } = {}) {
   const el = typeof target === 'string' ? document.getElementById(target) : target;
   if (!el) return;
   if (stack.some(s => s.el === el)) return;
-  stack.push({ el, onClose, returnFocus: document.activeElement });
+  clearTimeout(hideTimers.get(el));
+  const returnFocus = document.activeElement;
+  stack.push({ el, onClose, returnFocus });
+  const wasHidden = el.hidden;
   el.hidden = false;
+  if (wasHidden) anchorTo(el, returnFocus);
   void el.offsetWidth; // force le reflow pour déclencher la transition
   el.classList.add('is-open');
   syncLock();
@@ -33,15 +52,23 @@ export function openSheet(target, { onClose, focus = true } = {}) {
   }
 }
 
-export function closeSheet(target) {
+export function closeSheet(target, { immediate = false } = {}) {
   const el = typeof target === 'string' ? document.getElementById(target) : target;
   const index = stack.findIndex(s => s.el === el);
   if (index === -1) return;
   const [entry] = stack.splice(index, 1);
-  el.classList.remove('is-open');
-  setTimeout(() => {
-    if (!el.classList.contains('is-open')) el.hidden = true;
-  }, ANIMATION_MS);
+  if (immediate) {
+    // Feuille déjà sortie de l'écran par le geste : on la masque sans rejouer la transition.
+    el.hidden = true;
+    el.classList.remove('is-open');
+    resetDrag(el);
+  } else {
+    resetDrag(el);
+    el.classList.remove('is-open');
+    hideTimers.set(el, setTimeout(() => {
+      if (!el.classList.contains('is-open')) el.hidden = true;
+    }, ANIMATION_MS));
+  }
   syncLock();
   entry.returnFocus?.focus?.({ preventScroll: true });
   entry.onClose?.();
@@ -50,7 +77,85 @@ export function closeSheet(target) {
 export const isOpen = id => stack.some(s => s.el.id === id);
 export const closeTop = () => stack.length && closeSheet(stack[stack.length - 1].el);
 
+/* ---------- Glisser pour fermer (feuilles sur mobile) ---------- */
+const drags = new WeakMap();
+
+function setDrag(el, y) {
+  const sheet = el.querySelector('.sheet');
+  const h = sheet.offsetHeight || 1;
+  sheet.style.transition = 'none';
+  sheet.style.transform = `translateY(${y}px)`;
+  el.style.setProperty('--scrim', String(Math.max(0, 1 - Math.max(0, y) / h)));
+}
+
+function resetDrag(el) {
+  const sheet = el.querySelector('.sheet');
+  drags.get(el)?.stop?.();
+  drags.delete(el);
+  if (sheet) {
+    sheet.style.transition = '';
+    sheet.style.transform = '';
+  }
+  el.style.removeProperty('--scrim');
+}
+
+function initSheetDrag() {
+  document.addEventListener('pointerdown', e => {
+    if (!isSheetLayout() || e.button > 0) return;
+    const handle = e.target.closest('.sheet__grabber, .sheet__head');
+    if (!handle || e.target.closest('button, a, input, select, textarea')) return;
+    const el = handle.closest('.sheet-backdrop');
+    const sheet = el?.querySelector('.sheet');
+    if (!sheet || !el.classList.contains('is-open')) return;
+
+    // Interruption : on repart de la position affichée, pas de la cible.
+    const current = drags.get(el);
+    current?.stop?.();
+    const matrix = new DOMMatrixReadOnly(getComputedStyle(sheet).transform);
+    const startOffset = matrix.m42 || 0;
+    const startY = e.clientY;
+    const track = tracker();
+    let offset = startOffset;
+    let moved = false;
+    handle.setPointerCapture(e.pointerId);
+    drags.set(el, { stop: null });
+
+    const move = ev => {
+      const raw = startOffset + ev.clientY - startY;
+      if (!moved && Math.abs(ev.clientY - startY) < 6 && !current) return;
+      moved = true;
+      offset = raw < 0 ? rubberband(raw, sheet.offsetHeight) : raw;
+      track.add(ev.clientY);
+      setDrag(el, offset);
+    };
+    const end = () => {
+      handle.removeEventListener('pointermove', move);
+      handle.removeEventListener('pointerup', end);
+      handle.removeEventListener('pointercancel', end);
+      if (!moved && !current) return resetDrag(el);
+      const h = sheet.offsetHeight;
+      const velocity = track.velocity();
+      const close = offset + project(velocity) > h * 0.5 && velocity > -50;
+      if (reducedMotion()) return close ? closeSheet(el, { immediate: true }) : resetDrag(el);
+      const stop = spring({
+        from: offset,
+        to: close ? h : 0,
+        velocity,
+        damping: close ? 1 : 0.8,
+        response: 0.3,
+        onUpdate: y => setDrag(el, y),
+        onComplete: () => (close ? closeSheet(el, { immediate: true }) : resetDrag(el))
+      });
+      drags.set(el, { stop });
+    };
+    handle.addEventListener('pointermove', move);
+    handle.addEventListener('pointerup', end);
+    handle.addEventListener('pointercancel', end);
+  });
+}
+
 export function initDialogs() {
+  initSheetDrag();
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && stack.length) {
       e.preventDefault();

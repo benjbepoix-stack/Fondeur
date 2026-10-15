@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
+/* iOS : la racine prend la taille de texte du système (Dynamic Type). */
+@supports (font: -apple-system-body) {
+  html { font: -apple-system-body; --fs-scale: .9412; }
+}
 
 body {
   margin: 0;
@@ -20,7 +24,6 @@ body {
   font-family: var(--font);
   font-size: var(--fs-md);
   line-height: 1.45;
-  font-feature-settings: "cv11", "ss01", "tnum";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -34,33 +37,6 @@ button:disabled { cursor: default; }
 svg.icon { display: block; flex: none; }
 [hidden] { display: none !important; }
 img { max-width: 100%; display: block; }
-
-/* Fond d'ambiance : halos colorés flous, fixes */
-.ambient {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-}
-.ambient span {
-  position: absolute;
-  width: 60vmax;
-  height: 60vmax;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: .9;
-}
-/* Animation réservée aux écrans d'ordinateur (économie de batterie sur mobile) */
-@media (hover: hover) and (min-width: 900px) {
-  .ambient span { animation: drift 28s var(--ease) infinite alternate; }
-}
-.ambient span:nth-child(1) { background: var(--ambient-1); top: -30vmax; left: -20vmax; }
-.ambient span:nth-child(2) { background: var(--ambient-2); top: 10vmax; right: -30vmax; animation-delay: -9s; }
-.ambient span:nth-child(3) { background: var(--ambient-3); bottom: -35vmax; left: 10vmax; animation-delay: -18s; }
-@keyframes drift {
-  to { transform: translate3d(6vmax, 4vmax, 0) scale(1.08); }
-}
 
 /* Accessibilité */
 :focus { outline: none; }
@@ -100,9 +76,34 @@ html.theme-transition *::after {
   *, *::before, *::after {
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
     scroll-behavior: auto !important;
   }
+  /* Pas de glissement ni de mise à l'échelle : un fondu court les remplace. */
+  .sheet, .toast { transform: none !important; }
+  .sheet { opacity: 0; transition: opacity 200ms ease !important; }
+  .sheet-backdrop.is-open .sheet { opacity: 1; }
+  .toast { transition: opacity 200ms ease !important; }
+  .btn:active, .icon-btn:active, .nx:active, .filter-pill:active, .fav-btn:active, .tabbar__item:active, .tabbar__item.is-active [data-icon] { transform: none !important; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}
+
+/* Réduire la transparence : matériaux opaques, sans flou. */
+@media (prefers-reduced-transparency: reduce) {
+  .topbar, .tabbar, .fiche-cta, .fiche-tabs, .icon-btn--glass, .sync-pill, .sheet-backdrop::before {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  .topbar { background: var(--bg); }
+  .tabbar, .fiche-cta, .fiche-tabs { background: var(--surface-solid); }
+}
+
+/* Augmenter le contraste : bordures marquées, textes secondaires plus lisibles. */
+@media (prefers-contrast: more) {
+  :root, :root[data-theme="light"] {
+    --border: var(--border-strong);
+    --text-3: var(--text-2);
+  }
+  .tabbar, .topbar.is-scrolled, .fiche-cta { border-color: var(--text-3); }
 }
 
 .noscript {

@@ -13,7 +13,7 @@
   -webkit-backdrop-filter: var(--glass-blur);
   backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid transparent;
-  transition: border-color var(--dur) var(--ease);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
 .topbar__inner {
   display: flex;
@@ -26,7 +26,7 @@
   padding: var(--sp-2) max(var(--gutter), env(safe-area-inset-right)) var(--sp-2) max(var(--gutter), env(safe-area-inset-left));
 }
 .topbar__titles { min-width: 0; }
-.topbar__kicker { font-size: 11px; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.topbar__kicker { font-size: calc(0.6875rem * var(--fs-scale)); font-weight: 750; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
 .topbar__title { font-size: var(--fs-2xl); font-weight: 850; letter-spacing: -.045em; line-height: 1.05; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .topbar__actions { display: flex; align-items: center; gap: var(--sp-2); flex: none; }
 
@@ -59,14 +59,14 @@
   min-height: 52px;
   border-radius: 18px;
   color: var(--text-3);
-  font-size: 10.5px;
+  font-size: calc(0.6875rem * var(--fs-scale));
   font-weight: 700;
   letter-spacing: .01em;
   transition: color var(--dur) var(--ease), background var(--dur) var(--ease), transform var(--dur-fast) var(--ease);
 }
 .tabbar__item:active { transform: scale(.94); }
 .tabbar__item.is-active { color: var(--accent); background: var(--accent-soft); }
-.tabbar__item [data-icon] { transition: transform var(--dur-slow) var(--ease-spring); }
+.tabbar__item [data-icon] { transition: transform var(--dur-slow) var(--ease-out); }
 .tabbar__item.is-active [data-icon] { transform: translateY(-1px) scale(1.08); }
 
 /* ---------- Contenu ---------- */

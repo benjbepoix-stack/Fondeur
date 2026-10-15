@@ -1,6 +1,6 @@
 /* Fondeur — point d'entrée : chargement des données, départ, filtres, rendu. */
 import { $, $$, esc, uid, parseNumber } from './core/utils.js';
-import { readJSON, readText, write } from './services/storage.js';
+import { readJSON, write } from './services/storage.js';
 import { loadWeather } from './services/weather.js';
 import { loadRoutes } from './services/routes.js';
 import { searchPlace } from './services/geocode.js';
@@ -8,7 +8,9 @@ import { bulletinFor, computeScore } from './core/score.js';
 import { generalState } from './core/summary.js';
 import { isFavorite, toggleFavorite, rankScore, restoreFavorites } from './core/favorites.js';
 import { initDialogs, openSheet, closeSheet, confirmDialog } from './ui/dialog.js';
-import { applyTheme } from './ui/theme.js';
+import { applyTheme, nextTheme, themeLabel, watchSystemTheme } from './ui/theme.js';
+import { haptic } from './ui/haptics.js';
+import { reducedMotion } from './ui/motion.js';
 import { toast, toastError } from './ui/toast.js';
 import { icon } from './ui/icons.js';
 import { renderList } from './views/list.js';
@@ -139,6 +141,15 @@ function render() {
   ]
     .filter(Boolean)
     .join(' · ');
+}
+
+/**
+ * Rendu après une action de l'utilisateur (tri, filtre, favori) : les cartes
+ * glissent vers leur nouvelle place au lieu d'être remplacées d'un coup.
+ */
+function animatedRender() {
+  if (!document.startViewTransition || reducedMotion() || state.prefs.view !== 'list' || document.hidden) return render();
+  document.startViewTransition(render);
 }
 
 /* ---------- Départ ---------- */
@@ -346,6 +357,7 @@ function openFromHash() {
 /* ---------- Données ---------- */
 async function loadData({ force = false } = {}) {
   const btn = $('#refreshBtn');
+  const before = `${state.bulletins?.fetchedAt}|${state.weatherAt}`;
   btn.classList.add('is-spinning');
   try {
     const [bulletins, weather] = await Promise.all([
@@ -362,7 +374,8 @@ async function loadData({ force = false } = {}) {
       state.weather = weather.data;
       state.weatherAt = weather.at;
     }
-    render();
+    // Au retour dans l'app, on ne reconstruit l'écran que si les données ont changé.
+    if (force || `${state.bulletins?.fetchedAt}|${state.weatherAt}` !== before) render();
   } finally {
     btn.classList.remove('is-spinning');
   }
@@ -370,15 +383,29 @@ async function loadData({ force = false } = {}) {
 
 async function init() {
   $$('[data-icon]').forEach(el => (el.innerHTML = icon(el.dataset.icon, Number(el.dataset.size) || 22)));
-  applyTheme(readText('fondeur_theme', '"light"').includes('dark') ? 'dark' : 'light');
+  // Retour tactile : sans écouteur touchstart, Safari iOS n'applique pas les styles :active.
+  document.addEventListener('touchstart', () => {}, { passive: true });
+  // Bord de défilement : la barre du haut se détache seulement quand du contenu passe dessous.
+  const topbar = $('.topbar');
+  let edgeFrame = 0;
+  const syncEdge = () => {
+    edgeFrame = 0;
+    topbar.classList.toggle('is-scrolled', window.scrollY > 4);
+  };
+  window.addEventListener('scroll', () => (edgeFrame ||= requestAnimationFrame(syncEdge)), { passive: true });
+  syncEdge();
+
+  applyTheme(readJSON('fondeur_theme', 'auto'));
+  watchSystemTheme(() => state.prefs.view === 'map' && render());
   initDialogs();
   initStation();
   initRaces();
 
   $('#themeToggle').addEventListener('click', () => {
-    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    const next = nextTheme();
     write('fondeur_theme', JSON.stringify(next));
     applyTheme(next, { animate: true });
+    toast(`Thème ${themeLabel(next)}`, { type: 'info', duration: 1400 });
     if (state.prefs.view === 'map') render();
   });
   $('#refreshBtn').addEventListener('click', () => loadData({ force: true }));
@@ -417,26 +444,27 @@ async function init() {
   $('#countryFilter').addEventListener('change', e => {
     state.prefs.country = e.target.value;
     savePrefs();
-    render();
+    animatedRender();
   });
   $('#travelFilter').addEventListener('change', e => {
     state.prefs.travel = Number(e.target.value);
     savePrefs();
-    render();
+    animatedRender();
   });
   $('#sortFilter').value = state.prefs.sort;
   $('#sortFilter').addEventListener('change', e => {
     state.prefs.sort = e.target.value;
     savePrefs();
-    render();
+    animatedRender();
   });
   document.addEventListener('click', e => {
     const fav = e.target.closest('[data-fav]');
     if (fav) {
       const on = toggleFavorite(fav.dataset.fav);
       document.querySelectorAll(`[data-fav="${fav.dataset.fav}"]`).forEach(b => setFavButton(b, on));
+      haptic();
       toast(on ? 'Ajoutée aux favoris ★' : 'Retirée des favoris', { type: 'info' });
-      render();
+      animatedRender();
       return;
     }
     const s = e.target.closest('[data-station]');

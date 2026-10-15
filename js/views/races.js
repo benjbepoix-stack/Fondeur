@@ -8,6 +8,7 @@ import { $, $$, esc } from '../core/utils.js';
 import { readJSON, write } from '../services/storage.js';
 import { addRaceToCarnet } from '../services/carnet-sync.js';
 import { toast, toastError } from '../ui/toast.js';
+import { haptic } from '../ui/haptics.js';
 import { icon } from '../ui/icons.js';
 import { RACES, RACE_GROUPS } from '../data/races.js';
 
@@ -141,10 +142,15 @@ export function initRaces() {
     const addBtn = e.target.closest('[data-race-action="add"]');
     if (addBtn) return addOne(addBtn.closest('[data-race]'));
     const markBtn = e.target.closest('[data-race-mark]');
-    if (markBtn) toggleMark(markBtn.closest('[data-race]'));
+    if (markBtn) {
+      haptic();
+      toggleMark(markBtn.closest('[data-race]'));
+    }
   });
   $('#racesList').addEventListener('change', e => {
-    if (e.target.matches('[data-race-check]')) updateBar();
+    if (!e.target.matches('[data-race-check]')) return;
+    haptic();
+    updateBar();
   });
   $('#racesBarAdd').addEventListener('click', async () => {
     const cards = $$('#racesList [data-race-check]:checked').map(cb => cb.closest('[data-race]'));
