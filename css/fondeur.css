@@ -224,9 +224,6 @@ body[data-view="map"] .map { height: calc(100dvh - var(--safe-top) - var(--topba
 .race-card__check input { width: 20px; height: 20px; }
 .race-card__titles { min-width: 0; flex: 1; }
 /* Marque manuelle « déjà ajoutée au calendrier », indépendante du bouton Ajouter (qui pousse vers Carnet) */
-.race-card__mark { flex: none; align-self: flex-start; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--border); color: var(--text-3); transition: background var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
-@media (hover: hover) { .race-card__mark:hover { border-color: var(--border-strong); color: var(--text-2); } }
-.race-card__mark.is-on { background: color-mix(in srgb, var(--good) 16%, transparent); border-color: color-mix(in srgb, var(--good) 45%, var(--border)); color: var(--good); }
 .race-card__name { font-weight: 800; font-size: var(--fs-md); display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .race-card__circuit { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: var(--r-pill); font-size: calc(0.6875rem * var(--fs-scale)); font-weight: 800; letter-spacing: .01em; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
 .race-card__meta { font-size: var(--fs-sm); color: var(--text-2); margin-top: 2px; }
@@ -236,11 +233,6 @@ body[data-view="map"] .map { height: calc(100dvh - var(--safe-top) - var(--topba
 .race-card__notes { font-size: var(--fs-xs); color: var(--text-3); margin-top: 4px; }
 .race-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 8px; }
 .race-card__date { width: 150px; min-height: 36px; padding: 0 10px; font-size: var(--fs-xs); }
-.races-bar { position: sticky; bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 20px); z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; padding: 10px 14px; border-radius: var(--r-lg); background: var(--surface-solid); border: 1px solid var(--border-strong); box-shadow: var(--shadow-md, 0 10px 24px -10px rgba(0, 0, 0, .3)); font-weight: 700; font-size: var(--fs-sm); }
-@media (min-width: 900px) {
-  /* Sur grand écran la barre d'onglets passe en haut (sticky), plus besoin de lui laisser de la place en bas. */
-  .races-bar { bottom: calc(var(--safe-bottom) + 10px); }
-}
 
 /* =========================================================
    REFONTE « LA RÉPONSE » — une réponse en grand, le reste en cartes
@@ -360,8 +352,6 @@ body[data-view="map"] .map { height: calc(100dvh - var(--safe-top) - var(--topba
 .race-card__dist, .race-card__period, .race-card__notes { margin-left: 60px; }
 .race-card__period { font-size: calc(0.7188rem * var(--fs-scale)); }
 .race-card__actions { margin-left: 60px; }
-.races-bar { border-radius: 22px; padding: 8px 8px 8px 18px; background: var(--text); color: var(--bg); border: 0; }
-.races-bar .btn { border-radius: var(--r-pill); min-height: 42px; }
 @media (max-width: 380px) {
   .race-card__dist, .race-card__period, .race-card__notes, .race-card__actions { margin-left: 0; }
 }

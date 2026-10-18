@@ -80,7 +80,7 @@ async function ready() {
     return mods;
   } catch (error) {
     console.warn('[allure] Firebase injoignable', error);
-    throw new AllureError('unavailable', 'Allure injoignable (connexion ?).');
+    throw new AllureError('unavailable', 'Cadence injoignable (connexion ?).');
   }
 }
 
@@ -154,10 +154,10 @@ function toAllure(race) {
  */
 export async function addRacesToAllure(races) {
   const { dbMod, db } = await ready();
-  if (!user) throw new AllureError('signed-out', 'Connectez-vous pour envoyer vers Allure.');
+  if (!user) throw new AllureError('signed-out', 'Connectez-vous pour envoyer vers Cadence.');
   const base = `users/${user.uid}/carnet`;
   const migrated = await dbMod.get(dbMod.ref(db, `${base}/migrated`));
-  if (!migrated.exists()) throw new AllureError('not-migrated', 'Ouvrez Allure une fois pour transférer vos données, puis réessayez.');
+  if (!migrated.exists()) throw new AllureError('not-migrated', 'Ouvrez Cadence une fois pour transférer vos données, puis réessayez.');
 
   let counts = { added: 0, already: 0 };
   await dbMod.runTransaction(dbMod.ref(db, `${base}/races`), current => {
