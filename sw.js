@@ -4,7 +4,7 @@
  * (Open-Meteo, OSRM) et les données qui doivent rester fraîches passent par
  * le réseau normalement ; seul un éventuel repli cache les dépanne hors ligne.
  */
-const CACHE = 'glisse-fondeur-v10';
+const CACHE = 'glisse-fondeur-v11';
 
 const PRECACHE_URLS = [
   './',
@@ -28,7 +28,7 @@ const PRECACHE_URLS = [
   'js/core/utils.js',
   'js/core/wax.js',
   'js/services/routes.js',
-  'js/services/carnet-sync.js',
+  'js/services/allure-sync.js',
   'js/services/geocode.js',
   'js/data/races.js',
   'js/services/storage.js',
