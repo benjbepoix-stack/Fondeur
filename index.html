@@ -80,13 +80,9 @@
         <div class="races-year" id="racesYear" role="radiogroup" aria-label="Saison"></div>
       </header>
       <div class="races-filter" id="racesGroups" role="radiogroup" aria-label="Région"></div>
-      <p class="status-line">L’étoile présélectionne une course pour votre saison, sans l’envoyer · « Valider » l’ajoute au planning d’Allure. Dates à vérifier avant de valider.</p>
+      <p class="status-line">L’étoile présélectionne une course pour votre saison, sans l’envoyer · « Envoyer vers Cadence » l’ajoute à son planning. Dates à vérifier avant d’envoyer.</p>
       <p class="status-line races-account" id="racesAccount"></p>
       <div id="racesList"></div>
-      <div class="races-bar" id="racesBar" hidden>
-        <span id="racesBarCount"></span>
-        <button type="button" class="btn btn--primary btn--sm" id="racesBarAdd">Voir ma saison</button>
-      </div>
     </section>
 
     <p class="status-line" id="statusLine"></p>
@@ -185,13 +181,13 @@
     </div>
   </div>
 
-  <!-- Connexion au compte commun (Allure, Carnet, Mon Garage, Ma Maison) -->
+  <!-- Connexion au compte commun (Cadence, Carnet, Mon Garage, Ma Maison) -->
   <div class="sheet-backdrop" id="allureAuthSheet" hidden>
     <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="allureAuthTitle" tabindex="-1">
       <div class="sheet__grabber" aria-hidden="true"></div>
-      <header class="sheet__head"><h2 class="sheet__title" id="allureAuthTitle">Connexion à Allure</h2><button type="button" class="icon-btn" data-close aria-label="Fermer"><span data-icon="close"></span></button></header>
+      <header class="sheet__head"><h2 class="sheet__title" id="allureAuthTitle">Connexion à Cadence</h2><button type="button" class="icon-btn" data-close aria-label="Fermer"><span data-icon="close"></span></button></header>
       <form class="form sheet__scroll" id="allureAuthForm" novalidate>
-        <p class="field__help">Même compte qu’Allure, Carnet, Mon Garage et Ma Maison. Une seule fois sur cet appareil : les courses validées iront ensuite directement dans Allure.</p>
+        <p class="field__help">Même compte que Cadence (anciennement Allure), Carnet, Mon Garage et Ma Maison. Une seule fois sur cet appareil : les courses envoyées iront ensuite directement dans Cadence.</p>
         <div class="field"><label class="field__label" for="allureEmail">E-mail</label><input class="input" id="allureEmail" name="email" type="email" autocomplete="email" required></div>
         <div class="field"><label class="field__label" for="allurePassword">Mot de passe</label><input class="input" id="allurePassword" name="password" type="password" autocomplete="current-password" required></div>
         <div class="field-error" id="allureAuthError" role="alert" hidden></div>

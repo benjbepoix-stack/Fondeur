@@ -3,7 +3,7 @@
  * Vosges, Alpes du Nord, Massif Central). Deux temps :
  * - « présélectionner » (étoile) : la course entre dans « Ma saison », sur
  *   l'appareil seulement, sans rien envoyer ;
- * - « valider » : la course part dans le planning de l'app Allure.
+ * - « Envoyer vers Cadence » : la course part dans le planning de l'app Cadence (anciennement Allure).
  * Chaque course propose deux éditions (en cours / suivante) via le sélecteur
  * d'année ; présélection et validation portent sur l'édition affichée.
  */
@@ -16,7 +16,7 @@ import { haptic } from '../ui/haptics.js';
 import { icon } from '../ui/icons.js';
 import { RACES, RACE_GROUPS } from '../data/races.js';
 
-/* Validées : envoyées à Allure (ou marquées comme déjà présentes). */
+/* Envoyées à Cadence (clé historique, conservée). */
 const ADDED_KEY = 'fondeur_races_added';
 let added = new Set(readJSON(ADDED_KEY, []));
 const saveAdded = () => write(ADDED_KEY, JSON.stringify([...added]));
@@ -52,9 +52,9 @@ function raceCard(r) {
   const isPicked = !isAdded && key in picked;
   const date = picked[key] || edition.date;
   const [day, month] = dayMonth(date);
-  const state = isAdded ? 'validée' : isPicked ? 'présélectionnée' : '';
+  const state = isAdded ? 'dans Cadence' : isPicked ? 'présélectionnée' : '';
   const tags = [r.circuit, edition.confirmed ? 'date confirmée' : 'date à vérifier', state].filter(Boolean).join(' · ');
-  const pickTitle = isAdded ? 'Validée, dans Allure' : isPicked ? 'Retirer de ma saison' : 'Présélectionner pour ma saison';
+  const pickTitle = isAdded ? 'Dans Cadence' : isPicked ? 'Retirer de ma saison' : 'Présélectionner pour ma saison';
   return `<article class="race-card ${isAdded ? 'is-added' : ''} ${isPicked ? 'is-picked' : ''}" data-race="${esc(r.id)}">
     <header class="race-card__head">
       <span class="race-card__day" aria-hidden="true"><strong>${day}</strong><span>${esc(month)}</span></span>
@@ -70,8 +70,7 @@ function raceCard(r) {
     ${r.notes ? `<p class="race-card__notes">${esc(r.notes)}</p>` : ''}
     <div class="race-card__actions">
       <input type="date" class="input race-card__date" data-race-date value="${esc(date)}" aria-label="Date de l'édition ${edition.year} pour ${esc(r.name)}">
-      <button type="button" class="btn btn--soft btn--sm" data-race-action="add" ${isAdded ? 'disabled' : ''}>${icon(isAdded ? 'check' : 'plus', 15)}<span>${isAdded ? 'Validée ✓' : 'Valider'}</span></button>
-      <button type="button" class="race-card__mark ${isAdded ? 'is-on' : ''}" data-race-mark aria-pressed="${isAdded}" title="${isAdded ? 'Dans Allure · toucher pour retirer la marque' : 'Marquer comme déjà dans Allure (sans l’envoyer)'}" aria-label="${isAdded ? 'Retirer la marque « validée »' : 'Marquer comme déjà dans Allure'}">${icon(isAdded ? 'check' : 'calendar', 15)}</button>
+      <button type="button" class="btn btn--soft btn--sm" data-race-action="add" ${isAdded ? 'disabled' : ''}>${icon(isAdded ? 'check' : 'plus', 15)}<span>${isAdded ? 'Dans Cadence' : 'Envoyer vers Cadence'}</span></button>
     </div>
   </article>`;
 }
@@ -83,7 +82,6 @@ function refresh(card) {
   if (view.group === 'mine') renderRaces();
   else {
     card.outerHTML = raceCard(raceOf(card));
-    updateBar();
     updateMineChip();
   }
 }
@@ -95,28 +93,7 @@ function togglePick(card) {
   if (key in picked) delete picked[key];
   else picked[key] = card.querySelector('[data-race-date]').value || editionOf(r).date;
   savePicked();
-  const now = key in picked;
   refresh(card);
-  toast(now ? `${r.name} présélectionnée` : 'Retirée de ma saison', { type: 'info' });
-}
-
-/** Marque/démarque manuellement une course comme « déjà dans Allure », sans l'envoyer. */
-function toggleMark(card) {
-  const r = raceOf(card);
-  const key = keyOf(r);
-  const now = !added.has(key);
-  if (now) {
-    added.add(key);
-    delete picked[key];
-    savePicked();
-  } else added.delete(key);
-  saveAdded();
-  refresh(card);
-  toast(now ? 'Marquée comme déjà dans Allure' : 'Marque retirée', { type: 'info' });
-}
-
-function pendingPicks() {
-  return RACES.filter(r => keyOf(r) in picked && !added.has(keyOf(r)));
 }
 
 function updateMineChip() {
@@ -124,14 +101,6 @@ function updateMineChip() {
   if (!btn) return;
   const n = RACES.filter(isMine).length;
   btn.textContent = `★ Ma saison${n ? ` (${n})` : ''}`;
-}
-
-function updateBar() {
-  const n = pendingPicks().length;
-  const bar = $('#racesBar');
-  bar.hidden = n === 0;
-  $('#racesBarCount').textContent = `${n} présélectionnée${n > 1 ? 's' : ''} à valider`;
-  $('#racesBarAdd').textContent = view.group === 'mine' ? (n > 1 ? 'Tout valider' : 'Valider') : 'Voir ma saison';
 }
 
 export function renderRaces() {
@@ -151,12 +120,11 @@ export function renderRaces() {
     ? 'Aucune course pour cette saison. Touchez l’étoile d’une course pour la présélectionner.'
     : 'Aucune course dans cette catégorie.';
   $('#racesList').innerHTML = list.length ? list.map(raceCard).join('') : `<div class="empty">${empty}</div>`;
-  updateBar();
   updateMineChip();
 }
 
 /**
- * Valide des courses : envoi groupé vers Allure, puis marque « validée ».
+ * Envoie des courses vers Cadence (une seule transaction), puis les marque « dans Cadence ».
  * @param {{r:object, date:string}[]} items
  */
 async function send(items) {
@@ -174,15 +142,15 @@ async function send(items) {
     saveAdded();
     savePicked();
     renderRaces();
-    if (items.length === 1) toast(n ? `${items[0].r.name} ajoutée au planning d’Allure` : `${items[0].r.name} était déjà dans Allure`);
-    else toast(`${n} course${n > 1 ? 's' : ''} ajoutée${n > 1 ? 's' : ''} au planning d’Allure${already ? ` · ${already} déjà présente${already > 1 ? 's' : ''}` : ''}`);
+    if (items.length === 1) toast(n ? `${items[0].r.name} ajoutée au planning de Cadence` : `${items[0].r.name} était déjà dans Cadence`);
+    else toast(`${n} course${n > 1 ? 's' : ''} ajoutée${n > 1 ? 's' : ''} au planning de Cadence${already ? ` · ${already} déjà présente${already > 1 ? 's' : ''}` : ''}`);
   } catch (error) {
     if (error.code === 'signed-out') {
       pendingSend = items;
       openAccount();
       return;
     }
-    toastError(error.code ? error.message : `Allure injoignable : ${error.message}`);
+    toastError(error.code ? error.message : `Cadence injoignable : ${error.message}`);
   }
 }
 
@@ -198,8 +166,8 @@ function renderAccount(user) {
   const line = $('#racesAccount');
   if (!line) return;
   line.innerHTML = user
-    ? `Allure : ${esc(user.email || 'connecté')} · <button type="button" class="link-btn" data-allure-signout>Se déconnecter</button>`
-    : 'Allure : non connecté · <button type="button" class="link-btn" data-allure-signin>Se connecter</button>';
+    ? `Cadence : ${esc(user.email || 'connecté')} · <button type="button" class="link-btn" data-allure-signout>Se déconnecter</button>`
+    : 'Cadence : non connecté · <button type="button" class="link-btn" data-allure-signin>Se connecter</button>';
 }
 
 function initAccount() {
@@ -208,7 +176,7 @@ function initAccount() {
     if (e.target.closest('[data-allure-signin]')) openAccount();
     if (e.target.closest('[data-allure-signout]')) {
       await signOutAllure().catch(() => {});
-      toast('Déconnecté d’Allure', { type: 'info' });
+      toast('Déconnecté de Cadence', { type: 'info' });
     }
   });
   $('#allureAuthForm').addEventListener('submit', async e => {
@@ -224,7 +192,7 @@ function initAccount() {
       const items = pendingSend;
       pendingSend = null;
       closeSheet('allureAuthSheet');
-      toast('Connecté à Allure');
+      toast('Connecté à Cadence');
       if (items) send(items);
     } catch (error) {
       err.textContent = describeAuthError(error);
@@ -267,12 +235,7 @@ export function initRaces() {
     const pickBtn = e.target.closest('[data-race-pick]');
     if (pickBtn) {
       haptic();
-      return togglePick(pickBtn.closest('[data-race]'));
-    }
-    const markBtn = e.target.closest('[data-race-mark]');
-    if (markBtn) {
-      haptic();
-      toggleMark(markBtn.closest('[data-race]'));
+      togglePick(pickBtn.closest('[data-race]'));
     }
   });
   // Date modifiée sur une course présélectionnée : la nouvelle date est retenue.
@@ -283,15 +246,6 @@ export function initRaces() {
     if (!(key in picked)) return;
     picked[key] = e.target.value;
     savePicked();
-  });
-  $('#racesBarAdd').addEventListener('click', () => {
-    if (view.group !== 'mine') {
-      view.group = 'mine';
-      renderRaces();
-      return;
-    }
-    const items = pendingPicks().map(r => ({ r, date: picked[keyOf(r)] }));
-    if (items.length) send(items);
   });
   initAccount();
 }
