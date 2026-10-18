@@ -1,10 +1,14 @@
 /*
- * Mode hors ligne : app-shell pré-mise en cache, puis réseau d'abord avec
- * repli sur le cache pour les requêtes same-origin. Les appels météo/trajet
- * (Open-Meteo, OSRM) et les données qui doivent rester fraîches passent par
- * le réseau normalement ; seul un éventuel repli cache les dépanne hors ligne.
+ * Démarrage rapide et mode hors ligne :
+ * - code, styles et icônes : servis tout de suite depuis le cache, puis
+ *   actualisés en arrière-plan (la nouvelle version sert au lancement suivant ;
+ *   changer CACHE force une mise à jour complète) ;
+ * - données (data/*.json) : réseau d'abord, mais jamais plus de 4 s avant de
+ *   retomber sur la dernière copie (réseau faible en montagne) ;
+ * - météo/trajet/tuiles (Open-Meteo, OSRM…) : réseau normal, hors service worker.
  */
-const CACHE = 'glisse-fondeur-v10';
+const CACHE = 'glisse-fondeur-v11';
+const DATA_TIMEOUT = 4000;
 
 const PRECACHE_URLS = [
   './',
@@ -50,7 +54,7 @@ const PRECACHE_URLS = [
 
 async function precache() {
   const cache = await caches.open(CACHE);
-  await Promise.all(PRECACHE_URLS.map(url => cache.add(url).catch(() => {})));
+  await Promise.all(PRECACHE_URLS.map(url => cache.add(new Request(url, { cache: 'reload' })).catch(() => {})));
 }
 
 self.addEventListener('install', event => {
@@ -66,18 +70,39 @@ self.addEventListener('activate', event => {
   );
 });
 
+/** Copie en cache, sous l'adresse sans paramètres (data/bulletins.json?t=… -> une seule entrée). */
+function store(key, res) {
+  if (res.ok) {
+    const copy = res.clone();
+    caches.open(CACHE).then(cache => cache.put(key, copy));
+  }
+  return res;
+}
+
+function staleWhileRevalidate(event, request) {
+  const network = fetch(request).then(res => store(request, res));
+  event.waitUntil(network.catch(() => {}));
+  return caches.match(request).then(cached => cached || network.catch(() => caches.match('index.html')));
+}
+
+function networkFirst(request, key) {
+  const network = fetch(request).then(res => store(key, res));
+  const timeout = new Promise(resolve => setTimeout(resolve, DATA_TIMEOUT));
+  const cached = () => caches.match(key);
+  return Promise.race([network.catch(() => null), timeout.then(cached)])
+    .then(res => res || cached())
+    .then(res => res || network);
+}
+
 self.addEventListener('fetch', event => {
   const { request } = event;
   if (request.method !== 'GET') return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return; // météo/trajet/tuiles : réseau normal
 
-  event.respondWith(
-    fetch(request)
-      .then(res => {
-        if (res.ok) caches.open(CACHE).then(cache => cache.put(request, res.clone()));
-        return res;
-      })
-      .catch(() => caches.match(request).then(cached => cached || caches.match('index.html')))
-  );
+  if (url.pathname.includes('/data/') && url.pathname.endsWith('.json')) {
+    event.respondWith(networkFirst(request, url.origin + url.pathname));
+    return;
+  }
+  event.respondWith(staleWhileRevalidate(event, request));
 });

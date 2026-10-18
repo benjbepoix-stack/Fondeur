@@ -1,12 +1,16 @@
 /*
  * Météo Open-Meteo (gratuit, sans clé) : une seule requête pour toutes les
  * stations, à l'altitude de chaque foyer nordique.
- * Mise en cache 30 min sur l'appareil.
+ * Mise en cache 30 min sur l'appareil ; la dernière météo connue reste
+ * affichée (jusqu'à 12 h) quand le réseau ou Open-Meteo font défaut.
  */
 import { readJSON, write } from './storage.js';
 
 const CACHE_KEY = 'fondeur_weather';
 const TTL = 30 * 60 * 1000;
+const MAX_STALE = 12 * 3600 * 1000;
+const TIMEOUT = 12000;
+const BATCH = 12;
 const API = 'https://api.open-meteo.com/v1/forecast';
 
 const HOURLY = ['temperature_2m', 'snowfall', 'rain', 'snow_depth'];
@@ -64,25 +68,85 @@ export function summarize(raw, now = new Date()) {
   };
 }
 
-/** Météo de toutes les stations : { [stationId]: résumé }. */
-export async function loadWeather(stations, { force = false } = {}) {
+/** Dernière météo enregistrée sur l'appareil, même périmée (null si absente ou trop vieille). */
+export function cachedWeather(stations) {
   const cached = readJSON(CACHE_KEY, null);
-  if (!force && cached && Date.now() - cached.at < TTL && cached.ids === stations.map(s => s.id).join()) return { data: cached.data, at: cached.at, cached: true };
-  const res = await fetch(buildUrl(stations));
-  if (!res.ok) throw new Error(`Météo indisponible (${res.status})`);
-  const json = await res.json();
-  const list = Array.isArray(json) ? json : [json];
+  if (!cached || cached.ids !== stations.map(s => s.id).join() || Date.now() - cached.at > MAX_STALE) return null;
+  return { data: cached.data, at: cached.at, cached: true, stale: Date.now() - cached.at >= TTL };
+}
+
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+/** Une requête Open-Meteo avec délai maximal : sur un réseau de montagne, elle ne doit jamais pendre. */
+async function fetchJSON(url) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), TIMEOUT);
+  try {
+    const res = await fetch(url, { signal: ctrl.signal });
+    if (!res.ok) throw Object.assign(new Error(`Météo indisponible (${res.status})`), { status: res.status });
+    return await res.json();
+  } catch (error) {
+    if (error.name === 'AbortError') throw new Error('Météo trop lente à répondre');
+    if (error instanceof TypeError) throw new Error('Météo injoignable (réseau)');
+    throw error;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/** Avec une seconde tentative : les échecs d'Open-Meteo (429, 5xx, coupure) sont souvent passagers. */
+async function fetchWithRetry(url) {
+  try {
+    return await fetchJSON(url);
+  } catch (error) {
+    if (error.status && error.status < 500 && error.status !== 429) throw error;
+    await wait(error.status === 429 ? 4000 : 1500);
+    return fetchJSON(url);
+  }
+}
+
+/**
+ * Météo de toutes les stations : { data: { [stationId]: résumé }, at, cached, stale }.
+ * Les stations sont demandées par lots : une réponse plus légère arrive plus
+ * vite, et un lot en échec ne prive pas les autres de leur météo. Si tout
+ * échoue, la dernière météo connue (moins de 12 h) sert de repli.
+ */
+export async function loadWeather(stations, { force = false } = {}) {
+  const last = cachedWeather(stations);
+  if (!force && last && !last.stale) return last;
+  const batches = [];
+  for (let k = 0; k < stations.length; k += BATCH) batches.push(stations.slice(k, k + BATCH));
+  const results = await Promise.allSettled(
+    batches.map(async batch => {
+      const json = await fetchWithRetry(buildUrl(batch));
+      return { batch, list: Array.isArray(json) ? json : [json] };
+    })
+  );
   const data = {};
-  stations.forEach((s, k) => {
-    try {
-      data[s.id] = summarize(list[k]);
-    } catch (error) {
-      console.warn('[météo]', s.name, error);
+  let failure = null;
+  results.forEach(result => {
+    if (result.status === 'rejected') {
+      failure = result.reason;
+      return;
     }
+    const { batch, list } = result.value;
+    batch.forEach((s, k) => {
+      try {
+        data[s.id] = summarize(list[k]);
+      } catch (error) {
+        console.warn('[météo]', s.name, error);
+      }
+    });
   });
+  if (!Object.keys(data).length) {
+    if (last) return { ...last, error: failure };
+    throw failure || new Error('Météo indisponible');
+  }
+  // Lot manquant : on garde pour ces stations la météo précédente plutôt qu'un trou.
+  if (last) stations.forEach(s => (data[s.id] ||= last.data[s.id]));
   const at = Date.now();
   write(CACHE_KEY, JSON.stringify({ at, ids: stations.map(s => s.id).join(), data }));
-  return { data, at, cached: false };
+  return { data, at, cached: false, stale: false, error: failure };
 }
 
 /** Codes météo WMO -> pictogramme et libellé. */
