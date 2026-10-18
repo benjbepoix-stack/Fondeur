@@ -35,7 +35,6 @@ function waxCard(label, tempC) {
 function waxBlock(wx) {
   return `<section class="section"><header class="section__head"><h3 class="lab">Fart · repère température</h3></header>
     <div class="wax-cards">${waxCard('Matin', wx.tMinNight)}${waxCard('Après-midi', wx.tMaxToday)}</div>
-    <p class="card__sub wax-caveat">Indication basée sur la seule température : le choix réel dépend aussi de l'état de la neige (fraîche, transformée, humide) — vérifiez sur place ou avec le bulletin des pisteurs.</p>
   </section>`;
 }
 
@@ -97,7 +96,7 @@ function forecastBlock(s, wx) {
     })
     .join('');
   return `<section class="section"><header class="section__head"><h3 class="lab">5 prochains jours</h3><span class="lab">à ${s.alt} m</span></header><div class="days">${days}</div>
-    <p class="card__sub forecast-crosscheck">Modèle météo automatisé — à recouper avec l'avis d'un prévisionniste local : <a href="https://www.meteofranccomtoise.fr/" target="_blank" rel="noopener">Météo Franc-Comtoise</a>.</p>
+    <p class="card__sub forecast-crosscheck">À recouper : <a href="https://www.meteofranccomtoise.fr/" target="_blank" rel="noopener">Météo Franc-Comtoise</a></p>
   </section>`;
 }
 

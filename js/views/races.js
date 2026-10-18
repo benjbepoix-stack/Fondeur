@@ -117,7 +117,7 @@ export function renderRaces() {
   const editionDate = r => picked[keyOf(r)] || editionOf(r).date;
   const list = [...filtered].sort((a, b) => editionDate(a).localeCompare(editionDate(b)));
   const empty = view.group === 'mine'
-    ? 'Aucune course pour cette saison. Touchez l’étoile d’une course pour la présélectionner.'
+    ? 'Aucune course présélectionnée.'
     : 'Aucune course dans cette catégorie.';
   $('#racesList').innerHTML = list.length ? list.map(raceCard).join('') : `<div class="empty">${empty}</div>`;
   updateMineChip();
