@@ -1,7 +1,7 @@
 /* Fondeur — point d'entrée : chargement des données, départ, filtres, rendu. */
 import { $, $$, esc, uid, parseNumber } from './core/utils.js';
 import { readJSON, write } from './services/storage.js';
-import { loadWeather } from './services/weather.js';
+import { loadWeather, cachedWeather } from './services/weather.js';
 import { loadRoutes } from './services/routes.js';
 import { searchPlace } from './services/geocode.js';
 import { bulletinFor, computeScore } from './core/score.js';
@@ -98,6 +98,8 @@ export const getState = () => state;
 
 const COUNTRY_LABELS = { all: 'tous pays', fav: '★ favoris', FR: 'France', CH: 'Suisse' };
 const TRAVEL_LABELS = { 0: 'tout trajet', 45: '≤ 45 min', 60: '≤ 1 h', 90: '≤ 1 h 30' };
+const hhmm = t => new Date(t).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+
 const SORT_LABELS = { score: 'note', distance: 'trajet', night: 'nuit froide' };
 
 /** Texte de la pastille de réglages : « Ville-du-Pont · ≤ 1 h · tous pays · note ». */
@@ -132,7 +134,7 @@ function render() {
   if (view === 'list') renderList(list, state);
   else if (view === 'map') renderMap(list, state);
   else renderRaces();
-  const at = state.weatherAt ? new Date(state.weatherAt).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }) : null;
+  const at = state.weatherAt ? hhmm(state.weatherAt) : null;
   const fetched = state.bulletins?.fetchedAt ? new Date(state.bulletins.fetchedAt) : null;
   $('#statusLine').textContent = [
     state.origin ? `Départ : ${state.origin.name}` : '',
@@ -355,27 +357,40 @@ function openFromHash() {
 }
 
 /* ---------- Données ---------- */
+let staleWarnedAt = null;
+
+/**
+ * Bulletins et météo arrivent chacun de leur côté : l'écran se met à jour dès
+ * que l'un des deux est là, sans attendre le plus lent. On ne reconstruit
+ * l'écran que si les données ont changé (retour dans l'app).
+ */
 async function loadData({ force = false } = {}) {
   const btn = $('#refreshBtn');
-  const before = `${state.bulletins?.fetchedAt}|${state.weatherAt}`;
   btn.classList.add('is-spinning');
+  const bulletins = fetch(`data/bulletins.json?t=${Math.floor(Date.now() / 60000)}`)
+    .then(r => (r.ok ? r.json() : null))
+    .catch(() => null)
+    .then(data => {
+      if (!data) return;
+      const changed = data.fetchedAt !== state.bulletins?.fetchedAt;
+      state.bulletins = data;
+      if (changed) render();
+    });
+  const weather = loadWeather(state.stations, { force })
+    .then(wx => {
+      // Réseau ou Open-Meteo en défaut : la dernière météo connue reste affichée.
+      if (wx.error && wx.stale && (force || staleWarnedAt !== wx.at)) {
+        staleWarnedAt = wx.at;
+        toast(`Météo non actualisée, relevé de ${hhmm(wx.at)}`, { type: 'info' });
+      }
+      if (!force && wx.at === state.weatherAt) return;
+      state.weather = wx.data;
+      state.weatherAt = wx.at;
+      render();
+    })
+    .catch(error => toastError(`${error.message}. Touchez ↻ pour réessayer.`));
   try {
-    const [bulletins, weather] = await Promise.all([
-      fetch(`data/bulletins.json?t=${Math.floor(Date.now() / 60000)}`)
-        .then(r => (r.ok ? r.json() : null))
-        .catch(() => null),
-      loadWeather(state.stations, { force }).catch(error => {
-        toastError(`${error.message}. Nouvel essai dans un instant.`);
-        return null;
-      })
-    ]);
-    if (bulletins) state.bulletins = bulletins;
-    if (weather) {
-      state.weather = weather.data;
-      state.weatherAt = weather.at;
-    }
-    // Au retour dans l'app, on ne reconstruit l'écran que si les données ont changé.
-    if (force || `${state.bulletins?.fetchedAt}|${state.weatherAt}` !== before) render();
+    await Promise.all([bulletins, weather]);
   } finally {
     btn.classList.remove('is-spinning');
   }
@@ -488,8 +503,16 @@ async function init() {
   const originInput = $(`#originSwitch input[value="${originKey}"]`);
   if (originInput) originInput.checked = true;
   state.origin = placeById(originKey) || readJSON('fondeur_last_gps', state.places[0]);
+  // Premier affichage immédiat avec la dernière météo connue, actualisée ensuite.
+  const last = cachedWeather(state.stations);
+  if (last) {
+    state.weather = last.data;
+    state.weatherAt = last.at;
+  }
   render();
-  await Promise.all([loadData(), setOrigin(originKey)]);
+  setOrigin(originKey);
+  // Lien de widget : la fiche s'ouvre dès que la météo est là, sans attendre les trajets.
+  await loadData();
   openFromHash();
   window.addEventListener('hashchange', openFromHash);
 
