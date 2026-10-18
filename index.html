@@ -80,7 +80,6 @@
         <div class="races-year" id="racesYear" role="radiogroup" aria-label="Saison"></div>
       </header>
       <div class="races-filter" id="racesGroups" role="radiogroup" aria-label="Région"></div>
-      <p class="status-line">L’étoile présélectionne une course pour votre saison, sans l’envoyer · « Envoyer vers Cadence » l’ajoute à son planning. Dates à vérifier avant d’envoyer.</p>
       <p class="status-line races-account" id="racesAccount"></p>
       <div id="racesList"></div>
     </section>
@@ -89,7 +88,6 @@
 
     <footer class="sources">
       <p>Météo <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> · Bulletins <a href="https://www.espacenordiquejurassien.com/bulletin-neige.html" target="_blank" rel="noopener">Espace Nordique Jurassien</a> / <a href="https://www.nordicfrance.fr/" target="_blank" rel="noopener">Nordic France</a> et <a href="https://snow.myswitzerland.com/" target="_blank" rel="noopener">Suisse Tourisme</a> · Carte et trajets © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></p>
-      <p>La note est une aide à la décision : vérifiez le bulletin officiel avant de partir.</p>
     </footer>
   </main>
 
@@ -151,7 +149,6 @@
       <div class="sheet__grabber" aria-hidden="true"></div>
       <header class="sheet__head"><h2 class="sheet__title" id="placesTitle">Lieux de départ</h2><button type="button" class="icon-btn" data-close aria-label="Fermer"><span data-icon="close"></span></button></header>
       <div class="sheet__scroll">
-        <p class="field__help">« 📍 Ici » (position actuelle) reste toujours disponible et ne se modifie pas ici.</p>
         <div class="stack" id="placesList"></div>
         <button type="button" class="btn btn--ghost btn--block" id="placeAddBtn"><span data-icon="plus" data-size="16"></span><span>Ajouter un lieu</span></button>
       </div>
@@ -167,7 +164,6 @@
         <input type="hidden" name="editId">
         <div class="field"><label class="field__label" for="plSearch">Rechercher une commune</label><input class="input" id="plSearch" type="text" placeholder="Ex. Pontarlier" autocomplete="off"></div>
         <div class="stack" id="plSearchResults"></div>
-        <p class="field__help">La commune donne ses coordonnées directement (son centre). Pour un lieu précis (parking, départ de piste…), utilisez plutôt la position actuelle ci-dessous.</p>
         <div class="field"><label class="field__label" for="plName">Nom</label><input class="input" id="plName" name="name" maxlength="40" placeholder="Ex. Pontarlier" autocomplete="off"></div>
         <div class="form-grid">
           <div class="field"><label class="field__label" for="plLat">Latitude</label><input class="input" id="plLat" name="lat" inputmode="decimal" placeholder="Ex. 46,999"></div>
@@ -187,7 +183,6 @@
       <div class="sheet__grabber" aria-hidden="true"></div>
       <header class="sheet__head"><h2 class="sheet__title" id="allureAuthTitle">Connexion à Cadence</h2><button type="button" class="icon-btn" data-close aria-label="Fermer"><span data-icon="close"></span></button></header>
       <form class="form sheet__scroll" id="allureAuthForm" novalidate>
-        <p class="field__help">Même compte que Cadence (anciennement Allure), Carnet, Mon Garage et Ma Maison. Une seule fois sur cet appareil : les courses envoyées iront ensuite directement dans Cadence.</p>
         <div class="field"><label class="field__label" for="allureEmail">E-mail</label><input class="input" id="allureEmail" name="email" type="email" autocomplete="email" required></div>
         <div class="field"><label class="field__label" for="allurePassword">Mot de passe</label><input class="input" id="allurePassword" name="password" type="password" autocomplete="current-password" required></div>
         <div class="field-error" id="allureAuthError" role="alert" hidden></div>

@@ -115,7 +115,6 @@
 .wax-card__text strong { display: block; font-size: var(--fs-md); font-weight: 850; letter-spacing: -.02em; }
 .wax-card__text small { font-size: calc(0.6875rem * var(--fs-scale)); color: var(--text-2); }
 .wax-card--empty strong { color: var(--text-3); }
-.wax-caveat { margin-top: 8px; }
 .bulletin { display: flex; flex-direction: column; gap: 10px; }
 .bulletin__head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .bulletin__sub { font-size: var(--fs-sm); font-weight: 800; margin-top: 4px; }
