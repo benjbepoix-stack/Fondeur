@@ -1058,15 +1058,6 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/portes-du-soleil-champery-les-crosets-champoussin-morgins-13/"
   },
-  "Ovronnaz": {
-   "place": "Ovronnaz – Valais",
-   "noSeason": false,
-   "summary": "Début de la saison : 05.12.2026 · Forfaits journaliers (dynamiques) Adulte dès CHF 61.– Enfant dès CHF 37.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/ovronnaz-138/"
-  },
   "Nendaz - 4 Vallées": {
    "place": "Nendaz – Valais",
    "noSeason": false,
@@ -1160,7 +1151,7 @@
   "Prés-d'Orvin-Chasseral": {
    "place": "Les Prés d'Orvin – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Début de la saison : 19.11.2026 · Forfaits journaliers Adulte CHF 30.– Enfant CHF 19.–",
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 30.– Enfant CHF 19.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1201,6 +1192,15 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/sainte-croix-les-rasses-146/"
+  },
+  "Ovronnaz": {
+   "place": "Ovronnaz – Valais",
+   "noSeason": false,
+   "summary": "Début de la saison : 05.12.2026 · Forfaits journaliers (dynamiques) Adulte dès CHF 61.– Enfant dès CHF 37.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/ovronnaz-138/"
   },
   "Glacier 3000": {
    "place": "Les Diablerets – Canton de Vaud",
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/saignelegier-150/"
   }
  },
- "fetchedAt": "2026-10-22T05:42:13+00:00"
+ "fetchedAt": "2026-10-23T05:42:15+00:00"
 }
