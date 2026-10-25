@@ -1031,6 +1031,15 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/verbier-132/"
   },
+  "Portes du Soleil - Champéry - Les Crosets - Champoussin - Morgins": {
+   "place": "Champéry – Valais",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 74.– Enfant CHF 56.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/portes-du-soleil-champery-les-crosets-champoussin-morgins-13/"
+  },
   "Crans - Montana": {
    "place": "Crans-Montana – Valais",
    "noSeason": false,
@@ -1039,6 +1048,15 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/crans-montana-142/"
+  },
+  "Anzère": {
+   "place": "Anzère – Valais",
+   "noSeason": false,
+   "summary": "Début de la saison : 21.11.2026 · Forfaits journaliers –",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
   },
   "Nendaz - 4 Vallées": {
    "place": "Nendaz – Valais",
@@ -1052,20 +1070,11 @@
   "Val-de-Travers/La Robella": {
    "place": "Buttes La Robella – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 29.– Enfant CHF 0.–",
+   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 29.– Enfant CHF 0.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/val-de-traversla-robella-195/"
-  },
-  "Portes du Soleil - Champéry - Les Crosets - Champoussin - Morgins": {
-   "place": "Champéry – Valais",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 74.– Enfant CHF 56.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/portes-du-soleil-champery-les-crosets-champoussin-morgins-13/"
   },
   "Glacier 3000": {
    "place": "Les Diablerets – Canton de Vaud",
@@ -1079,7 +1088,7 @@
   "Vue des Alpes/Tête de Ran": {
    "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
+   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1097,16 +1106,70 @@
   "Mont-Soleil - Mont-Crosin": {
    "place": "Tramelan – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers –",
+   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers –",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
   },
+  "Champex-Lac": {
+   "place": "Champex-Lac – Valais",
+   "noSeason": false,
+   "summary": "Début de la saison : 05.12.2026 · Forfaits journaliers Adulte CHF 46.– Enfant CHF 30.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/champex-lac-168/"
+  },
+  "Bugnenets - Savagnières": {
+   "place": "Savagnières-Bugnenets – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 40.– Enfant CHF 23.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/bugnenets-savagnieres-197/"
+  },
+  "Les Genevez": {
+   "place": "Saignelégier – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 18.– Enfant CHF 10.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-genevez-208/"
+  },
+  "Vichères - Bavon": {
+   "place": "Liddes – Valais",
+   "noSeason": false,
+   "summary": "Début de la saison : 05.12.2026 · Forfaits journaliers Adulte CHF 46.– Enfant CHF 30.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vicheres-bavon-257/"
+  },
+  "Prés-d'Orvin-Chasseral": {
+   "place": "Les Prés d'Orvin – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 30.– Enfant CHF 19.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/pres-dorvin-chasseral-206/"
+  },
+  "Sainte-Croix / Les Rasses": {
+   "place": "Sainte-Croix Les Rasses – Canton de Vaud",
+   "noSeason": false,
+   "summary": "Pas de données actuelles ! Début de saison : 12.12.2026 · Forfaits journaliers Adulte CHF 35.– Enfant CHF 23.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/sainte-croix-les-rasses-146/"
+  },
   "Vallée de La Sagne": {
    "place": "La Sagne – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
+   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1139,15 +1202,6 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-fouly-141/"
   },
-  "Anzère": {
-   "place": "Anzère – Valais",
-   "noSeason": false,
-   "summary": "Début de la saison : 21.11.2026 · Forfaits journaliers –",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
-  },
   "Leysin": {
    "place": "Leysin – Canton de Vaud",
    "noSeason": true,
@@ -1178,7 +1232,7 @@
   "Les Breuleux": {
    "place": "Les Breuleux – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 24.– Enfant CHF 15.–",
+   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 24.– Enfant CHF 15.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1211,78 +1265,24 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
   },
-  "Sainte-Croix / Les Rasses": {
-   "place": "Sainte-Croix Les Rasses – Canton de Vaud",
-   "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 12.12.2026 · Forfaits journaliers Adulte CHF 35.– Enfant CHF 23.–",
+  "St-Cergue": {
+   "place": "St-Cergue – Canton de Vaud",
+   "noSeason": true,
+   "summary": "Pas de données actuelles ! Pas de saison ! · Forfaits journaliers Adulte CHF 24.– Enfant CHF 19.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/sainte-croix-les-rasses-146/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/st-cergue-14/"
   },
-  "Champex-Lac": {
-   "place": "Champex-Lac – Valais",
-   "noSeason": false,
-   "summary": "Début de la saison : 05.12.2026 · Forfaits journaliers Adulte CHF 46.– Enfant CHF 30.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/champex-lac-168/"
-  },
-  "Bugnenets - Savagnières": {
-   "place": "Savagnières-Bugnenets – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 40.– Enfant CHF 23.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/bugnenets-savagnieres-197/"
-  },
-  "Les Genevez": {
+  "Saignelégier": {
    "place": "Saignelégier – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 18.– Enfant CHF 10.–",
+   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers –",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-genevez-208/"
-  },
-  "Vichères - Bavon": {
-   "place": "Liddes – Valais",
-   "noSeason": false,
-   "summary": "Début de la saison : 05.12.2026 · Forfaits journaliers Adulte CHF 46.– Enfant CHF 30.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vicheres-bavon-257/"
-  },
-  "Prés-d'Orvin-Chasseral": {
-   "place": "Les Prés d'Orvin – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 30.– Enfant CHF 19.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/pres-dorvin-chasseral-206/"
-  },
-  "Nordic Région Gibloux": {
-   "place": "Les Monts de Riaz – Région de Fribourg",
-   "noSeason": true,
-   "summary": "Pas de données actuelles ! Pas de saison ! · Forfaits journaliers Adulte CHF 10.– Enfant CHF 0.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nordic-region-gibloux-216/"
-  },
-  "La Chaux-de-Fonds": {
-   "place": "La Chaux-de-Fonds – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers Adulte CHF 0.– Enfant CHF 0.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-chaux-de-fonds-75/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/saignelegier-150/"
   }
  },
- "fetchedAt": "2026-10-24T05:42:18+00:00"
+ "fetchedAt": "2026-10-25T09:49:17+00:00"
 }
