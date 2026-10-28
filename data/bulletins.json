@@ -1213,8 +1213,8 @@
   },
   "Rougemont - Videmanette": {
    "place": "Rougemont – Canton de Vaud",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers (dynamiques) Adulte dès CHF 49.– Enfant dès CHF 28.–",
+   "noSeason": false,
+   "summary": "Début de la saison : 05.12.2026 · Forfaits journaliers (dynamiques) Adulte dès CHF 49.– Enfant dès CHF 28.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/saignelegier-150/"
   }
  },
- "fetchedAt": "2026-10-27T10:33:48+00:00"
+ "fetchedAt": "2026-10-28T11:21:02+00:00"
 }
