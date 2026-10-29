@@ -1079,9 +1079,9 @@
   "Nendaz - 4 Vallées": {
    "place": "Nendaz – Valais",
    "noSeason": false,
-   "summary": "Début de la saison : 21.11.2026 · Forfaits journaliers Adulte CHF 79.– Enfant CHF 40.–",
-   "kmOpen": null,
-   "kmTotal": null,
+   "summary": "0.0/7.7 km Classique, pas de données · 0.0/7.7 km Skating, pas de données · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 7.7,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/nendaz-4-vallees-139/"
   },
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/saignelegier-150/"
   }
  },
- "fetchedAt": "2026-10-28T11:21:02+00:00"
+ "fetchedAt": "2026-10-29T11:32:12+00:00"
 }
