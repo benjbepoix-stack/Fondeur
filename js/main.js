@@ -17,7 +17,6 @@ import { renderList } from './views/list.js';
 import { setFavButton } from './views/common.js';
 import { openStation, initStation } from './views/station.js';
 import { renderMap } from './views/map.js';
-import { renderRaces, initRaces } from './views/races.js';
 
 /* ---------- Lieux de départ (éditables, « Ici » mis à part) ---------- */
 const PLACES_KEY = 'fondeur_places';
@@ -51,6 +50,8 @@ if (state.prefs.origin === 'besancon') state.prefs.origin = 'boussieres';
 // plus persisté d'une session à l'autre, même s'il continue de l'être le
 // temps de la session, pour les autres écrans qui s'y réfèrent).
 state.prefs.view = 'list';
+/* Les courses de ski de fond se choisissent désormais dans Cadence (onglet Courses). */
+const CADENCE_URL = 'https://benjbepoix-stack.github.io/Allure/';
 
 const savePrefs = () => write(PREFS, JSON.stringify(state.prefs));
 
@@ -113,27 +114,16 @@ function render() {
   const list = rows();
   const view = state.prefs.view;
   document.body.dataset.view = view;
-  $$('#viewSwitch [data-view]').forEach(b => {
-    const active = b.dataset.view === (view === 'map' ? 'list' : view);
-    b.classList.toggle('is-active', active);
-    if (active) b.setAttribute('aria-current', 'page');
-    else b.removeAttribute('aria-current');
-  });
   const mapBtn = $('#mapToggle');
-  mapBtn.hidden = view === 'races';
   mapBtn.setAttribute('aria-pressed', String(view === 'map'));
   mapBtn.setAttribute('aria-label', view === 'map' ? 'Voir le classement' : 'Voir la carte');
   mapBtn.innerHTML = icon(view === 'map' ? 'list' : 'map', 20);
   $('#listView').hidden = view !== 'list';
   $('#mapView').hidden = view !== 'map';
-  $('#racesView').hidden = view !== 'races';
-  $('#todayHead').hidden = view === 'races';
-  $('#statusLine').hidden = view === 'races';
   $('#filtersLabel').textContent = filtersLabel();
   $('#mood').textContent = generalState(scored());
   if (view === 'list') renderList(list, state);
-  else if (view === 'map') renderMap(list, state);
-  else renderRaces();
+  else renderMap(list, state);
   const at = state.weatherAt ? hhmm(state.weatherAt) : null;
   const fetched = state.bulletins?.fetchedAt ? new Date(state.bulletins.fetchedAt) : null;
   $('#statusLine').textContent = [
@@ -336,22 +326,22 @@ async function deletePlace(id) {
   if (state.prefs.origin === id) setOrigin(state.places[0]?.id || 'gps');
 }
 
-/* ---------- Liens directs (widgets) : #station=<id>, #courses, #carte ---------- */
+/* ---------- Liens directs (widgets) : #station=<id>, #carte (#courses : les courses sont dans Cadence) ---------- */
 function openFromHash() {
   const hash = decodeURIComponent(location.hash.slice(1));
   if (!hash) return;
   history.replaceState(null, '', location.pathname + location.search);
-  if (hash === 'courses' || hash === 'carte') {
-    state.prefs.view = hash === 'courses' ? 'races' : 'map';
+  if (hash === 'courses') {
+    location.href = CADENCE_URL;
+    return;
+  }
+  if (hash === 'carte') {
+    state.prefs.view = 'map';
     render();
     return;
   }
   const id = hash.startsWith('station=') ? hash.slice(8) : null;
   if (id && state.stations.some(s => s.id === id)) {
-    if (state.prefs.view === 'races') {
-      state.prefs.view = 'list';
-      render();
-    }
     openStation(id);
   }
 }
@@ -414,7 +404,6 @@ async function init() {
   watchSystemTheme(() => state.prefs.view === 'map' && render());
   initDialogs();
   initStation();
-  initRaces();
 
   $('#themeToggle').addEventListener('click', () => {
     const next = nextTheme();
@@ -445,13 +434,6 @@ async function init() {
   $('#filtersBtn').addEventListener('click', () => openSheet('filtersSheet', { focus: false }));
   $('#mapToggle').addEventListener('click', () => {
     state.prefs.view = state.prefs.view === 'map' ? 'list' : 'map';
-    render();
-  });
-  $('#viewSwitch').addEventListener('click', e => {
-    const b = e.target.closest('[data-view]');
-    if (!b) return;
-    state.prefs.view = b.dataset.view;
-    savePrefs();
     render();
   });
   $('#countryFilter').value = state.prefs.country;

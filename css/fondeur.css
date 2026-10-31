@@ -40,7 +40,7 @@
 @media (hover: hover) { #plSearchResults .row:hover { background: var(--surface-2); } }
 #plSearchResults .row__icon { flex: none; color: var(--text-3); }
 
-.app { padding-bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 40px); }
+.app { padding-bottom: calc(var(--safe-bottom) + 32px); }
 .page-title { font-size: calc(1.75rem * var(--fs-scale)); font-weight: 850; letter-spacing: -.04em; margin: 4px 0 12px; }
 .kicker { font-size: calc(0.6875rem * var(--fs-scale)); font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
 #refreshBtn.is-spinning .icon { animation: spin 1s linear infinite; }
