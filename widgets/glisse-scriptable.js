@@ -20,6 +20,8 @@
 
 // ---------- Réglages ----------
 const APP_URL = 'https://benjbepoix-stack.github.io/Fondeur/';
+// Les courses se choisissent dans Cadence : le widget « course » y renvoie.
+const CADENCE_URL = 'https://benjbepoix-stack.github.io/Allure/';
 const DATA_URL = 'https://raw.githubusercontent.com/benjbepoix-stack/Fondeur/main/data/widget.json';
 // Favoris par défaut quand le paramètre du widget est vide (ex. ['Chapelle', 'Mouthe', 'Brévine']).
 const FAVORIS = [];
@@ -197,7 +199,7 @@ function bestWidget(data, s, family) {
       w.addSpacer();
       const r = w.addStack();
       r.layoutVertically();
-      r.url = `${APP_URL}#courses`;
+      r.url = `${CADENCE_URL}`;
       label(r, 'Prochaine course');
       text(r, `${race.name} · ${raceDate(race)}`, 13.5, { weight: 'bold' });
     }
@@ -267,7 +269,7 @@ function waxWidget(data, s) {
 
 /** Prochaine course (moyen, en bandeau). */
 function raceWidget(data, group) {
-  const w = newWidget(`${APP_URL}#courses`);
+  const w = newWidget(`${CADENCE_URL}`);
   const races = (data.races || []).filter(r => !group || norm(r.group) === norm(group) || norm(r.location).includes(norm(group)));
   const race = races[0];
   label(w, 'Prochaine course');

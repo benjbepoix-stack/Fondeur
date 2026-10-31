@@ -7,7 +7,7 @@
  *   retomber sur la dernière copie (réseau faible en montagne) ;
  * - météo/trajet/tuiles (Open-Meteo, OSRM…) : réseau normal, hors service worker.
  */
-const CACHE = 'glisse-fondeur-v14';
+const CACHE = 'glisse-fondeur-v15';
 const DATA_TIMEOUT = 4000;
 
 const PRECACHE_URLS = [
@@ -32,7 +32,6 @@ const PRECACHE_URLS = [
   'js/core/utils.js',
   'js/core/wax.js',
   'js/services/routes.js',
-  'js/services/allure-sync.js',
   'js/services/geocode.js',
   'js/data/races.js',
   'js/services/storage.js',
@@ -45,7 +44,6 @@ const PRECACHE_URLS = [
   'js/ui/toast.js',
   'js/views/common.js',
   'js/views/list.js',
-  'js/views/races.js',
   'js/views/map.js',
   'js/views/station.js',
   'data/stations.json',

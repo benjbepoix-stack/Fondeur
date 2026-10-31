@@ -50,11 +50,6 @@
     </div>
   </header>
 
-  <nav class="tabbar" id="viewSwitch" aria-label="Navigation principale">
-    <button type="button" class="tabbar__item is-active" data-view="list" aria-current="page"><span data-icon="sun"></span><span>Aujourd’hui</span></button>
-    <button type="button" class="tabbar__item" data-view="races"><span data-icon="flag"></span><span>Courses</span></button>
-  </nav>
-
   <main class="app" id="main" tabindex="-1">
     <div class="today-head" id="todayHead">
       <button type="button" class="filter-pill" id="filtersBtn" aria-haspopup="dialog"><span id="filtersLabel">Réglages</span><span data-icon="chevronDown" data-size="15"></span></button>
@@ -74,15 +69,6 @@
       <div class="map-legend"><span style="--c:var(--good)">Très bon</span><span style="--c:var(--mid)">Correct</span><span style="--c:var(--bad)">Médiocre</span></div>
     </section>
 
-    <section id="racesView" hidden>
-      <header class="races-head">
-        <h2 class="page-title">Courses</h2>
-        <div class="races-year" id="racesYear" role="radiogroup" aria-label="Saison"></div>
-      </header>
-      <div class="races-filter" id="racesGroups" role="radiogroup" aria-label="Région"></div>
-      <p class="status-line races-account" id="racesAccount"></p>
-      <div id="racesList"></div>
-    </section>
 
     <p class="status-line" id="statusLine"></p>
 
