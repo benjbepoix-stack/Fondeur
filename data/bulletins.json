@@ -1061,7 +1061,7 @@
   "Val-de-Travers/La Robella": {
    "place": "Buttes La Robella – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 29.– Enfant CHF 0.–",
+   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers Adulte CHF 29.– Enfant CHF 0.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1079,7 +1079,7 @@
   "Bugnenets - Savagnières": {
    "place": "Savagnières-Bugnenets – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 40.– Enfant CHF 23.–",
+   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers Adulte CHF 40.– Enfant CHF 23.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1106,7 +1106,7 @@
   "Prés-d'Orvin-Chasseral": {
    "place": "Les Prés d'Orvin – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 30.– Enfant CHF 19.–",
+   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers Adulte CHF 30.– Enfant CHF 19.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1178,7 +1178,7 @@
   "Mont-Soleil - Mont-Crosin": {
    "place": "Tramelan – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers –",
+   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers –",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1196,7 +1196,7 @@
   "Vallée de La Sagne": {
    "place": "La Sagne – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
+   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1250,7 +1250,7 @@
   "Vue des Alpes/Tête de Ran": {
    "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
+   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1268,21 +1268,21 @@
   "Saignelégier": {
    "place": "Saignelégier – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Début de la saison : 01.11.2026 · Forfaits journaliers –",
-   "kmOpen": null,
-   "kmTotal": null,
+   "summary": "0.0/50.3 km Classique, fermées · 0.0/50.3 km Skating, fermées · Forfait de ski de fond Passeport journalier CHF 12.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
+   "kmOpen": 0.0,
+   "kmTotal": 50.3,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/saignelegier-150/"
   },
   "Vallée de La Brévine": {
    "place": "La Brévine – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 01.11.2026 · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
+   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   }
  },
- "fetchedAt": "2026-10-31T10:56:22+00:00"
+ "fetchedAt": "2026-11-01T04:53:34+00:00"
 }
