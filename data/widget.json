@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-01T04:53:37.033Z",
+ "generatedAt": "2026-11-01T11:49:00.315Z",
  "origin": "Ville-du-Pont",
  "summary": "Pas encore de neige skiable dans le massif.",
- "bulletinsAt": "2026-11-01T04:53:34+00:00",
+ "bulletinsAt": "2026-11-01T11:48:58+00:00",
  "stations": [
   {
    "id": "fr-20380",
@@ -17,7 +17,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 1,
-   "tMax": 7,
+   "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 18,
@@ -43,7 +43,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 0,
-   "tMax": 6,
+   "tMax": 5,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 21,
@@ -69,7 +69,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 1,
-   "tMax": 6,
+   "tMax": 5,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 23,
@@ -126,8 +126,8 @@
    "kmTotal": null,
    "minutes": 25,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -152,8 +152,8 @@
    "kmTotal": null,
    "minutes": 32,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -172,7 +172,7 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
+   "tMin": 1,
    "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
@@ -225,7 +225,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 1,
-   "tMax": 6,
+   "tMax": 5,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 39,
@@ -277,7 +277,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 0,
-   "tMax": 8,
+   "tMax": 7,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 44,
@@ -308,8 +308,8 @@
    "kmTotal": null,
    "minutes": 46,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -360,8 +360,8 @@
    "kmTotal": null,
    "minutes": 47,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -381,7 +381,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 2,
-   "tMax": 6,
+   "tMax": 5,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 50,
@@ -438,8 +438,8 @@
    "kmTotal": null,
    "minutes": 59,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -464,8 +464,8 @@
    "kmTotal": null,
    "minutes": 63,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -484,7 +484,7 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
+   "tMin": 2,
    "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
@@ -568,8 +568,8 @@
    "kmTotal": null,
    "minutes": 73,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -588,7 +588,7 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
+   "tMin": 0,
    "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
@@ -719,7 +719,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 1,
-   "tMax": 5,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 81,
@@ -874,7 +874,7 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
+   "tMin": 0,
    "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
@@ -926,7 +926,7 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
+   "tMin": 0,
    "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
@@ -953,7 +953,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 1,
-   "tMax": 8,
+   "tMax": 7,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 106,
@@ -978,8 +978,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
-   "tMax": 6,
+   "tMin": 0,
+   "tMax": 5,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 112,
@@ -1083,7 +1083,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 0,
-   "tMax": 5,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 134,
@@ -1109,13 +1109,13 @@
    "measured": false,
    "fresh72": 0,
    "tMin": -1,
-   "tMax": 9,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 144,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -1135,7 +1135,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 1,
-   "tMax": 9,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 146,
