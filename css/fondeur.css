@@ -400,3 +400,27 @@ body[data-view="map"] .map { height: calc(100dvh - var(--safe-top) - var(--topba
 .races-account { margin-top: -4px; }
 .races-account .link-btn { font-size: inherit; margin: 0; padding: 0 2px; }
 @media (prefers-reduced-motion: reduce) { .race-card__pick:active { transform: none; } }
+
+/* =========================================================
+   ANIMATIONS — apparition, continuité, retour tactile
+   transform et opacity seulement ; aucune sous « réduire les animations »
+   ========================================================= */
+/* Première réponse : chaque ligne monte à son tour (45 ms d'écart), --t reprend un rendu interrompu */
+.is-revealing .answer > *,
+.is-revealing .nx,
+.is-revealing .next__head { animation: view-in var(--dur-slow) var(--ease-out) both; animation-delay: calc(var(--d, 0) * 45ms - var(--t, 0ms)); }
+.is-revealing .answer > :nth-child(2) { --d: 1; }
+.is-revealing .answer > :nth-child(3) { --d: 2; }
+.is-revealing .answer > :nth-child(4) { --d: 3; }
+.is-revealing .answer > :nth-child(5) { --d: 4; }
+.is-revealing .answer > :nth-child(6) { --d: 5; }
+.is-revealing .next__head { --d: 5; }
+
+/* Carte : les pastilles apparaissent en cascade à la première ouverture */
+.map.is-first .map-pin { animation: pin-in var(--dur-slow) var(--ease-out) both; animation-delay: calc(var(--d, 0) * 25ms); }
+@keyframes pin-in { from { opacity: 0; transform: translateY(-6px) scale(.85); } }
+
+/* « Pourquoi cette note » : la barre se remplit de gauche à droite à l'ouverture du volet */
+.why-bar span { transform-origin: left center; animation: fill-in 520ms var(--ease-out) both; animation-delay: calc(180ms + var(--k, 0) * 60ms); }
+.why-bar .why-bar__rest { animation: none; }
+@keyframes fill-in { from { transform: scaleX(0); } }

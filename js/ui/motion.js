@@ -7,6 +7,13 @@
 
 export const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/** element.animate() avec la courbe --ease-out (tokens.css) ; ne fait rien quand l'utilisateur a demandé moins d'animations. */
+export function animate(el, keyframes, options) {
+  if (!el || reducedMotion()) return null;
+  const easing = getComputedStyle(document.documentElement).getPropertyValue('--ease-out').trim() || 'ease-out';
+  return el.animate(keyframes, { easing, ...options });
+}
+
 /**
  * Anime une valeur vers `to` avec un ressort, en partant de `from` et de la
  * vitesse `velocity` (unités/s). Renvoie une fonction d'arrêt : un nouveau

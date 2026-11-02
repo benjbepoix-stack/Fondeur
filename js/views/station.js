@@ -1,6 +1,7 @@
 /* Fiche d'une station : note, conditions, bulletin officiel, commentaires des pisteurs, prévisions. */
 import { $, $$, esc } from '../core/utils.js';
 import { openSheet } from '../ui/dialog.js';
+import { animate } from '../ui/motion.js';
 import { fmtTemp } from '../core/score.js';
 import { waxFor } from '../core/wax.js';
 import { weatherLabel } from '../services/weather.js';
@@ -154,8 +155,13 @@ export function initStation() {
     const tab = e.target.closest('[data-panel-tab]');
     if (!tab) return;
     const tabs = $$('#stationContent [data-panel-tab]');
+    const from = tabs.findIndex(b => b.getAttribute('aria-selected') === 'true');
+    const to = tabs.indexOf(tab);
+    if (from === to) return;
     tabs.forEach(b => b.setAttribute('aria-selected', String(b === tab)));
-    tab.parentElement.style.setProperty('--i', tabs.indexOf(tab));
+    tab.parentElement.style.setProperty('--i', to);
     $$('#stationContent .fiche-panel').forEach(p => (p.hidden = p.id !== `panel-${tab.dataset.panelTab}`));
+    // Le volet arrive du côté où glisse l'indicateur.
+    animate($(`#panel-${tab.dataset.panelTab}`), [{ opacity: 0, transform: `translateX(${Math.sign(to - from) * 16}px)` }, { opacity: 1, transform: 'none' }], { duration: 240 });
   });
 }

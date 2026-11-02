@@ -7,7 +7,7 @@
  *   retomber sur la dernière copie (réseau faible en montagne) ;
  * - météo/trajet/tuiles (Open-Meteo, OSRM…) : réseau normal, hors service worker.
  */
-const CACHE = 'glisse-fondeur-v15';
+const CACHE = 'glisse-fondeur-v16';
 const DATA_TIMEOUT = 4000;
 
 const PRECACHE_URLS = [
