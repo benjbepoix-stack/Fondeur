@@ -400,3 +400,55 @@ body[data-view="map"] .map { height: calc(100dvh - var(--safe-top) - var(--topba
 .races-account { margin-top: -4px; }
 .races-account .link-btn { font-size: inherit; margin: 0; padding: 0 2px; }
 @media (prefers-reduced-motion: reduce) { .race-card__pick:active { transform: none; } }
+
+/* =========================================================
+   ANIMATIONS — apparition, continuité, retour tactile
+   transform et opacity seulement ; aucune sous « réduire les animations »
+   ========================================================= */
+/* Première réponse : chaque ligne monte à son tour (45 ms d'écart), --t reprend un rendu interrompu */
+.is-revealing .answer > *,
+.is-revealing .nx,
+.is-revealing .next__head { animation: view-in var(--dur-slow) var(--ease-out) both; animation-delay: calc(var(--d, 0) * 45ms - var(--t, 0ms)); }
+.is-revealing .next__head { --d: 5; }
+.is-revealing .answer > .snowfall { animation-name: snow-in; animation-duration: 1200ms; }
+@keyframes snow-in { from { opacity: 0; } }
+
+/* Carte : les pastilles apparaissent en cascade à la première ouverture */
+.map.is-first .map-pin { animation: pin-in var(--dur-slow) var(--ease-out) both; animation-delay: calc(var(--d, 0) * 25ms); }
+@keyframes pin-in { from { opacity: 0; transform: translateY(-6px) scale(.85); } }
+
+/* « Pourquoi cette note » : la barre se remplit de gauche à droite à l'ouverture du volet */
+.why-bar span { transform-origin: left center; animation: fill-in 520ms var(--ease-out) both; animation-delay: calc(180ms + var(--k, 0) * 60ms); }
+.why-bar .why-bar__rest { animation: none; }
+@keyframes fill-in { from { transform: scaleX(0); } }
+
+/* Neige qui tombe derrière la réponse (s'il a neigé sur 72 h) */
+.answer { position: relative; isolation: isolate; }
+.snowfall { position: absolute; inset: -24px calc(var(--gutter) * -1) 0; z-index: -1; overflow: hidden; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 70%, transparent); mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 70%, transparent); }
+.snowfall i { position: absolute; top: -12px; left: var(--x); width: var(--s); height: var(--s); border-radius: 50%; background: var(--snow); opacity: var(--o);
+  animation: fall var(--dur) linear var(--delay) infinite; will-change: transform; }
+:root[data-theme="light"] .snowfall i { background: color-mix(in srgb, var(--snow) 55%, #fff); }
+@keyframes fall { to { transform: translate3d(var(--drift), 560px, 0); } }
+
+/* Trace de skating sous le nom : elle se dessine à l'apparition */
+.trace { display: block; width: 120px; height: 12px; margin: 2px 0 -2px; overflow: visible; }
+.trace path { fill: none; stroke: var(--accent); stroke-width: 2.4; stroke-linecap: round; stroke-dasharray: 1; opacity: .7; }
+.is-revealing .answer > .trace { animation: none; }
+.is-revealing .trace path { animation: draw 900ms var(--ease-out) both; animation-delay: calc(240ms - var(--t, 0ms)); }
+@keyframes draw { from { stroke-dashoffset: 1; } }
+
+/* Grosse note : elle se touche (rebond) */
+.answer__num { display: inline-block; transform-origin: 50% 100%; cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none; }
+
+/* Éclat d'étoiles quand on ajoute un favori */
+.spark { position: fixed; z-index: 200; pointer-events: none; font-size: 13px; line-height: 1; color: #e0a90f; }
+
+/* Prévisions : les jours arrivent en cascade, l'icône sautille */
+.day { animation: view-in var(--dur-slow) var(--ease-out) both; animation-delay: calc(var(--i, 0) * 50ms); }
+.day__ico { display: inline-block; animation: hop 600ms var(--ease-out) both; animation-delay: calc(120ms + var(--i, 0) * 50ms); }
+@keyframes hop { 0% { transform: translateY(0) scale(.8); opacity: 0; } 45% { transform: translateY(-5px) scale(1.05); opacity: 1; } 100% { transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .snowfall { display: none; }
+}

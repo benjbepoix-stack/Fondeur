@@ -10,7 +10,7 @@ import { isFavorite, toggleFavorite, rankScore, restoreFavorites } from './core/
 import { initDialogs, openSheet, closeSheet, confirmDialog } from './ui/dialog.js';
 import { applyTheme, nextTheme, themeLabel, watchSystemTheme } from './ui/theme.js';
 import { haptic } from './ui/haptics.js';
-import { reducedMotion } from './ui/motion.js';
+import { reducedMotion, animate } from './ui/motion.js';
 import { toast, toastError } from './ui/toast.js';
 import { icon } from './ui/icons.js';
 import { renderList } from './views/list.js';
@@ -140,8 +140,46 @@ function render() {
  * glissent vers leur nouvelle place au lieu d'être remplacées d'un coup.
  */
 function animatedRender() {
-  if (!document.startViewTransition || reducedMotion() || state.prefs.view !== 'list' || document.hidden) return render();
-  document.startViewTransition(render);
+  if (!document.startViewTransition || reducedMotion() || state.prefs.view !== 'list' || document.hidden) {
+    render();
+    return Promise.resolve();
+  }
+  return document.startViewTransition(render).updateCallbackDone;
+}
+
+/** Étoile allumée : petit rebond sur toutes ses copies (réponse, deck, fiche) et éclat de petites étoiles. */
+function popStar(id) {
+  $$(`[data-fav="${id}"]`).forEach(b => {
+    animate(b, [{ transform: 'scale(1)' }, { transform: 'scale(1.3)', offset: 0.35 }, { transform: 'scale(1)' }], { duration: 380 });
+    const r = b.getBoundingClientRect();
+    if (!r.width || reducedMotion()) return;
+    for (let k = 0; k < 7; k++) {
+      const a = (k / 7) * 2 * Math.PI - Math.PI / 2;
+      const d = 26 + (k % 2) * 10;
+      const spark = document.createElement('span');
+      spark.className = 'spark';
+      spark.textContent = '★';
+      spark.style.left = `${r.left + r.width / 2}px`;
+      spark.style.top = `${r.top + r.height / 2}px`;
+      document.body.append(spark);
+      animate(spark, [
+        { transform: 'translate(-50%, -50%) scale(.6)', opacity: 1 },
+        { transform: `translate(calc(-50% + ${Math.cos(a) * d}px), calc(-50% + ${Math.sin(a) * d}px)) scale(.9) rotate(${k * 40}deg)`, opacity: 0 }
+      ], { duration: 560 }).finished.finally(() => spark.remove());
+    }
+  });
+}
+
+/** La grosse note répond au toucher : elle s'écrase puis rebondit. */
+function squish(num) {
+  haptic();
+  animate(num, [
+    { transform: 'scale(1, 1)' },
+    { transform: 'scale(1.08, .88)', offset: 0.25 },
+    { transform: 'scale(.96, 1.06)', offset: 0.55 },
+    { transform: 'scale(1.02, .99)', offset: 0.8 },
+    { transform: 'scale(1, 1)' }
+  ], { duration: 520 });
 }
 
 /* ---------- Départ ---------- */
@@ -354,8 +392,20 @@ let staleWarnedAt = null;
  * que l'un des deux est là, sans attendre le plus lent. On ne reconstruit
  * l'écran que si les données ont changé (retour dans l'app).
  */
+let loadsPending = 0;
+
+/** Arrête l'icône d'actualisation à la fin de son tour plutôt que de la ramener d'un coup. */
+function stopSpin(btn) {
+  const ico = btn.querySelector('.icon');
+  const stop = () => loadsPending || btn.classList.remove('is-spinning');
+  if (!ico || reducedMotion()) return stop();
+  ico.addEventListener('animationiteration', stop, { once: true });
+  setTimeout(stop, 1100); // filet : pas d'événement si l'animation ne tourne pas (icône masquée…)
+}
+
 async function loadData({ force = false } = {}) {
   const btn = $('#refreshBtn');
+  loadsPending++;
   btn.classList.add('is-spinning');
   const bulletins = fetch(`data/bulletins.json?t=${Math.floor(Date.now() / 60000)}`)
     .then(r => (r.ok ? r.json() : null))
@@ -382,7 +432,8 @@ async function loadData({ force = false } = {}) {
   try {
     await Promise.all([bulletins, weather]);
   } finally {
-    btn.classList.remove('is-spinning');
+    loadsPending--;
+    stopSpin(btn);
   }
 }
 
@@ -435,6 +486,9 @@ async function init() {
   $('#mapToggle').addEventListener('click', () => {
     state.prefs.view = state.prefs.view === 'map' ? 'list' : 'map';
     render();
+    // La vue qui arrive glisse légèrement en fondu (sauf si le classement fait déjà sa première apparition).
+    const view = $(state.prefs.view === 'map' ? '#mapView' : '#listView');
+    if (!view.classList.contains('is-revealing')) animate(view, [{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 320 });
   });
   $('#countryFilter').value = state.prefs.country;
   $('#travelFilter').value = String(state.prefs.travel);
@@ -461,9 +515,11 @@ async function init() {
       document.querySelectorAll(`[data-fav="${fav.dataset.fav}"]`).forEach(b => setFavButton(b, on));
       haptic();
       toast(on ? 'Ajoutée aux favoris ★' : 'Retirée des favoris', { type: 'info' });
-      animatedRender();
+      animatedRender().then(() => on && popStar(fav.dataset.fav), console.error);
       return;
     }
+    const num = e.target.closest('.answer__num');
+    if (num) return squish(num);
     const s = e.target.closest('[data-station]');
     if (s && !e.target.closest('a')) openStation(s.dataset.station);
   });

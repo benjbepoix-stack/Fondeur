@@ -34,6 +34,8 @@ export async function renderMap(list, state) {
     return;
   }
   const L = window.L;
+  // Cascade des pastilles au premier affichage seulement : une actualisation ne la rejoue pas.
+  host.classList.toggle('is-first', !map);
   if (!map) {
     map = L.map(host, { zoomControl: true, attributionControl: true }).setView([46.75, 6.3], 8);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 16, attribution: '© OpenStreetMap' }).addTo(map);
@@ -45,11 +47,11 @@ export async function renderMap(list, state) {
     L.marker([state.origin.lat, state.origin.lon], { icon: L.divIcon({ className: 'map-home', html: '<i></i>', iconSize: [18, 18] }), title: state.origin.name, zIndexOffset: 1000 }).addTo(layer);
   }
   const pts = [];
-  list.forEach(r => {
+  list.forEach((r, i) => {
     const s = r.station;
     const lvl = levelOf(r.score);
     const m = L.marker([s.lat, s.lon], {
-      icon: L.divIcon({ className: 'map-pin-wrap', html: `<span class="map-pin is-${lvl}${r.fav ? ' is-fav' : ''}" data-station="${esc(s.id)}">${r.score ?? '—'}</span>`, iconSize: [30, 30], iconAnchor: [15, 15] }),
+      icon: L.divIcon({ className: 'map-pin-wrap', html: `<span class="map-pin is-${lvl}${r.fav ? ' is-fav' : ''}" data-station="${esc(s.id)}" style="--d:${Math.min(i, 20)}">${r.score ?? '—'}</span>`, iconSize: [30, 30], iconAnchor: [15, 15] }),
       title: s.name,
       riseOnHover: true,
       zIndexOffset: (r.score ?? 0) * 10
