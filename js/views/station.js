@@ -93,7 +93,7 @@ function forecastBlock(s, wx) {
     .map((d, i) => {
       const [ico] = weatherLabel(d.code);
       const note = d.snow >= 1 ? `+${Math.round(d.snow)} cm` : d.rain >= 1 ? 'pluie' : '';
-      return `<div class="day"><b>${esc(dayName(d.date, i))}</b><span class="day__ico">${ico}</span><span class="day__t">${Math.round(d.tmin)}/${Math.round(d.tmax)}°</span><span class="day__s ${d.rain >= 1 && !(d.snow >= 1) ? 'is-rain' : ''}">${note || '&nbsp;'}</span></div>`;
+      return `<div class="day" style="--i:${i}"><b>${esc(dayName(d.date, i))}</b><span class="day__ico">${ico}</span><span class="day__t">${Math.round(d.tmin)}/${Math.round(d.tmax)}°</span><span class="day__s ${d.rain >= 1 && !(d.snow >= 1) ? 'is-rain' : ''}">${note || '&nbsp;'}</span></div>`;
     })
     .join('');
   return `<section class="section"><header class="section__head"><h3 class="lab">5 prochains jours</h3><span class="lab">à ${s.alt} m</span></header><div class="days">${days}</div>

@@ -10,6 +10,26 @@ const travel = r => (r.route ? `${durationLabel(r.route.minutes)}${r.route.estim
 
 const LEADS = { score: 'Meilleur choix', distance: 'Le plus proche', night: 'Nuit la plus froide' };
 
+/*
+ * Neige qui tombe derrière la réponse quand il a neigé ces trois derniers jours :
+ * plus il en est tombé, plus il y a de flocons ; le vent les fait dériver.
+ * Positions tirées d'une suite fixe et phase calée sur l'horloge : un nouveau
+ * rendu retrouve chaque flocon là où il était.
+ */
+function snowfall(wx) {
+  if (!wx || !(wx.fresh72 >= 1)) return '';
+  const count = Math.min(10 + Math.round(wx.fresh72) * 2, 36);
+  const drift = Math.min(Math.round(wx.windMax || 0), 40) * 1.5;
+  const now = performance.now() / 1000;
+  const rand = i => ((Math.sin(i * 12.9898) * 43758.5453) % 1 + 1) % 1;
+  const flakes = Array.from({ length: count }, (_, i) => {
+    const dur = 6 + rand(i + 1) * 6;
+    const phase = (now + rand(i + 2) * dur) % dur;
+    return `<i style="--x:${(rand(i + 3) * 100).toFixed(1)}%;--s:${(2 + rand(i + 4) * 4).toFixed(1)}px;--o:${(0.35 + rand(i + 5) * 0.5).toFixed(2)};--dur:${dur.toFixed(2)}s;--delay:${(-phase).toFixed(2)}s;--drift:${Math.round(drift * (0.5 + rand(i + 6)))}px"></i>`;
+  });
+  return `<div class="snowfall" aria-hidden="true">${flakes.join('')}</div>`;
+}
+
 function answer(r, state) {
   const b = r.bulletin;
   const when = new Date().getHours() < 11 ? ' ce matin' : '';
@@ -21,15 +41,17 @@ function answer(r, state) {
   ];
   const go = travel(r);
   return `<section class="answer" aria-labelledby="answerName" style="view-transition-name: answer">
+    ${snowfall(r.wx)}
     <p class="lab">${esc(lead)}</p>
-    <div class="answer__title">
+    <div class="answer__title" style="--d:1">
       <h2 class="answer__name" id="answerName">${esc(r.station.name)}</h2>
       ${favButton(r.station.id, 'fav-btn--hero')}
     </div>
-    <p class="answer__score" aria-label="Note ${r.score} sur 100"><span class="answer__num" data-score="${r.score}">${r.score}</span><span class="answer__of">/100</span></p>
-    <p class="answer__verdict is-${r.level}">${esc(r.verdict)}</p>
-    <p class="answer__facts">${facts.map(esc).join(' · ')}</p>
-    <div class="answer__actions">
+    <svg class="trace" style="--d:2" viewBox="0 0 160 16" aria-hidden="true"><path pathLength="1" d="M2 8 C 16 1, 26 1, 40 8 S 66 15, 80 8 S 106 1, 120 8 S 146 15, 158 8"/></svg>
+    <p class="answer__score" style="--d:2" aria-label="Note ${r.score} sur 100"><span class="answer__num" data-score="${r.score}">${r.score}</span><span class="answer__of">/100</span></p>
+    <p class="answer__verdict is-${r.level}" style="--d:3">${esc(r.verdict)}</p>
+    <p class="answer__facts" style="--d:4">${facts.map(esc).join(' · ')}</p>
+    <div class="answer__actions" style="--d:5">
       <a class="btn btn--primary btn--lg" href="${esc(directionsUrl(r.station, state.origin))}" target="_blank" rel="noopener">Y aller${go ? ` · ${esc(go)}` : ''}</a>
       <button type="button" class="btn btn--soft btn--lg" data-station="${esc(r.station.id)}">Fiche</button>
     </div>
