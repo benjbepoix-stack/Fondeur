@@ -7,7 +7,7 @@
  *   retomber sur la dernière copie (réseau faible en montagne) ;
  * - météo/trajet/tuiles (Open-Meteo, OSRM…) : réseau normal, hors service worker.
  */
-const CACHE = 'glisse-fondeur-v16';
+const CACHE = 'glisse-fondeur-v17';
 const DATA_TIMEOUT = 4000;
 
 const PRECACHE_URLS = [
@@ -78,7 +78,8 @@ function store(key, res) {
 }
 
 function staleWhileRevalidate(event, request) {
-  const network = fetch(request).then(res => store(request, res));
+  // no-cache : revalide auprès du serveur au lieu de reprendre la copie du cache HTTP (10 min sur GitHub Pages).
+  const network = fetch(request, { cache: 'no-cache' }).then(res => store(request, res));
   event.waitUntil(network.catch(() => {}));
   return caches.match(request).then(cached => cached || network.catch(() => caches.match('index.html')));
 }

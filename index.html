@@ -26,6 +26,30 @@
     })();
   </script>
 
+  <script>
+    // Mise à jour de l'app installée : enregistrée tout de suite (même si le code de l'app plante),
+    // revérifiée à chaque retour dans l'app ; la nouvelle version s'applique au démarrage,
+    // ou à la prochaine sortie de l'app pour ne pas couper ce qu'on est en train de faire.
+    (function () {
+      if (!('serviceWorker' in navigator) || location.protocol !== 'https:') return;
+      var sw = navigator.serviceWorker;
+      var hadController = !!sw.controller;
+      var startedAt = Date.now();
+      var reloading = false;
+      function reload() { if (!reloading) { reloading = true; location.reload(); } }
+      sw.addEventListener('controllerchange', function () {
+        if (!hadController) return; // première installation : rien à recharger
+        if (document.hidden || Date.now() - startedAt < 10000) return reload();
+        document.addEventListener('visibilitychange', function () { if (document.hidden) reload(); });
+      });
+      sw.register('sw.js').then(function (reg) {
+        document.addEventListener('visibilitychange', function () {
+          if (document.visibilityState === 'visible') reg.update().catch(function () {});
+        });
+      }).catch(function () {});
+    })();
+  </script>
+
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/base.css">
