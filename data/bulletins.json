@@ -1097,9 +1097,9 @@
   "Prés-d'Orvin-Chasseral": {
    "place": "Les Prés d'Orvin – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers Adulte CHF 30.– Enfant CHF 19.–",
-   "kmOpen": null,
-   "kmTotal": null,
+   "summary": "0.0/48.0 km Classique, fermées · 0.0/48.0 km Skating, fermées · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 48.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/pres-dorvin-chasseral-206/"
   },
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   }
  },
- "fetchedAt": "2026-11-03T19:27:38+00:00"
+ "fetchedAt": "2026-11-04T00:12:43+00:00"
 }
