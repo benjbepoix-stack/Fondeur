@@ -1052,7 +1052,7 @@
   "Sainte-Croix / Les Rasses": {
    "place": "Sainte-Croix Les Rasses – Canton de Vaud",
    "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 12.12.2026 · Forfaits journaliers Adulte CHF 35.– Enfant CHF 23.–",
+   "summary": "Début de la saison : 12.12.2026 · Forfaits journaliers Adulte CHF 35.– Enfant CHF 23.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1159,8 +1159,8 @@
   },
   "Charmey.ch": {
    "place": "Charmey – Région de Fribourg",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 46.– Enfant CHF 31.–",
+   "noSeason": false,
+   "summary": "Début de la saison : 19.12.2026 · Forfaits journaliers Adulte CHF 46.– Enfant CHF 31.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1240,8 +1240,8 @@
   },
   "Les Mosses - La Lécherette": {
    "place": "Les Mosses – Canton de Vaud",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 62.– Enfant CHF 40.–",
+   "noSeason": false,
+   "summary": "Début de la saison : 19.12.2026 · Forfaits journaliers Adulte CHF 62.– Enfant CHF 40.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1259,7 +1259,7 @@
   "St-Cergue": {
    "place": "St-Cergue – Canton de Vaud",
    "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 22.12.2026 · Forfaits journaliers Adulte CHF 24.– Enfant CHF 19.–",
+   "summary": "Début de la saison : 22.12.2026 · Forfaits journaliers Adulte CHF 24.– Enfant CHF 19.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1268,9 +1268,9 @@
   "Saignelégier": {
    "place": "Saignelégier – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "0.0/50.3 km Classique, fermées · 0.0/50.3 km Skating, fermées · Forfait de ski de fond Passeport journalier CHF 12.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
-   "kmOpen": 0.0,
-   "kmTotal": 50.3,
+   "summary": "Début de la saison : 15.11.2026 · Forfaits journaliers –",
+   "kmOpen": null,
+   "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/saignelegier-150/"
   },
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   }
  },
- "fetchedAt": "2026-11-05T12:13:08+00:00"
+ "fetchedAt": "2026-11-05T20:16:07+00:00"
 }
