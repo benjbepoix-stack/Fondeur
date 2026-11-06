@@ -1016,9 +1016,9 @@
   "Glacier 3000": {
    "place": "Les Diablerets – Canton de Vaud",
    "noSeason": false,
-   "summary": "Début de la saison : 07.11.2026 · Forfaits journaliers Adulte CHF 75.– Enfant CHF 49.–",
-   "kmOpen": null,
-   "kmTotal": null,
+   "summary": "7.0/7.0 km Classique, bonnes · 7.0/7.0 km Skating, bonnes · Forfait de ski de fond –",
+   "kmOpen": 7.0,
+   "kmTotal": 7.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
   },
@@ -1040,15 +1040,6 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/verbier-132/"
   },
-  "Charmey.ch": {
-   "place": "Charmey – Région de Fribourg",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 46.– Enfant CHF 31.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/charmeych-4/"
-  },
   "Val-de-Travers/La Robella": {
    "place": "Buttes La Robella – Jura & Trois-Lacs",
    "noSeason": false,
@@ -1058,14 +1049,23 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/val-de-traversla-robella-195/"
   },
-  "Grimentz-Zinal /Anniviers": {
-   "place": "Grimentz – Valais",
-   "noSeason": true,
-   "summary": "Pas de données actuelles ! Pas de saison ! · Forfaits journaliers Adulte CHF 75.– Enfant CHF 45.–",
+  "Nendaz - 4 Vallées": {
+   "place": "Nendaz – Valais",
+   "noSeason": false,
+   "summary": "0.0/7.7 km Classique, pas de données · 0.0/7.7 km Skating, pas de données · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 7.7,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nendaz-4-vallees-139/"
+  },
+  "Sainte-Croix / Les Rasses": {
+   "place": "Sainte-Croix Les Rasses – Canton de Vaud",
+   "noSeason": false,
+   "summary": "Pas de données actuelles ! Début de saison : 12.12.2026 · Forfaits journaliers Adulte CHF 35.– Enfant CHF 23.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/sainte-croix-les-rasses-146/"
   },
   "Champex-Lac": {
    "place": "Champex-Lac – Valais",
@@ -1112,24 +1112,6 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/pres-dorvin-chasseral-206/"
   },
-  "Nendaz - 4 Vallées": {
-   "place": "Nendaz – Valais",
-   "noSeason": false,
-   "summary": "0.0/7.7 km Classique, pas de données · 0.0/7.7 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
-   "kmTotal": 7.7,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nendaz-4-vallees-139/"
-  },
-  "Sainte-Croix / Les Rasses": {
-   "place": "Sainte-Croix Les Rasses – Canton de Vaud",
-   "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 12.12.2026 · Forfaits journaliers Adulte CHF 35.– Enfant CHF 23.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/sainte-croix-les-rasses-146/"
-  },
   "Crans - Montana": {
    "place": "Crans-Montana – Valais",
    "noSeason": false,
@@ -1138,15 +1120,6 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/crans-montana-142/"
-  },
-  "Ovronnaz": {
-   "place": "Ovronnaz – Valais",
-   "noSeason": false,
-   "summary": "Début de la saison : 05.12.2026 · Forfaits journaliers (dynamiques) Adulte dès CHF 61.– Enfant dès CHF 37.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/ovronnaz-138/"
   },
   "Leysin": {
    "place": "Leysin – Canton de Vaud",
@@ -1183,6 +1156,33 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-breuleux-211/"
+  },
+  "Ovronnaz": {
+   "place": "Ovronnaz – Valais",
+   "noSeason": false,
+   "summary": "Début de la saison : 05.12.2026 · Forfaits journaliers (dynamiques) Adulte dès CHF 61.– Enfant dès CHF 37.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/ovronnaz-138/"
+  },
+  "Charmey.ch": {
+   "place": "Charmey – Région de Fribourg",
+   "noSeason": true,
+   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 46.– Enfant CHF 31.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/charmeych-4/"
+  },
+  "Grimentz-Zinal /Anniviers": {
+   "place": "Grimentz – Valais",
+   "noSeason": true,
+   "summary": "Pas de données actuelles ! Pas de saison ! · Forfaits journaliers Adulte CHF 75.– Enfant CHF 45.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
   },
   "Vue des Alpes/Tête de Ran": {
    "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
@@ -1256,6 +1256,15 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
   },
+  "St-Cergue": {
+   "place": "St-Cergue – Canton de Vaud",
+   "noSeason": false,
+   "summary": "Pas de données actuelles ! Début de saison : 22.12.2026 · Forfaits journaliers Adulte CHF 24.– Enfant CHF 19.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/st-cergue-14/"
+  },
   "Saignelégier": {
    "place": "Saignelégier – Jura & Trois-Lacs",
    "noSeason": false,
@@ -1273,16 +1282,7 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
-  },
-  "St-Cergue": {
-   "place": "St-Cergue – Canton de Vaud",
-   "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 22.12.2026 · Forfaits journaliers Adulte CHF 24.– Enfant CHF 19.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/st-cergue-14/"
   }
  },
- "fetchedAt": "2026-11-06T19:18:56+00:00"
+ "fetchedAt": "2026-11-06T23:49:16+00:00"
 }
