@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-06T12:01:41.640Z",
+ "generatedAt": "2026-11-06T19:18:58.886Z",
  "origin": "Ville-du-Pont",
  "summary": "Pas encore de neige skiable dans le massif.",
- "bulletinsAt": "2026-11-06T12:01:39+00:00",
+ "bulletinsAt": "2026-11-06T19:18:56+00:00",
  "stations": [
   {
    "id": "fr-1846",
@@ -161,32 +161,6 @@
    }
   },
   {
-   "id": "fr-1854",
-   "name": "Arc-sous-Cicon",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 950,
-   "score": 10,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 5,
-   "tMax": 7,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 33,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
    "id": "ch-les-cernets-les-verrières",
    "name": "Les Cernets · Les Verrières",
    "country": "CH",
@@ -329,7 +303,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 4,
-   "tMax": 7,
+   "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 47,
@@ -667,7 +641,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 4,
-   "tMax": 7,
+   "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 81,
@@ -1005,7 +979,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 4,
-   "tMax": 7,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 117,
@@ -1135,7 +1109,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 3,
-   "tMax": 5,
+   "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 171,
@@ -1175,12 +1149,38 @@
    }
   },
   {
+   "id": "fr-1854",
+   "name": "Arc-sous-Cicon",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 950,
+   "score": 9,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 5,
+   "tMax": 7,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 33,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
    "id": "fr-20380",
    "name": "Haut Saugeais Blanc",
    "country": "FR",
    "region": "Doubs",
    "alt": 950,
-   "score": 9,
+   "score": 8,
    "level": "bad",
    "verdict": "Pas assez de neige",
    "depth": 0,
@@ -1206,7 +1206,7 @@
    "country": "FR",
    "region": "Doubs",
    "alt": 1050,
-   "score": 9,
+   "score": 8,
    "level": "bad",
    "verdict": "Pas assez de neige",
    "depth": 0,
