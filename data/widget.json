@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-07T16:50:01.702Z",
+ "generatedAt": "2026-11-07T20:51:02.547Z",
  "origin": "Ville-du-Pont",
  "summary": "Pas encore de neige skiable dans le massif.",
- "bulletinsAt": "2026-11-07T16:49:59+00:00",
+ "bulletinsAt": "2026-11-07T20:51:00+00:00",
  "stations": [
   {
    "id": "fr-1846",
@@ -47,6 +47,32 @@
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 23,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1881",
+   "name": "Pontarlier · Larmont · Verrières-de-Joux",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 1050,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 3,
+   "tMax": 6,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 24,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -1149,8 +1175,8 @@
    }
   },
   {
-   "id": "fr-1881",
-   "name": "Pontarlier · Larmont · Verrières-de-Joux",
+   "id": "fr-3857",
+   "name": "Métabief · Mont d'Or",
    "country": "FR",
    "region": "Doubs",
    "alt": 1050,
@@ -1161,10 +1187,10 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 3,
-   "tMax": 6,
+   "tMax": 7,
    "kmOpen": null,
    "kmTotal": null,
-   "minutes": 24,
+   "minutes": 50,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -1191,32 +1217,6 @@
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 33,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-3857",
-   "name": "Métabief · Mont d'Or",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 1050,
-   "score": 7,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 3,
-   "tMax": 7,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 50,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
