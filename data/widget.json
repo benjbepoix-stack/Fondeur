@@ -1,9 +1,35 @@
 {
- "generatedAt": "2026-11-07T20:51:02.547Z",
+ "generatedAt": "2026-11-08T11:14:47.441Z",
  "origin": "Ville-du-Pont",
  "summary": "Pas encore de neige skiable dans le massif.",
- "bulletinsAt": "2026-11-07T20:51:00+00:00",
+ "bulletinsAt": "2026-11-08T11:14:45+00:00",
  "stations": [
+  {
+   "id": "fr-20380",
+   "name": "Haut Saugeais Blanc",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 950,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 0,
+   "tMax": 9,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 18,
+   "waxAm": {
+    "name": "Rouge",
+    "color": "#c23b3b"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
   {
    "id": "fr-1846",
    "name": "La Chaux-de-Gilley · Cernay Blanche",
@@ -16,14 +42,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 7,
+   "tMin": 0,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 21,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -42,14 +68,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 7,
+   "tMin": -1,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 23,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -68,8 +94,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 6,
+   "tMin": 2,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 24,
@@ -94,14 +120,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 7,
+   "tMin": 1,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 25,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -120,14 +146,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 7,
+   "tMin": 0,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 32,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -146,14 +172,40 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 7,
+   "tMin": 2,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 32,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1854",
+   "name": "Arc-sous-Cicon",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 950,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 1,
+   "tMax": 9,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 33,
+   "waxAm": {
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -172,14 +224,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 7,
+   "tMin": -1,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 39,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -198,14 +250,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 7,
+   "tMin": 0,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 42,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -224,14 +276,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 8,
+   "tMin": -2,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 44,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -250,14 +302,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 7,
+   "tMin": 1,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 46,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -276,8 +328,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 6,
+   "tMin": 1,
+   "tMax": 7,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 46,
@@ -302,11 +354,37 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 7,
+   "tMin": 2,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 47,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-3857",
+   "name": "Métabief · Mont d'Or",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 1050,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 1,
+   "tMax": 9,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 50,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -328,14 +406,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 5,
+   "tMin": 1,
+   "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 56,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -354,14 +432,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
+   "tMin": 0,
    "tMax": 5,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 59,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -380,14 +458,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 7,
+   "tMin": 0,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 63,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -406,14 +484,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 8,
+   "tMin": 0,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 63,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -432,8 +510,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 8,
+   "tMin": 2,
+   "tMax": 10,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 67,
@@ -458,8 +536,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 8,
+   "tMin": 2,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 73,
@@ -484,14 +562,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 5,
+   "tMin": 1,
+   "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 73,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -510,8 +588,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 6,
+   "tMin": 1,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 75,
@@ -536,14 +614,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 8,
+   "tMin": 1,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 78,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -562,7 +640,7 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
+   "tMin": 1,
    "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
@@ -589,7 +667,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 1,
-   "tMax": 7,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 80,
@@ -614,14 +692,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
+   "tMin": -2,
    "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 80,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -640,14 +718,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 6,
+   "tMin": 1,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 81,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -666,8 +744,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 7,
+   "tMin": 2,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 83,
@@ -692,8 +770,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
-   "tMax": 7,
+   "tMin": 0,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 85,
@@ -718,8 +796,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 0,
-   "tMax": 4,
+   "tMin": -1,
+   "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 88,
@@ -744,14 +822,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 7,
+   "tMin": 0,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 89,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -770,14 +848,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 7,
+   "tMin": -1,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 90,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -796,14 +874,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 6,
+   "tMin": 1,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 92,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -822,8 +900,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 0,
-   "tMax": 7,
+   "tMin": 1,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 101,
@@ -849,7 +927,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 1,
-   "tMax": 6,
+   "tMax": 7,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 104,
@@ -874,8 +952,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 7,
+   "tMin": 2,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 106,
@@ -900,7 +978,7 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -1,
+   "tMin": 0,
    "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
@@ -926,14 +1004,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 0,
-   "tMax": 7,
+   "tMin": 2,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 114,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -952,8 +1030,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 0,
-   "tMax": 6,
+   "tMin": 1,
+   "tMax": 7,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 116,
@@ -978,8 +1056,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 7,
+   "tMin": 2,
+   "tMax": 10,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 117,
@@ -1004,8 +1082,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 6,
+   "tMin": 1,
+   "tMax": 7,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 134,
@@ -1030,8 +1108,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 0,
-   "tMax": 8,
+   "tMin": 1,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 144,
@@ -1056,14 +1134,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 0,
-   "tMax": 8,
+   "tMin": 3,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 146,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -1082,14 +1160,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
-   "tMax": 7,
+   "tMin": 3,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 158,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -1108,14 +1186,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 0,
-   "tMax": 4,
+   "tMin": 2,
+   "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 171,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -1134,89 +1212,11 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
-   "tMax": 6,
+   "tMin": 2,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 183,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-20380",
-   "name": "Haut Saugeais Blanc",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 950,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 4,
-   "tMax": 7,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 18,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-3857",
-   "name": "Métabief · Mont d'Or",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 1050,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 3,
-   "tMax": 7,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 50,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1854",
-   "name": "Arc-sous-Cicon",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 950,
-   "score": 8,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 4,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 33,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
