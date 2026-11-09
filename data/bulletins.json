@@ -1016,8 +1016,8 @@
   "Glacier 3000": {
    "place": "Les Diablerets – Canton de Vaud",
    "noSeason": false,
-   "summary": "0.0/7.0 km Classique, pas de données · 0.0/7.0 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
+   "summary": "7.0/7.0 km Classique, bonnes · 7.0/7.0 km Skating, bonnes · Forfait de ski de fond –",
+   "kmOpen": 7.0,
    "kmTotal": 7.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   }
  },
- "fetchedAt": "2026-11-09T12:46:33+00:00"
+ "fetchedAt": "2026-11-09T22:58:58+00:00"
 }
