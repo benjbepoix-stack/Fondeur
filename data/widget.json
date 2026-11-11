@@ -1,120 +1,16 @@
 {
- "generatedAt": "2026-11-11T11:50:24.071Z",
+ "generatedAt": "2026-11-11T19:32:48.863Z",
  "origin": "Ville-du-Pont",
  "summary": "Pas encore de neige skiable dans le massif.",
- "bulletinsAt": "2026-11-11T11:50:21+00:00",
+ "bulletinsAt": "2026-11-11T19:32:47+00:00",
  "stations": [
-  {
-   "id": "fr-1846",
-   "name": "La Chaux-de-Gilley · Cernay Blanche",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 1050,
-   "score": 10,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 9,
-   "tMax": 10,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 21,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1874",
-   "name": "Val de Vennes",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 900,
-   "score": 10,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 10,
-   "tMax": 11,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 32,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1854",
-   "name": "Arc-sous-Cicon",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 950,
-   "score": 10,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 10,
-   "tMax": 11,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 33,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1897",
-   "name": "Plateau du Russey",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 950,
-   "score": 10,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 10,
-   "tMax": 11,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 46,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
   {
    "id": "ch-franches-montagnes-saignelégier",
    "name": "Franches-Montagnes · Saignelégier",
    "country": "CH",
    "region": "Jura (CH)",
    "alt": 1000,
-   "score": 10,
+   "score": 7,
    "level": "bad",
    "verdict": "Pas assez de neige",
    "depth": 0,
@@ -135,64 +31,12 @@
    }
   },
   {
-   "id": "fr-20380",
-   "name": "Haut Saugeais Blanc",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 950,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 9,
-   "tMax": 11,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 18,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1878",
-   "name": "Plateau de Maîche · Combe Saint-Pierre",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 950,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 8,
-   "tMax": 11,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 63,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
    "id": "ch-prés-dorvin-chasseral",
    "name": "Prés-d'Orvin · Chasseral",
    "country": "CH",
    "region": "Berne",
    "alt": 1050,
-   "score": 9,
+   "score": 7,
    "level": "bad",
    "verdict": "Pas assez de neige",
    "depth": 0,
@@ -213,12 +57,64 @@
    }
   },
   {
+   "id": "fr-20380",
+   "name": "Haut Saugeais Blanc",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 950,
+   "score": 6,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 9,
+   "tMax": 11,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 18,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1846",
+   "name": "La Chaux-de-Gilley · Cernay Blanche",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 1050,
+   "score": 6,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 9,
+   "tMax": 10,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 21,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
    "id": "fr-1900",
    "name": "Gilley · Les Combes",
    "country": "FR",
    "region": "Doubs",
    "alt": 1000,
-   "score": 8,
+   "score": 6,
    "level": "bad",
    "verdict": "Pas assez de neige",
    "depth": 0,
@@ -244,7 +140,7 @@
    "country": "FR",
    "region": "Doubs",
    "alt": 1050,
-   "score": 8,
+   "score": 6,
    "level": "bad",
    "verdict": "Pas assez de neige",
    "depth": 0,
@@ -255,136 +151,6 @@
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 24,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "ch-vue-des-alpes-tête-de-ran",
-   "name": "Vue des Alpes · Tête de Ran",
-   "country": "CH",
-   "region": "Neuchâtel",
-   "alt": 1300,
-   "score": 8,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 7,
-   "tMax": 9,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 59,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "ch-bugnenets-savagnières",
-   "name": "Bugnenets · Savagnières",
-   "country": "CH",
-   "region": "Berne",
-   "alt": 1150,
-   "score": 8,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 8,
-   "tMax": 9,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 78,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1858",
-   "name": "Val de Morteau",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 1050,
-   "score": 7,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 9,
-   "tMax": 11,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 32,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "ch-vallée-de-la-sagne",
-   "name": "Vallée de La Sagne",
-   "country": "CH",
-   "region": "Neuchâtel",
-   "alt": 1050,
-   "score": 7,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 9,
-   "tMax": 10,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 47,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "ch-mont-soleil-mont-crosin",
-   "name": "Mont-Soleil · Mont-Crosin",
-   "country": "CH",
-   "region": "Berne",
-   "alt": 1250,
-   "score": 7,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 8,
-   "tMax": 9,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 73,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -411,6 +177,84 @@
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 25,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1858",
+   "name": "Val de Morteau",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 1050,
+   "score": 6,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 9,
+   "tMax": 11,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 32,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1874",
+   "name": "Val de Vennes",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 900,
+   "score": 6,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 10,
+   "tMax": 11,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 32,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1854",
+   "name": "Arc-sous-Cicon",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 950,
+   "score": 6,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 10,
+   "tMax": 11,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 33,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -459,7 +303,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 9,
-   "tMax": 10,
+   "tMax": 11,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 42,
@@ -499,6 +343,32 @@
    }
   },
   {
+   "id": "fr-1897",
+   "name": "Plateau du Russey",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 950,
+   "score": 6,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 10,
+   "tMax": 11,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 46,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
    "id": "ch-val-de-travers-la-robella",
    "name": "Val-de-Travers · La Robella",
    "country": "CH",
@@ -515,6 +385,32 @@
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 46,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "ch-vallée-de-la-sagne",
+   "name": "Vallée de La Sagne",
+   "country": "CH",
+   "region": "Neuchâtel",
+   "alt": 1050,
+   "score": 6,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 9,
+   "tMax": 10,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 47,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -567,6 +463,58 @@
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 56,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "ch-vue-des-alpes-tête-de-ran",
+   "name": "Vue des Alpes · Tête de Ran",
+   "country": "CH",
+   "region": "Neuchâtel",
+   "alt": 1300,
+   "score": 6,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 7,
+   "tMax": 9,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 59,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1878",
+   "name": "Plateau de Maîche · Combe Saint-Pierre",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 950,
+   "score": 6,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 8,
+   "tMax": 11,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 63,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -641,7 +589,33 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 11,
-   "tMax": 11,
+   "tMax": 12,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 73,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "ch-mont-soleil-mont-crosin",
+   "name": "Mont-Soleil · Mont-Crosin",
+   "country": "CH",
+   "region": "Berne",
+   "alt": 1250,
+   "score": 6,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 8,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 73,
@@ -707,6 +681,32 @@
    }
   },
   {
+   "id": "ch-bugnenets-savagnières",
+   "name": "Bugnenets · Savagnières",
+   "country": "CH",
+   "region": "Berne",
+   "alt": 1150,
+   "score": 6,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 8,
+   "tMax": 9,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 78,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
    "id": "fr-4774",
    "name": "Chapelle-des-Bois",
    "country": "FR",
@@ -745,7 +745,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 8,
-   "tMax": 11,
+   "tMax": 12,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 80,
@@ -771,7 +771,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 11,
-   "tMax": 11,
+   "tMax": 12,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 83,
@@ -927,7 +927,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 9,
-   "tMax": 10,
+   "tMax": 11,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 101,
@@ -979,7 +979,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 10,
-   "tMax": 11,
+   "tMax": 12,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 106,
@@ -1031,7 +1031,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 10,
-   "tMax": 10,
+   "tMax": 11,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 114,
@@ -1057,7 +1057,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 8,
-   "tMax": 10,
+   "tMax": 11,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 116,
@@ -1083,7 +1083,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 10,
-   "tMax": 12,
+   "tMax": 13,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 117,

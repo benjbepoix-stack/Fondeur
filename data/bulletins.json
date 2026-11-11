@@ -1015,8 +1015,8 @@
  "suisse": {
   "Thyon - 4 Vallées": {
    "place": "Les Collons Thyon – Valais",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 79.– Enfant CHF 40.–",
+   "noSeason": false,
+   "summary": "Début de la saison : 21.11.2026 · Forfaits journaliers Adulte CHF 79.– Enfant CHF 40.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1249,8 +1249,8 @@
   },
   "Grimentz-Zinal /Anniviers": {
    "place": "Grimentz – Valais",
-   "noSeason": true,
-   "summary": "Pas de données actuelles ! Pas de saison ! · Forfaits journaliers Adulte CHF 75.– Enfant CHF 45.–",
+   "noSeason": false,
+   "summary": "Début de la saison : 28.11.2026 · Forfaits journaliers Adulte CHF 75.– Enfant CHF 45.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   }
  },
- "fetchedAt": "2026-11-11T11:50:21+00:00"
+ "fetchedAt": "2026-11-11T19:32:47+00:00"
 }
