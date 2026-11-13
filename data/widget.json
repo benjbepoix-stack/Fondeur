@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-13T12:07:04.486Z",
+ "generatedAt": "2026-11-13T19:37:32.132Z",
  "origin": "Ville-du-Pont",
  "summary": "Pas encore de neige skiable dans le massif.",
- "bulletinsAt": "2026-11-13T12:07:02+00:00",
+ "bulletinsAt": "2026-11-13T19:37:30+00:00",
  "stations": [
   {
    "id": "fr-20380",
@@ -258,6 +258,32 @@
    "waxAm": {
     "name": "Rouge",
     "color": "#c23b3b"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1850",
+   "name": "Frasne",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 850,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 1,
+   "tMax": 5,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 44,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -537,7 +563,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": -1,
-   "tMax": 1,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 78,
@@ -726,32 +752,6 @@
    "waxAm": {
     "name": "Rouge",
     "color": "#c23b3b"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1850",
-   "name": "Frasne",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 850,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 1,
-   "tMax": 5,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 44,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
