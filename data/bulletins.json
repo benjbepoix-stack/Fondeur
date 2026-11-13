@@ -1115,7 +1115,7 @@
   "Crans - Montana": {
    "place": "Crans-Montana – Valais",
    "noSeason": false,
-   "summary": "Début de la saison : 19.12.2026 · Forfaits journaliers Adulte CHF 89.– Enfant CHF 50.–",
+   "summary": "Début de la saison : 19.12.2026 · Forfaits journaliers Adulte CHF 94.– Enfant CHF 53.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1160,9 +1160,9 @@
   "Ovronnaz": {
    "place": "Ovronnaz – Valais",
    "noSeason": false,
-   "summary": "Début de la saison : 05.12.2026 · Forfaits journaliers (dynamiques) Adulte dès CHF 61.– Enfant dès CHF 37.–",
-   "kmOpen": null,
-   "kmTotal": null,
+   "summary": "0.0/4.0 km Classique, pas de données · 0.0/7.5 km Skating, pas de données · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 4.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/ovronnaz-138/"
   },
@@ -1178,7 +1178,7 @@
   "Grimentz-Zinal /Anniviers": {
    "place": "Grimentz – Valais",
    "noSeason": false,
-   "summary": "Début de la saison : 28.11.2026 · Forfaits journaliers Adulte CHF 75.– Enfant CHF 45.–",
+   "summary": "Pas de données actuelles ! Début de saison : 28.11.2026 · Forfaits journaliers Adulte CHF 75.– Enfant CHF 45.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   }
  },
- "fetchedAt": "2026-11-13T01:28:24+00:00"
+ "fetchedAt": "2026-11-13T12:07:02+00:00"
 }
