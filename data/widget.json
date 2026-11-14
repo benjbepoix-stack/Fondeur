@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-14T17:17:56.521Z",
+ "generatedAt": "2026-11-14T21:41:05.973Z",
  "origin": "Ville-du-Pont",
  "summary": "Pas encore de neige skiable dans le massif.",
- "bulletinsAt": "2026-11-14T17:17:54+00:00",
+ "bulletinsAt": "2026-11-14T21:41:04+00:00",
  "stations": [
   {
    "id": "fr-20380",
@@ -1123,6 +1123,32 @@
    }
   },
   {
+   "id": "fr-1802",
+   "name": "Giron 1000",
+   "country": "FR",
+   "region": "Ain",
+   "alt": 1000,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 0,
+   "tMax": 8,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 146,
+   "waxAm": {
+    "name": "Rouge",
+    "color": "#c23b3b"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
    "id": "fr-1753",
    "name": "Centre montagnard de Lachat",
    "country": "FR",
@@ -1194,32 +1220,6 @@
    "waxAm": {
     "name": "Violet",
     "color": "#8057b8"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1802",
-   "name": "Giron 1000",
-   "country": "FR",
-   "region": "Ain",
-   "alt": 1000,
-   "score": 8,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 0,
-   "tMax": 8,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 146,
-   "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
