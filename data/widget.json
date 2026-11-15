@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-15T11:54:48.470Z",
+ "generatedAt": "2026-11-15T18:47:20.992Z",
  "origin": "Ville-du-Pont",
  "summary": "Pas encore de neige skiable dans le massif.",
- "bulletinsAt": "2026-11-15T11:54:46+00:00",
+ "bulletinsAt": "2026-11-15T18:47:19+00:00",
  "stations": [
   {
    "id": "fr-1854",
@@ -433,10 +433,36 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 3,
-   "tMax": 9,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 32,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "ch-sainte-croix-les-rasses",
+   "name": "Sainte-Croix · Les Rasses",
+   "country": "CH",
+   "region": "Vaud",
+   "alt": 1180,
+   "score": 9,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 2,
+   "tMax": 7,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 56,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -577,48 +603,22 @@
    }
   },
   {
-   "id": "ch-sainte-croix-les-rasses",
-   "name": "Sainte-Croix · Les Rasses",
-   "country": "CH",
-   "region": "Vaud",
-   "alt": 1180,
+   "id": "fr-1808",
+   "name": "Monts Jura",
+   "country": "FR",
+   "region": "Ain",
+   "alt": 1300,
    "score": 8,
    "level": "bad",
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
+   "tMin": 4,
    "tMax": 7,
    "kmOpen": null,
    "kmTotal": null,
-   "minutes": 56,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1990",
-   "name": "Haute Joux",
-   "country": "FR",
-   "region": "Jura",
-   "alt": 900,
-   "score": 8,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 7,
-   "tMax": 10,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 67,
+   "minutes": 112,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -681,22 +681,22 @@
    }
   },
   {
-   "id": "fr-1808",
-   "name": "Monts Jura",
+   "id": "fr-1990",
+   "name": "Haute Joux",
    "country": "FR",
-   "region": "Ain",
-   "alt": 1300,
+   "region": "Jura",
+   "alt": 900,
    "score": 7,
    "level": "bad",
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 4,
-   "tMax": 7,
+   "tMin": 7,
+   "tMax": 10,
    "kmOpen": null,
    "kmTotal": null,
-   "minutes": 112,
+   "minutes": 67,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -733,6 +733,32 @@
    }
   },
   {
+   "id": "fr-1753",
+   "name": "Centre montagnard de Lachat",
+   "country": "FR",
+   "region": "Ain",
+   "alt": 1100,
+   "score": 7,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 5,
+   "tMax": 8,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 158,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
    "id": "fr-1850",
    "name": "Frasne",
    "country": "FR",
@@ -745,7 +771,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 4,
-   "tMax": 11,
+   "tMax": 10,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 44,
@@ -797,7 +823,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 6,
-   "tMax": 10,
+   "tMax": 9,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 73,
@@ -927,7 +953,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 5,
-   "tMax": 9,
+   "tMax": 8,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 85,
@@ -1165,32 +1191,6 @@
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 146,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1753",
-   "name": "Centre montagnard de Lachat",
-   "country": "FR",
-   "region": "Ain",
-   "alt": 1100,
-   "score": 6,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 5,
-   "tMax": 8,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 158,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
