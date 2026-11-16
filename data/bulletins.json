@@ -1013,15 +1013,6 @@
   }
  },
  "suisse": {
-  "Glacier 3000": {
-   "place": "Les Diablerets – Canton de Vaud",
-   "noSeason": false,
-   "summary": "0.0/7.0 km Classique, pas de données · 0.0/7.0 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
-   "kmTotal": 7.0,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
-  },
   "Thyon - 4 Vallées": {
    "place": "Les Collons Thyon – Valais",
    "noSeason": false,
@@ -1184,33 +1175,6 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
   },
-  "Vue des Alpes/Tête de Ran": {
-   "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vue-des-alpestete-de-ran-194/"
-  },
-  "Les Mosses - La Lécherette": {
-   "place": "Les Mosses – Canton de Vaud",
-   "noSeason": false,
-   "summary": "Début de la saison : 19.12.2026 · Forfaits journaliers Adulte CHF 62.– Enfant CHF 40.–",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-mosses-la-lecherette-329/"
-  },
-  "Mont-Soleil - Mont-Crosin": {
-   "place": "Tramelan – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers –",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
-  },
   "Vallée de La Sagne": {
    "place": "La Sagne – Jura & Trois-Lacs",
    "noSeason": false,
@@ -1256,6 +1220,42 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
   },
+  "Glacier 3000": {
+   "place": "Les Diablerets – Canton de Vaud",
+   "noSeason": false,
+   "summary": "0.0/7.0 km Classique, pas de données · 0.0/7.0 km Skating, pas de données · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 7.0,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
+  },
+  "Vue des Alpes/Tête de Ran": {
+   "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers Adulte CHF 12.– Enfant CHF 0.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vue-des-alpestete-de-ran-194/"
+  },
+  "Les Mosses - La Lécherette": {
+   "place": "Les Mosses – Canton de Vaud",
+   "noSeason": false,
+   "summary": "Début de la saison : 19.12.2026 · Forfaits journaliers Adulte CHF 62.– Enfant CHF 40.–",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-mosses-la-lecherette-329/"
+  },
+  "Mont-Soleil - Mont-Crosin": {
+   "place": "Tramelan – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "La station ne fournit pas de données actuelles ! · Forfaits journaliers –",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
+  },
   "St-Cergue": {
    "place": "St-Cergue – Canton de Vaud",
    "noSeason": false,
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   }
  },
- "fetchedAt": "2026-11-15T23:22:50+00:00"
+ "fetchedAt": "2026-11-16T12:39:49+00:00"
 }
