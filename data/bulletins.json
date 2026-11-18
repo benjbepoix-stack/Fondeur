@@ -1123,8 +1123,8 @@
   },
   "Les Paccots - La Veveyse": {
    "place": "Les Paccots – Région de Fribourg",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers Adulte CHF 45.– Enfant CHF 30.–",
+   "noSeason": false,
+   "summary": "Début de la saison : 21.12.2026 · Forfaits journaliers Adulte CHF 45.– Enfant CHF 30.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1259,7 +1259,7 @@
   "St-Cergue": {
    "place": "St-Cergue – Canton de Vaud",
    "noSeason": false,
-   "summary": "Pas de données actuelles ! Début de saison : 22.12.2026 · Forfaits journaliers Adulte CHF 24.– Enfant CHF 19.–",
+   "summary": "Début de la saison : 22.12.2026 · Forfaits journaliers Adulte CHF 24.– Enfant CHF 19.–",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   }
  },
- "fetchedAt": "2026-11-17T21:54:53+00:00"
+ "fetchedAt": "2026-11-18T12:58:56+00:00"
 }
