@@ -1024,10 +1024,10 @@
   },
   "Verbier": {
    "place": "Verbier – Valais",
-   "noSeason": true,
-   "summary": "Pas de saison ! · Forfaits journaliers (dynamiques) Adulte dès CHF 87.– Enfant dès CHF 43.–",
-   "kmOpen": null,
-   "kmTotal": null,
+   "noSeason": false,
+   "summary": "0.0/5.0 km Classique, pas de données · 0.0/5.0 km Skating, pas de données · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 5.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/verbier-132/"
   },
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   }
  },
- "fetchedAt": "2026-11-18T12:58:56+00:00"
+ "fetchedAt": "2026-11-18T21:22:49+00:00"
 }
