@@ -1196,8 +1196,8 @@
   "La Chaux-de-Fonds": {
    "place": "La Chaux-de-Fonds – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "0.0/45.0 km Classique, fermées · 0.0/45.0 km Skating, fermées · Forfait de ski de fond Passeport journalier CHF 10.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
-   "kmOpen": 0.0,
+   "summary": "13.5/45.0 km Classique, praticables à bonnes · 13.5/45.0 km Skating, praticables à bonnes · Forfait de ski de fond Passeport journalier CHF 10.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
+   "kmOpen": 13.5,
    "kmTotal": 45.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-chaux-de-fonds-75/"
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/bugnenets-savagnieres-197/"
   }
  },
- "fetchedAt": "2026-11-19T12:54:40+00:00"
+ "fetchedAt": "2026-11-19T21:26:51+00:00"
 }
