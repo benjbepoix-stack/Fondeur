@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-20T12:46:07.193Z",
+ "generatedAt": "2026-11-20T21:02:36.855Z",
  "origin": "Ville-du-Pont",
  "summary": "Pas encore de neige skiable dans le massif.",
- "bulletinsAt": "2026-11-20T12:46:05+00:00",
+ "bulletinsAt": "2026-11-20T21:02:32+00:00",
  "stations": [
   {
    "id": "fr-20380",
@@ -239,32 +239,6 @@
    }
   },
   {
-   "id": "fr-1897",
-   "name": "Plateau du Russey",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 950,
-   "score": 10,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 2,
-   "tMax": 5,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 46,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
    "id": "ch-val-de-travers-la-robella",
    "name": "Val-de-Travers · La Robella",
    "country": "CH",
@@ -379,41 +353,15 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 2,
+   "fresh72": 3,
    "tMin": 0,
-   "tMax": 2,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 59,
    "waxAm": {
     "name": "Rouge",
     "color": "#c23b3b"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1878",
-   "name": "Plateau de Maîche · Combe Saint-Pierre",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 950,
-   "score": 10,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 3,
-   "tMax": 5,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 63,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -837,6 +785,32 @@
    }
   },
   {
+   "id": "fr-1802",
+   "name": "Giron 1000",
+   "country": "FR",
+   "region": "Ain",
+   "alt": 1000,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 3,
+   "tMax": 5,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 146,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
    "id": "fr-1753",
    "name": "Centre montagnard de Lachat",
    "country": "FR",
@@ -849,7 +823,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 3,
-   "tMax": 5,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 158,
@@ -889,6 +863,32 @@
    }
   },
   {
+   "id": "fr-1837",
+   "name": "Plateau d'Hauteville",
+   "country": "FR",
+   "region": "Ain",
+   "alt": 1000,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 4,
+   "tMax": 5,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 183,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
    "id": "fr-1874",
    "name": "Val de Vennes",
    "country": "FR",
@@ -915,6 +915,58 @@
    }
   },
   {
+   "id": "fr-1897",
+   "name": "Plateau du Russey",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 950,
+   "score": 9,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 2,
+   "tMax": 5,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 46,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1878",
+   "name": "Plateau de Maîche · Combe Saint-Pierre",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 950,
+   "score": 9,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 3,
+   "tMax": 6,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 63,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
    "id": "fr-4519",
    "name": "Mouthe · Chez Liadet",
    "country": "FR",
@@ -931,6 +983,32 @@
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 63,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1990",
+   "name": "Haute Joux",
+   "country": "FR",
+   "region": "Jura",
+   "alt": 900,
+   "score": 9,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 4,
+   "tMax": 6,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 67,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -1097,58 +1175,6 @@
    }
   },
   {
-   "id": "fr-1802",
-   "name": "Giron 1000",
-   "country": "FR",
-   "region": "Ain",
-   "alt": 1000,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 3,
-   "tMax": 5,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 146,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1837",
-   "name": "Plateau d'Hauteville",
-   "country": "FR",
-   "region": "Ain",
-   "alt": 1000,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 4,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 183,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
    "id": "fr-1850",
    "name": "Frasne",
    "country": "FR",
@@ -1161,36 +1187,10 @@
    "measured": false,
    "fresh72": 0,
    "tMin": 4,
-   "tMax": 7,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 44,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1990",
-   "name": "Haute Joux",
-   "country": "FR",
-   "region": "Jura",
-   "alt": 900,
-   "score": 8,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 4,
    "tMax": 6,
    "kmOpen": null,
    "kmTotal": null,
-   "minutes": 67,
+   "minutes": 44,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
