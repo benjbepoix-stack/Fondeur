@@ -1112,15 +1112,6 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/charmeych-4/"
   },
-  "Grimentz-Zinal /Anniviers": {
-   "place": "Grimentz – Valais",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
-  },
   "Rougemont - Videmanette": {
    "place": "Rougemont – Canton de Vaud",
    "noSeason": false,
@@ -1196,8 +1187,8 @@
   "La Chaux-de-Fonds": {
    "place": "La Chaux-de-Fonds – Jura & Trois-Lacs",
    "noSeason": false,
-   "summary": "13.5/45.0 km Classique, praticables à bonnes · 13.5/45.0 km Skating, praticables à bonnes · Forfait de ski de fond Passeport journalier CHF 10.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
-   "kmOpen": 13.5,
+   "summary": "0.0/45.0 km Classique, fermées · 0.0/45.0 km Skating, fermées · Forfait de ski de fond Passeport journalier CHF 10.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
+   "kmOpen": 0.0,
    "kmTotal": 45.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-chaux-de-fonds-75/"
@@ -1210,6 +1201,15 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vue-des-alpestete-de-ran-194/"
+  },
+  "Grimentz-Zinal /Anniviers": {
+   "place": "Grimentz – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
   },
   "St-Cergue": {
    "place": "St-Cergue – Canton de Vaud",
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/bugnenets-savagnieres-197/"
   }
  },
- "fetchedAt": "2026-11-19T21:26:51+00:00"
+ "fetchedAt": "2026-11-20T12:46:05+00:00"
 }
