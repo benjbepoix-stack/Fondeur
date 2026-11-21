@@ -1049,6 +1049,42 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
   },
+  "Anzère": {
+   "place": "Anzère – Valais",
+   "noSeason": false,
+   "summary": "0.0/3.0 km Classique, pas de données · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 3.0,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
+  },
+  "Nendaz - 4 Vallées": {
+   "place": "Nendaz – Valais",
+   "noSeason": false,
+   "summary": "0.0/7.7 km Classique, pas de données · 0.0/7.7 km Skating, pas de données · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 7.7,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nendaz-4-vallees-139/"
+  },
+  "Crans - Montana": {
+   "place": "Crans-Montana – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/crans-montana-142/"
+  },
+  "Rougemont - Videmanette": {
+   "place": "Rougemont – Canton de Vaud",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/rougemont-videmanette-395/"
+  },
   "Leysin": {
    "place": "Leysin – Canton de Vaud",
    "noSeason": false,
@@ -1057,33 +1093,6 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/leysin-330/"
-  },
-  "Les Mosses - La Lécherette": {
-   "place": "Les Mosses – Canton de Vaud",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-mosses-la-lecherette-329/"
-  },
-  "Champex-Lac": {
-   "place": "Champex-Lac – Valais",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/champex-lac-168/"
-  },
-  "Vichères - Bavon": {
-   "place": "Liddes – Valais",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vicheres-bavon-257/"
   },
   "Les Paccots - La Veveyse": {
    "place": "Les Paccots – Région de Fribourg",
@@ -1121,59 +1130,95 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/charmeych-4/"
   },
-  "Anzère": {
-   "place": "Anzère – Valais",
+  "Les Mosses - La Lécherette": {
+   "place": "Les Mosses – Canton de Vaud",
    "noSeason": false,
-   "summary": "0.0/3.0 km Classique, pas de données · Forfait de ski de fond –",
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-mosses-la-lecherette-329/"
+  },
+  "Champex-Lac": {
+   "place": "Champex-Lac – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/champex-lac-168/"
+  },
+  "Vichères - Bavon": {
+   "place": "Liddes – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vicheres-bavon-257/"
+  },
+  "Prés-d'Orvin-Chasseral": {
+   "place": "Les Prés d'Orvin – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/pres-dorvin-chasseral-206/"
+  },
+  "Bugnenets - Savagnières": {
+   "place": "Savagnières-Bugnenets – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/bugnenets-savagnieres-197/"
+  },
+  "Les Genevez": {
+   "place": "Saignelégier – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-genevez-208/"
+  },
+  "Mont-Soleil - Mont-Crosin": {
+   "place": "Tramelan – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
+  },
+  "Val-de-Travers/La Robella": {
+   "place": "Buttes La Robella – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/val-de-traversla-robella-195/"
+  },
+  "Nordic Région Gibloux": {
+   "place": "Les Monts de Riaz – Région de Fribourg",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nordic-region-gibloux-216/"
+  },
+  "La Chaux-de-Fonds": {
+   "place": "La Chaux-de-Fonds – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "0.0/45.0 km Classique, fermées · 0.0/45.0 km Skating, fermées · Forfait de ski de fond Passeport journalier CHF 10.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
    "kmOpen": 0.0,
-   "kmTotal": 3.0,
+   "kmTotal": 45.0,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
-  },
-  "Nendaz - 4 Vallées": {
-   "place": "Nendaz – Valais",
-   "noSeason": false,
-   "summary": "0.0/7.7 km Classique, pas de données · 0.0/7.7 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
-   "kmTotal": 7.7,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nendaz-4-vallees-139/"
-  },
-  "Crans - Montana": {
-   "place": "Crans-Montana – Valais",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/crans-montana-142/"
-  },
-  "Rougemont - Videmanette": {
-   "place": "Rougemont – Canton de Vaud",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/rougemont-videmanette-395/"
-  },
-  "Sainte-Croix / Les Rasses": {
-   "place": "Sainte-Croix Les Rasses – Canton de Vaud",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/sainte-croix-les-rasses-146/"
-  },
-  "Vue des Alpes/Tête de Ran": {
-   "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vue-des-alpestete-de-ran-194/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-chaux-de-fonds-75/"
   },
   "Grimentz-Zinal /Anniviers": {
    "place": "Grimentz – Valais",
@@ -1237,52 +1282,7 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
-  },
-  "Prés-d'Orvin-Chasseral": {
-   "place": "Les Prés d'Orvin – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/pres-dorvin-chasseral-206/"
-  },
-  "Bugnenets - Savagnières": {
-   "place": "Savagnières-Bugnenets – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/bugnenets-savagnieres-197/"
-  },
-  "Les Genevez": {
-   "place": "Saignelégier – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-genevez-208/"
-  },
-  "Mont-Soleil - Mont-Crosin": {
-   "place": "Tramelan – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
-  },
-  "Val-de-Travers/La Robella": {
-   "place": "Buttes La Robella – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/val-de-traversla-robella-195/"
   }
  },
- "fetchedAt": "2026-11-21T12:32:47+00:00"
+ "fetchedAt": "2026-11-21T19:46:14+00:00"
 }
