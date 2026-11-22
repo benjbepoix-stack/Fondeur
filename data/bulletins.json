@@ -1013,24 +1013,6 @@
   }
  },
  "suisse": {
-  "Thyon - 4 Vallées": {
-   "place": "Les Collons Thyon – Valais",
-   "noSeason": false,
-   "summary": "0.0/20.6 km Classique, pas de données · 0.0/20.6 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
-   "kmTotal": 20.6,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/thyon-4-vallees-143/"
-  },
-  "Verbier": {
-   "place": "Verbier – Valais",
-   "noSeason": false,
-   "summary": "0.0/5.0 km Classique, pas de données · 0.0/5.0 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
-   "kmTotal": 5.0,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/verbier-132/"
-  },
   "La Fouly": {
    "place": "La Fouly – Valais",
    "noSeason": false,
@@ -1049,41 +1031,23 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
   },
-  "Anzère": {
-   "place": "Anzère – Valais",
+  "Verbier": {
+   "place": "Verbier – Valais",
    "noSeason": false,
-   "summary": "0.0/3.0 km Classique, pas de données · Forfait de ski de fond –",
+   "summary": "0.0/5.0 km Classique, pas de données · 0.0/5.0 km Skating, pas de données · Forfait de ski de fond –",
    "kmOpen": 0.0,
-   "kmTotal": 3.0,
+   "kmTotal": 5.0,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/verbier-132/"
   },
-  "Nendaz - 4 Vallées": {
-   "place": "Nendaz – Valais",
+  "Thyon - 4 Vallées": {
+   "place": "Les Collons Thyon – Valais",
    "noSeason": false,
-   "summary": "0.0/7.7 km Classique, pas de données · 0.0/7.7 km Skating, pas de données · Forfait de ski de fond –",
+   "summary": "0.0/20.6 km Classique, pas de données · 0.0/20.6 km Skating, pas de données · Forfait de ski de fond –",
    "kmOpen": 0.0,
-   "kmTotal": 7.7,
+   "kmTotal": 20.6,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nendaz-4-vallees-139/"
-  },
-  "Crans - Montana": {
-   "place": "Crans-Montana – Valais",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/crans-montana-142/"
-  },
-  "Rougemont - Videmanette": {
-   "place": "Rougemont – Canton de Vaud",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/rougemont-videmanette-395/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/thyon-4-vallees-143/"
   },
   "Leysin": {
    "place": "Leysin – Canton de Vaud",
@@ -1129,6 +1093,42 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/charmeych-4/"
+  },
+  "Nendaz - 4 Vallées": {
+   "place": "Nendaz – Valais",
+   "noSeason": false,
+   "summary": "0.0/7.7 km Classique, pas de données · 0.0/7.7 km Skating, pas de données · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 7.7,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nendaz-4-vallees-139/"
+  },
+  "Crans - Montana": {
+   "place": "Crans-Montana – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/crans-montana-142/"
+  },
+  "Rougemont - Videmanette": {
+   "place": "Rougemont – Canton de Vaud",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/rougemont-videmanette-395/"
+  },
+  "Anzère": {
+   "place": "Anzère – Valais",
+   "noSeason": false,
+   "summary": "0.0/3.0 km Classique, pas de données · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 3.0,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
   },
   "Les Mosses - La Lécherette": {
    "place": "Les Mosses – Canton de Vaud",
@@ -1220,6 +1220,24 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-chaux-de-fonds-75/"
   },
+  "Vue des Alpes/Tête de Ran": {
+   "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vue-des-alpestete-de-ran-194/"
+  },
+  "Sainte-Croix / Les Rasses": {
+   "place": "Sainte-Croix Les Rasses – Canton de Vaud",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/sainte-croix-les-rasses-146/"
+  },
   "Grimentz-Zinal /Anniviers": {
    "place": "Grimentz – Valais",
    "noSeason": false,
@@ -1264,25 +1282,7 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-breuleux-211/"
-  },
-  "Saignelégier": {
-   "place": "Saignelégier – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "0.0/49.2 km Classique, fermées · 0.0/49.2 km Skating, fermées · Forfait de ski de fond Passeport journalier CHF 12.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
-   "kmOpen": 0.0,
-   "kmTotal": 49.2,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/saignelegier-150/"
-  },
-  "Vallée de La Brévine": {
-   "place": "La Brévine – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   }
  },
- "fetchedAt": "2026-11-21T19:46:14+00:00"
+ "fetchedAt": "2026-11-22T00:18:01+00:00"
 }
