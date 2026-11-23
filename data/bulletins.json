@@ -1031,14 +1031,14 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/verbier-132/"
   },
-  "Nendaz - 4 Vallées": {
-   "place": "Nendaz – Valais",
+  "Glacier 3000": {
+   "place": "Les Diablerets – Canton de Vaud",
    "noSeason": false,
-   "summary": "0.0/7.7 km Classique, pas de données · 0.0/7.7 km Skating, pas de données · Forfait de ski de fond –",
+   "summary": "0.0/7.0 km Classique, pas de données · 0.0/7.0 km Skating, pas de données · Forfait de ski de fond –",
    "kmOpen": 0.0,
-   "kmTotal": 7.7,
+   "kmTotal": 7.0,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nendaz-4-vallees-139/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
   },
   "Champex-Lac": {
    "place": "Champex-Lac – Valais",
@@ -1066,6 +1066,51 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/crans-montana-142/"
+  },
+  "Nendaz - 4 Vallées": {
+   "place": "Nendaz – Valais",
+   "noSeason": false,
+   "summary": "0.0/7.7 km Classique, pas de données · 0.0/7.7 km Skating, pas de données · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 7.7,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nendaz-4-vallees-139/"
+  },
+  "Rougemont - Videmanette": {
+   "place": "Rougemont – Canton de Vaud",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/rougemont-videmanette-395/"
+  },
+  "La Fouly": {
+   "place": "La Fouly – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-fouly-141/"
+  },
+  "Anzère": {
+   "place": "Anzère – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
+  },
+  "Les Mosses - La Lécherette": {
+   "place": "Les Mosses – Canton de Vaud",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-mosses-la-lecherette-329/"
   },
   "Leysin": {
    "place": "Leysin – Canton de Vaud",
@@ -1111,96 +1156,6 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/charmeych-4/"
-  },
-  "Rougemont - Videmanette": {
-   "place": "Rougemont – Canton de Vaud",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/rougemont-videmanette-395/"
-  },
-  "La Fouly": {
-   "place": "La Fouly – Valais",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-fouly-141/"
-  },
-  "Anzère": {
-   "place": "Anzère – Valais",
-   "noSeason": false,
-   "summary": "0.0/3.0 km Classique, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
-   "kmTotal": 3.0,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
-  },
-  "Glacier 3000": {
-   "place": "Les Diablerets – Canton de Vaud",
-   "noSeason": false,
-   "summary": "0.0/7.0 km Classique, pas de données · 0.0/7.0 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
-   "kmTotal": 7.0,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
-  },
-  "Les Mosses - La Lécherette": {
-   "place": "Les Mosses – Canton de Vaud",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-mosses-la-lecherette-329/"
-  },
-  "Mont-Soleil - Mont-Crosin": {
-   "place": "Tramelan – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
-  },
-  "Val-de-Travers/La Robella": {
-   "place": "Buttes La Robella – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/val-de-traversla-robella-195/"
-  },
-  "Nordic Région Gibloux": {
-   "place": "Les Monts de Riaz – Région de Fribourg",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nordic-region-gibloux-216/"
-  },
-  "La Chaux-de-Fonds": {
-   "place": "La Chaux-de-Fonds – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "0.0/45.0 km Classique, fermées · 0.0/45.0 km Skating, fermées · Forfait de ski de fond Passeport journalier CHF 10.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
-   "kmOpen": 0.0,
-   "kmTotal": 45.0,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-chaux-de-fonds-75/"
-  },
-  "Vue des Alpes/Tête de Ran": {
-   "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vue-des-alpestete-de-ran-194/"
   },
   "Grimentz-Zinal /Anniviers": {
    "place": "Grimentz – Valais",
@@ -1265,6 +1220,51 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   },
+  "Mont-Soleil - Mont-Crosin": {
+   "place": "Tramelan – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
+  },
+  "Val-de-Travers/La Robella": {
+   "place": "Buttes La Robella – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/val-de-traversla-robella-195/"
+  },
+  "Nordic Région Gibloux": {
+   "place": "Les Monts de Riaz – Région de Fribourg",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nordic-region-gibloux-216/"
+  },
+  "La Chaux-de-Fonds": {
+   "place": "La Chaux-de-Fonds – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "0.0/45.0 km Classique, fermées · 0.0/45.0 km Skating, fermées · Forfait de ski de fond Passeport journalier CHF 10.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
+   "kmOpen": 0.0,
+   "kmTotal": 45.0,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-chaux-de-fonds-75/"
+  },
+  "Sainte-Croix / Les Rasses": {
+   "place": "Sainte-Croix Les Rasses – Canton de Vaud",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/sainte-croix-les-rasses-146/"
+  },
   "Prés-d'Orvin-Chasseral": {
    "place": "Les Prés d'Orvin – Jura & Trois-Lacs",
    "noSeason": false,
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/bugnenets-savagnieres-197/"
   }
  },
- "fetchedAt": "2026-11-23T00:48:30+00:00"
+ "fetchedAt": "2026-11-23T14:29:03+00:00"
 }

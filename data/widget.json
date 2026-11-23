@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-23T00:48:32.540Z",
+ "generatedAt": "2026-11-23T14:29:05.367Z",
  "origin": "Ville-du-Pont",
  "summary": "Peu de neige, peu de sites ouverts.",
- "bulletinsAt": "2026-11-23T00:48:30+00:00",
+ "bulletinsAt": "2026-11-23T14:29:03+00:00",
  "stations": [
   {
    "id": "ch-le-marchairuz",
@@ -10,12 +10,12 @@
    "country": "CH",
    "region": "Vaud",
    "alt": 1440,
-   "score": 16,
+   "score": 26,
    "level": "bad",
    "verdict": "Conditions médiocres",
-   "depth": 6,
+   "depth": 14,
    "measured": false,
-   "fresh72": 26,
+   "fresh72": 36,
    "tMin": -1,
    "tMax": 0,
    "kmOpen": null,
@@ -28,6 +28,58 @@
    "waxPm": {
     "name": "Rouge",
     "color": "#c23b3b"
+   }
+  },
+  {
+   "id": "ch-mont-soleil-mont-crosin",
+   "name": "Mont-Soleil · Mont-Crosin",
+   "country": "CH",
+   "region": "Berne",
+   "alt": 1250,
+   "score": 18,
+   "level": "bad",
+   "verdict": "Conditions médiocres",
+   "depth": 5,
+   "measured": false,
+   "fresh72": 7,
+   "tMin": 0,
+   "tMax": 1,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 73,
+   "waxAm": {
+    "name": "Rouge",
+    "color": "#c23b3b"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "ch-val-de-travers-la-robella",
+   "name": "Val-de-Travers · La Robella",
+   "country": "CH",
+   "region": "Neuchâtel",
+   "alt": 1200,
+   "score": 17,
+   "level": "bad",
+   "verdict": "Conditions médiocres",
+   "depth": 5,
+   "measured": false,
+   "fresh72": 16,
+   "tMin": 0,
+   "tMax": 1,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 46,
+   "waxAm": {
+    "name": "Rouge",
+    "color": "#c23b3b"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -48,8 +100,8 @@
    "kmTotal": null,
    "minutes": 18,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -67,8 +119,8 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 0,
-   "tMin": 1,
+   "fresh72": 1,
+   "tMin": 0,
    "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
@@ -93,15 +145,15 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 0,
-   "tMin": 1,
+   "fresh72": 1,
+   "tMin": 0,
    "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 23,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -120,8 +172,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": 0,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 24,
@@ -145,7 +197,7 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 9,
+   "fresh72": 12,
    "tMin": 1,
    "tMax": 3,
    "kmOpen": null,
@@ -171,7 +223,7 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 7,
+   "fresh72": 10,
    "tMin": 1,
    "tMax": 3,
    "kmOpen": null,
@@ -198,14 +250,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
+   "tMin": 1,
    "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 32,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -224,14 +276,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
+   "tMin": 1,
    "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 33,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -249,7 +301,7 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 2,
+   "fresh72": 4,
    "tMin": 0,
    "tMax": 2,
    "kmOpen": null,
@@ -275,8 +327,8 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 3,
-   "tMin": 1,
+   "fresh72": 10,
+   "tMin": 0,
    "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
@@ -302,7 +354,7 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
+   "tMin": 1,
    "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
@@ -343,32 +395,6 @@
    }
   },
   {
-   "id": "ch-val-de-travers-la-robella",
-   "name": "Val-de-Travers · La Robella",
-   "country": "CH",
-   "region": "Neuchâtel",
-   "alt": 1200,
-   "score": 10,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 2,
-   "measured": false,
-   "fresh72": 14,
-   "tMin": 0,
-   "tMax": 2,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 46,
-   "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
    "id": "ch-vallée-de-la-sagne",
    "name": "Vallée de La Sagne",
    "country": "CH",
@@ -379,7 +405,7 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 14,
+   "fresh72": 15,
    "tMin": 1,
    "tMax": 3,
    "kmOpen": null,
@@ -405,7 +431,7 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 0,
+   "fresh72": 3,
    "tMin": 0,
    "tMax": 3,
    "kmOpen": null,
@@ -429,11 +455,11 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 3,
+   "depth": 4,
    "measured": false,
-   "fresh72": 17,
+   "fresh72": 21,
    "tMin": 0,
-   "tMax": 2,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 56,
@@ -455,9 +481,9 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 1,
+   "depth": 0,
    "measured": false,
-   "fresh72": 22,
+   "fresh72": 23,
    "tMin": 0,
    "tMax": 1,
    "kmOpen": null,
@@ -468,8 +494,8 @@
     "color": "#c23b3b"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -490,8 +516,8 @@
    "kmTotal": null,
    "minutes": 63,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -509,9 +535,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 0,
+   "fresh72": 4,
    "tMin": 1,
-   "tMax": 4,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 63,
@@ -535,9 +561,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 0,
+   "fresh72": 1,
    "tMin": 2,
-   "tMax": 4,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 67,
@@ -559,37 +585,11 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 0,
+   "depth": 1,
    "measured": false,
    "fresh72": 0,
    "tMin": 1,
    "tMax": 3,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 73,
-   "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "ch-mont-soleil-mont-crosin",
-   "name": "Mont-Soleil · Mont-Crosin",
-   "country": "CH",
-   "region": "Berne",
-   "alt": 1250,
-   "score": 10,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 7,
-   "tMin": 0,
-   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 73,
@@ -639,8 +639,8 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 0,
-   "tMin": 1,
+   "fresh72": 2,
+   "tMin": 0,
    "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
@@ -681,32 +681,6 @@
    }
   },
   {
-   "id": "fr-4774",
-   "name": "Chapelle-des-Bois",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 1090,
-   "score": 10,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 1,
-   "measured": false,
-   "fresh72": 3,
-   "tMin": 1,
-   "tMax": 2,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 80,
-   "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
    "id": "ch-vallée-de-joux",
    "name": "Vallée de Joux",
    "country": "CH",
@@ -717,9 +691,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 1,
+   "fresh72": 8,
    "tMin": 1,
-   "tMax": 3,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 80,
@@ -769,15 +743,15 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 0,
+   "fresh72": 1,
    "tMin": 1,
    "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 83,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -795,7 +769,7 @@
    "verdict": "Pas assez de neige",
    "depth": 1,
    "measured": false,
-   "fresh72": 3,
+   "fresh72": 10,
    "tMin": 0,
    "tMax": 2,
    "kmOpen": null,
@@ -819,9 +793,9 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 1,
+   "depth": 0,
    "measured": false,
-   "fresh72": 3,
+   "fresh72": 8,
    "tMin": 1,
    "tMax": 3,
    "kmOpen": null,
@@ -848,7 +822,7 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
+   "tMin": 1,
    "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
@@ -873,7 +847,7 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 3,
+   "fresh72": 4,
    "tMin": 0,
    "tMax": 3,
    "kmOpen": null,
@@ -897,40 +871,14 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 1,
+   "depth": 0,
    "measured": false,
-   "fresh72": 3,
+   "fresh72": 9,
    "tMin": 0,
    "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 101,
-   "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "ch-la-givrine-saint-cergue",
-   "name": "La Givrine · Saint-Cergue",
-   "country": "CH",
-   "region": "Vaud",
-   "alt": 1210,
-   "score": 10,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 2,
-   "measured": false,
-   "fresh72": 10,
-   "tMin": 0,
-   "tMax": 1,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 104,
    "waxAm": {
     "name": "Rouge",
     "color": "#c23b3b"
@@ -975,9 +923,9 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 1,
+   "depth": 0,
    "measured": false,
-   "fresh72": 6,
+   "fresh72": 17,
    "tMin": 0,
    "tMax": 1,
    "kmOpen": null,
@@ -1003,9 +951,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 2,
-   "tMin": 1,
-   "tMax": 2,
+   "fresh72": 7,
+   "tMin": 0,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 114,
@@ -1029,7 +977,7 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 6,
+   "fresh72": 14,
    "tMin": 0,
    "tMax": 2,
    "kmOpen": null,
@@ -1108,7 +1056,7 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
+   "tMin": 2,
    "tMax": 5,
    "kmOpen": null,
    "kmTotal": null,
@@ -1134,14 +1082,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
+   "tMin": 1,
    "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 146,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -1157,9 +1105,9 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 0,
+   "depth": 2,
    "measured": false,
-   "fresh72": 0,
+   "fresh72": 6,
    "tMin": 1,
    "tMax": 3,
    "kmOpen": null,
@@ -1183,9 +1131,9 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 0,
+   "depth": 1,
    "measured": false,
-   "fresh72": 0,
+   "fresh72": 5,
    "tMin": 0,
    "tMax": 2,
    "kmOpen": null,
@@ -1212,7 +1160,7 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
+   "tMin": 1,
    "tMax": 5,
    "kmOpen": null,
    "kmTotal": null,
@@ -1220,6 +1168,58 @@
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "ch-la-givrine-saint-cergue",
+   "name": "La Givrine · Saint-Cergue",
+   "country": "CH",
+   "region": "Vaud",
+   "alt": 1210,
+   "score": 9,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 4,
+   "measured": false,
+   "fresh72": 19,
+   "tMin": 0,
+   "tMax": 2,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 104,
+   "waxAm": {
+    "name": "Rouge",
+    "color": "#c23b3b"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-4774",
+   "name": "Chapelle-des-Bois",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 1090,
+   "score": 8,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 3,
+   "measured": false,
+   "fresh72": 13,
+   "tMin": 1,
+   "tMax": 2,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 80,
+   "waxAm": {
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
