@@ -1013,15 +1013,6 @@
   }
  },
  "suisse": {
-  "Glacier 3000": {
-   "place": "Les Diablerets – Canton de Vaud",
-   "noSeason": false,
-   "summary": "0.0/7.0 km Classique, pas de données · 0.0/7.0 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
-   "kmTotal": 7.0,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
-  },
   "Thyon - 4 Vallées": {
    "place": "Les Collons Thyon – Valais",
    "noSeason": false,
@@ -1039,6 +1030,60 @@
    "kmTotal": 5.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/verbier-132/"
+  },
+  "Glacier 3000": {
+   "place": "Les Diablerets – Canton de Vaud",
+   "noSeason": false,
+   "summary": "7.0/7.0 km Classique, bonnes · 7.0/7.0 km Skating, bonnes · Forfait de ski de fond –",
+   "kmOpen": 7.0,
+   "kmTotal": 7.0,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
+  },
+  "Ovronnaz": {
+   "place": "Ovronnaz – Valais",
+   "noSeason": false,
+   "summary": "0.0/4.0 km Classique, pas de données · 0.0/7.5 km Skating, pas de données · Forfait de ski de fond –",
+   "kmOpen": 0.0,
+   "kmTotal": 4.0,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/ovronnaz-138/"
+  },
+  "Charmey.ch": {
+   "place": "Charmey – Région de Fribourg",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/charmeych-4/"
+  },
+  "Leysin": {
+   "place": "Leysin – Canton de Vaud",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/leysin-330/"
+  },
+  "Les Paccots - La Veveyse": {
+   "place": "Les Paccots – Région de Fribourg",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-paccots-la-veveyse-151/"
+  },
+  "Les Pléiades": {
+   "place": "Blonay – Canton de Vaud",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-pleiades-187/"
   },
   "Nendaz - 4 Vallées": {
    "place": "Nendaz – Valais",
@@ -1084,51 +1129,6 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-mosses-la-lecherette-329/"
-  },
-  "Leysin": {
-   "place": "Leysin – Canton de Vaud",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/leysin-330/"
-  },
-  "Les Paccots - La Veveyse": {
-   "place": "Les Paccots – Région de Fribourg",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-paccots-la-veveyse-151/"
-  },
-  "Les Pléiades": {
-   "place": "Blonay – Canton de Vaud",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-pleiades-187/"
-  },
-  "Ovronnaz": {
-   "place": "Ovronnaz – Valais",
-   "noSeason": false,
-   "summary": "0.0/4.0 km Classique, pas de données · 0.0/7.5 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
-   "kmTotal": 4.0,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/ovronnaz-138/"
-  },
-  "Charmey.ch": {
-   "place": "Charmey – Région de Fribourg",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/charmeych-4/"
   },
   "Champex-Lac": {
    "place": "Champex-Lac – Valais",
@@ -1193,41 +1193,50 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vue-des-alpestete-de-ran-194/"
   },
-  "Grimentz-Zinal /Anniviers": {
-   "place": "Grimentz – Valais",
+  "Mont-Soleil - Mont-Crosin": {
+   "place": "Tramelan – Jura & Trois-Lacs",
    "noSeason": false,
    "summary": "",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
   },
-  "St-Cergue": {
-   "place": "St-Cergue – Canton de Vaud",
+  "Val-de-Travers/La Robella": {
+   "place": "Buttes La Robella – Jura & Trois-Lacs",
    "noSeason": false,
    "summary": "",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/st-cergue-14/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/val-de-traversla-robella-195/"
   },
-  "Vallée de La Sagne": {
-   "place": "La Sagne – Jura & Trois-Lacs",
+  "Nordic Région Gibloux": {
+   "place": "Les Monts de Riaz – Région de Fribourg",
    "noSeason": false,
    "summary": "",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-sagne-190/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nordic-region-gibloux-216/"
   },
-  "Nax / Mont-Noble": {
-   "place": "Nax – Valais",
+  "La Chaux-de-Fonds": {
+   "place": "La Chaux-de-Fonds – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "0.0/45.0 km Classique, fermées · 0.0/45.0 km Skating, fermées · Forfait de ski de fond Passeport journalier CHF 10.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
+   "kmOpen": 0.0,
+   "kmTotal": 45.0,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-chaux-de-fonds-75/"
+  },
+  "Sainte-Croix / Les Rasses": {
+   "place": "Sainte-Croix Les Rasses – Canton de Vaud",
    "noSeason": false,
    "summary": "",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nax-mont-noble-8/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/sainte-croix-les-rasses-146/"
   },
   "Les Breuleux": {
    "place": "Les Breuleux – Jura & Trois-Lacs",
@@ -1256,33 +1265,24 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
   },
-  "Mont-Soleil - Mont-Crosin": {
-   "place": "Tramelan – Jura & Trois-Lacs",
+  "Grimentz-Zinal /Anniviers": {
+   "place": "Grimentz – Valais",
    "noSeason": false,
    "summary": "",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/mont-soleil-mont-crosin-335/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
   },
-  "Val-de-Travers/La Robella": {
-   "place": "Buttes La Robella – Jura & Trois-Lacs",
+  "St-Cergue": {
+   "place": "St-Cergue – Canton de Vaud",
    "noSeason": false,
    "summary": "",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/val-de-traversla-robella-195/"
-  },
-  "Nordic Région Gibloux": {
-   "place": "Les Monts de Riaz – Région de Fribourg",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nordic-region-gibloux-216/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/st-cergue-14/"
   }
  },
- "fetchedAt": "2026-11-24T01:53:51+00:00"
+ "fetchedAt": "2026-11-24T14:46:38+00:00"
 }
