@@ -343,7 +343,25 @@
   "1990": {
    "name": "Haute Joux",
    "open": false,
-   "error": true
+   "snowMin": 5.0,
+   "snowMax": 20.0,
+   "lastGrooming": null,
+   "quality": "",
+   "updated": "2026-02-25",
+   "tempMorning": 1.0,
+   "tempAfternoon": 1.0,
+   "kmOpen": 0.0,
+   "kmTotal": 232.6,
+   "xcOpen": 0,
+   "xcTotal": 25,
+   "comments": [
+    {
+     "scope": "secteur",
+     "name": "Haute-Joux - Arsure-Arsurette",
+     "text": "Site Trappeur, multiactivités, damé partiellement",
+     "groomed": null
+    }
+   ]
   },
   "2066": {
    "name": "Hautes Combes du Jura",
@@ -1004,6 +1022,15 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
   },
+  "Glacier 3000": {
+   "place": "Les Diablerets – Canton de Vaud",
+   "noSeason": false,
+   "summary": "7.0/7.0 km Classique, bonnes · 7.0/7.0 km Skating, bonnes · Forfait de ski de fond –",
+   "kmOpen": 7.0,
+   "kmTotal": 7.0,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
+  },
   "Thyon - 4 Vallées": {
    "place": "Les Collons Thyon – Valais",
    "noSeason": false,
@@ -1030,42 +1057,6 @@
    "kmTotal": 4.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/ovronnaz-138/"
-  },
-  "Glacier 3000": {
-   "place": "Les Diablerets – Canton de Vaud",
-   "noSeason": false,
-   "summary": "0.0/7.0 km Classique, pas de données · 0.0/7.0 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
-   "kmTotal": 7.0,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
-  },
-  "Rougemont - Videmanette": {
-   "place": "Rougemont – Canton de Vaud",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/rougemont-videmanette-395/"
-  },
-  "La Fouly": {
-   "place": "La Fouly – Valais",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-fouly-141/"
-  },
-  "Anzère": {
-   "place": "Anzère – Valais",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
   },
   "Charmey.ch": {
    "place": "Charmey – Région de Fribourg",
@@ -1111,6 +1102,33 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-pleiades-187/"
+  },
+  "Rougemont - Videmanette": {
+   "place": "Rougemont – Canton de Vaud",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/rougemont-videmanette-395/"
+  },
+  "La Fouly": {
+   "place": "La Fouly – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-fouly-141/"
+  },
+  "Anzère": {
+   "place": "Anzère – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
   },
   "Les Mosses - La Lécherette": {
    "place": "Les Mosses – Canton de Vaud",
@@ -1211,42 +1229,6 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-chaux-de-fonds-75/"
   },
-  "Les Breuleux": {
-   "place": "Les Breuleux – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-breuleux-211/"
-  },
-  "Saignelégier": {
-   "place": "Saignelégier – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "0.0/49.2 km Classique, fermées · 0.0/49.2 km Skating, fermées · Forfait de ski de fond Passeport journalier CHF 12.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
-   "kmOpen": 0.0,
-   "kmTotal": 49.2,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/saignelegier-150/"
-  },
-  "Vallée de La Brévine": {
-   "place": "La Brévine – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-brevine-198/"
-  },
-  "Sainte-Croix / Les Rasses": {
-   "place": "Sainte-Croix Les Rasses – Canton de Vaud",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/sainte-croix-les-rasses-146/"
-  },
   "Vue des Alpes/Tête de Ran": {
    "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
    "noSeason": false,
@@ -1264,7 +1246,43 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/st-cergue-14/"
+  },
+  "Vallée de La Sagne": {
+   "place": "La Sagne – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/vallee-de-la-sagne-190/"
+  },
+  "Nax / Mont-Noble": {
+   "place": "Nax – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/nax-mont-noble-8/"
+  },
+  "Les Breuleux": {
+   "place": "Les Breuleux – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-breuleux-211/"
+  },
+  "Saignelégier": {
+   "place": "Saignelégier – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "0.0/49.2 km Classique, fermées · 0.0/49.2 km Skating, fermées · Forfait de ski de fond Passeport journalier CHF 12.– Passeport régional pour les pistes de ski de fond CHF 100.– Passeport ski de fond Suisse CHF 160.–",
+   "kmOpen": 0.0,
+   "kmTotal": 49.2,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/saignelegier-150/"
   }
  },
- "fetchedAt": "2026-11-25T14:13:15+00:00"
+ "fetchedAt": "2026-11-25T23:17:19+00:00"
 }

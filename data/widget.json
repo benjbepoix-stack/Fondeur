@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-25T14:13:19.191Z",
+ "generatedAt": "2026-11-25T23:17:20.825Z",
  "origin": "Ville-du-Pont",
  "summary": "Peu de neige, peu de sites ouverts.",
- "bulletinsAt": "2026-11-25T14:13:15+00:00",
+ "bulletinsAt": "2026-11-25T23:17:19+00:00",
  "stations": [
   {
    "id": "ch-le-marchairuz",
@@ -10,13 +10,13 @@
    "country": "CH",
    "region": "Vaud",
    "alt": 1440,
-   "score": 38,
-   "level": "mid",
-   "verdict": "Conditions moyennes",
-   "depth": 14,
+   "score": 31,
+   "level": "bad",
+   "verdict": "Conditions médiocres",
+   "depth": 10,
    "measured": false,
-   "fresh72": 26,
-   "tMin": -1,
+   "fresh72": 23,
+   "tMin": 0,
    "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
@@ -31,6 +31,32 @@
    }
   },
   {
+   "id": "fr-20380",
+   "name": "Haut Saugeais Blanc",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 950,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 2,
+   "tMax": 3,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 18,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
    "id": "fr-1846",
    "name": "La Chaux-de-Gilley · Cernay Blanche",
    "country": "FR",
@@ -42,14 +68,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": -1,
-   "tMax": 5,
+   "tMin": 1,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 21,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -68,14 +94,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": 0,
-   "tMax": 6,
+   "tMin": 2,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 23,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -95,7 +121,7 @@
    "measured": false,
    "fresh72": 1,
    "tMin": 2,
-   "tMax": 5,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 24,
@@ -119,9 +145,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 8,
+   "fresh72": 7,
    "tMin": 1,
-   "tMax": 5,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 25,
@@ -145,15 +171,67 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 6,
-   "tMin": 0,
-   "tMax": 5,
+   "fresh72": 4,
+   "tMin": 1,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 32,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1874",
+   "name": "Val de Vennes",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 900,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 2,
+   "tMax": 4,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 32,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1854",
+   "name": "Arc-sous-Cicon",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 950,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 2,
+   "tMax": 3,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 33,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -172,14 +250,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 5,
-   "tMin": -1,
-   "tMax": 5,
+   "tMin": 1,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 39,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -197,15 +275,41 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 10,
-   "tMin": 0,
-   "tMax": 4,
+   "fresh72": 9,
+   "tMin": 1,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 42,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1850",
+   "name": "Frasne",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 850,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 3,
+   "tMax": 4,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 44,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -224,14 +328,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
-   "tMax": 6,
+   "tMin": 2,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 46,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -247,11 +351,11 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 3,
+   "depth": 0,
    "measured": false,
-   "fresh72": 13,
+   "fresh72": 12,
    "tMin": 1,
-   "tMax": 3,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 47,
@@ -275,9 +379,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 4,
-   "tMin": 0,
-   "tMax": 4,
+   "fresh72": 3,
+   "tMin": 1,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 47,
@@ -302,14 +406,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 3,
-   "tMin": 1,
-   "tMax": 5,
+   "tMin": 2,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 50,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -325,11 +429,11 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 3,
+   "depth": 0,
    "measured": false,
-   "fresh72": 14,
-   "tMin": -1,
-   "tMax": 2,
+   "fresh72": 13,
+   "tMin": 1,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 55,
@@ -353,19 +457,19 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 7,
-   "tMin": -2,
-   "tMax": 3,
+   "fresh72": 6,
+   "tMin": 0,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 59,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -380,8 +484,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 0,
-   "tMax": 6,
+   "tMin": 1,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 63,
@@ -406,14 +510,66 @@
    "depth": 0,
    "measured": false,
    "fresh72": 4,
-   "tMin": 0,
-   "tMax": 6,
+   "tMin": 3,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 63,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1990",
+   "name": "Haute Joux",
+   "country": "FR",
+   "region": "Jura",
+   "alt": 900,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 1,
+   "tMin": 3,
+   "tMax": 4,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 67,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-4491",
+   "name": "Chaux-Neuve · Le Pré Poncet",
+   "country": "FR",
+   "region": "Doubs",
+   "alt": 1000,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 2,
+   "tMax": 4,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 73,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -431,9 +587,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 3,
-   "tMin": 1,
-   "tMax": 4,
+   "fresh72": 2,
+   "tMin": 0,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 73,
@@ -459,13 +615,39 @@
    "measured": false,
    "fresh72": 1,
    "tMin": 0,
-   "tMax": 5,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 75,
    "waxAm": {
     "name": "Rouge",
     "color": "#c23b3b"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-2195",
+   "name": "Foncine-le-Haut",
+   "country": "FR",
+   "region": "Jura",
+   "alt": 950,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 2,
+   "tMin": 2,
+   "tMax": 4,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 78,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -484,8 +666,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 2,
-   "tMin": -1,
-   "tMax": 4,
+   "tMin": 0,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 78,
@@ -509,9 +691,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 13,
+   "fresh72": 11,
    "tMin": 2,
-   "tMax": 5,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 80,
@@ -535,15 +717,15 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 8,
-   "tMin": 1,
-   "tMax": 5,
+   "fresh72": 7,
+   "tMin": 2,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 80,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -561,15 +743,41 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 1,
+   "fresh72": 0,
    "tMin": 0,
-   "tMax": 5,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 81,
    "waxAm": {
     "name": "Rouge",
     "color": "#c23b3b"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1902",
+   "name": "Lac des Rouges Truites · Le Bugnon",
+   "country": "FR",
+   "region": "Jura",
+   "alt": 950,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 1,
+   "tMin": 2,
+   "tMax": 3,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 83,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -587,12 +795,64 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 10,
+   "fresh72": 9,
    "tMin": 1,
-   "tMax": 5,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 85,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1944",
+   "name": "Morbier",
+   "country": "FR",
+   "region": "Jura",
+   "alt": 1000,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 7,
+   "tMin": 2,
+   "tMax": 4,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 89,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-2778",
+   "name": "Saint-Pierre · Trémontagne",
+   "country": "FR",
+   "region": "Jura",
+   "alt": 950,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 2,
+   "tMax": 4,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 90,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
@@ -613,9 +873,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 3,
+   "fresh72": 2,
    "tMin": 0,
-   "tMax": 5,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 92,
@@ -639,15 +899,15 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 8,
-   "tMin": 2,
-   "tMax": 4,
+   "fresh72": 7,
+   "tMin": 1,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 101,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -663,17 +923,43 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 4,
+   "depth": 3,
    "measured": false,
-   "fresh72": 21,
+   "fresh72": 18,
    "tMin": 1,
-   "tMax": 3,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 104,
    "waxAm": {
     "name": "Rouge",
     "color": "#c23b3b"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-2779",
+   "name": "Prénovel · Les Piards (Nanchez)",
+   "country": "FR",
+   "region": "Jura",
+   "alt": 950,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 3,
+   "tMax": 4,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 106,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -691,7 +977,7 @@
    "verdict": "Pas assez de neige",
    "depth": 2,
    "measured": false,
-   "fresh72": 20,
+   "fresh72": 18,
    "tMin": 0,
    "tMax": 2,
    "kmOpen": null,
@@ -718,14 +1004,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 7,
-   "tMin": 2,
-   "tMax": 5,
+   "tMin": 1,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 114,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -743,7 +1029,7 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 15,
+   "fresh72": 13,
    "tMin": 1,
    "tMax": 3,
    "kmOpen": null,
@@ -752,6 +1038,32 @@
    "waxAm": {
     "name": "Rouge",
     "color": "#c23b3b"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-2185",
+   "name": "Les Crozets",
+   "country": "FR",
+   "region": "Jura",
+   "alt": 900,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 3,
+   "tMax": 4,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 117,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -770,14 +1082,40 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": -1,
-   "tMax": 5,
+   "tMin": 0,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 134,
    "waxAm": {
     "name": "Rouge",
     "color": "#c23b3b"
+   },
+   "waxPm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
+   }
+  },
+  {
+   "id": "fr-1766",
+   "name": "Belleydoux",
+   "country": "FR",
+   "region": "Ain",
+   "alt": 950,
+   "score": 10,
+   "level": "bad",
+   "verdict": "Pas assez de neige",
+   "depth": 0,
+   "measured": false,
+   "fresh72": 0,
+   "tMin": 2,
+   "tMax": 4,
+   "kmOpen": null,
+   "kmTotal": null,
+   "minutes": 144,
+   "waxAm": {
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -796,8 +1134,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 5,
+   "tMin": 3,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 146,
@@ -822,14 +1160,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 13,
-   "tMin": 1,
-   "tMax": 4,
+   "tMin": 2,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 158,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -849,7 +1187,7 @@
    "measured": false,
    "fresh72": 6,
    "tMin": 0,
-   "tMax": 3,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 171,
@@ -879,344 +1217,6 @@
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 183,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-20380",
-   "name": "Haut Saugeais Blanc",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 950,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 1,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 18,
-   "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1854",
-   "name": "Arc-sous-Cicon",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 950,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 1,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 33,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1850",
-   "name": "Frasne",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 850,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 1,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 44,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-4491",
-   "name": "Chaux-Neuve · Le Pré Poncet",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 1000,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 2,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 73,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-2195",
-   "name": "Foncine-le-Haut",
-   "country": "FR",
-   "region": "Jura",
-   "alt": 950,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 2,
-   "tMin": 2,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 78,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1902",
-   "name": "Lac des Rouges Truites · Le Bugnon",
-   "country": "FR",
-   "region": "Jura",
-   "alt": 950,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 1,
-   "tMin": 3,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 83,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1944",
-   "name": "Morbier",
-   "country": "FR",
-   "region": "Jura",
-   "alt": 1000,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 8,
-   "tMin": 2,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 89,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1766",
-   "name": "Belleydoux",
-   "country": "FR",
-   "region": "Ain",
-   "alt": 950,
-   "score": 9,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 2,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 144,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1874",
-   "name": "Val de Vennes",
-   "country": "FR",
-   "region": "Doubs",
-   "alt": 900,
-   "score": 8,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 2,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 32,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-1990",
-   "name": "Haute Joux",
-   "country": "FR",
-   "region": "Jura",
-   "alt": 900,
-   "score": 8,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 1,
-   "tMin": 3,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 67,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-2778",
-   "name": "Saint-Pierre · Trémontagne",
-   "country": "FR",
-   "region": "Jura",
-   "alt": 950,
-   "score": 8,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 2,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 90,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-2779",
-   "name": "Prénovel · Les Piards (Nanchez)",
-   "country": "FR",
-   "region": "Jura",
-   "alt": 950,
-   "score": 8,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 3,
-   "tMax": 6,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 106,
-   "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   },
-   "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
-   }
-  },
-  {
-   "id": "fr-2185",
-   "name": "Les Crozets",
-   "country": "FR",
-   "region": "Jura",
-   "alt": 900,
-   "score": 8,
-   "level": "bad",
-   "verdict": "Pas assez de neige",
-   "depth": 0,
-   "measured": false,
-   "fresh72": 0,
-   "tMin": 4,
-   "tMax": 7,
-   "kmOpen": null,
-   "kmTotal": null,
-   "minutes": 117,
    "waxAm": {
     "name": "Jaune / klister",
     "color": "#cf9f1e"
