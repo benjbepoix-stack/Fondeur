@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-26T13:49:18.479Z",
+ "generatedAt": "2026-11-26T22:57:15.410Z",
  "origin": "Ville-du-Pont",
  "summary": "Peu de neige, peu de sites ouverts.",
- "bulletinsAt": "2026-11-26T13:49:17+00:00",
+ "bulletinsAt": "2026-11-26T22:57:13+00:00",
  "stations": [
   {
    "id": "ch-le-marchairuz",
@@ -10,10 +10,10 @@
    "country": "CH",
    "region": "Vaud",
    "alt": 1440,
-   "score": 37,
+   "score": 39,
    "level": "mid",
    "verdict": "Conditions moyennes",
-   "depth": 13,
+   "depth": 14,
    "measured": false,
    "fresh72": 9,
    "tMin": -1,

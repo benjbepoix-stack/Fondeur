@@ -1043,8 +1043,8 @@
   "Glacier 3000": {
    "place": "Les Diablerets – Canton de Vaud",
    "noSeason": false,
-   "summary": "0.0/7.0 km Classique, pas de données · 0.0/7.0 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
+   "summary": "7.0/7.0 km Classique, bonnes · 7.0/7.0 km Skating, bonnes · Forfait de ski de fond –",
+   "kmOpen": 7.0,
    "kmTotal": 7.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
@@ -1052,9 +1052,9 @@
   "Ovronnaz": {
    "place": "Ovronnaz – Valais",
    "noSeason": false,
-   "summary": "0.0/4.0 km Classique, pas de données · 0.0/7.5 km Skating, pas de données · Forfait de ski de fond –",
-   "kmOpen": 0.0,
-   "kmTotal": 4.0,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/ovronnaz-138/"
   },
@@ -1284,5 +1284,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/saignelegier-150/"
   }
  },
- "fetchedAt": "2026-11-26T13:49:17+00:00"
+ "fetchedAt": "2026-11-26T22:57:13+00:00"
 }
