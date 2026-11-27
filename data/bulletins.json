@@ -20,135 +20,7 @@
   "2161": {
    "name": "Bellefontaine",
    "open": false,
-   "snowMin": 20.0,
-   "snowMax": 70.0,
-   "lastGrooming": "2026-04-06",
-   "quality": "Dure",
-   "updated": "2026-04-07",
-   "tempMorning": 0.0,
-   "tempAfternoon": -6.0,
-   "kmOpen": 0.0,
-   "kmTotal": 137.3,
-   "xcOpen": 0,
-   "xcTotal": 14,
-   "comments": [
-    {
-     "scope": "secteur",
-     "name": "Massif du Risoux",
-     "text": "La piste du Grand Remblai a été damée hier soir et les conditions de ski dans le Risoux sont toujours très bonnes ce lundi 6 avril 2026. Accès à 25 kms de piste de fond !",
-     "groomed": "2026-04-06"
-    },
-    {
-     "scope": "piste",
-     "name": "Piste du Grand Remblai",
-     "sector": "Massif du Risoux",
-     "text": "La piste du Grand Remblai a été damée hier soir et les conditions de ski dans le Risoux sont toujours très bonnes celundi 6 avril 2026, malgré les températures positives.",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "GTJ ski : Bellefontaine - Risoux",
-     "sector": "Massif du Risoux",
-     "text": "La piste du Grand Remblai a été damée ce dimanche 29 mars et les conditions de ski dans le Risoux sont superbes et hivernales avec 20 cm de neige fraîche et des températures négatives !",
-     "open": false
-    },
-    {
-     "scope": "secteur",
-     "name": "Porte d'entrée des Lacs",
-     "text": "pistes faciles et visuellement magnifiques.",
-     "groomed": "2026-02-27"
-    },
-    {
-     "scope": "piste",
-     "name": "Piste de la Mini Tourbière",
-     "sector": "Porte d'entrée des Lacs",
-     "text": "Bonnes conditions pour cette piste verte.",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "Piste de la petite Tourbière",
-     "sector": "Porte d'entrée des Lacs",
-     "text": "piste facile avec des paysages superbes",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "Piste des Pas de la Vie",
-     "sector": "Porte d'entrée des Lacs",
-     "text": "Bonnes conditions. Piste facile avec peu de dénivelés.",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "Piste des Tourbières",
-     "sector": "Porte d'entrée des Lacs",
-     "text": "Piste facile avecdes visuels d'exceptions !",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "Liaison Bellefontaine - Morbier",
-     "sector": "Porte d'entrée des Lacs",
-     "text": "le Sacré-cœur, la Chaux Mourant et la liaison Morbier ont été tracées ce matins samedi 21 février 26",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "Piste de La Feuillat",
-     "sector": "Porte d'entrée des Lacs",
-     "text": "Bonnes conditions,",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "Piste de la Chaux Mourant",
-     "sector": "Porte d'entrée des Lacs",
-     "text": "le Sacré-cœur, la Chaux Mourant et la liaison Morbier ont été tracées ce matins samedi 21 février 26",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "Piste des Baganiers",
-     "sector": "Porte d'entrée des Lacs",
-     "text": "piste qui permet de monter au Risoux",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "GTJ ski : Chapelle des Bois - Bellefontaine",
-     "sector": "Porte d'entrée des Lacs",
-     "text": "La liaison avec Chapelle est ouverte mais seul, le côté sous le Risoux de la piste des lacs est tracé le 21 02 26 !",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "Piste des Lacs",
-     "sector": "Porte d'entrée des Lacs",
-     "text": "Les conditions de ski sont très bonnes ce dimanche 1er février 2026.",
-     "open": false
-    },
-    {
-     "scope": "secteur",
-     "name": "Porte d'entrée Village",
-     "text": "On ne peut plus partir du village de Bellefontaine à ski  ! les Pas de la vie, la mini Tourbière et la Feuillat, ont été damées le 26 02 26 ainsi que le Risoux.",
-     "groomed": "2026-02-27"
-    },
-    {
-     "scope": "piste",
-     "name": "Victor Arbez",
-     "sector": "Porte d'entrée Village",
-     "text": "Depuis la porte des Lacs, les Pas de la vie, la mini Tourbière et la Feuillat, le Sacré-cœur, la Chaux Mourant et les liaisons Morbier et Chapelle ont été damées ce samedi 21 fév 26",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "Piste du Peraillet",
-     "sector": "Porte d'entrée Village",
-     "text": "30 cm de neige fraiche et du soleil ; on a donc des paysages magnifiques",
-     "open": false
-    }
-   ]
+   "error": true
   },
   "1766": {
    "name": "Belleydoux",
@@ -311,34 +183,12 @@
   "1802": {
    "name": "Giron 1000",
    "open": false,
-   "snowMin": 0.0,
-   "snowMax": 50.0,
-   "lastGrooming": "2026-03-10",
-   "quality": "Humide / Printemps",
-   "updated": "2026-03-15",
-   "tempMorning": 3.0,
-   "tempAfternoon": 3.0,
-   "kmOpen": 0.0,
-   "kmTotal": 110.5,
-   "xcOpen": 0,
-   "xcTotal": 9,
-   "comments": []
+   "error": true
   },
   "20380": {
    "name": "Haut Saugeais Blanc",
    "open": false,
-   "snowMin": 15.0,
-   "snowMax": 20.0,
-   "lastGrooming": "2026-02-01",
-   "quality": "Douce",
-   "updated": "2026-02-02",
-   "tempMorning": -1.0,
-   "tempAfternoon": 3.0,
-   "kmOpen": 0.0,
-   "kmTotal": 0.0,
-   "xcOpen": 0,
-   "xcTotal": 0,
-   "comments": []
+   "error": true
   },
   "1990": {
    "name": "Haute Joux",
@@ -366,53 +216,7 @@
   "2066": {
    "name": "Hautes Combes du Jura",
    "open": false,
-   "snowMin": 0.0,
-   "snowMax": 130.0,
-   "lastGrooming": "2026-04-05",
-   "quality": "Dure",
-   "updated": "2026-04-07",
-   "tempMorning": -2.0,
-   "tempAfternoon": 18.0,
-   "kmOpen": 0.0,
-   "kmTotal": 364.7,
-   "xcOpen": 0,
-   "xcTotal": 42,
-   "comments": [
-    {
-     "scope": "piste",
-     "name": "Les Forêts Monts",
-     "sector": "Lajoux",
-     "text": "En partant depuis Lajoux, il faut monter à pied jusqu'à la sermengindre. La route reste fermée à la circulation par arrêté .",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "GTJ ski : Carrefour du Massacre - La Baumette (Lajoux)",
-     "sector": "Lajoux",
-     "text": "Il faudra déchausser entre la Baumette et la Sermengindre",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "La Combe à la Chèvre",
-     "sector": "Lajoux",
-     "text": "En partant depuis Lajoux, il faut monter à pied jusqu'à la sermengindre. La route reste fermée à la circulation par arrêté .",
-     "open": false
-    },
-    {
-     "scope": "secteur",
-     "name": "La Pesse / Les Bouchoux",
-     "text": "Damage antérieur",
-     "groomed": "2026-03-28"
-    },
-    {
-     "scope": "piste",
-     "name": "La Combe Froide",
-     "sector": "La Pesse / Les Bouchoux",
-     "text": "Aller-retour",
-     "open": false
-    }
-   ]
+   "error": true
   },
   "1846": {
    "name": "La Chaux de Gilley - La Cernay Blanche",
@@ -625,39 +429,7 @@
   "1878": {
    "name": "Plateau de Maîche / Combe Saint-Pierre",
    "open": false,
-   "snowMin": 0.0,
-   "snowMax": 0.0,
-   "lastGrooming": null,
-   "quality": "",
-   "updated": "2026-03-12",
-   "tempMorning": 6.0,
-   "tempAfternoon": 6.0,
-   "kmOpen": 0.0,
-   "kmTotal": 96.4,
-   "xcOpen": 0,
-   "xcTotal": 8,
-   "comments": [
-    {
-     "scope": "secteur",
-     "name": "Combe Saint-Pierre",
-     "text": "Patinoire ouverte les après-midi, les mercredi, samedi et dimanche.",
-     "groomed": null
-    },
-    {
-     "scope": "piste",
-     "name": "LOCATION MATÉRIEL : COMBE SAINT-PIERRE",
-     "sector": "Combe Saint-Pierre",
-     "text": "ouverte de 9h30 à 17h",
-     "open": false
-    },
-    {
-     "scope": "piste",
-     "name": "SKI NORDIQUE : LIAISON COMBE SAINT-PIERRE - LA MONTEE",
-     "sector": "Combe Saint-Pierre",
-     "text": "Tracée au rouleau, privilégier les skis cailloux",
-     "open": false
-    }
-   ]
+   "error": true
   },
   "1897": {
    "name": "Plateau du Russey",
@@ -1016,8 +788,8 @@
   "Grimentz-Zinal /Anniviers": {
    "place": "Grimentz – Valais",
    "noSeason": false,
-   "summary": "3.0/13.0 km Classique, fermées · 3.0/13.0 km Skating, fermées · Forfait de ski de fond –",
-   "kmOpen": 3.0,
+   "summary": "7.5/13.0 km Classique, fermées · 7.5/13.0 km Skating, fermées · Forfait de ski de fond –",
+   "kmOpen": 7.5,
    "kmTotal": 13.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/grimentz-zinal-anniviers-140/"
@@ -1048,6 +820,15 @@
    "kmTotal": 7.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/glacier-3000-188/"
+  },
+  "Anzère": {
+   "place": "Anzère – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
   },
   "Ovronnaz": {
    "place": "Ovronnaz – Valais",
@@ -1103,6 +884,15 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-pleiades-187/"
   },
+  "Crans - Montana": {
+   "place": "Crans-Montana – Valais",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/crans-montana-142/"
+  },
   "Rougemont - Videmanette": {
    "place": "Rougemont – Canton de Vaud",
    "noSeason": false,
@@ -1121,14 +911,14 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-fouly-141/"
   },
-  "Anzère": {
-   "place": "Anzère – Valais",
+  "Champex-Lac": {
+   "place": "Champex-Lac – Valais",
    "noSeason": false,
    "summary": "",
    "kmOpen": null,
    "kmTotal": null,
    "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/anzere-145/"
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/champex-lac-168/"
   },
   "Les Mosses - La Lécherette": {
    "place": "Les Mosses – Canton de Vaud",
@@ -1139,15 +929,6 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-mosses-la-lecherette-329/"
   },
-  "Champex-Lac": {
-   "place": "Champex-Lac – Valais",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/champex-lac-168/"
-  },
   "Vichères - Bavon": {
    "place": "Liddes – Valais",
    "noSeason": false,
@@ -1157,15 +938,6 @@
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/vicheres-bavon-257/"
   },
-  "Crans - Montana": {
-   "place": "Crans-Montana – Valais",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/crans-montana-142/"
-  },
   "Prés-d'Orvin-Chasseral": {
    "place": "Les Prés d'Orvin – Jura & Trois-Lacs",
    "noSeason": false,
@@ -1174,24 +946,6 @@
    "kmTotal": null,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/pres-dorvin-chasseral-206/"
-  },
-  "Bugnenets - Savagnières": {
-   "place": "Savagnières-Bugnenets – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/bugnenets-savagnieres-197/"
-  },
-  "Les Genevez": {
-   "place": "Saignelégier – Jura & Trois-Lacs",
-   "noSeason": false,
-   "summary": "",
-   "kmOpen": null,
-   "kmTotal": null,
-   "snow": null,
-   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-genevez-208/"
   },
   "Mont-Soleil - Mont-Crosin": {
    "place": "Tramelan – Jura & Trois-Lacs",
@@ -1228,6 +982,24 @@
    "kmTotal": 45.0,
    "snow": null,
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/la-chaux-de-fonds-75/"
+  },
+  "Bugnenets - Savagnières": {
+   "place": "Savagnières-Bugnenets – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/bugnenets-savagnieres-197/"
+  },
+  "Les Genevez": {
+   "place": "Saignelégier – Jura & Trois-Lacs",
+   "noSeason": false,
+   "summary": "",
+   "kmOpen": null,
+   "kmTotal": null,
+   "snow": null,
+   "url": "https://snow.myswitzerland.com/bulletin_enneigement/les-genevez-208/"
   },
   "Vue des Alpes/Tête de Ran": {
    "place": "Vue-des-Alpes / Tête-de-Ran – Jura & Trois-Lacs",
@@ -1284,5 +1056,5 @@
    "url": "https://snow.myswitzerland.com/bulletin_enneigement/saignelegier-150/"
   }
  },
- "fetchedAt": "2026-11-26T22:57:13+00:00"
+ "fetchedAt": "2026-11-27T13:46:02+00:00"
 }

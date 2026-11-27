@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-26T22:57:15.410Z",
+ "generatedAt": "2026-11-27T13:46:04.488Z",
  "origin": "Ville-du-Pont",
  "summary": "Peu de neige, peu de sites ouverts.",
- "bulletinsAt": "2026-11-26T22:57:13+00:00",
+ "bulletinsAt": "2026-11-27T13:46:02+00:00",
  "stations": [
   {
    "id": "ch-le-marchairuz",
@@ -10,20 +10,20 @@
    "country": "CH",
    "region": "Vaud",
    "alt": 1440,
-   "score": 39,
+   "score": 48,
    "level": "mid",
    "verdict": "Conditions moyennes",
-   "depth": 14,
+   "depth": 13,
    "measured": false,
    "fresh72": 9,
-   "tMin": -1,
-   "tMax": 0,
+   "tMin": -7,
+   "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 88,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
     "name": "Rouge",
@@ -42,18 +42,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 3,
+   "tMin": -3,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 18,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -68,18 +68,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -4,
+   "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 21,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -94,18 +94,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -3,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 23,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -120,18 +120,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 3,
+   "tMin": -4,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 24,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -146,18 +146,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -4,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 25,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -172,18 +172,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -3,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 32,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -198,18 +198,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 4,
+   "tMin": -2,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 32,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -224,18 +224,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 3,
+   "tMin": -3,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 33,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -250,18 +250,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -4,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 39,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -276,18 +276,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 2,
-   "tMin": 1,
-   "tMax": 2,
+   "tMin": -4,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 42,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -302,18 +302,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 4,
+   "tMin": -2,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 44,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -328,18 +328,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
-   "tMax": 4,
+   "tMin": -2,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 46,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -354,18 +354,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 4,
-   "tMin": 0,
-   "tMax": 2,
+   "tMin": -4,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 47,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -380,18 +380,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -3,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 47,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -406,14 +406,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 3,
+   "tMin": -4,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 50,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -432,18 +432,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 5,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -4,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 55,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -458,18 +458,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 3,
-   "tMin": -1,
-   "tMax": 1,
+   "tMin": -5,
+   "tMax": -2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 59,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    }
   },
   {
@@ -484,18 +484,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 0,
-   "tMax": 3,
+   "tMin": -2,
+   "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 63,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -510,14 +510,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 4,
+   "tMin": -3,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 63,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -536,18 +536,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 4,
+   "tMin": -2,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 67,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -562,18 +562,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 3,
+   "tMin": -4,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 73,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -585,21 +585,21 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 0,
+   "depth": 3,
    "measured": false,
    "fresh72": 0,
-   "tMin": -1,
-   "tMax": 1,
+   "tMin": -4,
+   "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 73,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    }
   },
   {
@@ -614,18 +614,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 0,
-   "tMax": 2,
+   "tMin": -3,
+   "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 75,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    }
   },
   {
@@ -640,18 +640,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 4,
+   "tMin": -3,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 78,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -666,18 +666,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": 0,
-   "tMax": 2,
+   "tMin": -3,
+   "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 78,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    }
   },
   {
@@ -692,18 +692,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -4,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 80,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -718,14 +718,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 4,
+   "tMin": -4,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 80,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -744,18 +744,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -1,
-   "tMax": 2,
+   "tMin": -3,
+   "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 81,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    }
   },
   {
@@ -770,14 +770,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 3,
+   "tMin": -3,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 83,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -796,18 +796,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -4,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 85,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -822,18 +822,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 3,
+   "tMin": -3,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 89,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -848,14 +848,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 4,
+   "tMin": -2,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 90,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -874,8 +874,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -1,
-   "tMax": 1,
+   "tMin": -3,
+   "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 92,
@@ -884,8 +884,8 @@
     "color": "#8057b8"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    }
   },
   {
@@ -900,18 +900,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -4,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 101,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -926,18 +926,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 8,
-   "tMin": 1,
-   "tMax": 2,
+   "tMin": -4,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 104,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -952,18 +952,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 4,
+   "tMin": -2,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 106,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -975,21 +975,21 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 2,
+   "depth": 0,
    "measured": false,
    "fresh72": 6,
-   "tMin": 0,
-   "tMax": 1,
+   "tMin": -6,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 112,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -1004,18 +1004,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -4,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 114,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -1030,18 +1030,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 5,
-   "tMin": 1,
-   "tMax": 3,
+   "tMin": -5,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 116,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -1056,14 +1056,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 3,
-   "tMax": 4,
+   "tMin": -2,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 117,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -1082,18 +1082,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": -1,
-   "tMax": 2,
+   "tMin": -3,
+   "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 134,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -1108,14 +1108,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 4,
+   "tMin": -3,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 144,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -1134,14 +1134,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 3,
+   "tMin": -3,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 146,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -1160,14 +1160,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 7,
-   "tMin": 2,
-   "tMax": 3,
+   "tMin": -3,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 158,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -1186,18 +1186,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 2,
-   "tMin": 0,
-   "tMax": 2,
+   "tMin": -3,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 171,
    "waxAm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -1212,14 +1212,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": 2,
-   "tMax": 4,
+   "tMin": -2,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 183,
    "waxAm": {
-    "name": "Jaune / klister",
-    "color": "#cf9f1e"
+    "name": "Violet",
+    "color": "#8057b8"
    },
    "waxPm": {
     "name": "Jaune / klister",
