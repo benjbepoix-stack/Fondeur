@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-27T13:46:04.488Z",
+ "generatedAt": "2026-11-27T22:40:35.455Z",
  "origin": "Ville-du-Pont",
  "summary": "Peu de neige, peu de sites ouverts.",
- "bulletinsAt": "2026-11-27T13:46:02+00:00",
+ "bulletinsAt": "2026-11-27T22:40:33+00:00",
  "stations": [
   {
    "id": "ch-le-marchairuz",
@@ -585,7 +585,7 @@
    "score": 10,
    "level": "bad",
    "verdict": "Pas assez de neige",
-   "depth": 3,
+   "depth": 0,
    "measured": false,
    "fresh72": 0,
    "tMin": -4,
@@ -650,8 +650,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -953,7 +953,7 @@
    "measured": false,
    "fresh72": 0,
    "tMin": -2,
-   "tMax": 0,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 106,
@@ -1083,7 +1083,7 @@
    "measured": false,
    "fresh72": 1,
    "tMin": -3,
-   "tMax": -1,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 134,
