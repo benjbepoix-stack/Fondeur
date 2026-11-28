@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-27T22:40:35.455Z",
+ "generatedAt": "2026-11-28T12:54:30.047Z",
  "origin": "Ville-du-Pont",
  "summary": "Peu de neige, peu de sites ouverts.",
- "bulletinsAt": "2026-11-27T22:40:33+00:00",
+ "bulletinsAt": "2026-11-28T12:54:25+00:00",
  "stations": [
   {
    "id": "ch-le-marchairuz",
@@ -15,19 +15,19 @@
    "verdict": "Conditions moyennes",
    "depth": 13,
    "measured": false,
-   "fresh72": 9,
-   "tMin": -7,
+   "fresh72": 1,
+   "tMin": -10,
    "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 88,
    "waxAm": {
-    "name": "Bleu",
-    "color": "#2f84d1"
+    "name": "Bleu foncé",
+    "color": "#1f5fa8"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Violet",
+    "color": "#8057b8"
    }
   },
   {
@@ -42,18 +42,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
-   "tMax": 0,
+   "tMin": -5,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 18,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -68,8 +68,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -4,
-   "tMax": -1,
+   "tMin": -6,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 21,
@@ -78,8 +78,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -94,8 +94,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
-   "tMax": 0,
+   "tMin": -5,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 23,
@@ -104,8 +104,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -120,8 +120,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -4,
-   "tMax": 0,
+   "tMin": -5,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 24,
@@ -130,8 +130,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -145,9 +145,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 1,
-   "tMin": -4,
-   "tMax": 0,
+   "fresh72": 0,
+   "tMin": -5,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 25,
@@ -156,8 +156,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -171,9 +171,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 1,
-   "tMin": -3,
-   "tMax": 0,
+   "fresh72": 0,
+   "tMin": -5,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 32,
@@ -198,18 +198,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -2,
-   "tMax": 0,
+   "tMin": -4,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 32,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -224,8 +224,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
-   "tMax": 0,
+   "tMin": -5,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 33,
@@ -234,8 +234,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -249,9 +249,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 1,
-   "tMin": -4,
-   "tMax": 0,
+   "fresh72": 0,
+   "tMin": -7,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 39,
@@ -260,8 +260,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -275,9 +275,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 2,
-   "tMin": -4,
-   "tMax": 0,
+   "fresh72": 0,
+   "tMin": -5,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 42,
@@ -286,8 +286,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -302,18 +302,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -2,
-   "tMax": 1,
+   "tMin": -4,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 44,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -328,18 +328,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -2,
-   "tMax": 0,
+   "tMin": -4,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 46,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -353,9 +353,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 4,
-   "tMin": -4,
-   "tMax": 0,
+   "fresh72": 0,
+   "tMin": -5,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 47,
@@ -364,8 +364,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -379,8 +379,8 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 1,
-   "tMin": -3,
+   "fresh72": 0,
+   "tMin": -5,
    "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
@@ -431,8 +431,8 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 5,
-   "tMin": -4,
+   "fresh72": 0,
+   "tMin": -6,
    "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
@@ -457,9 +457,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 3,
-   "tMin": -5,
-   "tMax": -2,
+   "fresh72": 0,
+   "tMin": -7,
+   "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 59,
@@ -484,18 +484,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -2,
-   "tMax": -1,
+   "tMin": -5,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 63,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -510,8 +510,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
-   "tMax": 2,
+   "tMin": -4,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 63,
@@ -536,18 +536,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -2,
-   "tMax": 1,
+   "tMin": -4,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 67,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -562,8 +562,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -4,
-   "tMax": 1,
+   "tMin": -5,
+   "tMax": 5,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 73,
@@ -572,8 +572,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -588,8 +588,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -4,
-   "tMax": -1,
+   "tMin": -5,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 73,
@@ -598,8 +598,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -614,18 +614,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
-   "tMax": -1,
+   "tMin": -5,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 75,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -640,8 +640,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
-   "tMax": 1,
+   "tMin": -5,
+   "tMax": 5,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 78,
@@ -665,9 +665,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 1,
-   "tMin": -3,
-   "tMax": -1,
+   "fresh72": 0,
+   "tMin": -5,
+   "tMax": 0,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 78,
@@ -676,8 +676,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -692,8 +692,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": -4,
-   "tMax": 0,
+   "tMin": -5,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 80,
@@ -702,8 +702,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -718,8 +718,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -4,
-   "tMax": 2,
+   "tMin": -7,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 80,
@@ -744,18 +744,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
-   "tMax": -1,
+   "tMin": -5,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 81,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -770,14 +770,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
-   "tMax": 2,
+   "tMin": -4,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 83,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -796,8 +796,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -4,
-   "tMax": 0,
+   "tMin": -5,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 85,
@@ -806,8 +806,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -822,8 +822,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
-   "tMax": 1,
+   "tMin": -5,
+   "tMax": 5,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 89,
@@ -832,8 +832,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -848,14 +848,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -2,
-   "tMax": 1,
+   "tMin": -6,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 90,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -874,18 +874,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
+   "tMin": -5,
    "tMax": -1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 92,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Rouge",
+    "color": "#c23b3b"
    }
   },
   {
@@ -900,8 +900,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": -4,
-   "tMax": 0,
+   "tMin": -5,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 101,
@@ -910,8 +910,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -925,9 +925,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 8,
-   "tMin": -4,
-   "tMax": 0,
+   "fresh72": 2,
+   "tMin": -5,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 104,
@@ -936,8 +936,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -952,18 +952,18 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -2,
-   "tMax": 1,
+   "tMin": -6,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 106,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -977,9 +977,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 6,
-   "tMin": -6,
-   "tMax": 0,
+   "fresh72": 2,
+   "tMin": -7,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 112,
@@ -988,8 +988,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -1004,8 +1004,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 1,
-   "tMin": -4,
-   "tMax": 0,
+   "tMin": -5,
+   "tMax": 4,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 114,
@@ -1014,8 +1014,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -1029,9 +1029,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 5,
+   "fresh72": 1,
    "tMin": -5,
-   "tMax": 0,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 116,
@@ -1040,8 +1040,8 @@
     "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Jaune / klister",
+    "color": "#cf9f1e"
    }
   },
   {
@@ -1056,14 +1056,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -2,
-   "tMax": 1,
+   "tMin": -5,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 117,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
     "name": "Jaune / klister",
@@ -1081,19 +1081,19 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 1,
-   "tMin": -3,
-   "tMax": 0,
+   "fresh72": 0,
+   "tMin": -5,
+   "tMax": -2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 134,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
-    "name": "Rouge",
-    "color": "#c23b3b"
+    "name": "Violet",
+    "color": "#8057b8"
    }
   },
   {
@@ -1108,8 +1108,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
-   "tMax": 1,
+   "tMin": -7,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 144,
@@ -1134,8 +1134,8 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -3,
-   "tMax": 1,
+   "tMin": -6,
+   "tMax": 3,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 146,
@@ -1159,9 +1159,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 7,
-   "tMin": -3,
-   "tMax": 1,
+   "fresh72": 0,
+   "tMin": -5,
+   "tMax": 2,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 158,
@@ -1185,9 +1185,9 @@
    "verdict": "Pas assez de neige",
    "depth": 0,
    "measured": false,
-   "fresh72": 2,
-   "tMin": -3,
-   "tMax": 0,
+   "fresh72": 0,
+   "tMin": -5,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 171,
@@ -1212,14 +1212,14 @@
    "depth": 0,
    "measured": false,
    "fresh72": 0,
-   "tMin": -2,
-   "tMax": 2,
+   "tMin": -4,
+   "tMax": 1,
    "kmOpen": null,
    "kmTotal": null,
    "minutes": 183,
    "waxAm": {
-    "name": "Violet",
-    "color": "#8057b8"
+    "name": "Bleu",
+    "color": "#2f84d1"
    },
    "waxPm": {
     "name": "Jaune / klister",
